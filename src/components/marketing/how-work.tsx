@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
-import React, { HTMLAttributes } from 'react';
+import React, { type HTMLAttributes } from 'react';
 
 interface HowWorkProps extends HTMLAttributes<HTMLElement> {}
 
@@ -15,7 +15,7 @@ export default function HowWork({ ...props }: HowWorkProps) {
             <h2 className="text-4xl font-semibold text-center">
                 How {siteConfig.name} Works
             </h2>
-            <ul className="grid grid-cols-3 gap-6">
+            <ul className="grid grid-cols-3 gap-6 grid-flow-row">
                 <li>
                     <Card>
                         <CardHeader>

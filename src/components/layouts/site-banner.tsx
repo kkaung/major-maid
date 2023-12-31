@@ -29,8 +29,7 @@ export default function SiteBanner({ ...props }: SiteBannerProps) {
                 variant="outline"
                 className="text-primary border-primary hover:text-primary"
             >
-                <Icons.phone className="w-4 h-4 mr-1 stroke-3" /> Call Us 1300
-                245 417
+                <Icons.phone className="w-4 h-4 mr-1 stroke-3" /> 1300 245 417
             </Button>
             <Link
                 className={cn(

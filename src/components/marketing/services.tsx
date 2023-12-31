@@ -16,9 +16,7 @@ export default function Services({ ...props }: ServicesProps) {
             <p className="text-muted-foreground mt-2">
                 Whatever your cleaning needs are, we&apos;ve got you covered.
             </p>
-            <ul className="grid grid-cols-3">
-                
-            </ul>
+            <ul className="grid grid-cols-3"></ul>
         </section>
     );
 }

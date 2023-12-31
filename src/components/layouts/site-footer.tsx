@@ -33,7 +33,7 @@ export default async function SiteFooter() {
                             watch chinese | donghua animes online.
                         </p>
                         <div className="flex flex-col">
-                            <p
+                            <div
                                 className={cn(
                                     'cursor-pointer',
                                     buttonVariants({ variant: 'link' })
@@ -44,8 +44,8 @@ export default async function SiteFooter() {
                                     aria-hidden
                                 />
                                 contact@majormaid.com.au
-                            </p>
-                            <p
+                            </div>
+                            <div
                                 className={cn(
                                     'cursor-pointer',
                                     buttonVariants({ variant: 'link' })
@@ -56,7 +56,7 @@ export default async function SiteFooter() {
                                     aria-hidden
                                 />
                                 +61 430281937
-                            </p>
+                            </div>
                         </div>
                     </section>
                     <section
@@ -109,14 +109,11 @@ export default async function SiteFooter() {
                         <span>All rights reserved.</span>
                     </div>
                     <div className="mt-3 flex items-center gap-6 text-muted-foreground">
-                        <Link aria-label="" target="_blank" href="/">
-                            <Icons.twitter className="h-4 w-4" />
+                        <Link aria-label="Twitter" target="_blank" href="/">
+                            <Icons.twitter aria-hidden className="h-4 w-4" />
                         </Link>
-                        <Link aria-label="" target="_blank" href="/">
-                            <Icons.facebook className="h-4 w-4" />
-                        </Link>
-                        <Link aria-label="" target="_blank" href="/">
-                            <Icons.reddit className="h-4 w-4" />
+                        <Link aria-label="Facebook" target="_blank" href="/">
+                            <Icons.facebook aria-hidden className="h-4 w-4" />
                         </Link>
                     </div>
                 </section>

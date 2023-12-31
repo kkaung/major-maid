@@ -11,6 +11,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import React from 'react';
 import LiveReviews from './_components/live-reviews';
 import PopularQuestions from './_components/popular-questions';
+import { Button } from '@/components/ui/button';
+import { Icons } from '@/components/icons';
 
 export default function Page() {
     return (
@@ -28,10 +30,13 @@ export default function Page() {
                     <span className="text-primary ml-1">Seconds</span>
                 </PageHeaderHeading>
                 <PageHeaderDescription size="sm">
-                    Super simple! Pick the industry you want to book for. Select
-                    or fill the values in the fields, find the date and time you
-                    want to book for and wait for a confirmation!
+                    View pricing, availability & book online. Have questions?
                 </PageHeaderDescription>
+                <div className="text-center mt-6">
+                    <Button size="sm">
+                        <Icons.phone className="w-4 h-4 mr-1" /> 1300 905 032
+                    </Button>
+                </div>
                 <GridPattern className="-z-10 stroke-gray-200 dark:stroke-gray-800  opacity-50 [mask-image:radial-gradient(100%_100%_at_top_center,white,transparent)]" />
             </PageHeader>
             <section className="flex flex-col items-start gap-6 mx-auto max-w-4xl w-full md:flex-row">

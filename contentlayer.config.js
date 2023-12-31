@@ -27,7 +27,7 @@ const computedFields = {
 };
 
 export const Author = defineDocumentType(() => ({
-    name: 'Authors',
+    name: 'Author',
     filePathPattern: `authors/**/*.mdx`,
     contentType: 'mdx',
     fields: {
@@ -37,6 +37,14 @@ export const Author = defineDocumentType(() => ({
         },
         description: {
             type: 'string',
+        },
+        avatar: {
+            type: 'string',
+            required: true,
+        },
+        twitter: {
+            type: 'string',
+            required: true,
         },
     },
     computedFields,
@@ -58,8 +66,8 @@ export const Page = defineDocumentType(() => ({
     computedFields,
 }));
 
-export const Blog = defineDocumentType(() => ({
-    name: 'Blog',
+export const Post = defineDocumentType(() => ({
+    name: 'Post',
     filePathPattern: `blog/**/*.mdx`,
     contentType: 'mdx',
     fields: {
@@ -70,6 +78,23 @@ export const Blog = defineDocumentType(() => ({
         description: {
             type: 'string',
         },
+        image: {
+            type: 'string',
+            required: true,
+        },
+        date: {
+            type: 'date',
+            required: true,
+        },
+        authors: {
+            // Reference types are not embedded.
+            // Until this is fixed, we can use a simple list.
+            // type: "reference",
+            // of: Author,
+            type: 'list',
+            of: { type: 'string' },
+            required: true,
+        },
     },
     computedFields,
 }));
@@ -77,7 +102,7 @@ export const Blog = defineDocumentType(() => ({
 export default makeSource({
     contentDirPath: './src/content',
     disableImportAliasWarning: true,
-    documentTypes: [Page, Blog, Author],
+    documentTypes: [Page, Post, Author],
     mdx: {
         remarkPlugins: [remarkGfm],
         rehypePlugins: [

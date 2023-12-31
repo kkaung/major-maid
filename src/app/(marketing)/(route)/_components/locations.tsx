@@ -1,8 +1,9 @@
+import Link from 'next/link';
+import React, { type HTMLAttributes } from 'react';
+import { Icons } from '@/components/icons';
 import { buttonVariants } from '@/components/ui/button';
 import { cities } from '@/config/location';
 import { cn, slugify } from '@/lib/utils';
-import Link from 'next/link';
-import React, { HTMLAttributes } from 'react';
 
 interface LocationsProps extends HTMLAttributes<HTMLElement> {}
 
@@ -39,16 +40,16 @@ export default function Locations({ ...props }: LocationsProps) {
                     </div>
                 ))}
             </section>
-            <div>
+            <div className="mt-6">
                 <Link
-                    href="/sydney"
+                    href="/locations"
                     className={cn(
-                        buttonVariants({ variant: 'outline' }),
-                        'font-semibold'
+                        buttonVariants({ variant: 'outline', size: 'sm' })
                     )}
                 >
-                    View All Location
-                    <span></span>
+                    See All
+                    <Icons.arrowRight className="ml-1 w-4 h-4 stroke-2 inline transition-all group-hover:translate-x-1" />
+                    <span className="sr-only">See All Blog Posts</span>
                 </Link>
             </div>
         </section>

@@ -22,14 +22,37 @@ export default function FAQs({ location = 'Sydney', ...props }: FAQsProps) {
             className={cn(props.className, 'space-y-6')}
             {...props}
         >
-            <h2 className="text-3xl font-semibold mb-6">
-                Frequently Asked Questions
-            </h2>
+            <div className="flex justify-between mb-12">
+                <div>
+                    <h2 className="text-3xl font-semibold mb-2">
+                        Frequently Asked Questions
+                    </h2>
+                    <p className="text-gray-900 text-sm">
+                        Have questions about our house cleaning in Sydney? Take
+                        a look below. Or call us on
+                        <span className="text-primary ml-1">1300 905 032</span>.
+                    </p>
+                </div>
+                <Link
+                    href="/"
+                    className={cn(
+                        buttonVariants({ variant: 'outline', size: 'sm' })
+                    )}
+                >
+                    See All
+                    <Icons.arrowRight className="ml-1 w-4 h-4 stroke-2 inline transition-all group-hover:translate-x-1" />
+                    <span className="sr-only">See All Blog Posts</span>
+                </Link>
+            </div>
             <div>
-                <Accordion type="single" collapsible className="w-full">
+                <Accordion
+                    type="single"
+                    collapsible
+                    className="w-full space-y-4"
+                >
                     <AccordionItem value="item-1">
                         <AccordionTrigger>
-                            How can I get a quote for a cleaning service in {' '}
+                            How can I get a quote for a cleaning service in
                             {location}?
                         </AccordionTrigger>
                         <AccordionContent>
@@ -146,15 +169,6 @@ export default function FAQs({ location = 'Sydney', ...props }: FAQsProps) {
                         </AccordionContent>
                     </AccordionItem>
                 </Accordion>
-            </div>
-            <div className="text-center mt-6">
-                <Link href="/" className={'group font-semibold text-primary'}>
-                    See All
-                    <Icons.arrowRight className="ml-1 w-4 h-4 stroke-2 inline transition-all group-hover:translate-x-1" />
-                    <span className="sr-only">
-                        See All Frequently Asked Questions
-                    </span>
-                </Link>
             </div>
         </section>
     );
