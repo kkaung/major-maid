@@ -3,10 +3,8 @@ import React from 'react';
 import MobileNav from '@/components/layouts/mobile-nav';
 import MainNav from '@/components/layouts/main-nav';
 import { siteConfig } from '@/config/site';
-
+import { type HTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
-
-import { HTMLAttributes } from 'react';
 
 interface SiteHeaderProps extends HTMLAttributes<HTMLElement> {}
 

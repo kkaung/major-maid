@@ -1,5 +1,7 @@
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
 import React, { HTMLAttributes } from 'react';
+import { buttonVariants } from '../ui/button';
 
 interface WhyUsProps extends HTMLAttributes<HTMLElement> {}
 
@@ -8,7 +10,7 @@ export default function WhyUs({ ...props }: WhyUsProps) {
         <section
             id="why-us"
             aria-labelledby="why-us-heading"
-            className={cn(props.className)}
+            className={cn(props.className, 'space-y-12')}
         >
             <h2 className="text-3xl font-bold text-center">
                 Why Book Your Cleaning Service With Us?
@@ -37,6 +39,19 @@ export default function WhyUs({ ...props }: WhyUsProps) {
                         service in 60 seconds.
                     </p>
                 </div>
+            </div>
+            <div className="text-center">
+                <Link
+                    href="/booking"
+                    className={cn(
+                        buttonVariants({
+                            size: 'lg',
+                        }),
+                        'font-semibold uppercase'
+                    )}
+                >
+                    Book Online Now
+                </Link>
             </div>
         </section>
     );

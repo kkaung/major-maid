@@ -1,6 +1,6 @@
 import { type MetadataRoute } from 'next';
 import { absoluteUrl } from '@/lib/utils';
-import { allBlogs, allPages } from 'contentlayer/generated';
+import { allPosts, allPages } from 'contentlayer/generated';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const pagesRoutes = allPages.map(page => ({
@@ -8,7 +8,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         lastModified: new Date().toISOString(),
     }));
 
-    const postsRoutes = allBlogs.map(post => ({
+    const postsRoutes = allPosts.map(post => ({
         url: absoluteUrl(`${post.slug}`),
         lastModified: new Date().toISOString(),
     }));

@@ -23,14 +23,14 @@ export default function Locations({ ...props }: LocationsProps) {
                 {cities.map((city, idx) => (
                     <div key={idx}>
                         <h4 className="font-semibold text-xl mb-4">Sydney</h4>
-                        <ul className="grid grid-cols-5 gap-x-6">
+                        <ul className="grid grid-cols-3 gap-x-6 sm:grid-cols-6">
                             {city.items.map((suburb, idx) => (
                                 <li key={idx}>
                                     <Link
                                         href={`/${slugify(
                                             city.title
                                         )}/${slugify(suburb.title)}`}
-                                        className="font-medium text-muted-foreground hover:underline"
+                                        className="text-muted-foreground hover:underline"
                                     >
                                         {suburb.title}
                                     </Link>

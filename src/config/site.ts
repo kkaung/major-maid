@@ -23,8 +23,20 @@ export const siteConfig = {
                     href: '/services/house-cleaning',
                 },
                 {
+                    title: 'Regular Cleaing',
+                    href: '/services/regular-cleaning',
+                },
+                {
+                    title: 'Deep Cleaing',
+                    href: '/services/deep-cleaning',
+                },
+                {
                     title: 'End Lease Cleaning',
                     href: '/services/end-lease-cleaning',
+                },
+                {
+                    title: 'Oven Cleaning',
+                    href: '/services/oven-cleaning',
                 },
                 {
                     title: 'Bond Cleaning',
@@ -81,12 +93,28 @@ export const siteConfig = {
                     href: '/services/house-cleaning',
                 },
                 {
+                    title: 'Regular Cleaing',
+                    href: '/services/regular-cleaning',
+                },
+                {
+                    title: 'Deep Cleaing',
+                    href: '/services/deep-cleaning',
+                },
+                {
                     title: 'End Lease Cleaning',
                     href: '/services/end-lease-cleaning',
                 },
                 {
+                    title: 'Oven Cleaning',
+                    href: '/services/oven-cleaning',
+                },
+                {
                     title: 'Bond Cleaning',
                     href: '/services/bond-cleaning',
+                },
+                {
+                    title: 'Apartment Cleaning',
+                    href: '/services/apartment-cleaning',
                 },
                 {
                     title: 'Office Cleaning',

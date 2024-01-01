@@ -34,13 +34,16 @@ export default function FAQs({ location = 'Sydney', ...props }: FAQsProps) {
                     </p>
                 </div>
                 <Link
-                    href="/"
+                    href="/frequently-asked-questions"
                     className={cn(
                         buttonVariants({ variant: 'outline', size: 'sm' })
                     )}
                 >
                     See All
-                    <Icons.arrowRight className="ml-1 w-4 h-4 stroke-2 inline transition-all group-hover:translate-x-1" />
+                    <Icons.arrowRight
+                        aria-hidden
+                        className="ml-1 w-4 h-4 stroke-2 inline transition-all group-hover:translate-x-1"
+                    />
                     <span className="sr-only">See All Blog Posts</span>
                 </Link>
             </div>

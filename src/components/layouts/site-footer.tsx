@@ -5,7 +5,6 @@ import { Shell } from '@/components/shell';
 import { Icons } from '@/components/icons';
 import { Separator } from '@/components/ui/separator';
 import { cn } from '@/lib/utils';
-import { buttonVariants } from '@/components/ui/button';
 
 export default async function SiteFooter() {
     return (
@@ -28,31 +27,20 @@ export default async function SiteFooter() {
                         >
                             <span className="font-bold">{siteConfig.name}</span>
                         </Link>
-                        <p className="mt-4 max-w-sm text-xs font-light text-muted-foreground md:text-sm">
-                            Free anime streaming website that allows you to
-                            watch chinese | donghua animes online.
+                        <p className="my-4 max-w-sm text-xs font-light text-muted-foreground md:text-sm">
+                            All-In-One House Cleaning Service In Sydney
                         </p>
-                        <div className="flex flex-col">
-                            <div
-                                className={cn(
-                                    'cursor-pointer',
-                                    buttonVariants({ variant: 'link' })
-                                )}
-                            >
+                        <div className="flex flex-col mt-2 space-y-2 text-primary/80">
+                            <div className={cn('cursor-pointer text-sm')}>
                                 <Icons.mail
-                                    className="w-4 h-4 mr-1"
+                                    className="w-4 h-4 mr-1 inline"
                                     aria-hidden
                                 />
                                 contact@majormaid.com.au
                             </div>
-                            <div
-                                className={cn(
-                                    'cursor-pointer',
-                                    buttonVariants({ variant: 'link' })
-                                )}
-                            >
+                            <div className={cn('cursor-pointer text-sm')}>
                                 <Icons.phone
-                                    className="w-4 h-4 mr-1"
+                                    className="w-4 h-4 mr-1 inline"
                                     aria-hidden
                                 />
                                 +61 430281937
@@ -74,16 +62,6 @@ export default async function SiteFooter() {
                                         <li key={link.title}>
                                             <Link
                                                 href={link.href}
-                                                target={
-                                                    link?.external
-                                                        ? '_blank'
-                                                        : undefined
-                                                }
-                                                rel={
-                                                    link?.external
-                                                        ? 'noreferrer'
-                                                        : undefined
-                                                }
                                                 className="text-sm text-muted-foreground font-medium transition-colors hover:text-foreground"
                                             >
                                                 {link.title}
@@ -109,11 +87,14 @@ export default async function SiteFooter() {
                         <span>All rights reserved.</span>
                     </div>
                     <div className="mt-3 flex items-center gap-6 text-muted-foreground">
-                        <Link aria-label="Twitter" target="_blank" href="/">
-                            <Icons.twitter aria-hidden className="h-4 w-4" />
-                        </Link>
                         <Link aria-label="Facebook" target="_blank" href="/">
                             <Icons.facebook aria-hidden className="h-4 w-4" />
+                        </Link>
+                        <Link aria-label="Instagram" target="_blank" href="/">
+                            <Icons.instagram aria-hidden className="h-4 w-4" />
+                        </Link>
+                        <Link aria-label="Twitter" target="_blank" href="/">
+                            <Icons.twitter aria-hidden className="h-4 w-4" />
                         </Link>
                     </div>
                 </section>

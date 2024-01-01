@@ -16,7 +16,7 @@ export default function SiteBanner({ ...props }: SiteBannerProps) {
         <div
             className={cn(
                 props.className,
-                'sticky top-0 inset-x-0 z-50 flex gap-2 bg-transparent justify-end items-center py-2 container mx-auto transition-all sm:gap-6',
+                'sticky top-0 inset-x-0 z-50 flex gap-2 bg-transparent justify-end items-center py-2 container transition-all sm:gap-6',
                 {
                     'bg-background/80 border-b backdrop-blur-lg backdrop-saturate-200':
                         scrolled,
@@ -38,7 +38,8 @@ export default function SiteBanner({ ...props }: SiteBannerProps) {
                 )}
                 href="/booking"
             >
-                GET A QUOTE
+                <span className="hidden mr-1 sm:inline">GET A QUOTE &</span>
+                BOOK ONLINE
             </Link>
         </div>
     );
