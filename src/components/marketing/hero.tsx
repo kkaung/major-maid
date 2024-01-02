@@ -1,12 +1,11 @@
 import { Icons } from '@/components/icons';
 import GridPattern from '@/components/magicui/grid-pattern';
 import { PageHeader, headingVariants } from '@/components/page-header';
-import { Button, buttonVariants } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import React, { type HTMLAttributes } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-
 import Stamp from '/public/assets/stamp.png';
 
 interface HeroProps extends HTMLAttributes<HTMLElement> {
@@ -25,8 +24,8 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
         >
             <div className="space-y-6">
                 <div className="space-y-4">
-                    <p className="font-semibold text-primary">
-                        Trusted by 1000+ Families in Sydney
+                    <p className="text-red-500 font-medium">
+                        TRUSTED BY 1000+ FAMILIES IN SYDNEY
                     </p>
                     <div className="text-red-500 border border-red-500 inline-flex items-center p-2 rounded">
                         <Icons.fullGoogle
@@ -45,7 +44,8 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                     </div>
                 </div>
                 <h1 className={cn(headingVariants({ size: 'lg' }))}>
-                    1st House <br /> Cleaning & Maid Service <br />
+                    1st House Cleaning
+                    <br /> & Maid Service <br />
                     <span className="text-primary mt-1">In {location}</span>
                 </h1>
                 <div className="grid grid-cols-1 mt-6 gap-2 font-semibold text-lg sm:gap-4 sm:grid-cols-2">

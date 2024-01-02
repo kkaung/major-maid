@@ -3,28 +3,40 @@ import GridPattern from '@/components/magicui/grid-pattern';
 import { PageHeader, PageHeaderHeading } from '@/components/page-header';
 import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { Shell } from '@/components/shell';
-import { toTitleCase, unslugify } from '@/lib/utils';
+import { cn, toTitleCase, unslugify } from '@/lib/utils';
 import React from 'react';
-import { Button } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
 import Image from 'next/image';
 
 import FAQs from '@/components/marketing/faqs';
 import Testmonials from '@/components/marketing/testmonials';
 import Featuring from '@/components/marketing/featuring';
+import type { Metadata } from 'next';
 
-import Stamp from '../../../../../../public/assets/stamp.png';
+import Stamp from '/public/assets/stamp.png';
+import WhyUs from '@/components/marketing/why-us';
+import Link from 'next/link';
 
 interface PageProps {
     params: {
-        slug: string;
+        service: string;
+    };
+}
+
+export async function generateMetadata({
+    params,
+}: PageProps): Promise<Metadata> {
+    return {
+        title: '',
+        description: '',
     };
 }
 
 export default function Page({ params }: PageProps) {
-    const title = toTitleCase(unslugify(params.slug));
+    const title = toTitleCase(unslugify(params.service));
 
     return (
-        <Shell>
+        <Shell className="gap-16">
             <PageHeader className="relative text-center mx-auto">
                 <div className="mb-6 space-y-2 mx-auto">
                     <p className="font-semibold text-primary">
@@ -83,23 +95,38 @@ export default function Page({ params }: PageProps) {
                 </div>
                 <div className="flex items-center gap-2 mx-auto">
                     <Image src={Stamp} width={90} height={90} alt="Stamp" />
-                    <Button
-                        className="font-semibold px-8 py-1 uppercase rounded-full"
-                        size="lg"
-                    >
-                        Get A Quote & Book Online
-                    </Button>
+                    <div className="space-y-2">
+                        <Link
+                            href="/booking"
+                            className={cn(
+                                buttonVariants({
+                                    size: 'lg',
+                                }),
+                                'font-semibold px-8 h-12 uppercase rounded-full'
+                            )}
+                        >
+                            Get A Quote & Book Online
+                        </Link>
+                        <p className="text-xs text-primary text-center">
+                            TAKES LESS THAN 60 SECONDS
+                        </p>
+                    </div>
                 </div>
+                <p className="text-muted-foreground text-center mt-2 mx-auto w-full max-w-xl">
+                    Easily customize and book your cleaning service online in
+                    just 60 seconds using our user-friendly booking form.
+                </p>
                 <GridPattern className="-z-10 stroke-gray-200 dark:stroke-gray-800  opacity-50 [mask-image:radial-gradient(100%_100%_at_top_center,white,transparent)]" />
             </PageHeader>
-            <Testmonials className="max-w-xl mx-auto w-full" />
+            <Testmonials className="max-w-md w-full mx-auto" />
             <Featuring />
+            <WhyUs />
             <FAQs />
             <Breadcrumbs
                 segments={[
                     { title: 'Home', href: '/' },
                     { title: 'Services', href: '/services' },
-                    { title: title, href: `/services/${params.slug}` },
+                    { title: title, href: `/services/${params.service}` },
                 ]}
                 dottable={false}
             />

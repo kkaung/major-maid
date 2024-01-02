@@ -29,19 +29,19 @@ export default function Discounts({
                 </p>
             </div>
             <ul className="grid grid-cols-1 gap-x-6 gap-y-2 mt-12 text-white font-medium mx-auto w-full max-w-sm">
-                <li className="bg-primary px-4 py-1 flex items-center gap-4 rounded-xl">
+                <li className="bg-primary px-4 py-1 flex items-center gap-2 rounded-xl">
                     <span className="w-14 h-14 text-center flex justify-center items-center border border-yellow-300 border-dotted rounded-full leading-none font-semibold text-yellow-300">
                         15 % <br /> off
                     </span>
                     Weekly Cleaning
                 </li>
-                <li className="bg-primary px-4 py-2 flex items-center gap-4 rounded-xl">
+                <li className="bg-primary px-4 py-2 flex items-center gap-2 rounded-xl">
                     <span className="w-14 h-14 flex justify-center text-center items-center border border-yellow-300 border-dotted rounded-full leading-none font-semibold text-yellow-300">
                         10 % <br /> off
                     </span>
                     Weekly Cleaning
                 </li>
-                <li className="bg-primary px-4 py-2 flex items-center gap-4 rounded-xl">
+                <li className="bg-primary px-4 py-2 flex items-center gap-2 rounded-xl">
                     <span className="w-14 h-14 flex justify-center items-center text-center border border-yellow-300 border-dotted rounded-full leading-none font-semibold text-yellow-300">
                         5 % <br /> off
                     </span>

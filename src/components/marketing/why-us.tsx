@@ -1,7 +1,7 @@
+import React, { type HTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import React, { HTMLAttributes } from 'react';
-import { buttonVariants } from '../ui/button';
+import { buttonVariants } from '@/components/ui/button';
 
 interface WhyUsProps extends HTMLAttributes<HTMLElement> {}
 
@@ -10,7 +10,10 @@ export default function WhyUs({ ...props }: WhyUsProps) {
         <section
             id="why-us"
             aria-labelledby="why-us-heading"
-            className={cn(props.className, 'space-y-12')}
+            className={cn(
+                props.className,
+                'space-y-12 py-12 px-4 rounded-xl shadow bg-secondary/40'
+            )}
         >
             <h2 className="text-3xl font-bold text-center">
                 Why Book Your Cleaning Service With Us?

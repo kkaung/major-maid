@@ -1,4 +1,4 @@
-import type { FooterItem, Locale, MainNavItem } from '@/types';
+import type { FooterItem, MainNavItem } from '@/types';
 
 export type SiteConfig = typeof siteConfig;
 
@@ -6,6 +6,10 @@ const links = {
     twitter: 'https://twitter.com/sadmann17',
     facebook: 'https://github.com/sadmann7/skateshop',
     instagram: 'https://github.com/sadmann7/skateshop',
+    pinterest: '',
+    tiktok: '',
+    temblr: '',
+    linkin: '',
 };
 
 export const siteConfig = {
@@ -61,14 +65,6 @@ export const siteConfig = {
             title: 'Pricing',
             href: '/pricing',
         },
-        {
-            title: 'Checklist',
-            href: '/checklist',
-        },
-        {
-            title: 'FAQs',
-            href: '/frequently-asked-questions',
-        },
     ] satisfies MainNavItem[],
     links,
     footerNav: [
@@ -82,6 +78,7 @@ export const siteConfig = {
                 { title: 'Bondi', href: '/sydney/bondi' },
                 { title: 'Bronte', href: '/sydney/bronte' },
                 { title: 'North Sydney', href: '/sydney/north-sydney' },
+                { title: 'Surry Hill', href: '/sydney/surry-hills' },
                 { title: 'See All Locations', href: '/locations' },
             ],
         },
@@ -131,9 +128,16 @@ export const siteConfig = {
                 { title: 'Reviews', href: '/reviews' },
                 { title: 'Pricing', href: '/pricing' },
                 { title: 'Careers', href: '/careers' },
+                { title: 'Checklist', href: '/checklist' },
                 { title: 'Privacy Policy', href: '/privacy-policy' },
                 { title: 'Terms And Conditions', href: '/terms' },
             ],
         },
     ] satisfies FooterItem[],
+    business: {
+        email: 'contact@majormaid.com.ua',
+        phone: '430281937',
+        address: '7/24-26 Blaxland Road, Ryde, NSW 2112',
+        openingHour: 'Mon – Sat: 9:00 AM – 5:00 PM',
+    },
 };

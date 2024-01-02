@@ -1,16 +1,19 @@
 import { notFound } from 'next/navigation';
-import { allAuthors, allPosts } from 'contentlayer/generated';
-
+import { type Author, allAuthors, allPosts } from 'contentlayer/generated';
 import { Mdx } from '@/components/mdx/mdx-component';
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { type Metadata } from 'next';
-
 import { env } from '@/env.mjs';
 import { absoluteUrl, cn, formatDate } from '@/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
 import { Icons } from '@/components/icons';
+import Dot from '@/components/dot';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { AvatarImage } from '@radix-ui/react-avatar';
+
+export const runtime = 'edge';
 
 interface PostPageProps {
     params: {
@@ -85,9 +88,9 @@ export default async function PostPage({ params }: PostPageProps) {
         notFound();
     }
 
-    const authors = post.authors.map(author =>
-        allAuthors.find(({ slug }) => slug === `/authors/${author}`)
-    );
+    const author = allAuthors.find(
+        author => author.slugAsParams === post.author
+    ) as Author;
 
     return (
         <article className="container relative max-w-3xl py-6 lg:py-10">
@@ -113,35 +116,25 @@ export default async function PostPage({ params }: PostPageProps) {
                 <h1 className="mt-2 inline-block font-heading text-4xl leading-tight lg:text-5xl">
                     {post.title}
                 </h1>
-                {authors?.length ? (
-                    <div className="mt-4 flex space-x-4">
-                        {authors.map(author =>
-                            author ? (
-                                <Link
-                                    key={author._id}
-                                    href={`https://twitter.com/${author.twitter}`}
-                                    className="flex items-center space-x-2 text-sm"
-                                >
-                                    <Image
-                                        src={author.avatar}
-                                        alt={author.title}
-                                        width={42}
-                                        height={42}
-                                        className="rounded-full bg-white"
-                                    />
-                                    <div className="flex-1 text-left leading-tight">
-                                        <p className="font-medium">
-                                            {author.title}
-                                        </p>
-                                        <p className="text-[12px] text-muted-foreground">
-                                            @{author.twitter}
-                                        </p>
-                                    </div>
-                                </Link>
-                            ) : null
-                        )}
+                <div className="mt-4 flex space-x-4">
+                    <div
+                        key={author._id}
+                        className="flex gap-2 items-center justify-center"
+                    >
+                        <Image
+                            src={author.avatar}
+                            alt={author.title}
+                            width={42}
+                            height={42}
+                            className="rounded-full bg-white"
+                        />
+                        <p className="font-semibold">by {author.title}</p>
+                        <Dot />
+                        <p className="text-muted-foreground font-medium text-sm">
+                            {post.readingTime} mins
+                        </p>
                     </div>
-                ) : null}
+                </div>
             </div>
             {post.image && (
                 <Image
@@ -154,7 +147,32 @@ export default async function PostPage({ params }: PostPageProps) {
                 />
             )}
             <Mdx code={post.body.code} />
-            <section></section>
+            <section className="mt-8">
+                <Card>
+                    <CardHeader>
+                        <div className="flex gap-2">
+                            <CardTitle>
+                                <Avatar>
+                                    <AvatarFallback>K</AvatarFallback>
+                                </Avatar>
+                            </CardTitle>
+                            <div className="font-semibold">
+                                <p className="text-xs text-muted-foreground">
+                                    Article by
+                                </p>
+                                <Link href={`/author/${author.slugAsParams}`}>
+                                    <p className="relative text-primary hover:underline">
+                                        {author.title}
+                                    </p>
+                                </Link>
+                            </div>
+                        </div>
+                    </CardHeader>
+                    <CardContent>
+                        <p>{author.description}</p>
+                    </CardContent>
+                </Card>
+            </section>
             <hr className="mt-12" />
             <div className="flex justify-center py-6 lg:py-10">
                 <Link

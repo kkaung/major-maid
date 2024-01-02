@@ -1,5 +1,4 @@
 import Link from 'next/link';
-
 import { siteConfig } from '@/config/site';
 import { Shell } from '@/components/shell';
 import { Icons } from '@/components/icons';
@@ -8,7 +7,7 @@ import { cn } from '@/lib/utils';
 
 export default async function SiteFooter() {
     return (
-        <footer className="w-full bg-secondary relative overflow-hidden">
+        <footer className="w-full bg-secondary relative overflow-hidden border-t">
             <Shell as="div">
                 <section
                     id="footer-content"
@@ -30,20 +29,40 @@ export default async function SiteFooter() {
                         <p className="my-4 max-w-sm text-xs font-light text-muted-foreground md:text-sm">
                             All-In-One House Cleaning Service In Sydney
                         </p>
-                        <div className="flex flex-col mt-2 space-y-2 text-primary/80">
+                        <div className="flex flex-col mt-2 space-y-2 text-slate-500">
                             <div className={cn('cursor-pointer text-sm')}>
                                 <Icons.mail
                                     className="w-4 h-4 mr-1 inline"
                                     aria-hidden
                                 />
-                                contact@majormaid.com.au
+                                <span className="sr-only">Email</span>
+                                {siteConfig.business.email}
                             </div>
                             <div className={cn('cursor-pointer text-sm')}>
                                 <Icons.phone
                                     className="w-4 h-4 mr-1 inline"
                                     aria-hidden
                                 />
-                                +61 430281937
+                                <span className="sr-only">Phone Number</span>
+                                {siteConfig.business.phone}
+                            </div>
+                            <div className={cn('cursor-pointer text-sm')}>
+                                <Icons.mapPin
+                                    aria-hidden
+                                    className="w-4 h-4 mr-1 inline"
+                                />
+                                <span className="sr-only">Office Address</span>
+                                {siteConfig.business.address}
+                            </div>
+                            <div className={cn('cursor-pointer text-sm')}>
+                                <Icons.clock
+                                    aria-hidden
+                                    className="w-4 h-4 mr-1 inline"
+                                />
+                                <span className="sr-only">
+                                    Business Opening Hour
+                                </span>
+                                {siteConfig.business.openingHour}
                             </div>
                         </div>
                     </section>
@@ -95,6 +114,15 @@ export default async function SiteFooter() {
                         </Link>
                         <Link aria-label="Twitter" target="_blank" href="/">
                             <Icons.twitter aria-hidden className="h-4 w-4" />
+                        </Link>
+                        <Link aria-label="Pinterest" target="_blank" href="/">
+                            <Icons.pinterest aria-hidden className="h-4 w-4" />
+                        </Link>
+                        <Link aria-label="Tiktok" target="_blank" href="/">
+                            <Icons.tiktok aria-hidden className="h-4 w-4" />
+                        </Link>
+                        <Link aria-label="Temblr" target="_blank" href="/">
+                            <Icons.temblr aria-hidden className="h-4 w-4" />
                         </Link>
                     </div>
                 </section>

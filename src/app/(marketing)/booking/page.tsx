@@ -14,6 +14,13 @@ import PopularQuestions from './_components/popular-questions';
 import { Button } from '@/components/ui/button';
 import { Icons } from '@/components/icons';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Booking',
+    description: '',
+};
+
 export default function Page() {
     return (
         <Shell>

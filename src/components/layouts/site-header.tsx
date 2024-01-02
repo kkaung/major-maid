@@ -5,6 +5,8 @@ import MainNav from '@/components/layouts/main-nav';
 import { siteConfig } from '@/config/site';
 import { type HTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
+import { buttonVariants } from '@/components/ui/button';
+import { Icons } from '@/components/icons';
 
 interface SiteHeaderProps extends HTMLAttributes<HTMLElement> {}
 
@@ -25,6 +27,19 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
                         sidebarNavItems={siteConfig.mainNav}
                     />
                     <MainNav items={siteConfig.mainNav} />
+                    <Link
+                        href="/"
+                        className={cn(
+                            buttonVariants({ variant: 'secondary' }),
+                            'rounded-full font-semibold text-lg text-slate-600'
+                        )}
+                    >
+                        <Icons.circleUserRound
+                            aria-hidden
+                            className="w-5 h-5 mr-2"
+                        />
+                        Login
+                    </Link>
                 </nav>
             </nav>
         </header>

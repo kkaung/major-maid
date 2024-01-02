@@ -16,7 +16,7 @@ export type Author = {
   title: string
   description?: string | undefined
   avatar: string
-  twitter: string
+  linkin: string
   /** MDX file body */
   body: MDX
   slug: string
@@ -47,7 +47,7 @@ export type Post = {
   description?: string | undefined
   image: string
   date: IsoDateTimeString
-  authors: string[]
+  author: string
   /** MDX file body */
   body: MDX
   slug: string

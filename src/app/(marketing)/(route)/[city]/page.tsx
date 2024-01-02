@@ -4,6 +4,15 @@ import { Shell } from '@/components/shell';
 import { toTitleCase } from '@/lib/utils';
 import React from 'react';
 
+export const runtime = 'edge';
+
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: '',
+    description: '',
+};
+
 interface PageProps {
     params: {
         city: string;

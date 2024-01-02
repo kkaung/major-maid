@@ -4,7 +4,14 @@ import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { Shell } from '@/components/shell';
 import { siteConfig } from '@/config/site';
 import { allPosts } from 'contentlayer/generated';
-import PostCard from './_components/blog-card';
+import PostCard from './_components/post-card';
+
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: '',
+    description: '',
+};
 
 export default function Page() {
     return (

@@ -42,7 +42,7 @@ export const Author = defineDocumentType(() => ({
             type: 'string',
             required: true,
         },
-        twitter: {
+        linkin: {
             type: 'string',
             required: true,
         },
@@ -68,7 +68,7 @@ export const Page = defineDocumentType(() => ({
 
 export const Post = defineDocumentType(() => ({
     name: 'Post',
-    filePathPattern: `blog/**/*.mdx`,
+    filePathPattern: `posts/**/*.mdx`,
     contentType: 'mdx',
     fields: {
         title: {
@@ -86,13 +86,8 @@ export const Post = defineDocumentType(() => ({
             type: 'date',
             required: true,
         },
-        authors: {
-            // Reference types are not embedded.
-            // Until this is fixed, we can use a simple list.
-            // type: "reference",
-            // of: Author,
-            type: 'list',
-            of: { type: 'string' },
+        author: {
+            type: 'string',
             required: true,
         },
     },

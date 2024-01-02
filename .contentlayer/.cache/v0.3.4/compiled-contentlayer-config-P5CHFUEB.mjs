@@ -40,7 +40,7 @@ var Author = defineDocumentType(() => ({
       type: "string",
       required: true
     },
-    twitter: {
+    linkin: {
       type: "string",
       required: true
     }
@@ -64,7 +64,7 @@ var Page = defineDocumentType(() => ({
 }));
 var Post = defineDocumentType(() => ({
   name: "Post",
-  filePathPattern: `blog/**/*.mdx`,
+  filePathPattern: `posts/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
@@ -82,13 +82,8 @@ var Post = defineDocumentType(() => ({
       type: "date",
       required: true
     },
-    authors: {
-      // Reference types are not embedded.
-      // Until this is fixed, we can use a simple list.
-      // type: "reference",
-      // of: Author,
-      type: "list",
-      of: { type: "string" },
+    author: {
+      type: "string",
       required: true
     }
   },
@@ -160,4 +155,4 @@ export {
   Post,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-LFYFEC4O.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-P5CHFUEB.mjs.map

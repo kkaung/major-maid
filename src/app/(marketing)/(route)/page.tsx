@@ -5,12 +5,12 @@ import FAQs from '@/components/marketing/faqs';
 import Featuring from '@/components/marketing/featuring';
 import Testmonials from '@/components/marketing/testmonials';
 import Services from '@/components/marketing/services';
-import LatestBlog from './_components/latest-blog';
 import Locations from './_components/locations';
 import WhyUs from '@/components/marketing/why-us';
 import WhyDifferent from '@/components/marketing/why-different';
 import Discounts from '@/components/marketing/discounts';
 import HowWork from '@/components/marketing/how-work';
+import City from '@/components/marketing/city';
 
 export const runtime = 'edge';
 
@@ -21,13 +21,13 @@ export default function Page() {
             <Testmonials className="max-w-md w-full mx-auto" />
             <Featuring />
             {/* <WhyDifferent /> */}
-            {/* <WhyUs /> */}
+            <WhyUs />
             <Discounts />
             <HowWork />
             <Services />
             <Locations className="mx-auto max-w-4xl" />
+            <City />
             <FAQs />
-            <LatestBlog />
         </Shell>
     );
 }

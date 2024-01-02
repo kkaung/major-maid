@@ -50,6 +50,16 @@ export default function Testmonials({ ...props }: TestmonialsProps) {
             aria-labelledby="testmonials-heading"
             className={cn(props.className)}
         >
+            <div className="text-center mb-4">
+                <h2 className="font-semibold text-lg">Customer Reviews</h2>
+                <p className="text-sm text-muted-foreground">
+                    <span className="text-primary font-medium">4.8</span> rating
+                    out of
+                    <span className="font-medium text-primary ml-1">
+                        546 reviews
+                    </span>
+                </p>
+            </div>
             <Carousel
                 plugins={[
                     Autoplay({
@@ -73,31 +83,33 @@ export default function Testmonials({ ...props }: TestmonialsProps) {
                                                             .toUpperCase()}
                                                     </AvatarFallback>
                                                 </Avatar>
-                                                <div className="mt-1 font-medium">
-                                                    {testmonial.name}
+                                                <div>
+                                                    <div className="font-medium">
+                                                        {testmonial.name}
+                                                    </div>
+                                                    <div className="flex items-center">
+                                                        <Icons.starFull
+                                                            aria-hidden
+                                                            className="w-4 h-4 text-yellow-400"
+                                                        />
+                                                        <Icons.starFull
+                                                            aria-hidden
+                                                            className="w-4 h-4 text-yellow-400"
+                                                        />
+                                                        <Icons.starFull
+                                                            aria-hidden
+                                                            className="w-4 h-4 text-yellow-400"
+                                                        />
+                                                        <Icons.starFull
+                                                            aria-hidden
+                                                            className="w-4 h-4 text-yellow-400"
+                                                        />
+                                                        <Icons.starFull
+                                                            aria-hidden
+                                                            className="w-4 h-4 text-yellow-400"
+                                                        />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div className="flex items-center mt-2">
-                                                <Icons.starFull
-                                                    aria-hidden
-                                                    className="w-4 h-4 text-yellow-400"
-                                                />
-                                                <Icons.starFull
-                                                    aria-hidden
-                                                    className="w-4 h-4 text-yellow-400"
-                                                />
-                                                <Icons.starFull
-                                                    aria-hidden
-                                                    className="w-4 h-4 text-yellow-400"
-                                                />
-                                                <Icons.starFull
-                                                    aria-hidden
-                                                    className="w-4 h-4 text-yellow-400"
-                                                />
-                                                <Icons.starFull
-                                                    aria-hidden
-                                                    className="w-4 h-4 text-yellow-400"
-                                                />
                                             </div>
                                         </div>
                                         <div>

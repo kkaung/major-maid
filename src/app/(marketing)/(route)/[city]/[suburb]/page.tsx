@@ -8,6 +8,14 @@ import Services from '@/components/marketing/services';
 import FAQs from '@/components/marketing/faqs';
 import Featuring from '@/components/marketing/featuring';
 import HowWork from '@/components/marketing/how-work';
+import type { Metadata } from 'next';
+
+export const runtime = 'edge';
+
+export const metadata: Metadata = {
+    title: '',
+    description: '',
+};
 
 interface PageProps {
     params: {
@@ -20,7 +28,7 @@ export default function Page({ params }: PageProps) {
     return (
         <Shell variant="sidebar" className="max-w-6xl w-full gap-16 mx-auto">
             <Hero location={toTitleCase(unslugify(params.suburb))} />
-            <Testmonials />
+            <Testmonials className="max-w-md w-full mx-auto" />
             <Featuring />
             <HowWork />
             <Services />
