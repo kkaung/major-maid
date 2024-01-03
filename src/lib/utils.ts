@@ -62,3 +62,31 @@ export function formatDate(input: string | number): string {
 export function absoluteUrl(path: string) {
     return `${env.NEXT_PUBLIC_APP_URL}${path}`;
 }
+
+export async function getPicture(city: string) {
+    try {
+        const p = new URLSearchParams();
+        p.append('query', `${city} city architecture building`);
+        p.append('per_page', '1');
+        p.append('content_filter', 'high');
+        p.append('orientation', 'landscape');
+
+        const headers = {
+            // get the Unsplash API key first
+            Authorization: `Client-ID `,
+        };
+
+        const _url = 'https://api.unsplash.com/search/photos';
+        const url = `${_url}?${p.toString()}`;
+        const res = await fetch(url, { headers });
+        const results = (await res.json()).results;
+
+        for (const result of results) {
+            return result.urls.regular as string;
+        }
+    } catch (e) {
+        console.error('failed to getPicture', e);
+    }
+
+    return '';
+}

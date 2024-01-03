@@ -20,7 +20,7 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
                         </span>
                     </Link>
                 </div>
-                <nav className="flex gap-4">
+                <nav className="flex gap-4 items-center">
                     <MobileNav
                         mainNavItems={siteConfig.mainNav}
                         sidebarNavItems={siteConfig.mainNav}
@@ -29,11 +29,7 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
                     <Link
                         href="/"
                         className={cn(
-                            buttonVariants({
-                                variant: 'secondary',
-                                size: 'lg',
-                            }),
-                            'rounded-full font-semibold text-lg text-primary'
+                            'font-medium hidden text-foreground/60 hover:text-primary md:block'
                         )}
                     >
                         Login

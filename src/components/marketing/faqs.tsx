@@ -180,7 +180,9 @@ export default function FAQs({ location = 'Sydney', ...props }: FAQsProps) {
                             className="ml-1 w-4 h-4 inline transition-all group-hover:translate-x-1"
                             strokeWidth={3}
                         />
-                        <span className="sr-only">See All Blog Posts</span>
+                        <span className="sr-only">
+                            See All Frequently Asked Questions
+                        </span>
                     </Link>
                 </div>
             </div>

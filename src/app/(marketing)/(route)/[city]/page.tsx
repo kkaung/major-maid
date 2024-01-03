@@ -7,6 +7,8 @@ import React from 'react';
 export const runtime = 'edge';
 
 import type { Metadata } from 'next';
+import { cities } from '@/config/location';
+import { redirect } from 'next/navigation';
 
 export const metadata: Metadata = {
     title: '',
@@ -20,9 +22,13 @@ interface PageProps {
 }
 
 export default function Page({ params }: PageProps) {
+    const city = cities.find(city => city.title.toLowerCase() === params.city);
+
+    if (!city) redirect('/');
+
     return (
         <Shell variant="sidebar" className="max-w-6xl w-full gap-16 mx-auto">
-            <Hero />
+            <Hero location={city.title} />
             <Breadcrumbs
                 segments={[
                     { title: 'Home', href: '/' },

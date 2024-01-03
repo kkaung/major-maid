@@ -1,4 +1,5 @@
 import GridPattern from '@/components/magicui/grid-pattern';
+import Satisfaction from '@/components/marketing/satisfaction';
 import Testmonials from '@/components/marketing/testmonials';
 import {
     PageHeader,
@@ -6,7 +7,10 @@ import {
     PageHeaderHeading,
 } from '@/components/page-header';
 import { Shell } from '@/components/shell';
+import { buttonVariants } from '@/components/ui/button';
 import { siteConfig } from '@/config/site';
+import { cn } from '@/lib/utils';
+import Link from 'next/link';
 import React from 'react';
 
 export default function Page() {
@@ -20,9 +24,23 @@ export default function Page() {
                     See below what our customers had to say about their{' '}
                     {siteConfig.name} experience.
                 </PageHeaderDescription>
+                <div>
+                    <Link
+                        href="/booking"
+                        className={cn(
+                            buttonVariants({
+                                size: 'lg',
+                            }),
+                            'font-semibold px-8 h-12 rounded-full animate-shimmer bg-[linear-gradient(110deg,#2463EB,45%,#7ba4f6,55%,#2463EB)] bg-[length:200%_100%] transition-colors'
+                        )}
+                    >
+                        Get a quote & Book online
+                    </Link>
+                </div>
                 <GridPattern className="-z-10 stroke-gray-200 dark:stroke-gray-800  opacity-50 [mask-image:radial-gradient(100%_100%_at_top_center,white,transparent)]" />
             </PageHeader>
-            <Testmonials />
+            <Testmonials className="max-w-md w-full mx-auto" />
+            <Satisfaction />
         </Shell>
     );
 }

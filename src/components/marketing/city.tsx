@@ -1,6 +1,7 @@
 import { cn } from '@/lib/utils';
 import React, { type HTMLAttributes } from 'react';
 import { GoogleMapsEmbed } from '@next/third-parties/google';
+import { env } from '@/env.mjs';
 
 interface CityProps extends HTMLAttributes<HTMLElement> {
     name?: string;
@@ -13,19 +14,17 @@ export default function City({ name = 'Sydney', ...props }: CityProps) {
             aria-labelledby="city-heading"
             className={cn(props.className, 'grid grid-cols-1 sm:grid-cols-2')}
         >
-            <div>
+            <div className='order-2 sm:order-1'>
                 <GoogleMapsEmbed
-                    apiKey={''}
-                    height={200}
-                    width={200}
+                    apiKey={env.GM_API_KEY}
                     mode="place"
                     loading="lazy"
                     q="Brooklyn+Bridge,New+York,NY"
                     style={''}
-                    allowfullscreen={false}
+                    allowfullscreen={true}
                 />
             </div>
-            <div>
+            <div className='order-1 sm:order-2'>
                 <h2 className="font-semibold text-2xl mb-6">
                     Experience Sydney&apos;s Wonders While We Clean Your Home
                 </h2>

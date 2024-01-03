@@ -12,6 +12,7 @@ import Dot from '@/components/dot';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { headingVariants } from '@/components/page-header';
+import AboutUs from './_components/about-us';
 
 interface PostPageProps {
     params: {
@@ -45,9 +46,7 @@ export async function generateMetadata({
     return {
         title: post.title,
         description: post.description,
-        // authors: post.authors.map(author => ({
-        //     name: author,
-        // })),
+        authors: [],
         openGraph: {
             title: post.title,
             description: post.description,
@@ -82,9 +81,7 @@ export async function generateStaticParams(): Promise<
 export default async function PostPage({ params }: PostPageProps) {
     const post = await getPostFromParams(params);
 
-    if (!post) {
-        notFound();
-    }
+    if (!post) notFound();
 
     const author = allAuthors.find(
         author => author.slugAsParams === post.author
@@ -124,7 +121,15 @@ export default async function PostPage({ params }: PostPageProps) {
                             height={42}
                             className="rounded-full bg-white"
                         />
-                        <p className="font-semibold">by {author.title}</p>
+                        <p className="font-semibold">
+                            by
+                            <Link
+                                href={`/author/${author.slugAsParams}`}
+                                className="ml-1 hover:underline"
+                            >
+                                {author.title}
+                            </Link>
+                        </p>
                         <Dot />
                         <p className="text-muted-foreground font-medium text-sm">
                             {post.readingTime} mins
@@ -138,7 +143,7 @@ export default async function PostPage({ params }: PostPageProps) {
                     alt={post.title}
                     width={720}
                     height={405}
-                    className="my-8 rounded-md border bg-muted transition-colors"
+                    className="my-8 rounded-xl border bg-muted transition-colors"
                     priority
                 />
             )}
@@ -170,11 +175,23 @@ export default async function PostPage({ params }: PostPageProps) {
                             </div>
                         </div>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="space-y-4 text-foreground">
                         <p className="text-foreground">{author.description}</p>
+                        <div className="flex gap-4">
+                            <Link aria-label="Linkin" target="_blank" href="/">
+                                <Icons.linkin aria-hidden className="h-4 w-4" />
+                            </Link>
+                            <Link aria-label="Linkin" target="_blank" href="/">
+                                <Icons.twitter
+                                    aria-hidden
+                                    className="h-4 w-4"
+                                />
+                            </Link>
+                        </div>
                     </CardContent>
                 </Card>
             </section>
+            <AboutUs className="mt-6 w-full xl:absolute xl:right-[-260px] xl:top-14 xl:inline-flex xl:flex-col xl:mt-0 xl:w-[260px]" />
             <hr className="mt-12" />
             <div className="flex justify-center py-6 lg:py-10">
                 <Link

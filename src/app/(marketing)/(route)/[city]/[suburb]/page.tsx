@@ -26,6 +26,8 @@ interface PageProps {
 }
 
 export default function Page({ params }: PageProps) {
+    const cityName = toTitleCase(unslugify(params.city));
+
     return (
         <Shell variant="sidebar" className="gap-16">
             <Hero location={toTitleCase(unslugify(params.suburb))} />
@@ -39,7 +41,7 @@ export default function Page({ params }: PageProps) {
                 <Breadcrumbs
                     segments={[
                         { title: 'Home', href: '/' },
-                        { title: 'Sydney', href: '/sydney' },
+                        { title: cityName, href: `/${params.city}` },
                         {
                             title: toTitleCase(unslugify(params.suburb)),
                             href: '/',

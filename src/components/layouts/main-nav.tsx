@@ -26,7 +26,7 @@ export default function MainNav({ items }: MainNavProps) {
     const segment = useSelectedLayoutSegment();
 
     return (
-        <div className="hidden gap-6 lg:flex">
+        <div className="hidden gap-6 z-30 lg:flex">
             <NavigationMenu>
                 <NavigationMenuList>
                     {items?.map(item =>
@@ -34,16 +34,16 @@ export default function MainNav({ items }: MainNavProps) {
                             <NavigationMenuItem key={item.title}>
                                 <NavigationMenuTrigger
                                     className={cn(
-                                        'h-auto bg-transparent font-bold text-base capitalize hover:bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent',
+                                        'h-auto bg-transparent text-base capitalize hover:bg-transparent hover:text-primary data-[active]:bg-transparent data-[state=open]:bg-transparent',
                                         item?.href?.startsWith(`/${segment}`)
-                                            ? 'text-foreground'
+                                            ? 'text-primary'
                                             : 'text-foreground/60'
                                     )}
                                 >
                                     {item.title}
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent>
-                                    <ul className="w-[300px] gap-3 p-4">
+                                    <ul className="w-[340px] grid grid-cols-2 gap-y-2 gap-x-2  p-4 z-50">
                                         {item.items.map(item => (
                                             <ListItem
                                                 key={item.title}
@@ -67,7 +67,7 @@ export default function MainNav({ items }: MainNavProps) {
                                         <NavigationMenuLink
                                             className={cn(
                                                 navigationMenuTriggerStyle(),
-                                                'h-auto font-bold text-base bg-transparent text-muted-foreground hover:bg-transparent hover:text-foreground/80',
+                                                'h-auto text-base bg-transparent text-muted-foreground hover:bg-transparent hover:text-primary',
                                                 item.href.startsWith(
                                                     `/${segment}`
                                                 )
@@ -99,12 +99,12 @@ const ListItem = React.forwardRef<
                     ref={ref}
                     href={String(href)}
                     className={cn(
-                        'block select-none space-y-1 rounded-md  leading-none no-underline outline-none transition-colors focus:bg-accent focus:text-accent-foreground',
+                        'line-clamp-1 block select-none space-y-1 rounded-md leading-none no-underline outline-none transition-colors focus:bg-accent focus:text-accent-foreground',
                         className
                     )}
                     {...props}
                 >
-                    <div className="text-lg font-semibold leading-none">
+                    <div className="leading-none text-foreground line-clamp-1 hover:underline">
                         {title}
                     </div>
                 </Link>

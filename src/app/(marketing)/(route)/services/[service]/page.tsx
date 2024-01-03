@@ -16,6 +16,9 @@ import type { Metadata } from 'next';
 import Stamp from '/public/assets/stamp.png';
 import WhyUs from '@/components/marketing/why-us';
 import Link from 'next/link';
+import Services from '@/components/marketing/services';
+import HowWork from '@/components/marketing/how-work';
+import Satisfaction from '@/components/marketing/satisfaction';
 
 interface PageProps {
     params: {
@@ -120,8 +123,11 @@ export default function Page({ params }: PageProps) {
             </PageHeader>
             <Testmonials className="max-w-md w-full mx-auto" />
             <Featuring />
+            <HowWork />
             <WhyUs />
+            <Services />
             <FAQs />
+            <Satisfaction />
             <Breadcrumbs
                 segments={[
                     { title: 'Home', href: '/' },

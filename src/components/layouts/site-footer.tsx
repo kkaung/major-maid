@@ -16,7 +16,7 @@ export default async function SiteFooter() {
                     <section
                         id="footer-branding"
                         aria-labelledby="footer-branding-heading"
-                        className="w-full lg:max-w-md xl:max-w-xl"
+                        className="w-full lg:max-w-sm"
                     >
                         <Link
                             aria-label="Home"
@@ -68,7 +68,7 @@ export default async function SiteFooter() {
                     <section
                         id="footer-links"
                         aria-labelledby="footer-links-heading"
-                        className="grid flex-1 grid-cols-1 gap-10 xs:grid-cols-2 sm:grid-cols-3"
+                        className="grid flex-1 grid-cols-1 gap-10 xs:grid-cols-2 sm:grid-cols-4"
                     >
                         {siteConfig.footerNav.map(item => (
                             <div key={item.title} className="space-y-3">
@@ -80,7 +80,7 @@ export default async function SiteFooter() {
                                         <li key={link.title}>
                                             <Link
                                                 href={link.href}
-                                                className="text-sm text-slate-400 font-medium transition-colors hover:text-slate-50"
+                                                className="text-sm text-slate-400 font-medium transition-colors line-clamp-1 hover:text-slate-50"
                                             >
                                                 {link.title}
                                                 <span className="sr-only">
@@ -104,22 +104,53 @@ export default async function SiteFooter() {
                         <span>All rights reserved.</span>
                     </div>
                     <div className="mt-3 flex items-center gap-6 text-slate-400">
-                        <Link aria-label="Facebook" target="_blank" href="/">
+                        <Link
+                            aria-label="Facebook"
+                            target="_blank"
+                            href={siteConfig.links.facebook}
+                        >
                             <Icons.facebook aria-hidden className="h-4 w-4" />
                         </Link>
-                        <Link aria-label="Instagram" target="_blank" href="/">
+                        <Link
+                            aria-label="Instagram"
+                            target="_blank"
+                            href={siteConfig.links.instagram}
+                        >
                             <Icons.instagram aria-hidden className="h-4 w-4" />
                         </Link>
-                        <Link aria-label="Twitter" target="_blank" href="/">
+                        <Link
+                            aria-label="Twitter"
+                            target="_blank"
+                            href={siteConfig.links.twitter}
+                        >
                             <Icons.twitter aria-hidden className="h-4 w-4" />
                         </Link>
-                        <Link aria-label="Pinterest" target="_blank" href="/">
+                        <Link
+                            aria-label="Linkin"
+                            target="_blank"
+                            href={siteConfig.links.linkin}
+                        >
+                            <Icons.linkin aria-hidden className="h-4 w-4" />
+                        </Link>
+                        <Link
+                            aria-label="Pinterest"
+                            target="_blank"
+                            href={siteConfig.links.pinterest}
+                        >
                             <Icons.pinterest aria-hidden className="h-4 w-4" />
                         </Link>
-                        <Link aria-label="Tiktok" target="_blank" href="/">
+                        <Link
+                            aria-label="Tiktok"
+                            target="_blank"
+                            href={siteConfig.links.tiktok}
+                        >
                             <Icons.tiktok aria-hidden className="h-4 w-4" />
                         </Link>
-                        <Link aria-label="Temblr" target="_blank" href="/">
+                        <Link
+                            aria-label="Temblr"
+                            target="_blank"
+                            href={siteConfig.links.temblr}
+                        >
                             <Icons.temblr aria-hidden className="h-4 w-4" />
                         </Link>
                     </div>

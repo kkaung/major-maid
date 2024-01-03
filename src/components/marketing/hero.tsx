@@ -14,6 +14,8 @@ interface HeroProps extends HTMLAttributes<HTMLElement> {
 }
 
 export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
+    const numbers = location === 'Sydney' ? '1000' : '100';
+
     return (
         <PageHeader
             id="hero"
@@ -27,7 +29,10 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                 <div className="space-y-6">
                     <div className="space-y-4">
                         <p className="text-red-500 font-medium">
-                            TRUSTED BY 1000+ FAMILIES IN SYDNEY
+                            Trusted by {numbers}+ Families in
+                            <span className="font-semibold ml-1">
+                                {location}
+                            </span>
                         </p>
                         <div className="text-red-500 border border-red-500 inline-flex items-center p-2 rounded">
                             <Icons.fullGoogle

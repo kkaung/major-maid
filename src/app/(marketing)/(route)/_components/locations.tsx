@@ -6,9 +6,13 @@ import { cn } from '@/lib/utils';
 import { descriptionVariants, headingVariants } from '@/components/page-header';
 import Marquee from '@/components/magicui/marquee';
 
-interface LocationsProps extends HTMLAttributes<HTMLElement> {}
+interface LocationsProps extends HTMLAttributes<HTMLElement> {
+    city: string;
+}
 
 export default function Locations({ ...props }: LocationsProps) {
+    const city = cities.find(city => city.title === props.city);
+
     return (
         <section
             id="locations"
@@ -27,7 +31,7 @@ export default function Locations({ ...props }: LocationsProps) {
                     each city that we service:
                 </p>
             </div>
-            <div>
+            <div className='space-y-6'>
                 {cities.map((city, idx) => {
                     const firstRow = city.items.slice(0, city.items.length / 3);
                     const secondRow = city.items.slice(
@@ -48,14 +52,14 @@ export default function Locations({ ...props }: LocationsProps) {
                                         'italic mb-4 underline'
                                     )}
                                 >
-                                    Sydney
+                                    {city.title}
                                 </h4>
                             </Link>
                             <div className="space-y-4">
                                 <ul>
                                     <Marquee
                                         pauseOnHover
-                                        className="transform-cpu  [--duration:40s]"
+                                        className="transform-cpu  [--duration:50s]"
                                     >
                                         {firstRow.map((r, idx) => (
                                             <Link href={r.href} key={idx}>
@@ -69,7 +73,7 @@ export default function Locations({ ...props }: LocationsProps) {
                                 <ul>
                                     <Marquee
                                         pauseOnHover
-                                        className="transform-cpu  [--duration:40s]"
+                                        className="transform-cpu  [--duration:50s]"
                                     >
                                         {secondRow.map((r, idx) => (
                                             <Link href={r.href} key={idx}>
@@ -83,7 +87,7 @@ export default function Locations({ ...props }: LocationsProps) {
                                 <ul>
                                     <Marquee
                                         pauseOnHover
-                                        className="transform-cpu  [--duration:40s]"
+                                        className="transform-cpu  [--duration:50s]"
                                     >
                                         {thirdRow.map((r, idx) => (
                                             <Link href={r.href} key={idx}>
@@ -113,3 +117,4 @@ export default function Locations({ ...props }: LocationsProps) {
         </section>
     );
 }
+

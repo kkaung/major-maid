@@ -18,8 +18,8 @@ export default function Satisfaction({ ...props }: SatisfactionProps) {
         >
             <div className="max-w-3xl w-full mx-auto space-y-6 text-center px-6">
                 <h2 className={cn(headingVariants({}))}>
-                    We’re Committed To 200% <br /> Customer Satisfaction Each
-                    And Every Time
+                    Ensuring 200% Customer Satisfaction <br /> Your Happiness,
+                    Our Commitment.
                 </h2>
                 <p
                     className={cn(

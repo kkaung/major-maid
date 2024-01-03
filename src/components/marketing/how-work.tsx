@@ -1,10 +1,14 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import React, { type HTMLAttributes } from 'react';
 import Link from 'next/link';
 import { buttonVariants } from '@/components/ui/button';
-import { headingVariants } from '../page-header';
+import { headingVariants } from '@/components/page-header';
+import Image from 'next/image';
+
+import BookOnline from '/public/assets/images/book-online.png';
+import WeClean from '/public/assets/images/we-clean.png';
+import YouRelax from '/public/assets/images/you-relax.png';
 
 interface HowWorkProps extends HTMLAttributes<HTMLElement> {}
 
@@ -15,13 +19,20 @@ export default function HowWork({ ...props }: HowWorkProps) {
             aria-labelledby="how-work-heading"
             className={cn(
                 props.className,
-                'space-y-12 max-w-5xl w-full mx-auto text-center'
+                'space-y-12 max-w-5xl w-full mx-auto text-center py-6'
             )}
         >
             <h2 className={headingVariants({})}>How {siteConfig.name} Works</h2>
             <ul className="grid grid-cols-1 gap-6 grid-flow-row md:grid-cols-3">
                 <li>
                     <div className="space-y-2">
+                        <Image
+                            width={100}
+                            height={100}
+                            src={BookOnline}
+                            className="mx-auto"
+                            alt="Book Online"
+                        />
                         <p className="font-semibold text-lg">1. Book Online</p>
                         <p>
                             Book your Sydney house cleaning service online in 60
@@ -31,6 +42,13 @@ export default function HowWork({ ...props }: HowWorkProps) {
                 </li>
                 <li>
                     <div className="space-y-2">
+                        <Image
+                            width={100}
+                            height={100}
+                            src={WeClean}
+                            className="mx-auto"
+                            alt="We Clean"
+                        />
                         <p className="font-semibold text-lg">2. We Clean</p>
                         <p>
                             Our cleaners in Sydney will come over &
@@ -40,6 +58,13 @@ export default function HowWork({ ...props }: HowWorkProps) {
                 </li>
                 <li>
                     <div className="space-y-2">
+                        <Image
+                            width={100}
+                            height={100}
+                            src={YouRelax}
+                            className="mx-auto"
+                            alt="You Relax"
+                        />
                         <p className="font-semibold text-lg">3. You Relax</p>
                         <p>
                             Sit back, relax and enjoy your sparkling clean home.
