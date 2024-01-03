@@ -13,8 +13,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { headingVariants } from '@/components/page-header';
 
-export const runtime = 'edge';
-
 interface PostPageProps {
     params: {
         slug: string[];

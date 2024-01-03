@@ -75,7 +75,7 @@ export default function Page({ params }: PageProps) {
                 <GridPattern className="-z-10 stroke-gray-200 dark:stroke-gray-800  opacity-50 [mask-image:radial-gradient(100%_100%_at_top_center,white,transparent)]" />
             </PageHeader>
             <section className="mx-auto w-full max-w-4xl gap-6">
-                <ul className="grid grid-cols-3">
+                <ul className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
                     {posts.map((post, key) => (
                         <li key={key}>
                             <PostCard post={post} author={author} />
