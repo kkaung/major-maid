@@ -2,6 +2,7 @@ import React, { type HTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { buttonVariants } from '@/components/ui/button';
+import { headingVariants } from '../page-header';
 
 interface WhyUsProps extends HTMLAttributes<HTMLElement> {}
 
@@ -12,10 +13,10 @@ export default function WhyUs({ ...props }: WhyUsProps) {
             aria-labelledby="why-us-heading"
             className={cn(
                 props.className,
-                'space-y-12 py-12 px-4 rounded-xl shadow bg-secondary/40'
+                'space-y-12 py-12 px-4 rounded-3xl text-center'
             )}
         >
-            <h2 className="text-3xl font-bold text-center">
+            <h2 className={cn(headingVariants({}))}>
                 Why Book Your Cleaning Service With Us?
             </h2>
             <div className="grid grid-cols-1 gap-6 mt-6 sm:grid-cols-3">
@@ -50,10 +51,10 @@ export default function WhyUs({ ...props }: WhyUsProps) {
                         buttonVariants({
                             size: 'lg',
                         }),
-                        'font-semibold uppercase'
+                        'font-semibold rounded-full'
                     )}
                 >
-                    Book Online Now
+                    Book online now
                 </Link>
             </div>
         </section>

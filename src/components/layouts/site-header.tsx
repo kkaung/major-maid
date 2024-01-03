@@ -6,7 +6,6 @@ import { siteConfig } from '@/config/site';
 import { type HTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
-import { Icons } from '@/components/icons';
 
 interface SiteHeaderProps extends HTMLAttributes<HTMLElement> {}
 
@@ -16,8 +15,8 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
             <nav className="container flex h-14 items-center justify-between ">
                 <div className="flex-1">
                     <Link aria-label="Home" href="/">
-                        <span className="font-bold text-xl">
-                            {siteConfig.name}
+                        <span className="font-bold text-2xl italic text-primary">
+                            {siteConfig.logo}
                         </span>
                     </Link>
                 </div>
@@ -30,14 +29,13 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
                     <Link
                         href="/"
                         className={cn(
-                            buttonVariants({ variant: 'secondary' }),
-                            'rounded-full font-semibold text-lg text-slate-600'
+                            buttonVariants({
+                                variant: 'secondary',
+                                size: 'lg',
+                            }),
+                            'rounded-full font-semibold text-lg text-primary'
                         )}
                     >
-                        <Icons.circleUserRound
-                            aria-hidden
-                            className="w-5 h-5 mr-2"
-                        />
                         Login
                     </Link>
                 </nav>

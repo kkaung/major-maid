@@ -1,12 +1,25 @@
 import React from 'react';
-import { PageHeader, PageHeaderHeading } from '@/components/page-header';
+import {
+    PageHeader,
+    PageHeaderDescription,
+    PageHeaderHeading,
+} from '@/components/page-header';
 import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { Shell } from '@/components/shell';
 import { siteConfig } from '@/config/site';
-import { allPosts } from 'contentlayer/generated';
+import { type Author, allAuthors, allPosts } from 'contentlayer/generated';
 import PostCard from './_components/post-card';
 
 import type { Metadata } from 'next';
+import {
+    Pagination,
+    PaginationContent,
+    PaginationEllipsis,
+    PaginationItem,
+    PaginationLink,
+    PaginationNext,
+    PaginationPrevious,
+} from '@/components/ui/pagination';
 
 export const metadata: Metadata = {
     title: '',
@@ -23,19 +36,44 @@ export default function Page() {
                 ]}
                 dottable={false}
             />
-            <PageHeader className="text-center">
+            <PageHeader className="text-center space-y-4">
                 <PageHeaderHeading>
                     {siteConfig.name} House Cleaning Blog
                 </PageHeaderHeading>
+                <PageHeaderDescription size="sm" className="mx-auto">
+                    Simple solutions for a clean home.
+                </PageHeaderDescription>
             </PageHeader>
-            <section>
-                <ul className="grid gap-6 grid-cols-1 md:grid-cols-3">
-                    {allPosts.map((post, idx) => (
-                        <li key={idx}>
-                            <PostCard post={post} author={null} />
-                        </li>
-                    ))}
+            <section className="mt-8">
+                <ul className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+                    {allPosts.map((post, idx) => {
+                        const author = allAuthors.find(
+                            author => author.slugAsParams === post.author
+                        ) as Author;
+
+                        return (
+                            <li key={idx}>
+                                <PostCard post={post} author={author} />
+                            </li>
+                        );
+                    })}
                 </ul>
+                <Pagination className="mt-8">
+                    <PaginationContent>
+                        <PaginationItem>
+                            <PaginationPrevious href="#" />
+                        </PaginationItem>
+                        <PaginationItem>
+                            <PaginationLink href="#">1</PaginationLink>
+                        </PaginationItem>
+                        <PaginationItem>
+                            <PaginationEllipsis />
+                        </PaginationItem>
+                        <PaginationItem>
+                            <PaginationNext href="#" />
+                        </PaginationItem>
+                    </PaginationContent>
+                </Pagination>
             </section>
         </Shell>
     );

@@ -2,17 +2,16 @@ import Link from 'next/link';
 import { siteConfig } from '@/config/site';
 import { Shell } from '@/components/shell';
 import { Icons } from '@/components/icons';
-import { Separator } from '@/components/ui/separator';
 import { cn } from '@/lib/utils';
 
 export default async function SiteFooter() {
     return (
-        <footer className="w-full bg-secondary relative overflow-hidden border-t">
+        <footer className="w-full bg-[#0C0E1F] relative overflow-hidden border-t">
             <Shell as="div">
                 <section
                     id="footer-content"
                     aria-labelledby="footer-content-heading"
-                    className="flex flex-col gap-10 lg:flex-row lg:gap-20"
+                    className="text-gray-400 flex flex-col gap-10 lg:flex-row lg:gap-20"
                 >
                     <section
                         id="footer-branding"
@@ -22,14 +21,14 @@ export default async function SiteFooter() {
                         <Link
                             aria-label="Home"
                             href="/"
-                            className="flex items-center space-x-2"
+                            className="text-2xl italic flex items-center space-x-2 text-white"
                         >
-                            <span className="font-bold">{siteConfig.name}</span>
+                            <span className="font-bold">{siteConfig.logo}</span>
                         </Link>
-                        <p className="my-4 max-w-sm text-xs font-light text-muted-foreground md:text-sm">
+                        <p className="my-4 max-w-sm text-xs font-light text-slate-300 md:text-sm">
                             All-In-One House Cleaning Service In Sydney
                         </p>
-                        <div className="flex flex-col mt-2 space-y-2 text-slate-500">
+                        <div className="flex flex-col mt-2 space-y-2 text-slate-400">
                             <div className={cn('cursor-pointer text-sm')}>
                                 <Icons.mail
                                     className="w-4 h-4 mr-1 inline"
@@ -73,7 +72,7 @@ export default async function SiteFooter() {
                     >
                         {siteConfig.footerNav.map(item => (
                             <div key={item.title} className="space-y-3">
-                                <h4 className="text-base font-semibold">
+                                <h4 className="text-base font-semibold text-white">
                                     {item.title}
                                 </h4>
                                 <ul className="space-y-2">
@@ -81,7 +80,7 @@ export default async function SiteFooter() {
                                         <li key={link.title}>
                                             <Link
                                                 href={link.href}
-                                                className="text-sm text-muted-foreground font-medium transition-colors hover:text-foreground"
+                                                className="text-sm text-slate-400 font-medium transition-colors hover:text-slate-50"
                                             >
                                                 {link.title}
                                                 <span className="sr-only">
@@ -95,17 +94,16 @@ export default async function SiteFooter() {
                         ))}
                     </section>
                 </section>
-                <Separator />
                 <section
                     id="footer-bottom"
                     aria-labelledby="footer-bottom-heading"
                     className="flex items-center space-x-3"
                 >
-                    <div className="flex-1 text-left text-xs leading-tight text-muted-foreground">
+                    <div className="flex-1 text-left text-xs leading-tight text-muted-foreground text-slate-500">
                         © {new Date().getFullYear()} {siteConfig.name}.
                         <span>All rights reserved.</span>
                     </div>
-                    <div className="mt-3 flex items-center gap-6 text-muted-foreground">
+                    <div className="mt-3 flex items-center gap-6 text-slate-400">
                         <Link aria-label="Facebook" target="_blank" href="/">
                             <Icons.facebook aria-hidden className="h-4 w-4" />
                         </Link>

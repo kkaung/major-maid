@@ -13,6 +13,9 @@ import { type Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import Image from 'next/image';
 import PostCard from '../../blog/_components/post-card';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { Icons } from '@/components/icons';
+import Link from 'next/link';
 
 export const runtime = 'edge';
 
@@ -50,19 +53,24 @@ export default function Page({ params }: PageProps) {
                 ]}
                 dottable={false}
             />
-            <PageHeader className="relative grid grid-cols-2 gap-12 max-w-4xl w-full mx-auto py-12">
+            <PageHeader className="relative grid grid-cols-1 sm:grid-cols-2 gap-12 max-w-4xl w-full mx-auto py-12">
                 <div className="space-y-4">
                     <PageHeaderHeading>{author.title}</PageHeaderHeading>
                     <PageHeaderDescription className="mx-auto" size="sm">
                         {author.description}
                     </PageHeaderDescription>
+                    <div>
+                        <Link href={author.linkin}>
+                            <Icons.linkin className="w-4 h-4" />
+                        </Link>
+                    </div>
                 </div>
                 <Image
-                    width={100}
-                    height={100}
+                    width={300}
+                    height={300}
                     src={author.avatar}
                     alt={`${author.title}`}
-                    className=""
+                    className="hidden bg-cover object-cover rounded-xl sm:block"
                 />
                 <GridPattern className="-z-10 stroke-gray-200 dark:stroke-gray-800  opacity-50 [mask-image:radial-gradient(100%_100%_at_top_center,white,transparent)]" />
             </PageHeader>

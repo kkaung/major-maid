@@ -66,17 +66,11 @@ export default function Page() {
                         </div>
                         <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-5">
                             {location.items.map((item, idx) => (
-                                <li key={idx} className="relative">
-                                    <span>{item.title}</span>
-                                    <Link
-                                        href={item.href}
-                                        className="absolute inset-0"
-                                    >
-                                        <span className="sr-only">
-                                            View Subrub
-                                        </span>
-                                    </Link>
-                                </li>
+                                <Link href={item.href} key={idx}>
+                                    <li className="text-primary font-medium transition-all hover:underline">
+                                        {item.title}
+                                    </li>
+                                </Link>
                             ))}
                         </ul>
                     </section>

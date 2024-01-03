@@ -13,6 +13,7 @@ const links = {
 };
 
 export const siteConfig = {
+    logo: 'MajorMaid',
     name: 'Major Maids',
     description:
         'An open source e-commerce skateshop build with everything new in Next.js 13.',
@@ -50,6 +51,10 @@ export const siteConfig = {
                     title: 'Office Cleaning',
                     href: '/services/office-cleaning',
                 },
+                {
+                    title: 'All Services',
+                    href: '/services',
+                },
             ],
         },
         {
@@ -79,7 +84,7 @@ export const siteConfig = {
                 { title: 'Bronte', href: '/sydney/bronte' },
                 { title: 'North Sydney', href: '/sydney/north-sydney' },
                 { title: 'Surry Hill', href: '/sydney/surry-hills' },
-                { title: 'See All Locations', href: '/locations' },
+                { title: 'All Locations', href: '/locations' },
             ],
         },
         {
@@ -116,6 +121,10 @@ export const siteConfig = {
                 {
                     title: 'Office Cleaning',
                     href: '/services/office-cleaning',
+                },
+                {
+                    title: 'All Services',
+                    href: '/services',
                 },
             ],
         },

@@ -10,8 +10,8 @@ import { buttonVariants } from '@/components/ui/button';
 import { Icons } from '@/components/icons';
 import Dot from '@/components/dot';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { AvatarImage } from '@radix-ui/react-avatar';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { headingVariants } from '@/components/page-header';
 
 export const runtime = 'edge';
 
@@ -108,14 +108,12 @@ export default async function PostPage({ params }: PostPageProps) {
                 {post.date && (
                     <time
                         dateTime={post.date}
-                        className="block text-sm text-muted-foreground"
+                        className="block text-sm text-muted-foreground mb-2"
                     >
                         Published on {formatDate(post.date)}
                     </time>
                 )}
-                <h1 className="mt-2 inline-block font-heading text-4xl leading-tight lg:text-5xl">
-                    {post.title}
-                </h1>
+                <h1 className={headingVariants({})}>{post.title}</h1>
                 <div className="mt-4 flex space-x-4">
                     <div
                         key={author._id}
@@ -150,10 +148,16 @@ export default async function PostPage({ params }: PostPageProps) {
             <section className="mt-8">
                 <Card>
                     <CardHeader>
-                        <div className="flex gap-2">
+                        <div className="flex gap-4">
                             <CardTitle>
                                 <Avatar>
-                                    <AvatarFallback>K</AvatarFallback>
+                                    <AvatarImage
+                                        src={author.avatar}
+                                        alt="Author Avatar"
+                                    />
+                                    <AvatarFallback>
+                                        {author.title.charAt(0).toUpperCase()}
+                                    </AvatarFallback>
                                 </Avatar>
                             </CardTitle>
                             <div className="font-semibold">
@@ -169,7 +173,7 @@ export default async function PostPage({ params }: PostPageProps) {
                         </div>
                     </CardHeader>
                     <CardContent>
-                        <p>{author.description}</p>
+                        <p className="text-foreground">{author.description}</p>
                     </CardContent>
                 </Card>
             </section>

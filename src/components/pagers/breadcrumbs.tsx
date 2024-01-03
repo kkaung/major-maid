@@ -55,8 +55,9 @@ export function Breadcrumbs({
                                     <Dot className="mx-2" aria-hidden="true" />
                                 ) : (
                                     <SeparatorIcon
-                                        className="w-3 h-3 mx-2 stroke-2"
+                                        className="w-3 h-3 mx-2"
                                         aria-hidden="true"
+                                        strokeWidth={3}
                                     />
                                 )}
                             </>

@@ -55,7 +55,7 @@ function PageHeaderHeading({
     );
 }
 
-const descriptionVariants = cva('text-muted-foreground max-w-[750px]', {
+export const descriptionVariants = cva('text-muted-foreground max-w-[750px]', {
     variants: {
         size: {
             default: 'text-base sm:text-lg',
