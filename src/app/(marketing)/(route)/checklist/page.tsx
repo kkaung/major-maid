@@ -20,7 +20,7 @@ const getCity = () => {
 
 export const runtime = 'edge';
 
-export const data: TableData[] = [
+const data: TableData[] = [
     {
         title: 'All Areas',
         items: [

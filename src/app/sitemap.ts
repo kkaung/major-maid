@@ -1,6 +1,7 @@
 import { type MetadataRoute } from 'next';
 import { absoluteUrl } from '@/lib/utils';
 import { allPosts, allPages } from 'contentlayer/generated';
+import { locations } from '@/config/location';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const pagesRoutes = allPages.map(page => ({
@@ -12,6 +13,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         url: absoluteUrl(`${post.slug}`),
         lastModified: new Date().toISOString(),
     }));
+
+    const allLocations: string[] = locations.reduce<string[]>(
+        (result, city) => {
+            result.push(city.title.toLowerCase());
+
+            city.items.forEach(item => result.push(item.title.toLowerCase()));
+            return result;
+        },
+        []
+    );
 
     const routes = ['', '/products', '/stores', '/build-a-board', '/blog'].map(
         route => ({
