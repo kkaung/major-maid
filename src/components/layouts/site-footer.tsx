@@ -97,7 +97,7 @@ export default async function SiteFooter() {
                 <section
                     id="footer-bottom"
                     aria-labelledby="footer-bottom-heading"
-                    className="flex items-center space-x-3"
+                    className="flex flex-col  space-x-3 sm:flex-row sm:items-center"
                 >
                     <div className="flex-1 text-left text-xs leading-tight text-muted-foreground text-slate-500">
                         © {new Date().getFullYear()} {siteConfig.name}.

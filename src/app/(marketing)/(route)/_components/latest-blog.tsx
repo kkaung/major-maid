@@ -11,7 +11,7 @@ interface LatestBlogProps extends HTMLAttributes<HTMLElement> {}
 export default function LatestBlog({ ...props }: LatestBlogProps) {
     return (
         <section className={cn(props.className)} {...props}>
-            <div className="flex justify-between mb-6">
+            <div className="flex items-center justify-between mb-6">
                 <h2 className="text-3xl font-semibold">Latest Blog Posts</h2>
                 <Link
                     href="/frequently-asked-questions"

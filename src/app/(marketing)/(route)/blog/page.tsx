@@ -44,7 +44,7 @@ export default function Page() {
                     Simple solutions for a clean home.
                 </PageHeaderDescription>
             </PageHeader>
-            <section className="mt-8">
+            <section className="mt-8 max-w-5xl w-full mx-auto">
                 <ul className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
                     {allPosts.map((post, idx) => {
                         const author = allAuthors.find(

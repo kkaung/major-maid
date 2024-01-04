@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import {
@@ -14,9 +13,7 @@ import {
     navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import { useSelectedLayoutSegment } from 'next/navigation';
-
 import type { MainNavItem } from '@/types';
-import { buttonVariants } from '@/components/ui/button';
 
 interface MainNavProps {
     items?: MainNavItem[];
@@ -34,7 +31,7 @@ export default function MainNav({ items }: MainNavProps) {
                             <NavigationMenuItem key={item.title}>
                                 <NavigationMenuTrigger
                                     className={cn(
-                                        'h-auto bg-transparent text-base capitalize hover:bg-transparent hover:text-primary data-[active]:bg-transparent data-[state=open]:bg-transparent',
+                                        'h-auto bg-transparent font-normal text-base capitalize hover:bg-transparent hover:text-primary data-[active]:bg-transparent data-[state=open]:bg-transparent',
                                         item?.href?.startsWith(`/${segment}`)
                                             ? 'text-primary'
                                             : 'text-foreground/60'
@@ -67,7 +64,7 @@ export default function MainNav({ items }: MainNavProps) {
                                         <NavigationMenuLink
                                             className={cn(
                                                 navigationMenuTriggerStyle(),
-                                                'h-auto text-base bg-transparent text-muted-foreground hover:bg-transparent hover:text-primary',
+                                                'h-auto font-normal text-base bg-transparent text-muted-foreground hover:bg-transparent hover:text-primary',
                                                 item.href.startsWith(
                                                     `/${segment}`
                                                 )
@@ -104,7 +101,7 @@ const ListItem = React.forwardRef<
                     )}
                     {...props}
                 >
-                    <div className="leading-none text-foreground line-clamp-1 hover:underline">
+                    <div className="leading-none text-foreground font-normal line-clamp-1 hover:underline">
                         {title}
                     </div>
                 </Link>

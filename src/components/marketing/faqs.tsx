@@ -28,7 +28,12 @@ export default function FAQs({ location = 'Sydney', ...props }: FAQsProps) {
                         <h2 className={cn(headingVariants({}))}>
                             Frequently Asked Questions
                         </h2>
-                        <p className={descriptionVariants({ size: 'sm' })}>
+                        <p
+                            className={cn(
+                                descriptionVariants({ size: 'sm' }),
+                                'mx-auto'
+                            )}
+                        >
                             Have questions about our house cleaning in Sydney?
                             Take a look below. Or call us on
                             <span className="text-primary ml-1">

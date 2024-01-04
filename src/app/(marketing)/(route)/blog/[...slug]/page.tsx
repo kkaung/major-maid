@@ -100,15 +100,17 @@ export default async function PostPage({ params }: PostPageProps) {
                 See all posts
             </Link>
             <div>
-                {post.date && (
-                    <time
-                        dateTime={post.date}
-                        className="block text-sm text-muted-foreground mb-2"
-                    >
-                        Published on {formatDate(post.date)}
-                    </time>
-                )}
                 <h1 className={headingVariants({})}>{post.title}</h1>
+                <div className="mt-4">
+                    {post.date && (
+                        <time
+                            dateTime={post.date}
+                            className="block text-sm text-muted-foreground mb-2"
+                        >
+                            Updated on {formatDate(post.date)}
+                        </time>
+                    )}
+                </div>
                 <div className="mt-4 flex space-x-4">
                     <div
                         key={author._id}
@@ -121,19 +123,23 @@ export default async function PostPage({ params }: PostPageProps) {
                             height={42}
                             className="rounded-full bg-white"
                         />
-                        <p className="font-semibold">
-                            by
-                            <Link
-                                href={`/author/${author.slugAsParams}`}
-                                className="ml-1 hover:underline"
-                            >
-                                {author.title}
-                            </Link>
-                        </p>
-                        <Dot />
-                        <p className="text-muted-foreground font-medium text-sm">
-                            {post.readingTime} mins
-                        </p>
+                        <div className="flex flex-col ">
+                            <div className="flex items-center gap-2">
+                                <p className="font-semibold">
+                                    by
+                                    <Link
+                                        href={`/author/${author.slugAsParams}`}
+                                        className="ml-1 hover:underline"
+                                    >
+                                        {author.title}
+                                    </Link>
+                                </p>
+                                <Dot />
+                                <p className="text-muted-foreground font-medium text-sm">
+                                    {post.readingTime} min read
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
