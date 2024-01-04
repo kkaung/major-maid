@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { type Author, allAuthors, allPosts } from 'contentlayer/generated';
-import { Mdx } from '@/components/mdx/mdx-component';
+import { Mdx } from '@/components/mdx/mdx-components';
 import Image from 'next/image';
 import Link from 'next/link';
 import { type Metadata } from 'next';
@@ -88,7 +88,7 @@ export default async function PostPage({ params }: PostPageProps) {
     ) as Author;
 
     return (
-        <article className="container relative max-w-3xl py-6 lg:py-10">
+        <section className="container relative max-w-3xl py-6 lg:py-10">
             <Link
                 href="/blog"
                 className={cn(
@@ -208,6 +208,6 @@ export default async function PostPage({ params }: PostPageProps) {
                     See all posts
                 </Link>
             </div>
-        </article>
+        </section>
     );
 }

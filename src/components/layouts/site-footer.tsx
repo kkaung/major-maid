@@ -3,8 +3,16 @@ import { siteConfig } from '@/config/site';
 import { Shell } from '@/components/shell';
 import { Icons } from '@/components/icons';
 import { cn } from '@/lib/utils';
+import { HTMLAttributes } from 'react';
 
-export default async function SiteFooter() {
+interface SiteFooterProps extends HTMLAttributes<HTMLElement> {
+    location?: string;
+}
+
+export default async function SiteFooter({
+    location = 'Sydney',
+    ...props
+}: SiteFooterProps) {
     return (
         <footer className="w-full bg-[#0C0E1F] relative overflow-hidden border-t">
             <Shell as="div">
@@ -26,7 +34,10 @@ export default async function SiteFooter() {
                             <span className="font-bold">{siteConfig.logo}</span>
                         </Link>
                         <p className="my-4 max-w-sm text-xs font-light text-slate-300 md:text-sm">
-                            All-In-One House Cleaning Service In Sydney
+                            {siteConfig.name} is to transform your {location}{' '}
+                            home with our professional house cleaning services.
+                            Our local cleaners deliver tailored solutions for a
+                            spotless and comfortable living space.
                         </p>
                         <div className="flex flex-col mt-2 space-y-2 text-slate-400">
                             <div className={cn('cursor-pointer text-sm')}>
@@ -72,7 +83,7 @@ export default async function SiteFooter() {
                     >
                         {siteConfig.footerNav.map(item => (
                             <div key={item.title} className="space-y-3">
-                                <h4 className="text-base font-semibold text-white">
+                                <h4 className="text-base font-medium text-white">
                                     {item.title}
                                 </h4>
                                 <ul className="space-y-2">
@@ -80,12 +91,9 @@ export default async function SiteFooter() {
                                         <li key={link.title}>
                                             <Link
                                                 href={link.href}
-                                                className="text-sm text-slate-400 font-medium transition-colors line-clamp-1 hover:text-slate-50"
+                                                className="text-sm text-slate-400 transition-colors line-clamp-1 hover:text-slate-50"
                                             >
                                                 {link.title}
-                                                <span className="sr-only">
-                                                    {link.title}
-                                                </span>
                                             </Link>
                                         </li>
                                     ))}

@@ -1,5 +1,4 @@
 import { Icons } from '@/components/icons';
-import GridPattern from '@/components/magicui/grid-pattern';
 import { PageHeader, headingVariants } from '@/components/page-header';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -27,44 +26,6 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
         >
             <div className="z-20 mx-auto max-w-4xl w-full grid gap-12 grid-flow-col md:grid-flow-row md:grid-cols-2">
                 <div className="space-y-6">
-                    <div className="space-y-4">
-                        <p className="text-red-500 font-medium">
-                            Trusted by {numbers}+ Families in
-                            <span className="font-semibold ml-1">
-                                {location}
-                            </span>
-                        </p>
-                        <div className="text-red-500 border border-red-500 inline-flex items-center p-2 rounded">
-                            <Icons.fullGoogle
-                                className="w-4 h-4 mr-1"
-                                aria-hidden
-                            />
-                            <span className="font-medium">5.0</span>
-                            <span className="sr-only">Google Rating</span>
-                            <div className="flex ml-1 text-yellow-400">
-                                <Icons.starFull
-                                    className="w-4 h-4 "
-                                    aria-hidden
-                                />
-                                <Icons.starFull
-                                    className="w-4 h-4"
-                                    aria-hidden
-                                />
-                                <Icons.starFull
-                                    className="w-4 h-4"
-                                    aria-hidden
-                                />
-                                <Icons.starFull
-                                    className="w-4 h-4"
-                                    aria-hidden
-                                />
-                                <Icons.starFull
-                                    className="w-4 h-4"
-                                    aria-hidden
-                                />
-                            </div>
-                        </div>
-                    </div>
                     <h1
                         className={cn(
                             headingVariants({ size: 'lg' }),
@@ -110,7 +71,6 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                         </div>
                     </div>
                     <div className="flex flex-col items-center gap-x-2 gap-y-4 sm:flex-row">
-                        <Image src={Stamp} width={90} height={90} alt="Stamp" />
                         <div className="space-y-2">
                             <Link
                                 href="/booking"
@@ -125,19 +85,41 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                             </Link>
                         </div>
                     </div>
-                    <p className="text-muted-foreground text-sm">
-                        Easily customize and book your {location} cleaning
-                        service online in just 60 seconds using our
-                        user-friendly booking form.
-                    </p>
-                </div>
-                <div>
-                    <div className="rounded-3xl bg-[#051356] h-[400px]">
-                        <Image src={HeroPreview} alt="Hero Preview" />
+                    <div className="flex gap-4 items-start">
+                        <Image src={Stamp} width={90} height={90} alt="Stamp" />
+                        <div className="text-red-500 border border-red-500 inline-flex items-center p-2 rounded-lg">
+                            <Icons.fullGoogle
+                                className="w-4 h-4 mr-1"
+                                aria-hidden
+                            />
+                            <span className="font-medium">5.0</span>
+                            <span className="sr-only">Google Rating</span>
+                            <div className="flex ml-1 text-yellow-400">
+                                <Icons.starFull
+                                    className="w-4 h-4 "
+                                    aria-hidden
+                                />
+                                <Icons.starFull
+                                    className="w-4 h-4"
+                                    aria-hidden
+                                />
+                                <Icons.starFull
+                                    className="w-4 h-4"
+                                    aria-hidden
+                                />
+                                <Icons.starFull
+                                    className="w-4 h-4"
+                                    aria-hidden
+                                />
+                                <Icons.starFull
+                                    className="w-4 h-4"
+                                    aria-hidden
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <GridPattern className="z-10 stroke-gray-200 dark:stroke-gray-800  opacity-50 [mask-image:radial-gradient(100%_100%_at_top_center,white,transparent)]" />
         </PageHeader>
     );
 }

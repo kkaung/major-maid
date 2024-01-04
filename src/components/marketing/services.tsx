@@ -5,9 +5,14 @@ import { descriptionVariants, headingVariants } from '@/components/page-header';
 import { Icons } from '@/components/icons';
 import { siteServices } from '@/config/site';
 
-interface ServicesProps extends HTMLAttributes<HTMLElement> {}
+interface ServicesProps extends HTMLAttributes<HTMLElement> {
+    location?: string;
+}
 
-export default function Services({ ...props }: ServicesProps) {
+export default function Services({
+    location = 'Sydney',
+    ...props
+}: ServicesProps) {
     return (
         <section
             id="services"
@@ -17,7 +22,7 @@ export default function Services({ ...props }: ServicesProps) {
             <div className="space-y-4 text-center">
                 <h2 className={cn(headingVariants({}))}>
                     Cleaning Services We Offer in
-                    <span className="text-primary ml-1">Sydney</span>
+                    <span className="text-primary ml-1">{location}</span>
                 </h2>
                 <p
                     className={cn(

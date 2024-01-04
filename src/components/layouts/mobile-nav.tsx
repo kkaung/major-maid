@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import Link from 'next/link';
-import { usePathname, useSelectedLayoutSegment } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import type { MainNavItem, SidebarNavItem } from '@/types';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
@@ -80,7 +80,7 @@ export default function MobileNav({
                                         value={item.title}
                                         className="border-b-0"
                                     >
-                                        <AccordionTrigger className="text-sm capitalize">
+                                        <AccordionTrigger className="text-base py-2">
                                             {item.title}
                                         </AccordionTrigger>
                                         <AccordionContent>

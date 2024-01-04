@@ -1,10 +1,13 @@
 import { notFound } from 'next/navigation';
 import { allPages } from 'contentlayer/generated';
+
 import { Mdx } from '@/components/mdx/mdx-components';
 import { Metadata } from 'next';
 import { env } from '@/env.mjs';
 import { siteConfig } from '@/config/site';
-import { absoluteUrl } from '@/lib/utils';
+import { absoluteUrl, cn } from '@/lib/utils';
+import { headingVariants } from '@/components/page-header';
+import { Shell } from '@/components/shell';
 
 interface PageProps {
     params: {
@@ -12,13 +15,11 @@ interface PageProps {
     };
 }
 
-async function getPageFromParams(params: any) {
+async function getPageFromParams(params: { slug: string[] }) {
     const slug = params?.slug?.join('/');
     const page = allPages.find(page => page.slugAsParams === slug);
 
-    if (!page) {
-        null;
-    }
+    if (!page) null;
 
     return page;
 }
@@ -28,7 +29,9 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
     const page = await getPageFromParams(params);
 
-    if (!page) return {};
+    if (!page) {
+        return {};
+    }
 
     const url = env.NEXT_PUBLIC_APP_URL;
 
@@ -72,16 +75,12 @@ export async function generateStaticParams(): Promise<PageProps['params'][]> {
 export default async function PagePage({ params }: PageProps) {
     const page = await getPageFromParams(params);
 
-    if (!page) {
-        notFound();
-    }
+    if (!page) notFound();
 
     return (
-        <section>
+        <Shell variant="markdown">
             <div className="space-y-4">
-                <h1 className="inline-block font-heading text-4xl lg:text-5xl">
-                    {page.title}
-                </h1>
+                <h1 className={cn(headingVariants({}))}>{page.title}</h1>
                 {page.description && (
                     <p className="text-xl text-muted-foreground">
                         {page.description}
@@ -89,9 +88,7 @@ export default async function PagePage({ params }: PageProps) {
                 )}
             </div>
             <hr className="my-4" />
-            <article className="container max-w-3xl py-6 lg:py-12">
-                <Mdx code={page.body.code} />
-            </article>
-        </section>
+            <Mdx code={page.body.code} />
+        </Shell>
     );
 }

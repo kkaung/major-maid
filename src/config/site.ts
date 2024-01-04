@@ -25,39 +25,35 @@ export const siteConfig = {
             items: [
                 {
                     title: 'House Cleaing',
-                    href: '/services/house-cleaning',
+                    href: '/house-cleaning',
                 },
                 {
                     title: 'Regular Cleaing',
-                    href: '/services/regular-cleaning',
+                    href: '/regular-cleaning',
                 },
                 {
                     title: 'Deep Cleaing',
-                    href: '/services/deep-cleaning',
+                    href: '/deep-cleaning',
                 },
                 {
                     title: 'End Lease Cleaning',
-                    href: '/services/end-lease-cleaning',
+                    href: '/end-lease-cleaning',
                 },
                 {
                     title: 'Oven Cleaning',
-                    href: '/services/oven-cleaning',
+                    href: '/oven-cleaning',
                 },
                 {
                     title: 'Bond Cleaning',
-                    href: '/services/bond-cleaning',
+                    href: '/bond-cleaning',
                 },
                 {
                     title: 'Office Cleaning',
-                    href: '/services/office-cleaning',
+                    href: '/office-cleaning',
                 },
                 {
                     title: 'Move In - Move Out Cleaning',
-                    href: '/services/move-in-move-out-cleaning',
-                },
-                {
-                    title: 'All Services',
-                    href: '/services',
+                    href: '/move-in-move-out-cleaning',
                 },
             ],
         },
@@ -151,10 +147,6 @@ export const siteConfig = {
                     title: 'Move In - Move Out Cleaning',
                     href: '/services/move-in-move-out-cleaning',
                 },
-                {
-                    title: 'All Services',
-                    href: '/services',
-                },
             ],
         },
         {
@@ -168,13 +160,13 @@ export const siteConfig = {
                 { title: 'Careers', href: '/careers' },
                 { title: 'Checklist', href: '/checklist' },
                 { title: 'FAQs', href: '/frequently-asked-questions' },
-                { title: 'Privacy Policy', href: '/privacy-policy' },
+                { title: 'Privacy Policy', href: '/privacy' },
                 { title: 'Terms And Conditions', href: '/terms' },
             ],
         },
     ] satisfies FooterItem[],
     business: {
-        email: 'contact@majormaid.com.ua',
+        email: 'contact@majormaid.com.au',
         phone: '1300 245 417',
         address: '7/24-26 Blaxland Road, Ryde, NSW 2112',
         openingHour: 'Mon – Sat: 9:00 AM – 5:00 PM',

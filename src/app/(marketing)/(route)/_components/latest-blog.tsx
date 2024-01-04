@@ -13,10 +13,7 @@ export default function LatestBlog({ ...props }: LatestBlogProps) {
         <section className={cn(props.className)} {...props}>
             <div className="flex items-center justify-between mb-6">
                 <h2 className="text-3xl font-semibold">Latest Blog Posts</h2>
-                <Link
-                    href="/frequently-asked-questions"
-                    className={'underline font-bold group'}
-                >
+                <Link href="/blog" className="underline font-bold group">
                     See All
                     <Icons.arrowRight
                         aria-hidden

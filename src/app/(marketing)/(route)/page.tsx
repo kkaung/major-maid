@@ -38,7 +38,6 @@ export default function Page() {
             {/* <Locations className="w-full max-w-7xl mx-auto" city={city} /> */}
             <WhyUs className="max-w-5xl w-full mx-auto" />
             <div className="container mx-auto space-y-16">
-                <Cleaners />
                 <City />
                 <FAQs />
                 <LatestBlog className="max-w-6xl w-full mx-auto" />

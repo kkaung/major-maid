@@ -11,13 +11,26 @@ interface LocationsProps extends HTMLAttributes<HTMLElement> {
 }
 
 export default function Locations({ ...props }: LocationsProps) {
-    const city = cities.find(city => city.title === props.city);
+    const city = cities.find(city => city.title === props.city)!;
+
+    const firstRow = city.items.slice(0, city.items.length / 3);
+    const secondRow = city.items.slice(
+        (1 * city.items.length) / 3,
+        (2 * city.items.length) / 3
+    );
+    const thirdRow = city.items.slice(
+        (2 * city.items.length) / 3,
+        city.items.length
+    );
 
     return (
         <section
             id="locations"
             aria-labelledby="locations-heading"
-            className={cn(props.className, 'text-center space-y-6')}
+            className={cn(
+                props.className,
+                'text-center space-y-6 w-full max-w-6xl mx-auto'
+            )}
         >
             <div className="space-y-2">
                 <h2 className={cn(headingVariants({}))}>Where We Service</h2>
@@ -31,77 +44,34 @@ export default function Locations({ ...props }: LocationsProps) {
                     each city that we service:
                 </p>
             </div>
-            <div className='space-y-6'>
-                {cities.map((city, idx) => {
-                    const firstRow = city.items.slice(0, city.items.length / 3);
-                    const secondRow = city.items.slice(
-                        (1 * city.items.length) / 3,
-                        (2 * city.items.length) / 3
-                    );
-                    const thirdRow = city.items.slice(
-                        (2 * city.items.length) / 3,
-                        city.items.length
-                    );
-
-                    return (
-                        <div key={idx}>
-                            <Link href={'/sydney'}>
-                                <h4
-                                    className={cn(
-                                        headingVariants({ size: 'sm' }),
-                                        'italic mb-4 underline'
-                                    )}
-                                >
-                                    {city.title}
-                                </h4>
-                            </Link>
-                            <div className="space-y-4">
-                                <ul>
-                                    <Marquee
-                                        pauseOnHover
-                                        className="transform-cpu  [--duration:50s]"
-                                    >
-                                        {firstRow.map((r, idx) => (
-                                            <Link href={r.href} key={idx}>
-                                                <li className="px-4 py-1 whitespace-nowrap bg-primary text-white font-xl font-bold italic">
-                                                    {r.title}
-                                                </li>
-                                            </Link>
-                                        ))}
-                                    </Marquee>
-                                </ul>
-                                <ul>
-                                    <Marquee
-                                        pauseOnHover
-                                        className="transform-cpu  [--duration:50s]"
-                                    >
-                                        {secondRow.map((r, idx) => (
-                                            <Link href={r.href} key={idx}>
-                                                <li className="px-4 py-1 whitespace-nowrap bg-primary text-white font-xl font-bold italic">
-                                                    {r.title}
-                                                </li>
-                                            </Link>
-                                        ))}
-                                    </Marquee>
-                                </ul>
-                                <ul>
-                                    <Marquee
-                                        pauseOnHover
-                                        className="transform-cpu  [--duration:50s]"
-                                    >
-                                        {thirdRow.map((r, idx) => (
-                                            <Link href={r.href} key={idx}>
-                                                <li className="px-4 py-1 whitespace-nowrap bg-primary text-white font-xl font-bold italic">
-                                                    {r.title}
-                                                </li>
-                                            </Link>
-                                        ))}
-                                    </Marquee>
-                                </ul>
+            <div className="space-y-6">
+                <Link href={'/sydney'}>
+                    <h4
+                        className={cn(
+                            headingVariants({ size: 'sm' }),
+                            'italic mb-4 underline'
+                        )}
+                    >
+                        {city.title}
+                    </h4>
+                </Link>
+                <div className="flex flex-col gap-4">
+                    <Marquee
+                        pauseOnHover
+                        className="transform-cpu [--duration:50s]"
+                    >
+                        {firstRow.map((r, idx) => (
+                            <div
+                                key={idx}
+                                className="px-4 py-1  bg-primary text-white font-xl font-bold italic"
+                            >
+                                <Link href={r.href} key={idx} className="">
+                                    {r.title}
+                                </Link>
                             </div>
-                        </div>
-                    );
-                })}
+                        ))}
+                    </Marquee>
+                </div>
             </div>
             <div className="text-center">
                 <Link href="/locations" className={'underline font-bold group'}>
@@ -117,4 +87,3 @@ export default function Locations({ ...props }: LocationsProps) {
         </section>
     );
 }
-
