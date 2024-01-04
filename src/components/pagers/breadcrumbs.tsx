@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Link from 'next/link';
-import { ChevronRightIcon } from '@radix-ui/react-icons';
+import { ChevronRightIcon, SlashIcon } from '@radix-ui/react-icons';
 
 import { cn, truncate } from '@/lib/utils';
 import Dot from '@/components/dot';
@@ -23,7 +23,7 @@ export function Breadcrumbs({
     dottable = true,
     ...props
 }: BreadcrumbsProps) {
-    const SeparatorIcon = separator ?? ChevronRightIcon;
+    const SeparatorIcon = separator ?? SlashIcon;
 
     return (
         <nav
@@ -52,12 +52,12 @@ export function Breadcrumbs({
                         {!isLastSegment && (
                             <>
                                 {dottable ? (
-                                    <Dot className="mx-2" aria-hidden="true" />
+                                    <Dot className="mx-2" aria-hidden />
                                 ) : (
                                     <SeparatorIcon
                                         className="w-3 h-3 mx-2"
-                                        aria-hidden="true"
                                         strokeWidth={3}
+                                        aria-hidden
                                     />
                                 )}
                             </>

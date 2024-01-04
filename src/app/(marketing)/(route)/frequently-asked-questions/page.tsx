@@ -2,21 +2,86 @@ import {
     PageHeader,
     PageHeaderDescription,
     PageHeaderHeading,
+    headingVariants,
 } from '@/components/page-header';
 import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { Shell } from '@/components/shell';
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from '@/components/ui/accordion';
-import GridPattern from '@/components/magicui/grid-pattern';
 import React from 'react';
+import Satisfaction from '@/components/marketing/satisfaction';
+import AccordionList from '@/components/accordion-list';
+import { siteConfig } from '@/config/site';
+import { cn } from '@/lib/utils';
+
+const generalQuestions = [
+    {
+        question: 'How do I book my cleaning service?',
+        answer:
+            'To book your cleaning service, click the "Book Now" button. It only takes 60 seconds. Anticipate our confirmation on the same business day, specifying the appointment and arrival time. For immediate assistance, call us at ' +
+            siteConfig.business.phone,
+    },
+    {
+        question: 'Are you insured?',
+        answer: `Certainly. We want you to feel completely at ease, knowing that we are fully insured. If you ever need proof of our insurance coverage, a quick email to ${siteConfig.business.email} is all it takes, and we'll promptly send you all the relevant documentation.`,
+    },
+    {
+        question: 'Are your cleaning teams pet friendly?',
+        answer: `Absolutely! Our cleaning teams are trained to handle dogs, cats, and other pets with love, respect, and care. We're a pet-friendly cleaning service.`,
+    },
+    {
+        question: 'Do I have to be present for my home cleaning?',
+        answer: `Absolutely not! Your call to stay or go. Just give us the key, and we'll handle the cleaning. ${siteConfig.name}, making life easier.`,
+    },
+    {
+        question: 'What is the 100% Bond Back Guarantee?',
+        answer: `Not satisfied with our end-of-lease cleaning? We'll re-clean for free if your agent isn't happy. Just report any issues within 3 days. Note: Only initially booked items are re-cleaned at no extra cost. Review our terms for details.`,
+    },
+    {
+        question: 'What is your Satisfaction Guarantee?',
+        answer: `Reach out to us within 24 hours post-cleaning to share your concerns. For end-of-lease or move-in cleaning, report concerns within a 72-hour window.\nWe'll schedule a complimentary re-clean on the next available business day, focusing on your specific areas of concern. If you're still dissatisfied after the re-clean, we'll reassess. If concerns persist, you'll receive a credit or refund accordingly.`,
+    },
+    {
+        question: 'What forms of payment do you accept?',
+        answer: `We accept payments through VISA, MasterCard, American Express, and Discover, covering both debit and credit cards. No processing fees are applied to any of our transactions. Regrettably, we do not take cash payments.`,
+    },
+];
+
+const cleaningQuestions = [
+    {
+        question: 'How long will it take to clean my house?',
+        answer: 'It all depends on the condition of your home. But, as a baseline, take the number of bedrooms you have and turn that into hours. (Ex. 3 bedrooms = 3 hours)',
+    },
+];
+
+const schedulingQuestions = [
+    {
+        question:
+            'Does someone have to visit my house before I can book a cleaning service?',
+        answer: 'Absolutely not! We respect your privacy and avoid intrusive home visits. You can conveniently receive a quote and schedule your cleaning service online, completing the entire process in about 60 seconds.',
+    },
+    {
+        question: 'Can I get a same-day booking?',
+        answer: 'No assurance for same-day bookings, but we often meet the request depending on the day.',
+    },
+    {
+        question: 'Does my cleaner arrive at the exact time I book?',
+        answer: 'Generally, yes. However, to allow for potential delays caused by traffic or weather, we provide a one-hour arrival window. If your cleaner is running late, we will promptly contact you to provide an updated estimated time of arrival.',
+    },
+];
+
+const billingQuestions = [
+    {
+        question: 'How do I pay for my home cleaning?',
+        answer: "When scheduling your appointment, you'll need to provide us with a valid card, and we'll secure it with a hold the day before the cleaning. Please note that we won't process any charges until the booking is successfully completed. For our new clients, expect a courtesy call the day after the service to ensure your satisfaction. If you prefer alternative payment methods, feel free to reach out to us via phone or email.",
+    },
+    {
+        question: 'What is your refund policy?',
+        answer: "We guarantee 200% satisfaction. If unhappy, we'll re-clean within 72 hours. No satisfaction after re-clean? Money back, no questions.",
+    },
+];
 
 export default function Page() {
     return (
-        <Shell>
+        <Shell className="gap-16">
             <Breadcrumbs
                 segments={[
                     { title: 'Home', href: '/' },
@@ -28,144 +93,75 @@ export default function Page() {
                 dottable={false}
             />
             <PageHeader className="text-center relative space-y-3">
-                <PageHeaderHeading>Questions? Look here.</PageHeaderHeading>
+                <PageHeaderHeading>
+                    Find Answers to Your Questions
+                </PageHeaderHeading>
                 <PageHeaderDescription className="mx-auto" size="sm">
                     Can&apos;t find an answer? Call us at
                     <span className="text-primary/80 font-medium mx-1">
-                        1300 138 892
+                        {siteConfig.business.phone}
                     </span>
                     or email
                     <span className="text-primary/80 font-medium ml-1">
-                        info@maidforyou.com.au
+                        {siteConfig.business.email}
                     </span>
                 </PageHeaderDescription>
-                <GridPattern className="-z-10 stroke-gray-200 dark:stroke-gray-800  opacity-50 [mask-image:radial-gradient(100%_100%_at_top_center,white,transparent)]" />
             </PageHeader>
-            <section className="max-w-4xl w-full mx-auto">
-                <Accordion
-                    type="single"
-                    collapsible
-                    className="w-full space-y-4"
-                >
-                    <AccordionItem value="item-1">
-                        <AccordionTrigger>
-                            How can I get a quote for a cleaning service in
-                        </AccordionTrigger>
-                        <AccordionContent>
-                            For a quote on a cleaning service in , simply click
-                            “Quote Me” and then fill in the booking form. Our
-                            system will generate an automatic quote based on
-                            what you need and how big your home is.
-                            <br /> We use the number of bedrooms and bathrooms
-                            to calculate the size of your home and optional
-                            extra let you customise the service if you need
-                            anything more than a general clean.
-                        </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="item-2">
-                        <AccordionTrigger>
-                            Will you provide equipment??
-                        </AccordionTrigger>
-                        <AccordionContent>
-                            Yes, when you book a cleaning service in Sydney, our
-                            cleaners will provide all the equipment and
-                            chemicals to get your home spotless. The equipment
-                            and chemicals are provided free of charge. <br />{' '}
-                            However, if you’d prefer for the cleaners to use
-                            your own equipment of products, then simply ask them
-                            on the day and they will be happy to oblige. We can
-                            even use eco-friendly or organic cleaning products.
-                        </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="item-3">
-                        <AccordionTrigger>
-                            How long will it take to clean my home?
-                        </AccordionTrigger>
-                        <AccordionContent>
-                            That depends on the size of your home and what you
-                            need done! Our system is designed to use the number
-                            of bedrooms and bathrooms to estimate the size of
-                            your home. If you add any extras then that will also
-                            add time to your job. <br /> The time estimates are
-                            not shown when you make a booking online. This
-                            estimate of the total number of work hours needed is
-                            used for administration purposes only and can be
-                            provided on request.
-                        </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="item-4">
-                        <AccordionTrigger>
-                            Do I have to be home when the cleaners come?
-                        </AccordionTrigger>
-                        <AccordionContent>
-                            No, you don’t! Many of our clients who receive
-                            cleaning services in Sydney choose to leave a key
-                            for the cleaners so they can take advantage of their
-                            free time.
-                            <br /> The professionals who conduct our home
-                            cleaning in Sydney are background checked, so you’re
-                            in safe hands.
-                        </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="item-5">
-                        <AccordionTrigger>
-                            How can I book a cleaning service in Sydney?
-                        </AccordionTrigger>
-                        <AccordionContent>
-                            To book home cleaning in Sydney, simply fill in the
-                            booking form so we can estimate the cost based on
-                            your needs. Then enter your card details and click
-                            book.
-                            <br /> We’ll match you with a team of experienced,
-                            professional who specialise in home cleaning in
-                            Sydney, and then send you an email to confirm your
-                            booking.
-                        </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="item-6">
-                        <AccordionTrigger>
-                            When are the cleaners available to come?
-                        </AccordionTrigger>
-                        <AccordionContent>
-                            We have a lot of cleaners who provide house cleaning
-                            in Sydney, so we have availability almost all of the
-                            time. If you can book it online, then it is almost
-                            certain that the time you’ve request is available.
-                            <br /> Just in case we aren’t available for the
-                            exact time you request, be sure to let us know if
-                            the day and/or time of your request is flexible so
-                            that we can match you with cleaners are quickly as
-                            possible.
-                        </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="item-7">
-                        <AccordionTrigger>
-                            How many cleaners will come to my home?
-                        </AccordionTrigger>
-                        <AccordionContent>
-                            That depends on which of our cleaners are available
-                            in your area at the time and day you’ve requested
-                            the service to take place.
-                            <br /> For most cleaning services, it’s usually at
-                            least 2 people. For smaller jobs (2-3 hours), it may
-                            only be one person, but for bigger jobs (+3 hours),
-                            it’s usually a minimum of two cleaners.
-                        </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="item-8">
-                        <AccordionTrigger>
-                            How do I pay for my cleaning services?
-                        </AccordionTrigger>
-                        <AccordionContent>
-                            When you make a booking, you will enter your card
-                            details, which are stored in a secure, encrypted
-                            format (even we can’t see them!).
-                            <br /> Payments are only processed after your home
-                            cleaning service is complete.
-                        </AccordionContent>
-                    </AccordionItem>
-                </Accordion>
-            </section>
+            <div className="max-w-4xl w-full mx-auto space-y-12">
+                <section>
+                    <h2
+                        className={cn(
+                            headingVariants({
+                                size: 'sm',
+                            })
+                        )}
+                    >
+                        General
+                        <span className="sr-only">General Questions</span>
+                    </h2>
+                    <AccordionList items={generalQuestions} />
+                </section>
+                <section>
+                    <h2
+                        className={cn(
+                            headingVariants({
+                                size: 'sm',
+                            })
+                        )}
+                    >
+                        Cleaning
+                        <span className="sr-only">Cleaning Questions</span>
+                    </h2>
+                    <AccordionList items={cleaningQuestions} />
+                </section>
+                <section>
+                    <h2
+                        className={cn(
+                            headingVariants({
+                                size: 'sm',
+                            })
+                        )}
+                    >
+                        Scheduling
+                        <span className="sr-only">Scheduling Questions</span>
+                    </h2>
+                    <AccordionList items={schedulingQuestions} />
+                </section>
+                <section>
+                    <h2
+                        className={cn(
+                            headingVariants({
+                                size: 'sm',
+                            })
+                        )}
+                    >
+                        Billing
+                        <span className="sr-only">Billing Questions</span>
+                    </h2>
+                    <AccordionList items={billingQuestions} />
+                </section>
+            </div>
+            <Satisfaction />
         </Shell>
     );
 }

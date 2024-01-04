@@ -27,9 +27,9 @@ export default function LatestBlog({ ...props }: LatestBlogProps) {
                 </Link>
             </div>
             <section>
-                <ul className="grid grid-cols-3 gap-6">
+                <ul className="flex gap-6 overflow-x-scroll">
                     {allPosts.map((post, idx) => (
-                        <li key={idx}>
+                        <li key={idx} className="w-[400px]">
                             <article className="relative ">
                                 <AspectRatio
                                     ratio={16 / 9}

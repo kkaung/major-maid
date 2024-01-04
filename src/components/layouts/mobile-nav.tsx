@@ -27,7 +27,6 @@ export default function MobileNav({
     sidebarNavItems,
 }: MobileNavProps) {
     const pathname = usePathname();
-    const segment = useSelectedLayoutSegment();
     const [isOpen, setIsOpen] = React.useState(false);
 
     return (
@@ -51,11 +50,13 @@ export default function MobileNav({
                         className="flex items-center"
                         onClick={() => setIsOpen(false)}
                     >
-                        <span className="font-bold">{siteConfig.name}</span>
+                        <span className="font-bold text-2xl italic text-primary">
+                            {siteConfig.logo}
+                        </span>
                         <span className="sr-only">Home</span>
                     </Link>
                 </div>
-                <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6 space-y-1">
+                <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6 space-y-4">
                     {mainNavItems?.map((item, idx) =>
                         item.href ? (
                             <div key={idx} className="pl-1 pr-7 py-2">
@@ -75,7 +76,10 @@ export default function MobileNav({
                                     collapsible
                                     className="w-full"
                                 >
-                                    <AccordionItem value={item.title}>
+                                    <AccordionItem
+                                        value={item.title}
+                                        className="border-b-0"
+                                    >
                                         <AccordionTrigger className="text-sm capitalize">
                                             {item.title}
                                         </AccordionTrigger>
@@ -117,6 +121,15 @@ export default function MobileNav({
                             </div>
                         )
                     )}
+                    <div className="pl-1 pr-7 py-2">
+                        <MobileLink
+                            href=""
+                            pathname={pathname}
+                            setIsOpen={setIsOpen}
+                        >
+                            Login
+                        </MobileLink>
+                    </div>
                 </ScrollArea>
             </SheetContent>
         </Sheet>

@@ -48,6 +48,7 @@ export type Post = {
   image: string
   date: IsoDateTimeString
   author: string
+  category?: '' | undefined
   /** MDX file body */
   body: MDX
   slug: string

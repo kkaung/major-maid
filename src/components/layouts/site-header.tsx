@@ -25,7 +25,11 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
                         mainNavItems={siteConfig.mainNav}
                         sidebarNavItems={siteConfig.mainNav}
                     />
-                    <Link aria-label="Home" href="/">
+                    <Link
+                        aria-label="Home"
+                        href="/"
+                        className="hidden xs:inline"
+                    >
                         <span className="font-bold text-2xl italic text-primary">
                             {siteConfig.logo}
                         </span>
@@ -33,7 +37,7 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
                 </div>
                 <nav className="flex lg:flex-1 gap-4 items-center justify-between">
                     <MainNav items={siteConfig.mainNav} />
-                    <div className="gap-4 flex items-center">
+                    <div className="gap-4 flex items-center md:gap-6">
                         <Link
                             href="/"
                             className={cn(
@@ -45,14 +49,17 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
                         <Button
                             variant="outline"
                             className={cn(
-                                'hidden rounded-full bg-primary/5 text-primary border-none transition-colors lg:flex hover:text-primary'
+                                'rounded-full bg-primary/5 text-primary border-none transition-colors sm:flex hover:text-primary'
                             )}
                         >
                             <Icons.phone
                                 aria-hidden
                                 className="w-4 h-4 mr-1 stroke-3"
                             />
-                            1300 245 417{' '}
+                            <span className="sm:hidden">Call Us</span>
+                            <span className="hidden sm:inline">
+                                {siteConfig.business.phone}
+                            </span>
                             <span className="sr-only">Phone Number</span>
                         </Button>
                         <Link

@@ -1,4 +1,3 @@
-import React from 'react';
 import {
     PageHeader,
     PageHeaderDescription,
@@ -6,11 +5,12 @@ import {
 } from '@/components/page-header';
 import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { Shell } from '@/components/shell';
-import { siteConfig } from '@/config/site';
-import { type Author, allAuthors, allPosts } from 'contentlayer/generated';
-import PostCard from './_components/post-card';
+import { toTitleCase, unslugify } from '@/lib/utils';
+import React from 'react';
+import { Author, allAuthors, allPosts } from 'contentlayer/generated';
 
-import type { Metadata } from 'next';
+import { BlogTabs } from '../../_components/blog-tabs';
+import PostCard from '../../_components/post-card';
 import {
     Pagination,
     PaginationContent,
@@ -20,27 +20,31 @@ import {
     PaginationNext,
     PaginationPrevious,
 } from '@/components/ui/pagination';
-import { BlogTabs } from './_components/blog-tabs';
 
-export const metadata: Metadata = {
-    title: '',
-    description: '',
-};
+interface PageProps {
+    params: {
+        slug: string;
+    };
+}
 
-export default function Page() {
+export default function Page({ params }: PageProps) {
+    const title = toTitleCase(unslugify(params.slug));
+
     return (
         <Shell>
             <Breadcrumbs
                 segments={[
                     { title: 'Home', href: '/' },
                     { title: 'Blog', href: '/blog' },
+                    {
+                        title,
+                        href: `/blog/category/${params.slug}`,
+                    },
                 ]}
                 dottable={false}
             />
             <PageHeader className="text-center space-y-4">
-                <PageHeaderHeading>
-                    {siteConfig.name} House Cleaning Blog
-                </PageHeaderHeading>
+                <PageHeaderHeading>Cleaning {title}</PageHeaderHeading>
                 <PageHeaderDescription size="sm" className="mx-auto">
                     Simple solutions for a clean home.
                 </PageHeaderDescription>

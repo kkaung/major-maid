@@ -14,7 +14,7 @@ const links = {
 
 export const siteConfig = {
     logo: 'MajorMaid',
-    name: 'Major Maids',
+    name: 'Major Maid',
     description:
         'An open source e-commerce skateshop build with everything new in Next.js 13.',
     url: 'https://skateshop.sadmn.com',
@@ -167,6 +167,7 @@ export const siteConfig = {
                 { title: 'Pricing', href: '/pricing' },
                 { title: 'Careers', href: '/careers' },
                 { title: 'Checklist', href: '/checklist' },
+                { title: 'FAQs', href: '/frequently-asked-questions' },
                 { title: 'Privacy Policy', href: '/privacy-policy' },
                 { title: 'Terms And Conditions', href: '/terms' },
             ],
@@ -174,7 +175,7 @@ export const siteConfig = {
     ] satisfies FooterItem[],
     business: {
         email: 'contact@majormaid.com.ua',
-        phone: '430281937',
+        phone: '1300 245 417',
         address: '7/24-26 Blaxland Road, Ryde, NSW 2112',
         openingHour: 'Mon – Sat: 9:00 AM – 5:00 PM',
     },

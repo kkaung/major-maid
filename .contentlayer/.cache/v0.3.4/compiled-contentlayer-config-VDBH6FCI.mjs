@@ -85,7 +85,8 @@ var Post = defineDocumentType(() => ({
     author: {
       type: "string",
       required: true
-    }
+    },
+    category: {}
   },
   computedFields
 }));
@@ -155,4 +156,4 @@ export {
   Post,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-P5CHFUEB.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-VDBH6FCI.mjs.map
