@@ -368,7 +368,8 @@ export default function Page() {
             <Breadcrumbs
                 segments={[
                     { title: 'Home', href: '/' },
-                    { title: 'Checklist', href: '/' },
+                    { title: 'Services', href: '/services' },
+                    { title: 'Checklist', href: '/checklist' },
                 ]}
                 dottable={false}
             />

@@ -14,7 +14,7 @@ export default function City({ name = 'Sydney', ...props }: CityProps) {
             aria-labelledby="city-heading"
             className={cn(props.className, 'grid grid-cols-1 sm:grid-cols-2')}
         >
-            <div className='order-2 sm:order-1'>
+            <div className="order-2 sm:order-1">
                 <GoogleMapsEmbed
                     apiKey={env.GM_API_KEY}
                     mode="place"
@@ -24,7 +24,7 @@ export default function City({ name = 'Sydney', ...props }: CityProps) {
                     allowfullscreen={true}
                 />
             </div>
-            <div className='order-1 sm:order-2'>
+            <div className="order-1 sm:order-2">
                 <h2 className="font-semibold text-2xl mb-6">
                     Experience Sydney&apos;s Wonders While We Clean Your Home
                 </h2>

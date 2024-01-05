@@ -37,7 +37,6 @@ export default function Page() {
                         Get a quote & Book online
                     </Link>
                 </div>
-                <GridPattern className="-z-10 stroke-gray-200 dark:stroke-gray-800  opacity-50 [mask-image:radial-gradient(100%_100%_at_top_center,white,transparent)]" />
             </PageHeader>
             <Testmonials className="max-w-md w-full mx-auto" />
             <Satisfaction />

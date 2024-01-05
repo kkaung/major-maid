@@ -14,7 +14,6 @@ interface WhyUsProps extends HTMLAttributes<HTMLElement> {
 }
 
 export default function WhyUs({ location = 'Sydney', ...props }: WhyUsProps) {
-
     return (
         <section
             id="why-us"
@@ -27,8 +26,9 @@ export default function WhyUs({ location = 'Sydney', ...props }: WhyUsProps) {
             <div className="relative">
                 <div className="pointer-events-none absolute bottom-0 left-0 right-0 w-1/4 bg-gradient-to-t from-white bg-black z-10" />
                 <Image
-                    width={400}
-                    height={400}
+                    // width={400}
+                    // height={400}
+                    fill
                     src={HouseCleaner}
                     alt={'House Cleaner'}
                 />

@@ -24,7 +24,7 @@ export default function LatestBlog({ ...props }: LatestBlogProps) {
                 </Link>
             </div>
             <section>
-                <ul className="flex gap-6 overflow-x-scroll">
+                <ul className="flex gap-6 overflow-x-scroll w-full">
                     {allPosts.map((post, idx) => (
                         <li key={idx} className="w-[400px]">
                             <article className="relative ">

@@ -80,7 +80,7 @@ export default function MobileNav({
                                         value={item.title}
                                         className="border-b-0"
                                     >
-                                        <AccordionTrigger className="text-base py-2">
+                                        <AccordionTrigger className="text-foreground/70 text-base py-2 data-[state=open]:text-foreground">
                                             {item.title}
                                         </AccordionTrigger>
                                         <AccordionContent>

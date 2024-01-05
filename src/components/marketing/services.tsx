@@ -17,7 +17,7 @@ export default function Services({
         <section
             id="services"
             aria-labelledby="services-heading"
-            className={cn(props.className, 'bg-secondary py-12 px-4')}
+            className={cn(props.className, 'bg-secondary py-12 px-4 space-y-12')}
         >
             <div className="space-y-4 text-center">
                 <h2 className={cn(headingVariants({}))}>
@@ -34,10 +34,10 @@ export default function Services({
                     covered.
                 </p>
             </div>
-            <ul className="grid gap-2 mt-6 max-w-2xl w-full mx-auto grid-cols-2 sm:grid-cols-3">
+            <ul className="grid gap-x-6 gap-y-4 max-w-3xl w-full mx-auto grid-cols-2 sm:grid-cols-3">
                 {siteServices.map((service, idx) => (
                     <li key={idx} className="relative">
-                        <h3 className="font-semibold text-primary line-clamp-1">
+                        <h3 className="font-semibold text-primary leading-tight">
                             {service.title}
                         </h3>
                         <Link

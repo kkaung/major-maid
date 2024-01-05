@@ -4,22 +4,14 @@ import FAQs from '@/components/marketing/faqs';
 import Featuring from '@/components/marketing/featuring';
 import Testmonials from '@/components/marketing/testmonials';
 import Services from '@/components/marketing/services';
-import Locations from './_components/locations';
 import WhyUs from '@/components/marketing/why-us';
 import HowWork from '@/components/marketing/how-work';
 import City from '@/components/marketing/city';
 import { Shell } from '@/components/shell';
 import Satisfaction from '@/components/marketing/satisfaction';
-
-import { headers } from 'next/headers';
 import LatestBlog from './_components/latest-blog';
-import Cleaners from '@/components/marketing/cleaners';
-
-const getCity = () => {
-    const headersList = headers();
-
-    return headersList.get('x-vercel-ip-city') ?? 'Sydney';
-};
+import PopularLocations from './_components/popular-locations';
+import { getCity } from '@/lib/next';
 
 export const runtime = 'edge';
 
@@ -30,18 +22,24 @@ export default function Page() {
         <Shell variant="sidebar" className="grid-16">
             <div className="container mx-auto space-y-16">
                 <Hero location={city} />
-                <Testmonials className="max-w-md w-full mx-auto" />
+                {/* <Testmonials className="max-w-md w-full mx-auto" />
                 <Featuring />
-                <HowWork />
+                <HowWork /> */}
             </div>
-            <Services />
-            {/* <Locations className="w-full max-w-7xl mx-auto" city={city} /> */}
+            <div>
+                <Services />
+            </div>
             <WhyUs className="max-w-5xl w-full mx-auto" />
             <div className="container mx-auto space-y-16">
                 <City />
                 <FAQs />
-                <LatestBlog className="max-w-6xl w-full mx-auto" />
-                <Satisfaction />
+                {/* <LatestBlog className="max-w-6xl w-full mx-auto" /> */}
+            </div>
+            <div className="bg-secondary py-12">
+                <PopularLocations className="container mx-auto w-full max-w-6xl" />
+            </div>
+            <div className="container mx-auto">
+                <Satisfaction className="container mx-auto" />
             </div>
         </Shell>
     );

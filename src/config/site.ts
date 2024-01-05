@@ -55,6 +55,18 @@ export const siteConfig = {
                     title: 'Move In - Move Out Cleaning',
                     href: '/move-in-move-out-cleaning',
                 },
+                {
+                    title: 'Carpet Cleaning',
+                    href: '/carpet-cleaning',
+                },
+                {
+                    title: 'NDIS Cleaning',
+                    href: '/ndis-cleaning',
+                },
+                {
+                    title: 'Apartment Cleaning',
+                    href: '/apartment-cleaning',
+                },
             ],
         },
         {
@@ -162,6 +174,7 @@ export const siteConfig = {
                 { title: 'FAQs', href: '/frequently-asked-questions' },
                 { title: 'Privacy Policy', href: '/privacy' },
                 { title: 'Terms And Conditions', href: '/terms' },
+                { title: 'Sitemap', href: '/sitemap' },
             ],
         },
     ] satisfies FooterItem[],
@@ -176,66 +189,66 @@ export const siteConfig = {
 export const siteServices = [
     {
         title: 'House Cleaing',
-        href: '/services/house-cleaning',
+        href: '/house-cleaning',
     },
     {
         title: 'Regular Cleaing',
-        href: '/services/regular-cleaning',
+        href: '/regular-cleaning',
     },
     {
         title: 'Deep Cleaing',
-        href: '/services/deep-cleaning',
+        href: '/deep-cleaning',
     },
     {
         title: 'End Lease Cleaning',
-        href: '/services/end-lease-cleaning',
+        href: '/end-lease-cleaning',
     },
     {
         title: 'Oven Cleaning',
-        href: '/services/oven-cleaning',
+        href: '/oven-cleaning',
     },
     {
         title: 'Bond Cleaning',
-        href: '/services/bond-cleaning',
+        href: '/bond-cleaning',
     },
     {
         title: 'Office Cleaning',
-        href: '/services/office-cleaning',
+        href: '/office-cleaning',
     },
     {
         title: 'NDIS Cleaning',
-        href: '/services/ndis-cleaning',
+        href: '/ndis-cleaning',
     },
     {
         title: 'Carpet Cleaning',
-        href: '/services/carpet-cleaning',
+        href: '/carpet-cleaning',
     },
     {
         title: 'NDIS Cleaning',
-        href: '/services/office-cleaning',
+        href: '/office-cleaning',
     },
     {
         title: 'Move In - Move Out Cleaning',
-        href: '/services/move-in-move-out-cleaning',
+        href: '/move-in-move-out-cleaning',
     },
     {
         title: 'Tile Cleaning',
-        href: '/services/move-in-move-out-cleaning',
+        href: '/move-in-move-out-cleaning',
     },
     {
         title: 'One Off Cleaning',
-        href: '/services/one-off-cleaning',
+        href: '/one-off-cleaning',
     },
     {
         title: 'Strata Cleaning',
-        href: '/services/one-off-cleaning',
+        href: '/one-off-cleaning',
     },
     {
         title: 'Residental Window Cleaning',
-        href: '/services/residental-window-cleaning',
+        href: '/residental-window-cleaning',
     },
     {
         title: 'Construction Cleaning',
-        href: '/services/residental-window-cleaning',
+        href: '/residental-window-cleaning',
     },
 ];
