@@ -16,10 +16,10 @@ export default function Page() {
     const city = getCity();
 
     return (
-        <Shell>
+        <Shell variant="sidebar" className="grid-16">
             <Hero location={city} />
             <Featuring />
-            <Suburbs location={city} />
+            <Suburbs location={city} title={''} />
             <Satisfaction />
         </Shell>
     );

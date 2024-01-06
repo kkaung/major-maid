@@ -1,7 +1,6 @@
 import { headingVariants } from '@/components/page-header';
-import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { cities, locations } from '@/config/location';
+import { cities } from '@/config/location';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import React, { HTMLAttributes } from 'react';
@@ -64,7 +63,7 @@ export default function PopularLocations({ ...props }: PopularLocationProps) {
                                             className="text-xs font-normal transition-all hover:scale-[1.02] hover:text-primary"
                                         >
                                             <Link
-                                                href={city.href}
+                                                href={``}
                                                 title={`House Cleaning ${city.title}`}
                                             >
                                                 <span className="sr-only">
