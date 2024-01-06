@@ -6,11 +6,7 @@ import React, { type HTMLAttributes } from 'react';
 import Balancer from 'react-wrap-balancer';
 import { headingVariants } from './page-header';
 import Link from 'next/link';
-import {
-    Collapsible,
-    CollapsibleContent,
-    CollapsibleTrigger,
-} from '@/components/ui/collapsible';
+import { Collapsible, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { Button } from './ui/button';
 
 interface SuburbsProps extends HTMLAttributes<HTMLElement> {

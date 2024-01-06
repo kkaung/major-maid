@@ -65,7 +65,11 @@ export default function Locations({ ...props }: LocationsProps) {
                                 key={idx}
                                 className="px-4 py-1  bg-primary text-white font-xl font-bold italic"
                             >
-                                <Link href={r.href} key={idx} className="">
+                                <Link
+                                    href={`/house-cleaning/${r.slug}`}
+                                    key={idx}
+                                    className=""
+                                >
                                     {r.title}
                                 </Link>
                             </div>
