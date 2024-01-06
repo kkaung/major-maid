@@ -1,9 +1,9 @@
 import React, { HTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
-import Homely from '/public/assets/images/homely.png';
-import Yahoo from '/public/assets/images/yahoo.png';
-import RealHomes from '/public/assets/images/realhomes.png';
+import Insider from '/public/assets/images/insider.webp';
+import RealHomes from '/public/assets/images/realhomes.webp';
+import Yahoo from '/public/assets/images/yahoo.webp';
 import NineNews from '/public/assets/images/9news.webp';
 import SevenNews from '/public/assets/images/7news.webp';
 import NewsCom from '/public/assets/images/newscomau.webp';
@@ -40,7 +40,7 @@ export default function Featuring({ ...props }: FeaturingProps) {
                     <Image
                         width={100}
                         height={100}
-                        src={NewsCom}
+                        src={Insider}
                         alt="Seven News"
                         className="grayscale"
                     />
@@ -54,7 +54,14 @@ export default function Featuring({ ...props }: FeaturingProps) {
                     <Image
                         width={100}
                         height={100}
-                        src={NewsCom}
+                        src={RealHomes}
+                        alt="Seven News"
+                        className="grayscale"
+                    />
+                    <Image
+                        width={100}
+                        height={100}
+                        src={Yahoo}
                         alt="Seven News"
                         className="grayscale"
                     />

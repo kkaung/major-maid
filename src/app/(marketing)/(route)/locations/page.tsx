@@ -35,7 +35,6 @@ export default function Page() {
                         listed below. If you have any questions, reach out to
                         our friendly customer service team!
                     </PageHeaderDescription>
-                    <GridPattern className="-z-10 stroke-gray-200 dark:stroke-gray-800  opacity-50 [mask-image:radial-gradient(100%_100%_at_top_center,white,transparent)]" />
                 </PageHeader>
                 <section className="w-full max-w-4xl mx-auto grid gap-12">
                     {locations.map((location, idx) => (
@@ -72,7 +71,10 @@ export default function Page() {
                             </div>
                             <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-5">
                                 {location.items.map((item, idx) => (
-                                    <Link href={item.href} key={idx}>
+                                    <Link
+                                        href={`/house-cleaning/${item.slug}`}
+                                        key={idx}
+                                    >
                                         <li className="text-primary font-medium transition-all hover:underline">
                                             {item.title}
                                         </li>

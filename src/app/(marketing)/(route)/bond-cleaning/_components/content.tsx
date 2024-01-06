@@ -9,6 +9,7 @@ import Satisfaction from '@/components/marketing/satisfaction';
 import Suburbs from '@/components/suburbs';
 import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { LocalBusinessJsonLd } from 'next-seo';
+import Reviews from '@/components/marketing/reviews';
 
 interface ContentProps {
     city: string;
@@ -32,8 +33,8 @@ export default function Content({ city, suburb, segments }: ContentProps) {
                     <Satisfaction />
                     <Suburbs
                         title="Move In - Move Out Cleaners"
+                        slug="move-in-move-out-cleaing"
                         location={city}
-                        slug={'move-in-move-out-cleaning'}
                     />
                     <Breadcrumbs segments={segments} dottable={false} />
                 </div>

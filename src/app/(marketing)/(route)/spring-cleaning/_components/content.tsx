@@ -32,6 +32,7 @@ export default function Content({ city, suburb, segments }: ContentProps) {
                     <Satisfaction />
                     <Suburbs
                         title="Move In - Move Out Cleaners"
+                        slug="spring-cleaning"
                         location={city}
                     />
                     <Breadcrumbs segments={segments} dottable={false} />

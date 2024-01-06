@@ -1,6 +1,6 @@
+import React from 'react';
 import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { Shell } from '@/components/shell';
-import React from 'react';
 import { type Metadata } from 'next';
 import { toTitleCase, unslugify } from '@/lib/utils';
 import Hero from '../_components/hero';

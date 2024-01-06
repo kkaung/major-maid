@@ -11,12 +11,14 @@ import { Button } from './ui/button';
 
 interface SuburbsProps extends HTMLAttributes<HTMLElement> {
     title: string;
+    slug: string;
     location?: string;
 }
 
 export default function Suburbs({
     title,
     location = 'Sydney',
+    slug,
     ...props
 }: SuburbsProps) {
     const [isOpen, setIsOpen] = React.useState(false);
@@ -31,7 +33,7 @@ export default function Suburbs({
             aria-label="suburbs"
             className={cn(
                 props.className,
-                'space-y-12 max-w-5xl w-full mx-auto overflow-hidden'
+                'space-y-12 max-w-5xl w-full mx-auto'
             )}
         >
             <div className="text-center">
@@ -51,7 +53,7 @@ export default function Suburbs({
                     {find.items.map(item => (
                         <Link
                             key={item.title}
-                            href=""
+                            href={`/${slug}/${item.slug}`}
                             title={`${title} ${location}`}
                             className="text-sm"
                         >

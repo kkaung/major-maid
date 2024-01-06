@@ -54,7 +54,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
             <body
                 className={
                     (fontSans.variable,
-                    'scroll-smooth antialiased bg-secondary/10')
+                    'scroll-smooth antialiased bg-secondary/10 relative')
                 }
             >
                 <Providers>{children}</Providers>

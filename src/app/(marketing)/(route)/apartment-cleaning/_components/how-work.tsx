@@ -1,4 +1,3 @@
-import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import React, { type HTMLAttributes } from 'react';
 import Link from 'next/link';
@@ -9,6 +8,7 @@ import Image from 'next/image';
 import BookOnline from '/public/assets/images/book-online.png';
 import WeClean from '/public/assets/images/we-clean.png';
 import YouRelax from '/public/assets/images/you-relax.png';
+import Balancer from 'react-wrap-balancer';
 
 interface HowWorkProps extends HTMLAttributes<HTMLElement> {
     location?: string;
@@ -27,7 +27,9 @@ export default function HowWork({
                 'space-y-12 max-w-5xl w-full mx-auto text-center py-6'
             )}
         >
-            <h2 className={headingVariants({})}>How {siteConfig.name} Works</h2>
+            <h2 className={headingVariants({})}>
+                <Balancer>How It Works For Apartment Cleaning</Balancer>
+            </h2>
             <ul className="grid grid-cols-1 gap-6 grid-flow-row md:grid-cols-3">
                 <li>
                     <div className="space-y-2">
@@ -40,8 +42,8 @@ export default function HowWork({
                         />
                         <p className="font-semibold text-lg">1. Book Online</p>
                         <p>
-                            Book your {location} house cleaning service online
-                            in 60 seconds.
+                            Book your {location} apartment cleaning service
+                            online in 60 seconds.
                         </p>
                     </div>
                 </li>
@@ -57,7 +59,7 @@ export default function HowWork({
                         <p className="font-semibold text-lg">2. We Clean</p>
                         <p>
                             Our cleaners in {location} will come over &
-                            professionally clean your home.
+                            professionally clean your apartment.
                         </p>
                     </div>
                 </li>
@@ -87,7 +89,7 @@ export default function HowWork({
                         'font-semibold  rounded-full'
                     )}
                 >
-                    Book my cleaning
+                    Book my apartment cleaning
                 </Link>
             </div>
         </section>

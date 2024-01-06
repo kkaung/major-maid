@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Stamp from '/public/assets/stamp.png';
 import HeroPreview from '/public/assets/images/hero.jpg';
+import Balancer from 'react-wrap-balancer';
 
 interface HeroProps extends HTMLAttributes<HTMLElement> {
     location?: string;
@@ -32,8 +33,12 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                             'text-[#051356]'
                         )}
                     >
-                        Bond Cleaning
-                        <span className="text-primary ml-1">In {location}</span>
+                        <Balancer>
+                            Bond Cleaning In
+                            <span className="text-primary ml-1">
+                                {location}
+                            </span>
+                        </Balancer>
                     </h1>
                     <div className="grid grid-cols-1 mt-6 gap-2 font-semibold text-lg sm:grid-cols-2">
                         <p>

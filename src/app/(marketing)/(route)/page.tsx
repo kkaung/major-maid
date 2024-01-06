@@ -21,17 +21,14 @@ export default function Page() {
     return (
         <>
             <Shell variant="sidebar" className="grid-16">
-                <div className="container mx-auto space-y-16">
-                    <Hero location={city} />
-                    {/* <Testmonials className="max-w-md w-full mx-auto" />
+                <Hero location={city} />
                 <Featuring />
-                <HowWork /> */}
-                </div>
-                <div>
-                    <Services />
-                </div>
-                <WhyUs className="max-w-5xl w-full mx-auto" />
+                <HowWork />
                 <div className="container mx-auto space-y-16">
+                    <WhyUs
+                        location={city}
+                        className="max-w-5xl w-full mx-auto"
+                    />
                     <City />
                     <FAQs />
                     {/* <LatestBlog className="max-w-6xl w-full mx-auto" /> */}

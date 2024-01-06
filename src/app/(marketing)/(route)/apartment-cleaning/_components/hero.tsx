@@ -32,8 +32,8 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                             'text-[#051356]'
                         )}
                     >
-                        Apartment Cleaning Service
-                        <span className="text-primary ml-1">In {location}</span>
+                        Apartment Cleaning Service In
+                        <span className="text-primary ml-1">{location}</span>
                     </h1>
                     <div className="grid grid-cols-1 mt-6 gap-2 font-semibold text-lg sm:grid-cols-2">
                         <div>

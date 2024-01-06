@@ -7,6 +7,8 @@ import { toTitleCase, unslugify } from '@/lib/utils';
 
 import Hero from '../_components/hero';
 import FAQs from '../_components/faqs';
+import Content from '../_components/content';
+import { getCity } from '@/lib/next';
 
 export const runtime = 'edge';
 
@@ -26,28 +28,25 @@ export async function generateMetadata({
 }
 
 export default function Page({ params }: PageProps) {
+    const city = getCity();
+
     const location = toTitleCase(unslugify(params.location));
 
+    const isCity = city === location;
+
     return (
-        <Shell>
-            <Hero />
-            <FAQs />
-            <Satisfaction />
-            <Breadcrumbs
-                segments={[
-                    { title: 'Home', href: '/' },
-                    { title: 'Services', href: '/services' },
-                    {
-                        title: 'Apartment Cleaning',
-                        href: '/apartment-cleaning',
-                    },
-                    {
-                        title: location,
-                        href: `/apartment-cleaning/${params.location}`,
-                    },
-                ]}
-                dottable={false}
-            />
-        </Shell>
+        <Content
+            city={city}
+            suburb={!isCity ? location : undefined}
+            segments={[
+                { title: 'Home', href: '/' },
+                { title: 'Services', href: '/services' },
+                { title: 'Apartment Cleaning', href: '/apartment-cleaning' },
+                {
+                    title: location,
+                    href: `/apartment-cleaning/${params.location}`,
+                },
+            ]}
+        />
     );
 }

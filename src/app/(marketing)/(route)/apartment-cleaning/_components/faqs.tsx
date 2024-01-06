@@ -7,20 +7,17 @@ import AccordionList from '@/components/accordion-list';
 
 const getFAQs = (location?: string) => {
     return [
-        { question: 'Do you offer a bond back guarantee?', answer: '' },
+        {
+            question: `How do I book apartment cleaning services in ${location}?`,
+            answer: '',
+        },
         { question: 'How much do you charge?', answer: '' },
-        { question: 'Is your quote final?', answer: '' },
         {
-            question: 'How long will my bond cleaning service take?',
+            question: 'How long will it take to clean my apartment?',
             answer: '',
         },
         {
-            question:
-                'Do I need to be present during the bond cleaning process?',
-            answer: '',
-        },
-        {
-            question: 'How many people will come to clean my house?',
+            question: 'How many people will come to clean my apartment?',
             answer: '',
         },
         {
@@ -32,12 +29,7 @@ const getFAQs = (location?: string) => {
             answer: '',
         },
         {
-            question: 'Can I get a receipt to show my landlord?',
-            answer: '',
-        },
-        {
-            question:
-                'My agent has a specific checklist, are you able to help?',
+            question: 'Do I have to be home for my apartment cleaning service?',
             answer: '',
         },
         {
@@ -75,8 +67,8 @@ export default function FAQs({ location = 'Sydney', ...props }: FAQsProps) {
                                 'mx-auto'
                             )}
                         >
-                            Have questions about our house cleaning in Sydney?
-                            Take a look below. Or call us on
+                            Have questions about our apartment cleaning in
+                            Sydney? Take a look below. Or call us on
                             <span className="text-primary ml-1">
                                 1300 905 032
                             </span>

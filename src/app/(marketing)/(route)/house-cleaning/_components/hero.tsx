@@ -28,8 +28,8 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                             'text-[#051356]'
                         )}
                     >
-                        1st House Cleaning Service
-                        <span className="text-primary ml-1">In {location}</span>
+                        1st House Cleaning Service In
+                        <span className="text-primary ml-1">{location}</span>
                     </h1>
                     <div className="grid grid-cols-1 mt-6 gap-2 font-semibold text-lg sm:grid-cols-2">
                         <div>
@@ -82,35 +82,41 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                     </div>
                     <div className="flex gap-4 items-start">
                         <Image src={Stamp} width={90} height={90} alt="Stamp" />
-                        <div className="text-red-500 border border-red-500 inline-flex items-center p-2 rounded-lg">
-                            <Icons.fullGoogle
-                                className="w-4 h-4 mr-1"
-                                aria-hidden
-                            />
-                            <span className="font-medium">5.0</span>
-                            <span className="sr-only">Google Rating</span>
-                            <div className="flex ml-1 text-yellow-400">
-                                <Icons.starFull
-                                    className="w-4 h-4 "
+                        <div className="space-y-1">
+                            <div className="text-red-500 border border-red-500 inline-flex items-center p-2 rounded-lg">
+                                <Icons.fullGoogle
+                                    className="w-4 h-4 mr-1"
                                     aria-hidden
                                 />
-                                <Icons.starFull
-                                    className="w-4 h-4"
-                                    aria-hidden
-                                />
-                                <Icons.starFull
-                                    className="w-4 h-4"
-                                    aria-hidden
-                                />
-                                <Icons.starFull
-                                    className="w-4 h-4"
-                                    aria-hidden
-                                />
-                                <Icons.starFull
-                                    className="w-4 h-4"
-                                    aria-hidden
-                                />
+                                <span className="font-medium">5.0</span>
+                                <span className="sr-only">Google Rating</span>
+                                <div className="flex ml-1 text-yellow-400">
+                                    <Icons.starFull
+                                        className="w-4 h-4 "
+                                        aria-hidden
+                                    />
+                                    <Icons.starFull
+                                        className="w-4 h-4"
+                                        aria-hidden
+                                    />
+                                    <Icons.starFull
+                                        className="w-4 h-4"
+                                        aria-hidden
+                                    />
+                                    <Icons.starFull
+                                        className="w-4 h-4"
+                                        aria-hidden
+                                    />
+                                    <Icons.starFull
+                                        className="w-4 h-4"
+                                        aria-hidden
+                                    />
+                                </div>
                             </div>
+                            <Icons.productReview
+                                aria-hidden
+                                className="w-[140px] h-[40px]"
+                            />
                         </div>
                     </div>
                 </div>

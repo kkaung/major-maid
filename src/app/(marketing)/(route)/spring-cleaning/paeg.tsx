@@ -19,7 +19,7 @@ export default function Page() {
         <Shell variant="sidebar" className="grid-16">
             <Hero location={city} />
             <Featuring />
-            <Suburbs location={city} title={''} />
+            <Suburbs location={city} title={''} slug="spring-cleaing" />
             <Satisfaction />
         </Shell>
     );
