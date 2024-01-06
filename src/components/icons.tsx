@@ -44,12 +44,14 @@ import {
     MapPin,
     CircleUserRound,
     Clock,
+    Map,
 } from 'lucide-react';
 import { MoonIcon } from '@radix-ui/react-icons';
 
 // export type Icon = LucideIcon;
 
 export const Icons = {
+    map: Map,
     sun: SunMedium,
     moon: MoonIcon,
     star: Star,

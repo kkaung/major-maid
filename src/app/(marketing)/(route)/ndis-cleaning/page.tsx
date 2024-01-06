@@ -6,6 +6,8 @@ import Hero from './_components/hero';
 import Satisfaction from '@/components/marketing/satisfaction';
 import FAQs from './_components/faqs';
 
+export const runtime = 'edge';
+
 export const metadata: Metadata = {
     title: '',
     description: '',

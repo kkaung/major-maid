@@ -1,10 +1,9 @@
-import { Shell } from '@/components/shell';
 import React from 'react';
-import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { toTitleCase, unslugify } from '@/lib/utils';
 import { type Metadata } from 'next';
-import Hero from '../_components/hero';
-import FAQs from '../_components/faqs';
+import { getCity } from '@/lib/next';
+
+import Content from '../_components/content';
 
 interface PageProps {
     params: {
@@ -22,27 +21,28 @@ export async function generateMetadata({
 }
 
 export default function Page({ params }: PageProps) {
+    const city = getCity();
+
     const location = toTitleCase(unslugify(params.location));
 
+    const isCity = city === location;
+
     return (
-        <Shell>
-            <Hero location={location} />
-            <FAQs />
-            <Breadcrumbs
-                segments={[
-                    { title: 'Home', href: '/' },
-                    { title: 'Services', href: '/services' },
-                    {
-                        title: 'Move In Move Out Cleaning',
-                        href: '/move-in-move-out-cleaning',
-                    },
-                    {
-                        title: location,
-                        href: `/move-in-move-out-cleaning/${params.location}`,
-                    },
-                ]}
-                dottable={false}
-            />
-        </Shell>
+        <Content
+            city={city}
+            suburb={isCity ? location : undefined}
+            segments={[
+                { title: 'Home', href: '/' },
+                { title: 'Services', href: '/services' },
+                {
+                    title: 'Move In - Move Out Cleaning',
+                    href: '/move-in-move-out-cleaning',
+                },
+                {
+                    title: city,
+                    href: `/move-in-move-out-cleaning/${city}`,
+                },
+            ]}
+        />
     );
 }

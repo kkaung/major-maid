@@ -24,7 +24,7 @@ export default function PopularLocations({ ...props }: PopularLocationProps) {
         <section
             id="popular-location"
             aria-labelledby="popular-locations-heading"
-            className={cn(props.className, 'space-y-6 bg-secondary')}
+            className={cn(props.className, 'space-y-6')}
         >
             <h2 className={cn(headingVariants({ size: 'sm' }))}>
                 Popular Locations

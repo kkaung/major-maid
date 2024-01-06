@@ -8,12 +8,18 @@ import { Icons } from '@/components/icons';
 
 import HouseCleaner from '/public/assets/images/house-cleaner.png';
 import { Avatar, AvatarImage } from '@/components/ui/avatar';
+import Balancer from 'react-wrap-balancer';
 
 interface WhyUsProps extends HTMLAttributes<HTMLElement> {
     location?: string;
+    service?: string;
 }
 
-export default function WhyUs({ location = 'Sydney', ...props }: WhyUsProps) {
+export default function WhyUs({
+    location = 'Sydney',
+    service = 'Cleaing Service',
+    ...props
+}: WhyUsProps) {
     return (
         <section
             id="why-us"
@@ -25,13 +31,7 @@ export default function WhyUs({ location = 'Sydney', ...props }: WhyUsProps) {
         >
             <div className="relative">
                 <div className="pointer-events-none absolute bottom-0 left-0 right-0 w-1/4 bg-gradient-to-t from-white bg-black z-10" />
-                <Image
-                    // width={400}
-                    // height={400}
-                    fill
-                    src={HouseCleaner}
-                    alt={'House Cleaner'}
-                />
+
                 <div className="broder rounded-xl p-2 bg-secondary inline-flex gap-4 absolute top-0 left-0 translate-y-1/3 sm:p-4">
                     <Avatar>
                         <AvatarImage
@@ -72,7 +72,7 @@ export default function WhyUs({ location = 'Sydney', ...props }: WhyUsProps) {
             </div>
             <div className="space-y-12">
                 <h2 className={cn(headingVariants({}))}>
-                    Why Book Your Cleaning Service With Us?
+                    <Balancer>Why Book Your {service} With Us?</Balancer>
                 </h2>
                 <div className="space-y-6">
                     <div className="relative">
@@ -83,7 +83,7 @@ export default function WhyUs({ location = 'Sydney', ...props }: WhyUsProps) {
                         />
                         <div className="ml-9">
                             <h3 className="text-lg font-semibold leading-none mb-2">
-                                Simple
+                                Simple Online Booking
                             </h3>
                             <p className="text-muted-foreground">
                                 Set up a regular cleaning schedule or book a
@@ -100,7 +100,7 @@ export default function WhyUs({ location = 'Sydney', ...props }: WhyUsProps) {
                         />
                         <div className="ml-9">
                             <h3 className="text-lg font-semibold leading-none mb-2">
-                                Highly Trusted
+                                Highly Trusted Cleaners
                             </h3>
                             <p className="text-muted-foreground">
                                 Our professional cleaners are rated by thousands

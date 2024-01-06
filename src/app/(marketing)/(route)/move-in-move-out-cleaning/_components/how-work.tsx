@@ -1,11 +1,9 @@
-import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import React, { type HTMLAttributes } from 'react';
 import Link from 'next/link';
 import { buttonVariants } from '@/components/ui/button';
 import { headingVariants } from '@/components/page-header';
 import Image from 'next/image';
-
 import BookOnline from '/public/assets/images/book-online.png';
 import WeClean from '/public/assets/images/we-clean.png';
 import YouRelax from '/public/assets/images/you-relax.png';
@@ -29,7 +27,9 @@ export default function HowWork({
             )}
         >
             <h2 className={headingVariants({})}>
-                <Balancer>How It Works For End Of Lease Cleaning</Balancer>
+                <Balancer>
+                    How It Works For Move In - Move Out Cleaning
+                </Balancer>
             </h2>
             <ul className="grid grid-cols-1 gap-6 grid-flow-row md:grid-cols-3">
                 <li>
@@ -43,8 +43,8 @@ export default function HowWork({
                         />
                         <p className="font-semibold text-lg">1. Book Online</p>
                         <p>
-                            Book your {location} house cleaning service online
-                            in 60 seconds.
+                            Book your {location} move in / move out cleaning
+                            service online in 60 seconds.
                         </p>
                     </div>
                 </li>
@@ -59,8 +59,8 @@ export default function HowWork({
                         />
                         <p className="font-semibold text-lg">2. We Clean</p>
                         <p>
-                            Our cleaners in {location} will come over &
-                            professionally clean your home.
+                            Our trusted and vetted cleaners in {location} will
+                            come over & clean your home.
                         </p>
                     </div>
                 </li>
@@ -75,7 +75,7 @@ export default function HowWork({
                         />
                         <p className="font-semibold text-lg">3. You Relax</p>
                         <p>
-                            Sit back, relax and have your rental bond returned.
+                            Sit back, relax and enjoy your sparkling clean home.
                         </p>
                     </div>
                 </li>
@@ -90,7 +90,7 @@ export default function HowWork({
                         'font-semibold  rounded-full'
                     )}
                 >
-                    Book my end lease cleaning
+                    Book my cleaning
                 </Link>
             </div>
         </section>

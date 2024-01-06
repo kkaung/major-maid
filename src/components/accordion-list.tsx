@@ -16,7 +16,7 @@ export default function AccordionList({ items, ...props }: AccordionListProps) {
         <Accordion type="single" collapsible className={cn(props.className)}>
             {items.map((item, idx) => (
                 <AccordionItem key={idx} value={`item-${idx + 1}`}>
-                    <AccordionTrigger className="sm:text-lg">
+                    <AccordionTrigger className="text-base">
                         {item.question}
                     </AccordionTrigger>
                     <AccordionContent>{item.answer}</AccordionContent>

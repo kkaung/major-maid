@@ -1,10 +1,9 @@
-import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
-import { Shell } from '@/components/shell';
-import { getCity } from '@/lib/next';
-import { Metadata } from 'next';
 import React from 'react';
-import Hero from './_components/hero';
-import FAQs from './_components/faqs';
+import { getCity } from '@/lib/next';
+import { type Metadata } from 'next';
+import Content from './_components/content';
+
+export const runtime = 'edge';
 
 export const metadata: Metadata = {
     title: '',
@@ -15,20 +14,16 @@ export default function Page() {
     const city = getCity();
 
     return (
-        <Shell>
-            <Hero location={city} />
-            <FAQs />
-            <Breadcrumbs
-                segments={[
-                    { title: 'Home', href: '/' },
-                    { title: 'Services', href: '/services' },
-                    {
-                        title: 'Move In Move Out Cleaning',
-                        href: '/move-in-move-out-cleaning',
-                    },
-                ]}
-                dottable={false}
-            />
-        </Shell>
+        <Content
+            city={city}
+            segments={[
+                { title: 'Home', href: '/' },
+                { title: 'Services', href: '/services' },
+                {
+                    title: 'Move In - Move Out Cleaing',
+                    href: '/move-in-move-out-cleaing',
+                },
+            ]}
+        />
     );
 }

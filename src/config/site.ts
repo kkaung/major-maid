@@ -184,6 +184,10 @@ export const siteConfig = {
         address: '7/24-26 Blaxland Road, Ryde, NSW 2112',
         openingHour: 'Mon – Sat: 9:00 AM – 5:00 PM',
     },
+    rating: {
+        ratingValue: '4.8',
+        ratingCount: '528',
+    },
 };
 
 export const siteServices = [
@@ -222,10 +226,6 @@ export const siteServices = [
     {
         title: 'Carpet Cleaning',
         href: '/carpet-cleaning',
-    },
-    {
-        title: 'NDIS Cleaning',
-        href: '/office-cleaning',
     },
     {
         title: 'Move In - Move Out Cleaning',

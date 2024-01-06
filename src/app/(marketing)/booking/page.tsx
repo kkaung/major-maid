@@ -44,7 +44,6 @@ export default function Page() {
                         <Icons.phone className="w-4 h-4 mr-1" /> 1300 905 032
                     </Button>
                 </div>
-                <GridPattern className="-z-10 stroke-gray-200 dark:stroke-gray-800  opacity-50 [mask-image:radial-gradient(100%_100%_at_top_center,white,transparent)]" />
             </PageHeader>
             <section className="flex flex-col items-start gap-6 mx-auto max-w-4xl w-full md:flex-row">
                 <Card className="flex-1">

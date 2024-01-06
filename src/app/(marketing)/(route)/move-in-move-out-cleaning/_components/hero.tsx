@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Stamp from '/public/assets/stamp.png';
 import HeroPreview from '/public/assets/images/hero.jpg';
+import Balancer from 'react-wrap-balancer';
 
 interface HeroProps extends HTMLAttributes<HTMLElement> {
     location?: string;
@@ -29,42 +30,46 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                             'text-[#051356]'
                         )}
                     >
-                        Move In/ Move Out Cleaning
-                        <span className="text-primary ml-1">In {location}</span>
+                        <Balancer>
+                            Move In - Move Out Cleaning In
+                            <span className="text-primary ml-1">
+                                {location}
+                            </span>
+                        </Balancer>
                     </h1>
                     <div className="grid grid-cols-1 mt-6 gap-2 font-semibold text-lg sm:grid-cols-2">
-                        <div>
+                        <p>
                             <Icons.checkCircle
                                 aria-hidden
                                 className="w-4 h-4 mr-1 text-primary inline"
                                 strokeWidth={3}
                             />
                             Trusted Cleaners
-                        </div>
-                        <div>
+                        </p>
+                        <p>
                             <Icons.checkCircle
                                 aria-hidden
                                 className="w-4 h-4 mr-1 text-primary inline"
                                 strokeWidth={3}
                             />
                             200% Guarantee
-                        </div>
-                        <div>
+                        </p>
+                        <p>
                             <Icons.checkCircle
                                 aria-hidden
                                 className="w-4 h-4 mr-1 text-primary inline"
                                 strokeWidth={3}
                             />
                             5-Star Rated Service
-                        </div>
-                        <div>
+                        </p>
+                        <p>
                             <Icons.checkCircle
                                 aria-hidden
                                 className="w-4 h-4 mr-1 text-primary inline stroke-3"
                                 strokeWidth={3}
                             />
                             Happy Customers
-                        </div>
+                        </p>
                     </div>
                     <div className="flex flex-col items-center gap-x-2 gap-y-4 sm:flex-row">
                         <div className="space-y-2">
@@ -83,7 +88,7 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                     </div>
                     <div className="flex gap-4 items-start">
                         <Image src={Stamp} width={90} height={90} alt="Stamp" />
-                        <div>
+                        <div className="space-y-1">
                             <div className="text-red-500 border border-red-500 inline-flex items-center p-2 rounded-lg">
                                 <Icons.fullGoogle
                                     className="w-4 h-4 mr-1"
@@ -114,6 +119,10 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                                     />
                                 </div>
                             </div>
+                            <Icons.productReview
+                                aria-hidden
+                                className="w-[140px] h-[40px]"
+                            />
                         </div>
                     </div>
                 </div>

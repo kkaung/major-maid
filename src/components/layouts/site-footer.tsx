@@ -3,7 +3,7 @@ import { siteConfig } from '@/config/site';
 import { Shell } from '@/components/shell';
 import { Icons } from '@/components/icons';
 import { cn } from '@/lib/utils';
-import { HTMLAttributes } from 'react';
+import { type HTMLAttributes } from 'react';
 
 interface SiteFooterProps extends HTMLAttributes<HTMLElement> {
     location?: string;

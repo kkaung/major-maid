@@ -29,7 +29,7 @@ export default function HowWork({
             )}
         >
             <h2 className={headingVariants({})}>
-                <Balancer>How It Works For End Of Lease Cleaning</Balancer>
+                <Balancer>How It Works For Deep Cleaning</Balancer>
             </h2>
             <ul className="grid grid-cols-1 gap-6 grid-flow-row md:grid-cols-3">
                 <li>
@@ -43,8 +43,8 @@ export default function HowWork({
                         />
                         <p className="font-semibold text-lg">1. Book Online</p>
                         <p>
-                            Book your {location} house cleaning service online
-                            in 60 seconds.
+                            Book your {location} deep cleaning service online in
+                            60 seconds.
                         </p>
                     </div>
                 </li>
@@ -60,7 +60,7 @@ export default function HowWork({
                         <p className="font-semibold text-lg">2. We Clean</p>
                         <p>
                             Our cleaners in {location} will come over &
-                            professionally clean your home.
+                            professionally deep clean your home.
                         </p>
                     </div>
                 </li>
@@ -75,7 +75,7 @@ export default function HowWork({
                         />
                         <p className="font-semibold text-lg">3. You Relax</p>
                         <p>
-                            Sit back, relax and have your rental bond returned.
+                            Sit back, relax and enjoy your sparkling clean home.
                         </p>
                     </div>
                 </li>
@@ -90,7 +90,7 @@ export default function HowWork({
                         'font-semibold  rounded-full'
                     )}
                 >
-                    Book my end lease cleaning
+                    Book my deep cleaning
                 </Link>
             </div>
         </section>

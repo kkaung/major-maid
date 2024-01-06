@@ -75,8 +75,8 @@ export default function FAQs({ location = 'Sydney', ...props }: FAQsProps) {
                                 'mx-auto'
                             )}
                         >
-                            Have questions about our house cleaning in Sydney?
-                            Take a look below. Or call us on
+                            Have questions about our bond cleaning in {location}
+                            ? Take a look below. Or call us on
                             <span className="text-primary ml-1">
                                 1300 905 032
                             </span>

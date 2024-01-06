@@ -10,8 +10,8 @@ import City from '@/components/marketing/city';
 import { Shell } from '@/components/shell';
 import Satisfaction from '@/components/marketing/satisfaction';
 import LatestBlog from './_components/latest-blog';
-import PopularLocations from './_components/popular-locations';
 import { getCity } from '@/lib/next';
+import { OrganizationJsonLd, WebPageJsonLd } from 'next-seo';
 
 export const runtime = 'edge';
 
@@ -19,28 +19,28 @@ export default function Page() {
     const city = getCity();
 
     return (
-        <Shell variant="sidebar" className="grid-16">
-            <div className="container mx-auto space-y-16">
-                <Hero location={city} />
-                {/* <Testmonials className="max-w-md w-full mx-auto" />
+        <>
+            <Shell variant="sidebar" className="grid-16">
+                <div className="container mx-auto space-y-16">
+                    <Hero location={city} />
+                    {/* <Testmonials className="max-w-md w-full mx-auto" />
                 <Featuring />
                 <HowWork /> */}
-            </div>
-            <div>
-                <Services />
-            </div>
-            <WhyUs className="max-w-5xl w-full mx-auto" />
-            <div className="container mx-auto space-y-16">
-                <City />
-                <FAQs />
-                {/* <LatestBlog className="max-w-6xl w-full mx-auto" /> */}
-            </div>
-            <div className="bg-secondary py-12">
-                <PopularLocations className="container mx-auto w-full max-w-6xl" />
-            </div>
-            <div className="container mx-auto">
-                <Satisfaction className="container mx-auto" />
-            </div>
-        </Shell>
+                </div>
+                <div>
+                    <Services />
+                </div>
+                <WhyUs className="max-w-5xl w-full mx-auto" />
+                <div className="container mx-auto space-y-16">
+                    <City />
+                    <FAQs />
+                    {/* <LatestBlog className="max-w-6xl w-full mx-auto" /> */}
+                </div>
+                <div className="bg-secondary py-12"></div>
+                <div className="container mx-auto">
+                    <Satisfaction className="container mx-auto" />
+                </div>
+            </Shell>
+        </>
     );
 }

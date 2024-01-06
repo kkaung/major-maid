@@ -4,6 +4,7 @@ import React, { type HTMLAttributes } from 'react';
 import { descriptionVariants, headingVariants } from '@/components/page-header';
 import { buttonVariants } from '@/components/ui/button';
 import Balancer from 'react-wrap-balancer';
+import { siteConfig } from '@/config/site';
 
 interface SatisfactionProps extends HTMLAttributes<HTMLElement> {}
 
@@ -32,15 +33,26 @@ export default function Satisfaction({ ...props }: SatisfactionProps) {
                 >
                     If you’re not happy with our work, we make it right!
                 </p>
-                <Link
-                    href="/booking"
-                    className={cn(
-                        buttonVariants({ variant: 'secondary' }),
-                        'text-primary rounded-full font-semibold w-40 hover:text-primary'
-                    )}
-                >
-                    Get a quote
-                </Link>
+                <div className="space-x-4">
+                    <Link
+                        href="/booking"
+                        className={cn(
+                            buttonVariants({ variant: 'secondary' }),
+                            'text-primary rounded-full font-semibold w-40 hover:text-primary'
+                        )}
+                    >
+                        Get a quote
+                    </Link>
+                    {/* <Link
+                        href="/booking"
+                        className={cn(
+                            buttonVariants({ variant: 'outline' }),
+                            'bg-transparent rounded-full font-semibold'
+                        )}
+                    >
+                        Call Us: {siteConfig.business.phone}
+                    </Link> */}
+                </div>
             </div>
         </section>
     );

@@ -1,10 +1,9 @@
 import * as React from 'react';
 import Link from 'next/link';
-import { ChevronRightIcon, SlashIcon } from '@radix-ui/react-icons';
-
-import { cn, truncate } from '@/lib/utils';
+import { SlashIcon } from '@radix-ui/react-icons';
+import { absoluteUrl, cn, truncate } from '@/lib/utils';
 import Dot from '@/components/dot';
-import { Icons } from '@/components/icons';
+import { BreadcrumbJsonLd } from 'next-seo';
 
 interface BreadcrumbsProps {
     segments: {
@@ -26,45 +25,68 @@ export function Breadcrumbs({
     const SeparatorIcon = separator ?? SlashIcon;
 
     return (
-        <nav
-            aria-label="breadcrumbs"
-            className="flex items-center text-sm font-medium text-muted-foreground"
-        >
-            {segments.map((segment, index) => {
-                const isLastSegment = index === segments.length - 1;
+        <>
+            <nav
+                aria-label="breadcrumbs"
+                className="flex items-center text-sm font-medium text-muted-foreground flex-wrap"
+            >
+                {segments.map((segment, index) => {
+                    const isLastSegment = index === segments.length - 1;
 
-                return (
-                    <React.Fragment key={segment.href}>
-                        <Link
-                            aria-current={isLastSegment ? 'page' : undefined}
-                            href={segment.href}
-                            className={cn(
-                                'truncate transition-colors hover:text-foreground',
-                                isLastSegment
-                                    ? 'text-foreground'
-                                    : 'text-muted-foreground'
-                            )}
-                        >
-                            {truncationLength > 0 && segment.title
-                                ? truncate(segment.title, truncationLength)
-                                : segment.title}
-                        </Link>
-                        {!isLastSegment && (
-                            <>
-                                {dottable ? (
-                                    <Dot className="mx-2" aria-hidden />
-                                ) : (
-                                    <SeparatorIcon
-                                        className="w-3 h-3 mx-2"
-                                        strokeWidth={3}
-                                        aria-hidden
-                                    />
+                    if (isLastSegment)
+                        return (
+                            <div className="text-foreground font-medium">
+                                {truncationLength > 0 && segment.title
+                                    ? truncate(segment.title, truncationLength)
+                                    : segment.title}
+                            </div>
+                        );
+
+                    return (
+                        <React.Fragment key={segment.href}>
+                            <Link
+                                aria-current={
+                                    isLastSegment ? 'page' : undefined
+                                }
+                                href={segment.href}
+                                className={cn(
+                                    'truncate transition-colors hover:text-foreground',
+                                    isLastSegment
+                                        ? 'text-foreground'
+                                        : 'text-muted-foreground'
                                 )}
-                            </>
-                        )}
-                    </React.Fragment>
-                );
-            })}
-        </nav>
+                            >
+                                {truncationLength > 0 && segment.title
+                                    ? truncate(segment.title, truncationLength)
+                                    : segment.title}
+                            </Link>
+                            {!isLastSegment && (
+                                <>
+                                    {dottable ? (
+                                        <Dot className="mx-2" aria-hidden />
+                                    ) : (
+                                        <SeparatorIcon
+                                            className="w-3 h-3 mx-2"
+                                            strokeWidth={3}
+                                            aria-hidden
+                                        />
+                                    )}
+                                </>
+                            )}
+                        </React.Fragment>
+                    );
+                })}
+            </nav>
+            <BreadcrumbJsonLd
+                useAppDir
+                itemListElements={segments.map((segment, idx) => {
+                    return {
+                        position: idx + 1,
+                        name: segment.title,
+                        item: absoluteUrl(segment.href),
+                    };
+                })}
+            />
+        </>
     );
 }

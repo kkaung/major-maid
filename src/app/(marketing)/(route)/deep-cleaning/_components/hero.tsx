@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Stamp from '/public/assets/stamp.png';
 import HeroPreview from '/public/assets/images/hero.jpg';
+import Balancer from 'react-wrap-balancer';
 
 interface HeroProps extends HTMLAttributes<HTMLElement> {
     location?: string;
@@ -23,25 +24,23 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
         >
             <div className="z-20 mx-auto max-w-4xl w-full grid gap-12 grid-flow-col md:grid-flow-row md:grid-cols-2">
                 <div className="space-y-6">
-                    <h1
-                        className={cn(
-                            headingVariants({ size: 'lg' }),
-                            'text-[#051356]'
-                        )}
-                    >
-                        Deep Cleaning
-                        <br /> & Maid Service <br />
-                        <span className="text-primary mt-1">In {location}</span>
+                    <h1 className={cn(headingVariants({ size: 'lg' }))}>
+                        <Balancer>
+                            Deep Cleaning & Maid Service In
+                            <span className="text-primary ml-1">
+                                {location}
+                            </span>
+                        </Balancer>
                     </h1>
                     <div className="grid grid-cols-1 mt-6 gap-2 font-semibold text-lg sm:grid-cols-2">
-                        <div>
+                        <p>
                             <Icons.checkCircle
                                 aria-hidden
                                 className="w-4 h-4 mr-1 text-primary inline"
                                 strokeWidth={3}
                             />
-                            Trusted Cleaning
-                        </div>
+                            Trusted Cleaners
+                        </p>
                         <div>
                             <Icons.checkCircle
                                 aria-hidden
@@ -84,7 +83,7 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                     </div>
                     <div className="flex gap-4 items-start">
                         <Image src={Stamp} width={90} height={90} alt="Stamp" />
-                        <div>
+                        <div className="space-y-1">
                             <div className="text-red-500 border border-red-500 inline-flex items-center p-2 rounded-lg">
                                 <Icons.fullGoogle
                                     className="w-4 h-4 mr-1"
@@ -115,6 +114,10 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                                     />
                                 </div>
                             </div>
+                            <Icons.productReview
+                                aria-hidden
+                                className="w-[140px] h-[40px]"
+                            />
                         </div>
                     </div>
                 </div>

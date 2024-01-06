@@ -9,43 +9,58 @@ import Testmonials from '@/components/marketing/testmonials';
 import FAQs from './_components/faqs';
 import HowWork from './_components/how-work';
 import { type Metadata } from 'next';
-
-const getCity = () => {
-    const headersList = headers();
-
-    return headersList.get('x-vercel-ip-city') ?? 'Sydney';
-};
+import { getCity } from '@/lib/next';
+import { LocalBusinessJsonLd } from 'next-seo';
+import { siteConfig } from '@/config/site';
+import { absoluteUrl } from '@/lib/utils';
 
 export const runtime = 'edge';
 
-export async function generateMetadata({}): Promise<Metadata> {
-    return {
-        title: '',
-        description: '',
-    };
-}
+export const metadata: Metadata = {
+    title: '',
+    description: '',
+};
 
 export default function Page() {
     const city = getCity();
 
     return (
-        <Shell>
-            <Hero />
-            <HowWork location="" />
-            <Testmonials className="mx-auto" />
-            <Featuring />
-            <FAQs />
-            <Satisfaction />
-            <Breadcrumbs
-                segments={[
-                    { title: 'Home', href: '/' },
-                    {
-                        title: 'End Of Lease Cleaning',
-                        href: '/end-lease-cleaning',
-                    },
-                ]}
-                dottable={false}
+        <>
+            <LocalBusinessJsonLd
+                useAppDir
+                id={''}
+                type="Cleaing"
+                name="End Of Lease Cleaing"
+                url={absoluteUrl('/')}
+                description={''}
+                address={{
+                    addressLocality: city,
+                    addressCountry: 'Australia',
+                }}
+                telephone={siteConfig.business.phone}
+                rating={{
+                    ratingValue: siteConfig.rating.ratingValue,
+                    ratingCount: siteConfig.rating.ratingCount,
+                }}
             />
-        </Shell>
+            <Shell>
+                <Hero location={city} />
+                <Featuring />
+                <HowWork location={city} />
+                <Testmonials className="mx-auto" />
+                <FAQs />
+                <Satisfaction />
+                <Breadcrumbs
+                    segments={[
+                        { title: 'Home', href: '/' },
+                        {
+                            title: 'End Of Lease Cleaning',
+                            href: '/end-lease-cleaning',
+                        },
+                    ]}
+                    dottable={false}
+                />
+            </Shell>
+        </>
     );
 }

@@ -7,16 +7,42 @@ import AccordionList from '@/components/accordion-list';
 
 const getFAQs = (location?: string) => {
     return [
-        { question: 'Do you offer a bond back guarantee?', answer: '' },
-        { question: 'How much do you charge?', answer: '' },
-        { question: 'Is your quote final?', answer: '' },
         {
-            question: 'How long will my bond cleaning service take?',
+            question: 'What is deep clean?',
+            answer: `A deep clean is for first-time customers or customers who haven't had their home professionally cleaned in the last three months. To see the extra things we do for deep cleans check out our`,
+        },
+        {
+            question:
+                'What is the difference between deep cleaning and regular cleaning?',
+            answer: '',
+        },
+        {
+            question: 'How long does it take to clean my house?',
+            answer: `The duration of the cleaning process is contingent on your home's condition. A quick rule of thumb is to match the number of bedrooms with the estimated hours needed (e.g. 3 bedrooms would typically require around 3 hours)`,
+        },
+        {
+            question: 'Are you insured?',
             answer: '',
         },
         {
             question:
-                'Do I need to be present during the bond cleaning process?',
+                'What services are not included in your deep cleaning service?',
+            answer: '',
+        },
+        {
+            question: `What services are included in your deep cleaning service?`,
+            answer: '',
+        },
+        {
+            question: `What services are not included in your deep cleaning service?`,
+            answer: '',
+        },
+        {
+            question: `How often should I get a deep cleaning service?`,
+            answer: '',
+        },
+        {
+            question: `Can I book deep cleaning services online in ${location}?`,
             answer: '',
         },
     ];

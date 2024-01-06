@@ -4,7 +4,7 @@ import SiteFooter from '@/components/layouts/site-footer';
 
 export default async function Layout({ children }: PropsWithChildren) {
     return (
-        <div className="relative flex min-h-screen flex-col">
+        <div className="relative flex min-h-screen flex-col overflow-hidden">
             <SiteHeader />
             <main className="flex-1">{children}</main>
             <SiteFooter />
