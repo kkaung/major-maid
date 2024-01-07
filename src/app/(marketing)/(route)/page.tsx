@@ -8,6 +8,7 @@ import City from '@/components/marketing/city';
 import { Shell } from '@/components/shell';
 import Satisfaction from '@/components/marketing/satisfaction';
 import { getCity } from '@/lib/next';
+import Reviews from '@/components/marketing/reviews';
 
 export const runtime = 'edge';
 
@@ -19,8 +20,9 @@ export default function Page() {
             <Shell variant="sidebar" className="grid-16">
                 <Hero location={city} />
                 <Featuring />
-                <HowWork />
+                <Reviews />
                 <div className="container mx-auto space-y-16 max-w-6xl">
+                    <HowWork />
                     <WhyUs
                         location={city}
                         className="max-w-5xl w-full mx-auto"
