@@ -30,13 +30,13 @@ export default function PopularLocations({ ...props }: PopularLocationProps) {
             </h2>
             <div>
                 <Tabs defaultValue="sydney" className="relative mt-6 w-full">
-                    <TabsList className="w-full justify-start rounded-none border-b bg-transparent p-0">
+                    <TabsList className="w-full justify-start rounded-none border-b border-primary p-0 bg-transparent">
                         {tabs.map(tab => (
                             <div
                                 role="none"
                                 key={tab.title}
                                 className={cn(
-                                    'border-b-3 border-transparent py-1 data-[state=active]:border-primary'
+                                    'border-b-2 border-transparent py- data-[state=active]:border-primary'
                                 )}
                             >
                                 <TabsTrigger

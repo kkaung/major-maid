@@ -4,10 +4,9 @@ import { locations } from '@/config/location';
 import { cn } from '@/lib/utils';
 import React, { type HTMLAttributes } from 'react';
 import Balancer from 'react-wrap-balancer';
-import { headingVariants } from './page-header';
 import Link from 'next/link';
+import { headingVariants } from './page-header';
 import { Collapsible, CollapsibleTrigger } from '@/components/ui/collapsible';
-import { Button } from './ui/button';
 
 interface SuburbsProps extends HTMLAttributes<HTMLElement> {
     title: string;
@@ -38,13 +37,13 @@ export default function Suburbs({
         >
             <div className="text-center">
                 <h2 className={cn(headingVariants({}))}>
-                    <Balancer>Find Cleaners In Suburbs Of {location}</Balancer>
+                    <Balancer>{title}</Balancer>
                 </h2>
             </div>
             <Collapsible open={isOpen} onOpenChange={setIsOpen}>
                 <div
                     className={cn(
-                        'grid grid-cols-2 gap-x-6 gap-y-2 h-[300px] overflow-hidden text-center xs:grid-cols-3 sm:grid-cols-4 sm:text-left md:grid-cols-5 lg:grid-cols-6',
+                        'relative grid grid-cols-2 gap-x-6 gap-y-2 h-[300px] overflow-hidden text-center xs:grid-cols-3 sm:grid-cols-4 sm:text-left md:grid-cols-5 lg:grid-cols-6',
                         {
                             'h-full': isOpen,
                         }
@@ -61,17 +60,19 @@ export default function Suburbs({
                             {item.title}
                         </Link>
                     ))}
+                    <div
+                        className={cn(
+                            'absolute z-10 bottom-0 inset-x-0 h-24 bg-gradient-to-t from-background via-background/80 translate-y-1',
+                            { 'from-transparent via-transparent': isOpen }
+                        )}
+                    />
                 </div>
                 <div className="text-center py-6">
                     <CollapsibleTrigger asChild>
-                        <Button
-                            variant="ghost"
-                            size="sm"
-                            className="text-primary rounded-full hover:text-primary"
-                        >
+                        <div className="cursor-pointer">
                             {isOpen ? 'View Less' : 'View More'}
                             <span className="sr-only">Toggle</span>
-                        </Button>
+                        </div>
                     </CollapsibleTrigger>
                 </div>
             </Collapsible>

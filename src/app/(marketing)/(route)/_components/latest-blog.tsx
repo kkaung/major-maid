@@ -24,10 +24,10 @@ export default function LatestBlog({ ...props }: LatestBlogProps) {
                 </Link>
             </div>
             <section>
-                <ul className="flex gap-6 overflow-x-scroll w-full">
+                <ul className="flex gap-6 overflow-x-scroll w-full max-w-5xl">
                     {allPosts.map((post, idx) => (
                         <li key={idx} className="w-[400px]">
-                            <article className="relative ">
+                            <article className="relative">
                                 <AspectRatio
                                     ratio={16 / 9}
                                     className="overflow-hidden rounded-xl relative mb-2"

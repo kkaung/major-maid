@@ -1,4 +1,3 @@
-import GridPattern from '@/components/magicui/grid-pattern';
 import {
     PageHeader,
     PageHeaderDescription,
@@ -11,8 +10,6 @@ import { env } from '@/env.mjs';
 import { GoogleMapsEmbed } from '@next/third-parties/google';
 import React from 'react';
 import Link from 'next/link';
-import { BreadcrumbJsonLd, ProductJsonLd } from 'next-seo';
-import { absoluteUrl } from '@/lib/utils';
 
 export default function Page() {
     return (

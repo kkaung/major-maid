@@ -29,12 +29,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         s.title.toLocaleLowerCase()
     );
 
-    const routes = ['', '/products', '/stores', '/build-a-board', '/blog'].map(
-        route => ({
-            url: absoluteUrl(route),
-            lastModified: new Date().toISOString(),
-        })
-    );
+    const routes = [
+        '',
+        '/frequently-asked-questions',
+        '/checklist',
+        '/carrers',
+        '/pricing',
+        '/reviews',
+        '/blog',
+    ].map(route => ({
+        url: absoluteUrl(route),
+        lastModified: new Date().toISOString(),
+    }));
 
     return [...routes, ...postsRoutes, ...pagesRoutes];
 }

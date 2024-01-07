@@ -20,10 +20,7 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
         <PageHeader
             id="hero"
             aria-labelledby="hero-heading"
-            className={cn(
-                'bg-[#F9F3EE] relative rounded-3xl p-6',
-                props.className
-            )}
+            className={cn('relative rounded-3xl p-6', props.className)}
         >
             <div className="z-20 mx-auto max-w-4xl w-full grid gap-12 grid-flow-col md:grid-flow-row md:grid-cols-2">
                 <div className="space-y-6">
@@ -91,7 +88,7 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                     </div>
                     <div className="flex gap-4 items-start">
                         <Image src={Stamp} width={90} height={90} alt="Stamp" />
-                        <div>
+                        <div className="space-y-1">
                             <div className="text-red-500 border border-red-500 inline-flex items-center p-2 rounded-lg">
                                 <Icons.fullGoogle
                                     className="w-4 h-4 mr-1"
@@ -122,6 +119,10 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                                     />
                                 </div>
                             </div>
+                            <Icons.productReview
+                                aria-hidden
+                                className="w-[140px] h-[40px]"
+                            />
                         </div>
                     </div>
                 </div>

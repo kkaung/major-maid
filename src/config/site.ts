@@ -81,83 +81,100 @@ export const siteConfig = {
     links,
     footerNav: [
         {
-            title: 'Sydney',
-            items: [
-                { title: 'Redfern', href: '/sydney/redfern' },
-                { title: 'Waterloo', href: '/sydney/waterloo' },
-                { title: 'Newtown', href: '/sydney/newtown' },
-                { title: 'Paramatta', href: '/sydney/paramatta' },
-                { title: 'Bondi', href: '/sydney/bondi' },
-                { title: 'Bronte', href: '/sydney/bronte' },
-                { title: 'North Sydney', href: '/sydney/north-sydney' },
-                { title: 'Surry Hill', href: '/sydney/surry-hills' },
-                { title: 'Double Bay', href: '/sydney/double-bay' },
-                { title: 'Ryde', href: '/sydney/ryde' },
-                { title: 'All Locations', href: '/locations' },
-            ],
-        },
-        {
-            title: 'Melbourne',
-            items: [
-                { title: 'East Melbourne', href: '/melbourne/east-melbourne' },
-                { title: 'Brighton', href: '/melbourne/brighton' },
-                { title: 'Canterbury', href: '/melbourne/canterbury' },
-                { title: 'Surrey Hills', href: '/melbourne/surrey-hills' },
-                { title: 'Toorak', href: '/melbourne/toorok' },
-                { title: 'Malvern', href: '/melbourne/malvern' },
-                { title: 'Kew', href: '/melbourne/kew' },
-                { title: 'Armadale', href: '/melbourne/armadale' },
-                { title: 'Balwyn', href: '/melbourne/balwyn' },
-                { title: 'South Yarra', href: '/melbourne/south-yarra' },
-                { title: 'All Locations', href: '/locations' },
-            ],
-        },
-        {
-            title: 'Services',
+            title: 'Sydney Services',
             items: [
                 {
                     title: 'House Cleaing',
-                    href: '/services/house-cleaning',
+                    href: '/house-cleaning-sydney',
                 },
                 {
                     title: 'Regular Cleaing',
-                    href: '/services/regular-cleaning',
+                    href: '/regular-cleaning-sydney',
                 },
                 {
                     title: 'Deep Cleaing',
-                    href: '/services/deep-cleaning',
+                    href: '/deep-cleaning-sydney',
                 },
                 {
                     title: 'End Lease Cleaning',
-                    href: '/services/end-lease-cleaning',
+                    href: '/end-lease-cleaning-sydney',
                 },
                 {
                     title: 'Oven Cleaning',
-                    href: '/services/oven-cleaning',
+                    href: '/oven-cleaning-sydney',
                 },
                 {
                     title: 'Bond Cleaning',
-                    href: '/services/bond-cleaning',
+                    href: '/bond-cleaning-sydney',
                 },
                 {
                     title: 'Apartment Cleaning',
-                    href: '/services/apartment-cleaning',
+                    href: '/apartment-cleaning-sydney',
                 },
                 {
                     title: 'Office Cleaning',
-                    href: '/services/office-cleaning',
+                    href: '/office-cleaning-sydney',
                 },
                 {
                     title: 'NDIS Cleaning',
-                    href: '/services/ndis-cleaning',
+                    href: '/ndis-cleaning-sydney',
                 },
                 {
                     title: 'Carpet Cleaning',
-                    href: '/services/carpet-cleaning',
+                    href: '/carpet-cleaning-sydney',
                 },
                 {
                     title: 'Move In - Move Out Cleaning',
-                    href: '/services/move-in-move-out-cleaning',
+                    href: '/move-in-move-out-cleaning-sydney',
+                },
+            ],
+        },
+        {
+            title: 'Melbourne Services',
+            items: [
+                {
+                    title: 'House Cleaing',
+                    href: '/house-cleaning-melbourne',
+                },
+                {
+                    title: 'Regular Cleaing',
+                    href: '/regular-cleaning-melbourne',
+                },
+                {
+                    title: 'Deep Cleaing',
+                    href: '/deep-cleaning-melbourne',
+                },
+                {
+                    title: 'End Lease Cleaning',
+                    href: '/end-lease-cleaning-melbourne',
+                },
+                {
+                    title: 'Oven Cleaning',
+                    href: '/oven-cleaning-melbourne',
+                },
+                {
+                    title: 'Bond Cleaning',
+                    href: '/bond-cleaning-melbourne',
+                },
+                {
+                    title: 'Apartment Cleaning',
+                    href: '/apartment-cleaning-melbourne',
+                },
+                {
+                    title: 'Office Cleaning',
+                    href: '/office-cleaning-melbourne',
+                },
+                {
+                    title: 'NDIS Cleaning',
+                    href: '/ndis-cleaning-melbourne',
+                },
+                {
+                    title: 'Carpet Cleaning',
+                    href: '/carpet-cleaning-melbourne',
+                },
+                {
+                    title: 'Move In - Move Out Cleaning',
+                    href: '/move-in-move-out-cleaning-melbourne',
                 },
             ],
         },
@@ -174,7 +191,6 @@ export const siteConfig = {
                 { title: 'FAQs', href: '/frequently-asked-questions' },
                 { title: 'Privacy Policy', href: '/privacy' },
                 { title: 'Terms And Conditions', href: '/terms' },
-                { title: 'Sitemap', href: '/sitemap' },
             ],
         },
     ] satisfies FooterItem[],

@@ -41,28 +41,28 @@ export default function Featuring({ ...props }: FeaturingProps) {
                         width={100}
                         height={100}
                         src={Insider}
-                        alt="Seven News"
+                        alt="Insider"
                         className="grayscale"
                     />
                     <Image
                         width={100}
                         height={100}
                         src={NewsCom}
-                        alt="Seven News"
+                        alt="News Com"
                         className="grayscale"
                     />
                     <Image
                         width={100}
                         height={100}
                         src={RealHomes}
-                        alt="Seven News"
+                        alt="Real Homes"
                         className="grayscale"
                     />
                     <Image
                         width={100}
                         height={100}
                         src={Yahoo}
-                        alt="Seven News"
+                        alt="Yahoo"
                         className="grayscale"
                     />
                 </div>

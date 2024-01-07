@@ -8,15 +8,50 @@ import { Shell } from '@/components/shell';
 import { siteConfig } from '@/config/site';
 import React from 'react';
 import FAQs from './_components/faqs';
+import { Button } from '@/components/ui/button';
 
 export default function Page() {
     return (
-        <Shell>
+        <Shell className="max-w-6xl">
             <PageHeader className="relative text-center">
                 <PageHeaderHeading>
                     {siteConfig.name} House Cleaning Pricing
                 </PageHeaderHeading>
-                <GridPattern className="-z-10 stroke-gray-200 dark:stroke-gray-800  opacity-50 [mask-image:radial-gradient(100%_100%_at_top_center,white,transparent)]" />
+                <PageHeaderDescription className="mx-auto mt-4" size="sm">
+                    We will assist you in determining the most suitable cleaning
+                    service from our range of high-quality options, tailored to
+                    both your budget and specific cleaning requirements.
+                </PageHeaderDescription>
+                <div className="flex gap-4 mx-auto mt-6">
+                    <Button
+                        variant="secondary"
+                        size="sm"
+                        className="rounded-full"
+                    >
+                        Flat Rate
+                    </Button>
+                    <Button
+                        variant="secondary"
+                        size="sm"
+                        className="rounded-full"
+                    >
+                        Hourly Rate
+                    </Button>
+                    <Button
+                        variant="secondary"
+                        size="sm"
+                        className="rounded-full"
+                    >
+                        Extras
+                    </Button>
+                    <Button
+                        variant="secondary"
+                        size="sm"
+                        className="rounded-full"
+                    >
+                        End Of Lease
+                    </Button>
+                </div>
             </PageHeader>
             <section></section>
             <section>

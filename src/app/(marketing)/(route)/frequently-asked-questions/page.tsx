@@ -81,7 +81,7 @@ const billingQuestions = [
 
 export default function Page() {
     return (
-        <Shell className="gap-16">
+        <Shell className="gap-16 max-w-7xl">
             <Breadcrumbs
                 segments={[
                     { title: 'Home', href: '/' },
@@ -161,7 +161,6 @@ export default function Page() {
                     <AccordionList items={billingQuestions} />
                 </section>
             </div>
-            <Satisfaction />
         </Shell>
     );
 }
