@@ -5,7 +5,7 @@ import { descriptionVariants, headingVariants } from '@/components/page-header';
 import { Icons } from '@/components/icons';
 import { siteConfig } from '@/config/site';
 import Marquee from '@/components/magicui/marquee';
-import { Avatar, AvatarFallback } from '../ui/avatar';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 
 const reviews = [
     {
@@ -112,7 +112,7 @@ function ReviewCard({ name, body, ...props }: ReviewCardProps) {
             <div className="flex justify-between">
                 <div className="space-y-2">
                     <div className="flex gap-2">
-                        <Avatar className="h-10 w-10">
+                        <Avatar className="h-9 w-9">
                             <AvatarFallback className="bg-violet-500 text-white">
                                 {name.charAt(0).toUpperCase()}
                             </AvatarFallback>

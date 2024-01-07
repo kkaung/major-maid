@@ -155,7 +155,7 @@ export default async function PostPage({ params }: PostPageProps) {
             )}
             <Mdx code={post.body.code} />
             <section className="mt-8">
-                <Card>
+                <Card className="border-0 bg-secondary/50 rounded-xl">
                     <CardHeader>
                         <div className="flex gap-4">
                             <CardTitle>
@@ -198,7 +198,6 @@ export default async function PostPage({ params }: PostPageProps) {
                 </Card>
             </section>
             <AboutUs className="mt-6 w-full xl:absolute xl:right-[-260px] xl:top-14 xl:inline-flex xl:flex-col xl:mt-0 xl:w-[260px]" />
-            <hr className="mt-12" />
             <div className="flex justify-center py-6 lg:py-10">
                 <Link
                     href="/blog"
