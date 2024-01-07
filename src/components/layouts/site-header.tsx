@@ -19,7 +19,7 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
             )}
             {...props}
         >
-            <nav className="flex container h-16 items-center justify-between sm:h-14">
+            <nav className="flex container max-w-6xl w-full h-16 items-center justify-between sm:h-14">
                 <div className="flex items-center gap-6 flex-1 sm:gap-8 sm:mr-12 md:flex-grow-0">
                     <MobileNav
                         mainNavItems={siteConfig.mainNav}

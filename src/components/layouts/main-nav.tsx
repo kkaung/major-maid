@@ -40,7 +40,7 @@ export default function MainNav({ items }: MainNavProps) {
                                     {item.title}
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent>
-                                    <ul className="w-[340px] grid grid-cols-2 gap-y-2 gap-x-2  p-4 z-50">
+                                    <ul className="w-[360px] h-full grid grid-cols-2 gap-3  p-4 z-50">
                                         {item.items.map(item => (
                                             <ListItem
                                                 key={item.title}
@@ -96,12 +96,12 @@ const ListItem = React.forwardRef<
                     ref={ref}
                     href={String(href)}
                     className={cn(
-                        'line-clamp-1 block select-none space-y-1 rounded-md leading-none no-underline outline-none transition-colors focus:bg-accent focus:text-accent-foreground',
+                        'block select-none space-y-1 text-sm rounded-md leading-none no-underline outline-none transition-colors focus:bg-accent focus:text-accent-foreground',
                         className
                     )}
                     {...props}
                 >
-                    <div className="leading-none text-foreground font-normal line-clamp-1 hover:underline">
+                    <div className="leading-none text-foreground font-normal hover:underline">
                         {title}
                     </div>
                 </Link>

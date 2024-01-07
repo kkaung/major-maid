@@ -9,6 +9,8 @@ import { Shell } from '@/components/shell';
 import Satisfaction from '@/components/marketing/satisfaction';
 import { getCity } from '@/lib/next';
 import Reviews from '@/components/marketing/reviews';
+import Services from '@/components/marketing/services';
+import LatestBlog from './_components/latest-blog';
 
 export const runtime = 'edge';
 
@@ -18,18 +20,20 @@ export default function Page() {
     return (
         <>
             <Shell variant="sidebar" className="grid-16">
-                <Hero location={city} />
-                <Featuring />
+                <div>
+                    <Hero location={city} />
+                    <Featuring />
+                </div>
+                <HowWork className="container mx-auto" />
                 <Reviews />
                 <div className="container mx-auto space-y-16 max-w-6xl">
-                    <HowWork />
+                    <Services location={city} />
                     <WhyUs
                         location={city}
                         className="max-w-5xl w-full mx-auto"
                     />
                     <City />
                     <FAQs />
-                    {/* <LatestBlog className="max-w-6xl w-full mx-auto" /> */}
                     <Satisfaction className="container mx-auto" />
                 </div>
                 <div className="container mx-auto max-w-6xl space-y-16"></div>

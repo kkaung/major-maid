@@ -71,10 +71,10 @@ export default function Reviews({ location, ...props }: ReviewsProps) {
                             </Balancer>
                         </p>
                     </div>
-                    <div className="space-y-6">
+                    <div className="space-y-5">
                         <Marquee
                             pauseOnHover
-                            className="transform-cpu [--duration:90s]"
+                            className="transform-cpu [--duration:150s]"
                         >
                             {reviews.map(review => (
                                 <ReviewCard key={review.name} {...review} />
@@ -83,7 +83,7 @@ export default function Reviews({ location, ...props }: ReviewsProps) {
                         <Marquee
                             pauseOnHover
                             reverse
-                            className="transform-cpu [--duration:90s]"
+                            className="transform-cpu [--duration:150s]"
                         >
                             {reviews.map(review => (
                                 <ReviewCard key={review.name} {...review} />
@@ -106,7 +106,7 @@ function ReviewCard({ name, body, ...props }: ReviewCardProps) {
         <div
             className={cn(
                 props.className,
-                'h-full w-60 min-w-[22rem] leading-tight border rounded-3xl p-4 bg-secondary ml-2'
+                'h-full w-60 min-w-[20rem] leading-tight border rounded-xl p-4 bg-secondary ml-2'
             )}
         >
             <div className="flex justify-between">

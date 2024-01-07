@@ -22,10 +22,7 @@ interface MobileNavProps {
     sidebarNavItems: SidebarNavItem[];
 }
 
-export default function MobileNav({
-    mainNavItems,
-    sidebarNavItems,
-}: MobileNavProps) {
+export default function MobileNav({ mainNavItems }: MobileNavProps) {
     const pathname = usePathname();
     const [isOpen, setIsOpen] = React.useState(false);
 

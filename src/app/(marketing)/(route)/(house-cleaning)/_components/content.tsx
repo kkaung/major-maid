@@ -10,6 +10,7 @@ import HowWork from '@/components/marketing/how-work';
 
 import Hero from './hero';
 import FAQs from './faqs';
+import Reviews from '@/components/marketing/reviews';
 
 interface ContentProps {
     city: string;
@@ -23,8 +24,9 @@ export default function Content({ city, suburb, segments }: ContentProps) {
             <Shell variant="sidebar" className="grid-16">
                 <Hero location={suburb ?? city} />
                 <Featuring />
-                <HowWork location={city} />
+                <Reviews />
                 <div className="container mx-auto max-w-7xl w-full space-y-16">
+                    <HowWork location={city} />
                     <Checklist title="House Cleaning" name="bond" />
                     <FAQs />
                     <Satisfaction />

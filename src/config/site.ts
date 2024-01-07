@@ -21,57 +21,102 @@ export const siteConfig = {
     ogImage: 'https://skateshop.sadmn.com/opengraph-image.png',
     mainNav: [
         {
-            title: 'Services',
+            title: 'Sydney',
             items: [
                 {
                     title: 'House Cleaing',
-                    href: '/house-cleaning',
+                    href: '/house-cleaning-sydney',
                 },
                 {
                     title: 'Regular Cleaing',
-                    href: '/regular-cleaning',
+                    href: '/regular-cleaning-sydney',
                 },
                 {
                     title: 'Deep Cleaing',
-                    href: '/deep-cleaning',
+                    href: '/deep-cleaning-sydney',
                 },
                 {
                     title: 'End Lease Cleaning',
-                    href: '/end-lease-cleaning',
+                    href: '/end-lease-cleaning-sydney',
                 },
                 {
                     title: 'Oven Cleaning',
-                    href: '/oven-cleaning',
+                    href: '/oven-cleaning-sydney',
                 },
                 {
                     title: 'Bond Cleaning',
-                    href: '/bond-cleaning',
+                    href: '/bond-cleaning-sydney',
                 },
                 {
                     title: 'Office Cleaning',
-                    href: '/office-cleaning',
+                    href: '/office-cleaning-sydney',
                 },
                 {
-                    title: 'Move In - Move Out Cleaning',
-                    href: '/move-in-move-out-cleaning',
+                    title: 'Move In - Move Out',
+                    href: '/move-in-move-out-cleaning-sydney',
                 },
                 {
                     title: 'Carpet Cleaning',
-                    href: '/carpet-cleaning',
+                    href: '/carpet-cleaning-sydney',
                 },
                 {
                     title: 'NDIS Cleaning',
-                    href: '/ndis-cleaning',
+                    href: '/ndis-cleaning-sydney',
                 },
                 {
                     title: 'Apartment Cleaning',
-                    href: '/apartment-cleaning',
+                    href: '/apartment-cleaning-sydney',
                 },
             ],
         },
         {
-            title: 'Where We Serve',
-            href: '/locations',
+            title: 'Melbourne',
+            items: [
+                {
+                    title: 'House Cleaing',
+                    href: '/house-cleaning-melbourne',
+                },
+                {
+                    title: 'Regular Cleaing',
+                    href: '/regular-cleaning-melbourne',
+                },
+                {
+                    title: 'Deep Cleaing',
+                    href: '/deep-cleaning-melbourne',
+                },
+                {
+                    title: 'End Lease Cleaning',
+                    href: '/end-lease-cleaning-melbourne',
+                },
+                {
+                    title: 'Oven Cleaning',
+                    href: '/oven-cleaning-melbourne',
+                },
+                {
+                    title: 'Bond Cleaning',
+                    href: '/bond-cleaning-melbourne',
+                },
+                {
+                    title: 'Office Cleaning',
+                    href: '/office-cleaning-melbourne',
+                },
+                {
+                    title: 'Move In - Move Out',
+                    href: '/move-in-move-out-cleaning-melbourne',
+                },
+                {
+                    title: 'Carpet Cleaning',
+                    href: '/carpet-cleaning-melbourne',
+                },
+                {
+                    title: 'NDIS Cleaning',
+                    href: '/ndis-cleaning-melbourne',
+                },
+                {
+                    title: 'Apartment Cleaning',
+                    href: '/apartment-cleaning-melbourne',
+                },
+            ],
         },
         {
             title: 'Pricing',
@@ -124,7 +169,7 @@ export const siteConfig = {
                     href: '/carpet-cleaning-sydney',
                 },
                 {
-                    title: 'Move In - Move Out Cleaning',
+                    title: 'Move In - Move Out',
                     href: '/move-in-move-out-cleaning-sydney',
                 },
             ],
@@ -173,7 +218,7 @@ export const siteConfig = {
                     href: '/carpet-cleaning-melbourne',
                 },
                 {
-                    title: 'Move In - Move Out Cleaning',
+                    title: 'Move In - Move Out',
                     href: '/move-in-move-out-cleaning-melbourne',
                 },
             ],
@@ -188,6 +233,7 @@ export const siteConfig = {
                 { title: 'Pricing', href: '/pricing' },
                 { title: 'Careers', href: '/careers' },
                 { title: 'Checklist', href: '/checklist' },
+                { title: 'Locations', href: '/locations' },
                 { title: 'FAQs', href: '/frequently-asked-questions' },
                 { title: 'Privacy Policy', href: '/privacy' },
                 { title: 'Terms And Conditions', href: '/terms' },

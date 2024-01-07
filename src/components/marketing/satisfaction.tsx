@@ -20,10 +20,7 @@ export default function Satisfaction({ ...props }: SatisfactionProps) {
         >
             <div className="max-w-3xl w-full mx-auto space-y-6 text-center px-6">
                 <h2 className={cn(headingVariants({}))}>
-                    <Balancer>
-                        Ensuring 200% Customer Satisfaction Your Happiness, Our
-                        Commitment.
-                    </Balancer>
+                    <Balancer>Your 200% Satisfaction, Our Commitment.</Balancer>
                 </h2>
                 <p
                     className={cn(

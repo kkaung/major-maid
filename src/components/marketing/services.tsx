@@ -19,7 +19,7 @@ export default function Services({
             aria-labelledby="services-heading"
             className={cn(
                 props.className,
-                'bg-secondary py-12 px-4 space-y-12'
+                'bg-secondary py-12 px-4 space-y-12 rounded-3xl'
             )}
         >
             <div className="space-y-4 text-center">

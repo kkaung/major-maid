@@ -14,8 +14,8 @@ export default async function SiteFooter({
     ...props
 }: SiteFooterProps) {
     return (
-        <footer className="w-full bg-[#0C0E1F] relative overflow-hidden border-t">
-            <Shell as="div">
+        <footer className="w-full  bg-[#0C0E1F] relative overflow-hidden border-t">
+            <Shell as="div" className="max-w-6xl w-full mx-auto">
                 <section
                     id="footer-content"
                     aria-labelledby="footer-content-heading"

@@ -15,7 +15,7 @@ export default function Featuring({ ...props }: FeaturingProps) {
         <section
             id="featuring"
             aria-labelledby="featuring-heading"
-            className={cn(props.className, 'bg-secondary/40 py-6')}
+            className={cn(props.className, 'py-6')}
         >
             <div className="flex flex-col gap-x-12 gap-y-4 container max-w-4xl mx-auto sm:items-center sm:flex-row">
                 <p className="text-lg font-medium z-10 md:text-xl">
