@@ -63,3 +63,15 @@
         @apply px-4;
     }
 }
+
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+* {
+    scrollbar-color: transparent;
+}
+
+*::-ms-scrollbar-thumb {
+    background-color: transparent;
+}

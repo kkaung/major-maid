@@ -33,10 +33,10 @@ export default function Page({ params }: PageProps) {
             segments={[
                 { title: 'Home', href: '/' },
                 { title: 'Services', href: '/services' },
-                { title: 'Bond Cleaning', href: '/services/bond-cleaning' },
+                { title: 'Bond Cleaning', href: '/bond-cleaning-melbourne' },
                 {
                     title: location,
-                    href: `/services/bond-cleaning/${params.location}`,
+                    href: `/bond-cleaning-melbourne/${params.location}`,
                 },
             ]}
         />

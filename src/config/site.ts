@@ -67,6 +67,10 @@ export const siteConfig = {
                     title: 'Apartment Cleaning',
                     href: '/apartment-cleaning-sydney',
                 },
+                {
+                    title: 'Residental Window Cleaning',
+                    href: '/residental-window-cleaning-sydney',
+                },
             ],
         },
         {
@@ -116,6 +120,63 @@ export const siteConfig = {
                     title: 'Apartment Cleaning',
                     href: '/apartment-cleaning-melbourne',
                 },
+                {
+                    title: 'Residental Window Cleaning',
+                    href: '/residental-window-cleaning-melbourne',
+                },
+            ],
+        },
+        {
+            title: 'Canberra',
+            items: [
+                {
+                    title: 'House Cleaing',
+                    href: '/house-cleaning-canberra',
+                },
+                {
+                    title: 'Regular Cleaing',
+                    href: '/regular-cleaning-canberra',
+                },
+                {
+                    title: 'Deep Cleaing',
+                    href: '/deep-cleaning-canberra',
+                },
+                {
+                    title: 'End Lease Cleaning',
+                    href: '/end-lease-cleaning-canberra',
+                },
+                {
+                    title: 'Oven Cleaning',
+                    href: '/oven-cleaning-canberra',
+                },
+                {
+                    title: 'Bond Cleaning',
+                    href: '/bond-cleaning-canberra',
+                },
+                {
+                    title: 'Office Cleaning',
+                    href: '/office-cleaning-canberra',
+                },
+                {
+                    title: 'Move In - Move Out',
+                    href: '/move-in-move-out-cleaning-canberra',
+                },
+                {
+                    title: 'Carpet Cleaning',
+                    href: '/carpet-cleaning-canberra',
+                },
+                {
+                    title: 'NDIS Cleaning',
+                    href: '/ndis-cleaning-canberra',
+                },
+                {
+                    title: 'Apartment Cleaning',
+                    href: '/apartment-cleaning-canberra',
+                },
+                {
+                    title: 'Residental Window Cleaning',
+                    href: '/residental-window-cleaning-canberra',
+                },
             ],
         },
         {
@@ -126,7 +187,7 @@ export const siteConfig = {
     links,
     footerNav: [
         {
-            title: 'Sydney Services',
+            title: 'Sydney',
             items: [
                 {
                     title: 'House Cleaing',
@@ -175,7 +236,56 @@ export const siteConfig = {
             ],
         },
         {
-            title: 'Melbourne Services',
+            title: 'Melbourne',
+            items: [
+                {
+                    title: 'House Cleaing',
+                    href: '/house-cleaning-melbourne',
+                },
+                {
+                    title: 'Regular Cleaing',
+                    href: '/regular-cleaning-melbourne',
+                },
+                {
+                    title: 'Deep Cleaing',
+                    href: '/deep-cleaning-melbourne',
+                },
+                {
+                    title: 'End Lease Cleaning',
+                    href: '/end-lease-cleaning-melbourne',
+                },
+                {
+                    title: 'Oven Cleaning',
+                    href: '/oven-cleaning-melbourne',
+                },
+                {
+                    title: 'Bond Cleaning',
+                    href: '/bond-cleaning-melbourne',
+                },
+                {
+                    title: 'Apartment Cleaning',
+                    href: '/apartment-cleaning-melbourne',
+                },
+                {
+                    title: 'Office Cleaning',
+                    href: '/office-cleaning-melbourne',
+                },
+                {
+                    title: 'NDIS Cleaning',
+                    href: '/ndis-cleaning-melbourne',
+                },
+                {
+                    title: 'Carpet Cleaning',
+                    href: '/carpet-cleaning-melbourne',
+                },
+                {
+                    title: 'Move In - Move Out',
+                    href: '/move-in-move-out-cleaning-melbourne',
+                },
+            ],
+        },
+        {
+            title: 'Canberra',
             items: [
                 {
                     title: 'House Cleaing',
@@ -230,6 +340,7 @@ export const siteConfig = {
                 { title: 'About Us', href: '/about' },
                 { title: 'Blog', href: '/blog' },
                 { title: 'Reviews', href: '/reviews' },
+                { title: 'Services', href: '/services' },
                 { title: 'Pricing', href: '/pricing' },
                 { title: 'Careers', href: '/careers' },
                 { title: 'Checklist', href: '/checklist' },
@@ -255,62 +366,46 @@ export const siteConfig = {
 export const siteServices = [
     {
         title: 'House Cleaing',
-        href: '/house-cleaning',
+        slug: 'house-cleaning',
     },
     {
         title: 'Regular Cleaing',
-        href: '/regular-cleaning',
+        slug: 'regular-cleaning',
     },
     {
         title: 'Deep Cleaing',
-        href: '/deep-cleaning',
+        slug: 'deep-cleaning',
     },
     {
         title: 'End Lease Cleaning',
-        href: '/end-lease-cleaning',
+        slug: 'end-lease-cleaning',
     },
     {
         title: 'Oven Cleaning',
-        href: '/oven-cleaning',
+        slug: 'oven-cleaning',
     },
     {
         title: 'Bond Cleaning',
-        href: '/bond-cleaning',
+        slug: 'bond-cleaning',
     },
     {
         title: 'Office Cleaning',
-        href: '/office-cleaning',
+        slug: 'office-cleaning',
     },
     {
         title: 'NDIS Cleaning',
-        href: '/ndis-cleaning',
+        slug: 'ndis-cleaning',
     },
     {
         title: 'Carpet Cleaning',
-        href: '/carpet-cleaning',
+        slug: '/carpet-cleaning',
     },
     {
-        title: 'Move In - Move Out Cleaning',
-        href: '/move-in-move-out-cleaning',
+        title: 'Move In - Move Out',
+        slug: '/move-in-move-out-cleaning',
     },
     {
         title: 'Tile Cleaning',
-        href: '/move-in-move-out-cleaning',
-    },
-    {
-        title: 'One Off Cleaning',
-        href: '/one-off-cleaning',
-    },
-    {
-        title: 'Strata Cleaning',
-        href: '/one-off-cleaning',
-    },
-    {
-        title: 'Residental Window Cleaning',
-        href: '/residental-window-cleaning',
-    },
-    {
-        title: 'Construction Cleaning',
-        href: '/residental-window-cleaning',
+        href: '/tile-cleaning',
     },
 ];

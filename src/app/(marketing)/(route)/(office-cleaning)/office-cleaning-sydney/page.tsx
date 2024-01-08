@@ -1,6 +1,6 @@
 import React from 'react';
+import { type Metadata } from 'next';
 import { getCityFromPathname } from '@/lib/next';
-import { Metadata } from 'next';
 
 import Content from '../_components/content';
 

@@ -17,8 +17,8 @@ export default function Featuring({ ...props }: FeaturingProps) {
             aria-labelledby="featuring-heading"
             className={cn(props.className, 'py-6')}
         >
-            <div className="flex flex-col gap-x-12 gap-y-4 container max-w-4xl mx-auto sm:items-center sm:flex-row">
-                <p className="text-lg font-medium z-10 md:text-xl">
+            <div className="flex flex-col gap-x-12 gap-y-2 container max-w-4xl mx-auto sm:items-center sm:flex-row">
+                <p className="text-lg font-medium grayscale">
                     As
                     <span className="font-bold mx-1">Seen</span>On:
                 </p>

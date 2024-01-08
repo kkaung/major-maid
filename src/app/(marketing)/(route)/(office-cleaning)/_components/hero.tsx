@@ -6,6 +6,7 @@ import React, { type HTMLAttributes } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Stamp from '/public/assets/stamp.png';
+import Balancer from 'react-wrap-balancer';
 
 interface HeroProps extends HTMLAttributes<HTMLElement> {
     location?: string;
@@ -20,7 +21,7 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
             aria-labelledby="hero-heading"
             className={cn('relative rounded-3xl p-6', props.className)}
         >
-            <div className="z-20 mx-auto max-w-4xl w-full grid gap-12 grid-flow-col md:grid-flow-row md:grid-cols-2">
+            <div className="z-20 mx-auto max-w-5xl w-full grid gap-12 grid-flow-col md:grid-flow-row md:grid-cols-2">
                 <div className="space-y-6">
                     <h1
                         className={cn(
@@ -28,42 +29,46 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                             'text-[#051356]'
                         )}
                     >
-                        Office Cleaning Service In
-                        <span className="text-primary ml-1">{location}</span>
+                        <Balancer>
+                            Office Cleaning Service In
+                            <span className="text-primary ml-1">
+                                {location}
+                            </span>
+                        </Balancer>
                     </h1>
                     <div className="grid grid-cols-1 mt-6 gap-2 font-semibold text-lg sm:grid-cols-2">
-                        <div>
-                            <Icons.checkCircle
+                        <p>
+                            <Icons.check
                                 aria-hidden
                                 className="w-4 h-4 mr-1 text-primary inline"
                                 strokeWidth={3}
                             />
                             Trusted Cleaners
-                        </div>
-                        <div>
-                            <Icons.checkCircle
+                        </p>
+                        <p>
+                            <Icons.check
                                 aria-hidden
                                 className="w-4 h-4 mr-1 text-primary inline"
                                 strokeWidth={3}
                             />
                             200% Guarantee
-                        </div>
-                        <div>
-                            <Icons.checkCircle
+                        </p>
+                        <p>
+                            <Icons.check
                                 aria-hidden
                                 className="w-4 h-4 mr-1 text-primary inline"
                                 strokeWidth={3}
                             />
                             5-Star Rated Service
-                        </div>
-                        <div>
-                            <Icons.checkCircle
+                        </p>
+                        <p>
+                            <Icons.check
                                 aria-hidden
                                 className="w-4 h-4 mr-1 text-primary inline stroke-3"
                                 strokeWidth={3}
                             />
                             Happy Customers
-                        </div>
+                        </p>
                     </div>
                     <div className="flex flex-col items-center gap-x-2 gap-y-4 sm:flex-row">
                         <div className="space-y-2">
@@ -78,45 +83,6 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                             >
                                 Get a quote & Book online
                             </Link>
-                        </div>
-                    </div>
-                    <div className="flex gap-4 items-start">
-                        <Image src={Stamp} width={90} height={90} alt="Stamp" />
-                        <div className="space-y-1">
-                            <div className="text-red-500 border border-red-500 inline-flex items-center p-2 rounded-lg">
-                                <Icons.fullGoogle
-                                    className="w-4 h-4 mr-1"
-                                    aria-hidden
-                                />
-                                <span className="font-medium">5.0</span>
-                                <span className="sr-only">Google Rating</span>
-                                <div className="flex ml-1 text-yellow-400">
-                                    <Icons.starFull
-                                        className="w-4 h-4 "
-                                        aria-hidden
-                                    />
-                                    <Icons.starFull
-                                        className="w-4 h-4"
-                                        aria-hidden
-                                    />
-                                    <Icons.starFull
-                                        className="w-4 h-4"
-                                        aria-hidden
-                                    />
-                                    <Icons.starFull
-                                        className="w-4 h-4"
-                                        aria-hidden
-                                    />
-                                    <Icons.starFull
-                                        className="w-4 h-4"
-                                        aria-hidden
-                                    />
-                                </div>
-                            </div>
-                            <Icons.productReview
-                                aria-hidden
-                                className="w-[140px] h-[40px]"
-                            />
                         </div>
                     </div>
                 </div>

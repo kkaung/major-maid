@@ -1,10 +1,13 @@
-import Satisfaction from '@/components/marketing/satisfaction';
-import { PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/components/page-header';
+import {
+    PageHeader,
+    PageHeaderDescription,
+    PageHeaderHeading,
+} from '@/components/page-header';
+import React from 'react';
 import { Shell } from '@/components/shell';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import React from 'react';
 
 export default function Page() {
     return (
@@ -26,7 +29,6 @@ export default function Page() {
                     </Link>
                 </div>
             </PageHeader>
-            <Satisfaction />
         </Shell>
     );
 }

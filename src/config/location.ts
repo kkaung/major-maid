@@ -853,4 +853,13 @@ export const locations = [
             { title: 'Yarraville', slug: 'yarraville' },
         ],
     },
+    {
+        title: 'Canberra',
+        meta: {},
+        items: [
+            { title: 'Acton', slug: 'acton' },
+            { title: 'Ainslie', slug: 'ainslie' },
+            { title: 'Amaroo', slug: 'amaroo' },
+        ],
+    },
 ];

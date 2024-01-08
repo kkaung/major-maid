@@ -18,17 +18,6 @@ export const metadata: Metadata = {
 export default function Page() {
     return (
         <Shell>
-            <PageHeader
-                id="hero"
-                aria-labelledby="hero-heading"
-                className="relative text-center"
-            >
-                <PageHeaderHeading>Our Services</PageHeaderHeading>
-                <PageHeaderDescription className="mx-auto">
-                    Sometimes, there&apos;s just too much to do. Our maid
-                    service will take care of the housework.
-                </PageHeaderDescription>
-            </PageHeader>
             <Breadcrumbs
                 segments={[
                     { title: 'Home', href: '/' },
@@ -39,6 +28,21 @@ export default function Page() {
                 ]}
                 dottable={false}
             />
+            <PageHeader
+                id="hero"
+                aria-labelledby="hero-heading"
+                className="relative text-center space-y-6"
+            >
+                <PageHeaderHeading size="lg">Our Services</PageHeaderHeading>
+                <PageHeaderDescription className="mx-auto">
+                    Sometimes, there&apos;s just too much to do. Our maid
+                    service will take care of the housework.
+                </PageHeaderDescription>
+            </PageHeader>
+            <section className="grid gap-6 grid-cols-1 md:grid-cols-2">
+                <section></section>
+                <section></section>
+            </section>
         </Shell>
     );
 }

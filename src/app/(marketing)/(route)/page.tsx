@@ -20,7 +20,7 @@ export default function Page() {
     return (
         <>
             <Shell variant="sidebar" className="grid-16">
-                <div>
+                <div className="container mx-auto">
                     <Hero location={city} />
                     <Featuring />
                 </div>

@@ -22,11 +22,15 @@ export default function Content({ city, suburb, segments }: ContentProps) {
     return (
         <>
             <Shell variant="sidebar" className="grid-16">
-                <Hero location={suburb ?? city} />
-                <Featuring />
+                <div>
+                    <Hero location={suburb ?? city} />
+                    <Featuring />
+                </div>
+                <div className="container mx-auto">
+                    <HowWork location={city} />
+                </div>
                 <Reviews />
                 <div className="container mx-auto max-w-7xl w-full space-y-16">
-                    <HowWork location={city} />
                     <Checklist title="House Cleaning" name="bond" />
                     <FAQs />
                     <Satisfaction />

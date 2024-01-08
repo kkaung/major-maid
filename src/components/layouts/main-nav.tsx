@@ -31,7 +31,7 @@ export default function MainNav({ items }: MainNavProps) {
                             <NavigationMenuItem key={item.title}>
                                 <NavigationMenuTrigger
                                     className={cn(
-                                        'h-auto bg-transparent font-normal text-base capitalize hover:bg-transparent hover:text-primary data-[active]:bg-transparent data-[state=open]:bg-transparent',
+                                        'h-auto bg-transparent font-normal text-base capitalize hover:bg-transparent hover:text-primary data-[active]:bg-transparent data-[state=open]:bg-transparent focus:bg-transparent',
                                         item?.href?.startsWith(`/${segment}`)
                                             ? 'text-primary'
                                             : 'text-foreground/60'

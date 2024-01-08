@@ -7,46 +7,17 @@ import AccordionList from '@/components/accordion-list';
 
 const getFAQs = (location?: string) => {
     return [
-        { question: 'Do you offer a bond back guarantee?', answer: '' },
-        { question: 'How much do you charge?', answer: '' },
-        { question: 'Is your quote final?', answer: '' },
-        {
-            question: 'How long will my bond cleaning service take?',
-            answer: '',
-        },
-        {
-            question:
-                'Do I need to be present during the bond cleaning process?',
-            answer: '',
-        },
+        { question: 'How much does your office cleaning cost?', answer: '' },
+        { question: 'How long will it toke to clean my office?', answer: '' },
+        { question: 'Do you clean retail stores?', answer: '' },
+        { question: 'Do you clean medical centers?', answer: '' },
         {
             question: 'How many people will come to clean my house?',
             answer: '',
         },
         {
-            question: 'Are you insured?',
-            answer: '',
-        },
-        {
-            question: 'Are your cleaning teams professionals?',
-            answer: '',
-        },
-        {
-            question: 'Can I get a receipt to show my landlord?',
-            answer: '',
-        },
-        {
-            question:
-                'My agent has a specific checklist, are you able to help?',
-            answer: '',
-        },
-        {
-            question: 'Is carpet steam cleaning included?',
-            answer: '',
-        },
-        {
-            question: 'What is your cancellation policy?',
-            answer: '',
+            question: 'Are your cleaners police checked and insured?',
+            answer: 'Yes. Our professional cleaners undergo thorough vetting, police checks, and maintain valid public liability insurance.',
         },
     ];
 };

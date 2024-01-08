@@ -1,6 +1,7 @@
 import React from 'react';
 import { type Metadata } from 'next';
 import { toTitleCase, unslugify } from '@/lib/utils';
+
 import Content from '../../_components/content';
 
 export const runtime = 'edge';
@@ -33,10 +34,10 @@ export default function Page({ params }: PageProps) {
             segments={[
                 { title: 'Home', href: '/' },
                 { title: 'Services', href: '/services' },
-                { title: 'Bond Cleaning', href: '/services/bond-cleaning' },
+                { title: 'Bond Cleaning', href: '/bond-cleaning-sydney' },
                 {
                     title: location,
-                    href: `/services/bond-cleaning/${params.location}`,
+                    href: `/bond-cleaning-sydney/${params.location}`,
                 },
             ]}
         />

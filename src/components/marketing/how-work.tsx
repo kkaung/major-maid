@@ -1,11 +1,9 @@
-import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import React, { type HTMLAttributes } from 'react';
 import Link from 'next/link';
 import { buttonVariants } from '@/components/ui/button';
 import { headingVariants } from '@/components/page-header';
 import Image from 'next/image';
-
 import BookOnline from '/public/assets/images/book-online.png';
 import WeClean from '/public/assets/images/we-clean.png';
 import YouRelax from '/public/assets/images/you-relax.png';
@@ -27,7 +25,9 @@ export default function HowWork({
                 'space-y-12 max-w-5xl w-full mx-auto text-center py-6'
             )}
         >
-            <h2 className={headingVariants({})}>How {siteConfig.name} Works</h2>
+            <h2 className={headingVariants({})}>
+                How It Works <span className="sr-only">For House Cleaning</span>
+            </h2>
             <ul className="grid grid-cols-1 gap-6 grid-flow-row md:grid-cols-3">
                 <li>
                     <div className="space-y-2">

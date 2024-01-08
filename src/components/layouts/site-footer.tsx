@@ -15,11 +15,11 @@ export default async function SiteFooter({
 }: SiteFooterProps) {
     return (
         <footer className="w-full  bg-[#0C0E1F] relative overflow-hidden border-t">
-            <Shell as="div" className="max-w-6xl w-full mx-auto">
+            <Shell as="div" className="max-w-7xl w-full mx-auto">
                 <section
                     id="footer-content"
                     aria-labelledby="footer-content-heading"
-                    className="text-gray-400 flex flex-col gap-10 lg:flex-row lg:gap-20"
+                    className="text-gray-400 flex flex-col gap-6 lg:flex-row lg:gap-8"
                 >
                     <section
                         id="footer-branding"
@@ -33,11 +33,9 @@ export default async function SiteFooter({
                         >
                             <span className="font-bold">{siteConfig.logo}</span>
                         </Link>
-                        <p className="my-4 max-w-sm text-xs font-light text-slate-300 md:text-sm">
-                            {siteConfig.name} is to transform your {location}{' '}
+                        <p className="my-4 max-w-xs text-xs font-light text-slate-300 md:text-sm">
+                            {siteConfig.name} is to transform your {location}
                             home with our professional house cleaning services.
-                            Our local cleaners deliver tailored solutions for a
-                            spotless and comfortable living space.
                         </p>
                         <div className="flex flex-col mt-2 space-y-2 text-slate-400">
                             <div className={cn('cursor-pointer text-sm')}>
@@ -79,7 +77,7 @@ export default async function SiteFooter({
                     <section
                         id="footer-links"
                         aria-labelledby="footer-links-heading"
-                        className="grid flex-1 grid-cols-1 gap-10 xs:grid-cols-2 sm:grid-cols-3"
+                        className="grid flex-1 grid-cols-1 gap-10 xs:grid-cols-2 sm:grid-cols-4"
                     >
                         {siteConfig.footerNav.map(item => (
                             <div key={item.title} className="space-y-3">
@@ -92,6 +90,7 @@ export default async function SiteFooter({
                                             <Link
                                                 href={link.href}
                                                 className="text-sm text-slate-400 transition-colors line-clamp-1 hover:text-slate-50"
+                                                title={link.title}
                                             >
                                                 {link.title}
                                             </Link>

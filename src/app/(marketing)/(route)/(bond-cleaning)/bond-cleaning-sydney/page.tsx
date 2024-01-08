@@ -1,6 +1,7 @@
 import React from 'react';
 import { type Metadata } from 'next';
 import { getCityFromPathname } from '@/lib/next';
+
 import Content from '../_components/content';
 
 export const runtime = 'edge';
@@ -24,7 +25,7 @@ export default function Page() {
             segments={[
                 { title: 'Home', href: '/' },
                 { title: 'Services', href: '/services' },
-                { title: '', href: '/' },
+                { title: 'Bond Cleaning', href: '/bond-cleaning-sydney' },
             ]}
         />
     );

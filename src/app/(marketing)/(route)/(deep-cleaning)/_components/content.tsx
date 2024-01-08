@@ -20,8 +20,10 @@ export default function Content({ city, suburb, segments }: ContentProps) {
     return (
         <>
             <Shell variant="sidebar" className="grid-16">
-                <Hero location={suburb ?? city} />
-                <Featuring />
+                <div>
+                    <Hero location={suburb ?? city} />
+                    <Featuring />
+                </div>
                 <HowWork location={city} />
                 <div className="container mx-auto max-w-7xl w-full space-y-16">
                     <FAQs />

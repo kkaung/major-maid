@@ -46,7 +46,7 @@ export default function Reviews({ location, ...props }: ReviewsProps) {
                 aria-labelledby="reviews-heading"
                 className={cn(
                     props.className,
-                    'relative space-y-6 w-full overflow-hidden'
+                    'relative space-y-6 w-full overflow-hidden py-12'
                 )}
             >
                 <div className="space-y-12">
