@@ -23,7 +23,7 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
             className={cn('max-w-5xl w-full mx-auto', props.className)}
         >
             <div className="grid grid-cols-1 gap-12 items-center md:grid-cols-2">
-                <div className="flex-1">
+                <div>
                     <h1 className={cn(headingVariants({ size: 'lg' }))}>
                         <Balancer>
                             1st House Cleaning & Maid Service In

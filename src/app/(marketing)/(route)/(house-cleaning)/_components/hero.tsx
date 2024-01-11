@@ -4,6 +4,9 @@ import { buttonVariants } from '@/components/ui/button';
 import React, { type HTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import HeroPreview from '/public/assets/images/hero-pp.jpeg';
+import Image from 'next/image';
+import Balancer from 'react-wrap-balancer';
 
 interface HeroProps extends HTMLAttributes<HTMLElement> {
     location?: string;
@@ -16,18 +19,17 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
         <PageHeader
             id="hero"
             aria-labelledby="hero-heading"
-            className={cn('relative rounded-3xl p-6', props.className)}
+            className={cn('pt-6', props.className)}
         >
-            <div className="z-20 mx-auto max-w-4xl w-full grid gap-12 grid-flow-col md:grid-flow-row md:grid-cols-2">
+            <div className="container mx-auto max-w-5xl w-full grid grid-cols-1 gap-12 md:grid-flow-row md:grid-cols-2">
                 <div className="space-y-6">
-                    <h1
-                        className={cn(
-                            headingVariants({ size: 'lg' }),
-                            'text-[#051356]'
-                        )}
-                    >
-                        1st House Cleaning Service In
-                        <span className="text-primary ml-1">{location}</span>
+                    <h1 className={cn(headingVariants({ size: 'lg' }))}>
+                        <Balancer>
+                            1st House Cleaning Service In
+                            <span className="text-primary ml-1">
+                                {location}
+                            </span>
+                        </Balancer>
                     </h1>
                     <div className="grid grid-cols-1 mt-6 gap-2 font-semibold text-lg sm:grid-cols-2">
                         <p>
@@ -74,6 +76,15 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                     >
                         Get a quote & Book online
                     </Link>
+                </div>
+                <div>
+                    <Image
+                        width={400}
+                        height={400}
+                        src={HeroPreview}
+                        alt="Hero Image"
+                        className="bg-top object-cover z-10 rounded-xl"
+                    />
                 </div>
             </div>
         </PageHeader>
