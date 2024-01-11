@@ -353,7 +353,6 @@ export const siteConfig = {
                 { title: 'About Us', href: '/about' },
                 { title: 'Blog', href: '/blog' },
                 { title: 'Reviews', href: '/reviews' },
-                { title: 'Services', href: '/services' },
                 { title: 'Pricing', href: '/pricing' },
                 { title: 'Careers', href: '/careers' },
                 { title: 'Checklist', href: '/checklist' },
@@ -409,6 +408,7 @@ export const siteServices: {
     {
         title: 'Office Cleaning',
         slug: 'office-cleaning',
+        icon: 'building',
     },
     {
         title: 'NDIS Cleaning',
@@ -417,6 +417,7 @@ export const siteServices: {
     {
         title: 'Carpet Cleaning',
         slug: '/carpet-cleaning',
+        icon: 'carpet',
     },
     {
         title: 'Move In - Move Out',

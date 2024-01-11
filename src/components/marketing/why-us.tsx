@@ -6,6 +6,43 @@ import { headingVariants } from '@/components/page-header';
 import Balancer from 'react-wrap-balancer';
 import { siteConfig } from '@/config/site';
 import { Separator } from '@/components/ui/separator';
+import {
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+} from '@/components/ui/table';
+import { Icons } from '../icons';
+
+const data = [
+    {
+        title: 'Vetted Cleaners',
+        majorMaid: true,
+        others: true,
+    },
+    {
+        title: 'Experienced & Reliable Cleaners',
+        majorMaid: true,
+        others: false,
+    },
+    {
+        title: 'Tailored Service, No Hidden Fees',
+        majorMaid: true,
+        others: false,
+    },
+    {
+        title: '100% Money-Back guarantee',
+        majorMaid: true,
+        others: false,
+    },
+    {
+        title: 'Schedule Online, Cancel Anytime',
+        majorMaid: true,
+        others: false,
+    },
+];
 
 interface WhyUsProps extends HTMLAttributes<HTMLElement> {
     location?: string;
@@ -21,47 +58,71 @@ export default function WhyUs({
         <section
             id="why-us"
             aria-labelledby="why-us-heading"
-            className={cn(props.className, 'space-y-12')}
+            className={cn(
+                props.className,
+                'space-y-12 py-12 container mx-auto'
+            )}
         >
             <div className="text-center">
-                <h2 className={cn(headingVariants({}))}>
-                    <Balancer>
-                        Why Choose{' '}
-                        <span className="text-primary">{siteConfig.name}</span>?
-                    </Balancer>
+                <h2 className={cn(headingVariants({}), 'text-white')}>
+                    <Balancer>Why Choose Major Maid?</Balancer>
                 </h2>
             </div>
-
-            <div>
-                <div>
-                    <div>
-                        <div className="py-4">
-                            <div className="text-4xl font-semibold italic">
-                                {siteConfig.name}
-                            </div>
-                            <ul>
-                                <li></li>
-                            </ul>
-                        </div>
-                        <Separator />
-                    </div>
-                    <div>
-                        <div>Standard Cleaning Companines</div>
-                    </div>
-                </div>
-                <div>
-                    <Link
-                        href="/booking"
-                        className={cn(
-                            buttonVariants({
-                                size: 'lg',
-                            }),
-                            'font-semibold rounded-full'
-                        )}
-                    >
-                        Book online now
-                    </Link>
-                </div>
+            <div className="rounded-3xl p-4 max-w-3xl mx-auto bg-white">
+                <Table>
+                    <TableHeader>
+                        <TableRow className="hover:bg-transparent">
+                            <TableHead className="min-w-[80px]">
+                                Benefits
+                            </TableHead>
+                            <TableHead className="text-lg font-bold text-primary italic text-center leading-tight sm:text-xl md:text-3xl">
+                                <span>
+                                    Major
+                                    <br className="sm:hidden" />
+                                    Maid
+                                </span>
+                            </TableHead>
+                            <TableHead className="font-medium text-center text-xs sm:text-base leading-tight py-2">
+                                Standard Cleaning <br /> Companines
+                            </TableHead>
+                        </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                        {data.map((item, idx) => (
+                            <TableRow key={idx}>
+                                <TableCell className="font-medium text-sm">
+                                    <p>{item.title}</p>
+                                </TableCell>
+                                <TableCell className="">
+                                    {item.majorMaid ? (
+                                        <Icons.check
+                                            className="w-6 h-6 text-green-500 mx-auto"
+                                            aria-hidden
+                                        />
+                                    ) : (
+                                        <Icons.close
+                                            className="w-6 h-6 text-green-500 mx-auto"
+                                            aria-hidden
+                                        />
+                                    )}
+                                </TableCell>
+                                <TableCell>
+                                    {item.others ? (
+                                        <Icons.check
+                                            className="w-6 h-6 text-green-500 mx-auto"
+                                            aria-hidden
+                                        />
+                                    ) : (
+                                        <Icons.close
+                                            className="w-6 h-6 text-red-500 mx-auto"
+                                            aria-hidden
+                                        />
+                                    )}
+                                </TableCell>
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
             </div>
         </section>
     );

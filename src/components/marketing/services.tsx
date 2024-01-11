@@ -25,10 +25,7 @@ export default function Services({
         <section
             id="services"
             aria-labelledby="services-heading"
-            className={cn(
-                props.className,
-                'bg-secondary py-12 px-4 space-y-12'
-            )}
+            className={cn(props.className, 'py-12 px-4 space-y-12')}
         >
             <div className="space-y-4 text-center">
                 <h2 className={cn(headingVariants({}))}>
@@ -84,8 +81,12 @@ export default function Services({
                                             key={idx}
                                             className="relative flex flex-col justify-center items-center text-center leading-tight"
                                         >
-                                            <Icon className="w-12 h-12" />
-                                            <h6 className="mt-2">
+                                            <Icon
+                                                className="w-14 h-14"
+                                                strokeWidth={0.1}
+                                                aria-hidden
+                                            />
+                                            <h6 className="mt-2 text-sm">
                                                 {service.title}
                                             </h6>
                                             <Link

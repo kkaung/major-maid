@@ -6,17 +6,10 @@ import {
     PageHeaderHeading,
 } from '@/components/page-header';
 import { siteConfig } from '@/config/site';
-import Services from '@/components/marketing/services';
-import { headers } from 'next/headers';
 import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import Satisfaction from '@/components/marketing/satisfaction';
 import TableList, { TableData } from './_components/table-list';
-
-const getCity = () => {
-    const headersList = headers();
-
-    return headersList.get('x-vercel-ip-city') ?? 'Sydney';
-};
+import { getCity } from '@/lib/next';
 
 export const runtime = 'edge';
 
@@ -387,7 +380,6 @@ export default function Page() {
                 </PageHeaderDescription>
             </PageHeader>
             <TableList data={data as any} />
-            <Services className="rounded-3xl" location={city} />
             <Satisfaction />
         </Shell>
     );

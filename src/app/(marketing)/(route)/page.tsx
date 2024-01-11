@@ -26,12 +26,11 @@ export default function Page() {
                 </div>
                 <HowWork className="container mx-auto" />
                 <Reviews />
-                <Services location={city} />
+                <div>
+                    <Services location={city} />
+                    <WhyUs location={city} className="bg-primary" />
+                </div>
                 <div className="container mx-auto space-y-16 max-w-6xl">
-                    <WhyUs
-                        location={city}
-                        className="max-w-5xl w-full mx-auto"
-                    />
                     <City />
                     <FAQs />
                     <Satisfaction className="container mx-auto" />
