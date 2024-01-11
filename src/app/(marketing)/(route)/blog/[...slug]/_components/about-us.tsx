@@ -2,7 +2,7 @@ import { Icons } from '@/components/icons';
 import { siteConfig, siteServices } from '@/config/site';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import React, { HTMLAttributes } from 'react';
+import React, { type HTMLAttributes } from 'react';
 
 interface AboutUsProps extends HTMLAttributes<HTMLElement> {}
 
@@ -36,11 +36,7 @@ export default function AboutUs({ ...props }: AboutUsProps) {
                 <p className="text-sm">Click below to explore our services:</p>
                 <ul className="text-primary text-sm space-y-2">
                     {siteServices.map((service, idx) => (
-                        <Link
-                            href={service.href}
-                            key={idx}
-                            className="hover:underline"
-                        >
+                        <Link href={``} key={idx} className="hover:underline">
                             <li key={idx}>{service.title}</li>
                         </Link>
                     ))}

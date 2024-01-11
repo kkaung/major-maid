@@ -30,7 +30,7 @@ export function BlogTabs({}: BlogTabsProps) {
             className="sticky top-0 z-30 w-full overflow-auto bg-background px-1"
             onValueChange={value => router.push(value)}
         >
-            <TabsList className="w-full justify-start rounded-none border-b bg-transparent p-0">
+            <TabsList className="w-full justify-start rounded-none border-b bg-transparent p-0 flex">
                 {tabs.map(tab => (
                     <div
                         role="none"

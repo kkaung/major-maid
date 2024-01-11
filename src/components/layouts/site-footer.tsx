@@ -34,8 +34,8 @@ export default async function SiteFooter({
                             <span className="font-bold">{siteConfig.logo}</span>
                         </Link>
                         <p className="my-4 max-w-xs text-xs font-light text-slate-300 md:text-sm">
-                            {siteConfig.name} is to transform your {location}
-                            home with our professional house cleaning services.
+                            {siteConfig.name} is to transform your home with our
+                            professional house cleaning services.
                         </p>
                         <div className="flex flex-col mt-2 space-y-2 text-slate-400">
                             <div className={cn('cursor-pointer text-sm')}>

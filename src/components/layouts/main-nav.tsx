@@ -20,7 +20,7 @@ interface MainNavProps {
 }
 
 export default function MainNav({ items }: MainNavProps) {
-    const segment = useSelectedLayoutSegment();
+    // const segment = useSelectedLayoutSegment();
 
     return (
         <div className="hidden gap-6 z-30 lg:flex">
@@ -31,10 +31,10 @@ export default function MainNav({ items }: MainNavProps) {
                             <NavigationMenuItem key={item.title}>
                                 <NavigationMenuTrigger
                                     className={cn(
-                                        'h-auto bg-transparent font-normal text-base capitalize hover:bg-transparent hover:text-primary data-[active]:bg-transparent data-[state=open]:bg-transparent focus:bg-transparent',
-                                        item?.href?.startsWith(`/${segment}`)
-                                            ? 'text-primary'
-                                            : 'text-foreground/60'
+                                        'h-auto bg-transparent font-normal text-base capitalize hover:bg-transparent hover:text-primary data-[active]:bg-transparent data-[state=open]:bg-transparent focus:bg-transparent'
+                                        // item?.href?.startsWith(`/${segment}`)
+                                        //     ? 'text-primary'
+                                        //     : 'text-foreground/60'
                                     )}
                                 >
                                     {item.title}
@@ -64,12 +64,12 @@ export default function MainNav({ items }: MainNavProps) {
                                         <NavigationMenuLink
                                             className={cn(
                                                 navigationMenuTriggerStyle(),
-                                                'h-auto font-normal text-base bg-transparent text-muted-foreground hover:bg-transparent hover:text-primary',
-                                                item.href.startsWith(
-                                                    `/${segment}`
-                                                )
-                                                    ? 'text-foreground'
-                                                    : 'text-foreground/60'
+                                                'h-auto font-normal text-base bg-transparent text-muted-foreground hover:bg-transparent hover:text-primary'
+                                                // item.href.startsWith(
+                                                //     `/${segment}`
+                                                // )
+                                                //     ? 'text-foreground'
+                                                //     : 'text-foreground/60'
                                             )}
                                         >
                                             {item.title}

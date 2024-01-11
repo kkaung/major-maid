@@ -59,7 +59,7 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                                 className="w-4 h-4 mr-1 text-primary inline"
                                 strokeWidth={3}
                             />
-                            5-Star Rated Service
+                            5 Star Rated Service
                         </p>
                         <p>
                             <Icons.check
@@ -77,10 +77,10 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                                 buttonVariants({
                                     size: 'lg',
                                 }),
-                                'font-semibold px-8 h-12 rounded-full animate-shimmer bg-[linear-gradient(110deg,#2463EB,45%,#7ba4f6,55%,#2463EB)] bg-[length:200%_100%] transition-colors'
+                                'font-semibold text-lg px-8 h-12 rounded-full animate-shimmer bg-[linear-gradient(110deg,#2463EB,45%,#7ba4f6,55%,#2463EB)] bg-[length:200%_100%] transition-colors'
                             )}
                         >
-                            Get a quote & Book online
+                            Quote Me
                         </Link>
                     </div>
                 </div>

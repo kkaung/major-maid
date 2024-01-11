@@ -1,3 +1,4 @@
+import { Icons } from '@/components/icons';
 import type { FooterItem, MainNavItem } from '@/types';
 
 export type SiteConfig = typeof siteConfig;
@@ -68,8 +69,12 @@ export const siteConfig = {
                     href: '/apartment-cleaning-sydney',
                 },
                 {
-                    title: 'Residental Window Cleaning',
-                    href: '/residental-window-cleaning-sydney',
+                    title: 'Window Cleaning',
+                    href: '/window-cleaning-sydney',
+                },
+                {
+                    title: 'Construction Cleaning',
+                    href: '/construction-cleaning-sydney',
                 },
             ],
         },
@@ -121,8 +126,12 @@ export const siteConfig = {
                     href: '/apartment-cleaning-melbourne',
                 },
                 {
-                    title: 'Residental Window Cleaning',
-                    href: '/residental-window-cleaning-melbourne',
+                    title: 'Window Cleaning',
+                    href: '/window-cleaning-melbourne',
+                },
+                {
+                    title: 'Construction Cleaning',
+                    href: '/construction-cleaning-melbourne',
                 },
             ],
         },
@@ -174,8 +183,12 @@ export const siteConfig = {
                     href: '/apartment-cleaning-canberra',
                 },
                 {
-                    title: 'Residental Window Cleaning',
-                    href: '/residental-window-cleaning-canberra',
+                    title: 'Window Cleaning',
+                    href: '/window-cleaning-canberra',
+                },
+                {
+                    title: 'Construction Cleaning',
+                    href: '/construction-cleaning-canberra',
                 },
             ],
         },
@@ -363,10 +376,15 @@ export const siteConfig = {
     },
 };
 
-export const siteServices = [
+export const siteServices: {
+    title: string;
+    slug: string;
+    icon?: keyof typeof Icons;
+}[] = [
     {
         title: 'House Cleaing',
         slug: 'house-cleaning',
+        icon: 'house',
     },
     {
         title: 'Regular Cleaing',
@@ -406,6 +424,6 @@ export const siteServices = [
     },
     {
         title: 'Tile Cleaning',
-        href: '/tile-cleaning',
+        slug: '/tile-cleaning',
     },
 ];

@@ -68,11 +68,9 @@ export default function Suburbs({
                     />
                 </div>
                 <div className="text-center py-6">
-                    <CollapsibleTrigger asChild>
-                        <div className="cursor-pointer">
-                            {isOpen ? 'View Less' : 'View More'}
-                            <span className="sr-only">Toggle</span>
-                        </div>
+                    <CollapsibleTrigger>
+                        {isOpen ? 'View Less' : 'View More'}
+                        <span className="sr-only">Toggle</span>
                     </CollapsibleTrigger>
                 </div>
             </Collapsible>

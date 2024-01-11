@@ -26,8 +26,8 @@ export default function Page() {
                 </div>
                 <HowWork className="container mx-auto" />
                 <Reviews />
+                <Services location={city} />
                 <div className="container mx-auto space-y-16 max-w-6xl">
-                    <Services location={city} />
                     <WhyUs
                         location={city}
                         className="max-w-5xl w-full mx-auto"

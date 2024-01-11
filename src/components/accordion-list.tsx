@@ -1,5 +1,7 @@
+'use client';
+
 import { cn } from '@/lib/utils';
-import React, { type HTMLAttributes } from 'react';
+import React, { useState, type HTMLAttributes } from 'react';
 import {
     Accordion,
     AccordionContent,
@@ -12,16 +14,34 @@ interface AccordionListProps extends HTMLAttributes<HTMLElement> {
 }
 
 export default function AccordionList({ items, ...props }: AccordionListProps) {
+    const [tab, setTab] = useState('');
+
     return (
-        <Accordion type="single" collapsible className={cn(props.className)}>
-            {items.map((item, idx) => (
-                <AccordionItem key={idx} value={`item-${idx + 1}`}>
-                    <AccordionTrigger className="text-base">
-                        {item.question}
-                    </AccordionTrigger>
-                    <AccordionContent>{item.answer}</AccordionContent>
-                </AccordionItem>
-            ))}
+        <Accordion
+            type="single"
+            collapsible
+            value={tab}
+            onValueChange={setTab}
+            className={cn(props.className)}
+        >
+            {items.map((item, idx) => {
+                const isActive = `${idx}` === tab;
+
+                return (
+                    <AccordionItem key={idx} value={`${idx}`}>
+                        <AccordionTrigger className="text-base">
+                            {item.question}
+                        </AccordionTrigger>
+                        <AccordionContent
+                            forceMount
+                            hidden={`${idx}` !== tab}
+                            className={cn({ '': isActive })}
+                        >
+                            {item.answer}
+                        </AccordionContent>
+                    </AccordionItem>
+                );
+            })}
         </Accordion>
     );
 }

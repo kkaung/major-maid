@@ -5,7 +5,6 @@ import { z } from 'zod';
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
@@ -19,7 +18,11 @@ import { Icons } from '@/components/icons';
 import { useRouter } from 'next/navigation';
 
 const quoteSchema = z.object({
-    postcode: z.string(),
+    firstName: z.string(),
+    lastName: z.string(),
+    email: z.string().email(),
+    phoneNumber: z.string(),
+    service: z.string(),
 });
 
 type Inputs = z.infer<typeof quoteSchema>;
@@ -53,10 +56,48 @@ export function QuoteForm({ onSuccess }: Props) {
             >
                 <FormField
                     control={form.control}
-                    name="postcode"
+                    name="firstName"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel className="sr-only">Postcode</FormLabel>
+                            <FormLabel className="sr-only">
+                                First Name
+                            </FormLabel>
+                            <FormControl>
+                                <Input className="text-primary" {...field} />
+                            </FormControl>
+                        </FormItem>
+                    )}
+                />
+                <FormField
+                    control={form.control}
+                    name="lastName"
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel className="sr-only">Last Name</FormLabel>
+                            <FormControl>
+                                <Input className="text-primary" {...field} />
+                            </FormControl>
+                        </FormItem>
+                    )}
+                />
+                <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel className="sr-only">Last Name</FormLabel>
+                            <FormControl>
+                                <Input className="text-primary" {...field} />
+                            </FormControl>
+                        </FormItem>
+                    )}
+                />
+                <FormField
+                    control={form.control}
+                    name="phoneNumber"
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel className="sr-only">Last Name</FormLabel>
                             <FormControl>
                                 <Input className="text-primary" {...field} />
                             </FormControl>
@@ -75,7 +116,7 @@ export function QuoteForm({ onSuccess }: Props) {
                             aria-hidden="true"
                         />
                     )}
-                    Get a quote
+                    Get a quote & Book online
                 </Button>
             </form>
         </Form>
