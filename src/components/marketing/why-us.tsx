@@ -1,11 +1,7 @@
 import React, { type HTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
-import Link from 'next/link';
-import { buttonVariants } from '@/components/ui/button';
 import { headingVariants } from '@/components/page-header';
 import Balancer from 'react-wrap-balancer';
-import { siteConfig } from '@/config/site';
-import { Separator } from '@/components/ui/separator';
 import {
     Table,
     TableBody,
@@ -14,7 +10,7 @@ import {
     TableHeader,
     TableRow,
 } from '@/components/ui/table';
-import { Icons } from '../icons';
+import { Icons } from '@/components/icons';
 
 const data = [
     {
@@ -61,10 +57,11 @@ export default function WhyUs({
             className={cn(props.className, 'py-14 bg-primary')}
         >
             <div className="container mx-auto space-y-12">
-                <div className="text-center">
+                <div className="relative text-center">
                     <h2 className={cn(headingVariants({}), 'text-white')}>
                         <Balancer>Why Choose Major Maid?</Balancer>
                     </h2>
+                    <Icons.ppointed className="w-36 h-36  absolute left-1/2 z-20 -translate-x-full top-4" />
                 </div>
                 <div className="rounded-3xl p-4 max-w-3xl mx-auto bg-white">
                     <Table>
@@ -73,7 +70,7 @@ export default function WhyUs({
                                 <TableHead className="font-medium text-center text-xs sm:text-base leading-tight py-2">
                                     Benefits
                                 </TableHead>
-                                <TableHead className="text-xl font-bold text-primary italic text-center leading-tight sm:text-2xl md:text-3xl">
+                                <TableHead className="relative text-xl font-bold text-primary italic text-center leading-tight sm:text-2xl md:text-3xl">
                                     <span>
                                         Major
                                         <br className="sm:hidden" />

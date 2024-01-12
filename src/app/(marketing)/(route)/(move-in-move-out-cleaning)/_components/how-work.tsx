@@ -28,7 +28,10 @@ export default function HowWork({
         >
             <h2 className={headingVariants({})}>
                 <Balancer>
-                    How It Works For Move In - Move Out Cleaning
+                    How It Works
+                    <span className="sr-only">
+                        For Move In - Move Out Cleaning
+                    </span>
                 </Balancer>
             </h2>
             <ul className="grid grid-cols-1 gap-6 grid-flow-row md:grid-cols-3">
@@ -43,7 +46,7 @@ export default function HowWork({
                         />
                         <p className="font-semibold text-lg">1. Book Online</p>
                         <p>
-                            Book your {location} move in / move out cleaning
+                            Book your {location} move in - move out cleaning
                             service online in 60 seconds.
                         </p>
                     </div>

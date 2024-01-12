@@ -10,6 +10,7 @@ import Reviews from '@/components/marketing/reviews';
 import Hero from './hero';
 import FAQs from './faqs';
 import HowWork from './how-work';
+import WhyUs from '@/components/marketing/why-us';
 
 interface ContentProps {
     city: string;
@@ -29,6 +30,7 @@ export default function Content({ city, suburb, segments }: ContentProps) {
                     <HowWork location={suburb ?? city} />
                 </div>
                 <Reviews />
+                <WhyUs />
                 <div className="container mx-auto max-w-6xl w-full space-y-16">
                     <FAQs />
                     <Satisfaction />

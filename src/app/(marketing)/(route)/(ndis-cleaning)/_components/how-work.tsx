@@ -26,7 +26,7 @@ export default function HowWork({
             )}
         >
             <h2 className={headingVariants({})}>
-                How It Works <span className="sr-only">For House Cleaning</span>
+                How It Works <span className="sr-only">For NDIS Cleaning</span>
             </h2>
             <ul className="grid grid-cols-1 gap-6 grid-flow-row md:grid-cols-3">
                 <li>
@@ -40,8 +40,8 @@ export default function HowWork({
                         />
                         <p className="font-semibold text-lg">1. Book Online</p>
                         <p>
-                            Book your {location} house cleaning service online
-                            in 60 seconds.
+                            Book your {location} NDIS cleaning service online in
+                            60 seconds.
                         </p>
                     </div>
                 </li>

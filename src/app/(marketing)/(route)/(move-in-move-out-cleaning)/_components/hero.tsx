@@ -5,8 +5,7 @@ import { cn } from '@/lib/utils';
 import React, { type HTMLAttributes } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Stamp from '/public/assets/stamp.png';
-import HeroPreview from '/public/assets/images/hero.jpg';
+import HeroImage from '/public/assets/images/move-in-move-out-cleaning.jpg';
 import Balancer from 'react-wrap-balancer';
 
 interface HeroProps extends HTMLAttributes<HTMLElement> {
@@ -20,18 +19,13 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
         <PageHeader
             id="hero"
             aria-labelledby="hero-heading"
-            className={cn('relative rounded-3xl p-6', props.className)}
+            className={cn('pt-6', props.className)}
         >
-            <div className="z-20 mx-auto max-w-4xl w-full grid gap-12 grid-flow-col md:grid-flow-row md:grid-cols-2">
+            <div className="container mx-auto max-w-5xl w-full grid grid-cols-1 gap-12 md:grid-flow-row md:grid-cols-2">
                 <div className="space-y-6">
-                    <h1
-                        className={cn(
-                            headingVariants({ size: 'lg' }),
-                            'text-[#051356]'
-                        )}
-                    >
+                    <h1 className={cn(headingVariants({ size: 'lg' }))}>
                         <Balancer>
-                            Move In - Move Out Cleaning In
+                            Move In - Move Out Cleaning Service In
                             <span className="text-primary ml-1">
                                 {location}
                             </span>
@@ -39,7 +33,7 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                     </h1>
                     <div className="grid grid-cols-1 mt-6 gap-2 font-semibold text-lg sm:grid-cols-2">
                         <p>
-                            <Icons.checkCircle
+                            <Icons.check
                                 aria-hidden
                                 className="w-4 h-4 mr-1 text-primary inline"
                                 strokeWidth={3}
@@ -47,7 +41,7 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                             Trusted Cleaners
                         </p>
                         <p>
-                            <Icons.checkCircle
+                            <Icons.check
                                 aria-hidden
                                 className="w-4 h-4 mr-1 text-primary inline"
                                 strokeWidth={3}
@@ -55,15 +49,15 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                             200% Guarantee
                         </p>
                         <p>
-                            <Icons.checkCircle
+                            <Icons.check
                                 aria-hidden
                                 className="w-4 h-4 mr-1 text-primary inline"
                                 strokeWidth={3}
                             />
-                            5-Star Rated Service
+                            5 Star Rated Service
                         </p>
                         <p>
-                            <Icons.checkCircle
+                            <Icons.check
                                 aria-hidden
                                 className="w-4 h-4 mr-1 text-primary inline stroke-3"
                                 strokeWidth={3}
@@ -86,45 +80,15 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                             </Link>
                         </div>
                     </div>
-                    <div className="flex gap-4 items-start">
-                        <Image src={Stamp} width={90} height={90} alt="Stamp" />
-                        <div className="space-y-1">
-                            <div className="text-red-500 border border-red-500 inline-flex items-center p-2 rounded-lg">
-                                <Icons.fullGoogle
-                                    className="w-4 h-4 mr-1"
-                                    aria-hidden
-                                />
-                                <span className="font-medium">5.0</span>
-                                <span className="sr-only">Google Rating</span>
-                                <div className="flex ml-1 text-yellow-400">
-                                    <Icons.starFull
-                                        className="w-4 h-4 "
-                                        aria-hidden
-                                    />
-                                    <Icons.starFull
-                                        className="w-4 h-4"
-                                        aria-hidden
-                                    />
-                                    <Icons.starFull
-                                        className="w-4 h-4"
-                                        aria-hidden
-                                    />
-                                    <Icons.starFull
-                                        className="w-4 h-4"
-                                        aria-hidden
-                                    />
-                                    <Icons.starFull
-                                        className="w-4 h-4"
-                                        aria-hidden
-                                    />
-                                </div>
-                            </div>
-                            <Icons.productReview
-                                aria-hidden
-                                className="w-[140px] h-[40px]"
-                            />
-                        </div>
-                    </div>
+                </div>
+                <div>
+                    <Image
+                        width={400}
+                        height={400}
+                        src={HeroImage}
+                        alt="Move In - Move Out Cleaning Service"
+                        className="bg-top object-cover z-10 rounded-xl"
+                    />
                 </div>
             </div>
         </PageHeader>

@@ -40,7 +40,7 @@ export default function HowWork({
                         />
                         <p className="font-semibold text-lg">1. Book Online</p>
                         <p>
-                            Book your {location} house cleaning service online
+                            Book your {location} window cleaning service online
                             in 60 seconds.
                         </p>
                     </div>

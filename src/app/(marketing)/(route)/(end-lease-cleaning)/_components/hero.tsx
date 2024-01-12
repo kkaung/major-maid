@@ -5,6 +5,8 @@ import { cn } from '@/lib/utils';
 import React, { type HTMLAttributes } from 'react';
 import Link from 'next/link';
 import Balancer from 'react-wrap-balancer';
+import HeroImage from '/public/assets/images/end-lease-cleaning.jpeg';
+import Image from 'next/image';
 
 interface HeroProps extends HTMLAttributes<HTMLElement> {
     location?: string;
@@ -17,12 +19,9 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
         <PageHeader
             id="hero"
             aria-labelledby="hero-heading"
-            className={cn(
-                'relative rounded-3xl p-6 overflow-hidden',
-                props.className
-            )}
+            className={cn('pt-6', props.className)}
         >
-            <div className="z-20 mx-auto max-w-4xl w-full grid gap-12 grid-flow-col md:grid-flow-row md:grid-cols-2">
+            <div className="container mx-auto max-w-5xl w-full grid grid-cols-1 gap-12 md:grid-flow-row md:grid-cols-2">
                 <div className="space-y-6">
                     <h1 className={cn(headingVariants({ size: 'lg' }))}>
                         <Balancer>
@@ -39,7 +38,7 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                                 className="w-4 h-4 mr-1 text-primary inline"
                                 strokeWidth={3}
                             />
-                            Trusted Cleaning
+                            Trusted Cleaner
                         </div>
                         <div>
                             <Icons.check
@@ -55,7 +54,7 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                                 className="w-4 h-4 mr-1 text-primary inline"
                                 strokeWidth={3}
                             />
-                            5-Star Rated Service
+                            5 Star Rated Service
                         </div>
                         <div>
                             <Icons.check
@@ -77,6 +76,15 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                     >
                         Get a quote & Book online
                     </Link>
+                </div>
+                <div>
+                    <Image
+                        width={400}
+                        height={400}
+                        src={HeroImage}
+                        alt="Deep Cleaning"
+                        className="bg-top object-cover z-10 rounded-xl"
+                    />
                 </div>
             </div>
         </PageHeader>

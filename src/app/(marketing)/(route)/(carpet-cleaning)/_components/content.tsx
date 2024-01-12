@@ -9,6 +9,8 @@ import Satisfaction from '@/components/marketing/satisfaction';
 import Suburbs from '@/components/suburbs';
 import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { LocalBusinessJsonLd } from 'next-seo';
+import WhyUs from '@/components/marketing/why-us';
+import Reviews from '@/components/marketing/reviews';
 
 interface ContentProps {
     city: string;
@@ -20,9 +22,13 @@ export default function Content({ city, suburb, segments }: ContentProps) {
     return (
         <>
             <Shell variant="sidebar" className="grid-16">
-                <Hero location={suburb && city} />
-                <Featuring />
+                <div>
+                    <Hero location={suburb && city} />
+                    <Featuring />
+                </div>
                 <HowWork location={city} />
+                <Reviews />
+                <WhyUs />
                 <div className="container mx-auto max-w-7xl w-full space-y-16">
                     <Checklist
                         title="Move In / Move Out Cleaning"
@@ -31,9 +37,9 @@ export default function Content({ city, suburb, segments }: ContentProps) {
                     <FAQs />
                     <Satisfaction />
                     <Suburbs
-                        title="Move In - Move Out Cleaners"
+                        title="Carpet Cleaners"
                         location={city}
-                        slug={'move-in-move-out-cleaning'}
+                        slug={`carpet-cleaning-${city.toLocaleLowerCase()}`}
                     />
                     <Breadcrumbs segments={segments} dottable={false} />
                 </div>

@@ -4,10 +4,9 @@ import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import React, { type HTMLAttributes } from 'react';
 import Link from 'next/link';
-import HeroPreview from '/public/assets/images/hero-pp.jpeg';
+import HeroImage from '/public/assets/images/construction-cleaning.jpeg';
 import Balancer from 'react-wrap-balancer';
 import Image from 'next/image';
-import { siteConfig } from '@/config/site';
 
 interface HeroProps extends HTMLAttributes<HTMLElement> {
     location?: string;
@@ -20,10 +19,10 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
         <PageHeader
             id="hero"
             aria-labelledby="hero-heading"
-            className={cn('max-w-5xl w-full mx-auto', props.className)}
+            className={cn('pt-6', props.className)}
         >
-            <div className="grid grid-cols-1 gap-12 items-center md:grid-cols-2">
-                <div className="flex-1">
+            <div className="z-20 mx-auto max-w-4xl w-full grid gap-12 grid-flow-col md:grid-flow-row md:grid-cols-2">
+                <div className="space-y-6">
                     <h1 className={cn(headingVariants({ size: 'lg' }))}>
                         <Balancer>
                             Construction Cleaning Service In
@@ -32,18 +31,22 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                             </span>
                         </Balancer>
                     </h1>
-                    <p className="font-medium mt-6 mb-3">
-                        {siteConfig.name}&apos;s professional construction
-                        cleaners are here to make your home clean and tidy.
-                    </p>
-                    <div className="space-y-2">
-                        <p>
+                    <div className="grid grid-cols-1 mt-6 gap-2 font-semibold text-lg sm:grid-cols-2">
+                        <div>
                             <Icons.check
                                 aria-hidden
                                 className="w-4 h-4 mr-1 text-primary inline"
                                 strokeWidth={3}
                             />
                             Trusted Cleaners
+                        </div>
+                        <p>
+                            <Icons.check
+                                aria-hidden
+                                className="w-4 h-4 mr-1 text-primary inline"
+                                strokeWidth={3}
+                            />
+                            200% Guarantee
                         </p>
                         <p>
                             <Icons.check
@@ -51,15 +54,7 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                                 className="w-4 h-4 mr-1 text-primary inline"
                                 strokeWidth={3}
                             />
-                            100% Guarantee
-                        </p>
-                        <p>
-                            <Icons.check
-                                aria-hidden
-                                className="w-4 h-4 mr-1 text-primary inline"
-                                strokeWidth={3}
-                            />
-                            5-Star Rated Service
+                            5 Star Rated Service
                         </p>
                         <p>
                             <Icons.check
@@ -70,7 +65,7 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                             Happy Customers
                         </p>
                     </div>
-                    <div className="mt-6">
+                    <div>
                         <Link
                             href="/booking"
                             className={cn(
@@ -88,7 +83,7 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                     <Image
                         width={400}
                         height={400}
-                        src={HeroPreview}
+                        src={HeroImage}
                         alt="Hero Image"
                         className="bg-top object-cover z-10 rounded-xl"
                     />

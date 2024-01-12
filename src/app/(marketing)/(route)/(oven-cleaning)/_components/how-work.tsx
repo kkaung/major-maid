@@ -27,7 +27,10 @@ export default function HowWork({
             )}
         >
             <h2 className={headingVariants({})}>
-                <Balancer>How It Works For Oven Cleaning</Balancer>
+                <Balancer>
+                    How It Works
+                    <span className="sr-only">For Oven Cleaning</span>
+                </Balancer>
             </h2>
             <ul className="grid grid-cols-1 gap-6 grid-flow-row md:grid-cols-3">
                 <li>
@@ -88,7 +91,7 @@ export default function HowWork({
                         'font-semibold  rounded-full'
                     )}
                 >
-                    Book my bond cleaning
+                    Book my cleaning
                 </Link>
             </div>
         </section>

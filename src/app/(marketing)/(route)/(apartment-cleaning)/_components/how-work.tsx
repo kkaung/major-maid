@@ -28,7 +28,9 @@ export default function HowWork({
             )}
         >
             <h2 className={headingVariants({})}>
-                <Balancer>How It Works For Apartment Cleaning</Balancer>
+                <Balancer>
+                    How It Works <span className='sr-only'>For Apartment Cleaning</span>
+                </Balancer>
             </h2>
             <ul className="grid grid-cols-1 gap-6 grid-flow-row md:grid-cols-3">
                 <li>

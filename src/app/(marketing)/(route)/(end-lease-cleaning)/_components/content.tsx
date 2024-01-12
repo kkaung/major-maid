@@ -9,6 +9,8 @@ import { LocalBusinessJsonLd } from 'next-seo';
 import Hero from './hero';
 import HowWork from './how-work';
 import FAQs from './faqs';
+import WhyUs from '@/components/marketing/why-us';
+import Reviews from '@/components/marketing/reviews';
 
 interface ContentProps {
     city: string;
@@ -27,6 +29,8 @@ export default function Content({ city, suburb, segments }: ContentProps) {
                 <div className="container mx-auto">
                     <HowWork location={suburb ?? city} />
                 </div>
+                <Reviews />
+                <WhyUs />
                 <div className="container mx-auto max-w-7xl w-full space-y-16">
                     <FAQs />
                     <Satisfaction />

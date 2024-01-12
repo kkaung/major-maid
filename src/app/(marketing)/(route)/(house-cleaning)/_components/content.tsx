@@ -6,12 +6,12 @@ import Satisfaction from '@/components/marketing/satisfaction';
 import Suburbs from '@/components/suburbs';
 import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { LocalBusinessJsonLd } from 'next-seo';
-import HowWork from '@/components/marketing/how-work';
 
 import Hero from './hero';
 import FAQs from './faqs';
 import Reviews from '@/components/marketing/reviews';
 import WhyUs from '@/components/marketing/why-us';
+import HowWork from './how-work';
 
 interface ContentProps {
     city: string;

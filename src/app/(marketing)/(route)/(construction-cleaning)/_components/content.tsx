@@ -31,8 +31,8 @@ export default function Content({ city, suburb, segments }: ContentProps) {
                     <FAQs />
                     <Satisfaction />
                     <Suburbs
-                        title={`Find Bond Cleaners In Suburb Of ${city}`}
-                        slug={`bond-cleaning-${city.toLowerCase()}`}
+                        title={`Find After Builders Cleaners In Suburb Of ${city}`}
+                        slug={`construction-cleaning-${city.toLowerCase()}`}
                         location={city}
                     />
                     <Breadcrumbs segments={segments} dottable={false} />

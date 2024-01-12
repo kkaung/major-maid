@@ -1,9 +1,8 @@
 import React from 'react';
 import { type Metadata } from 'next';
 import { toTitleCase, unslugify } from '@/lib/utils';
-import { getCity } from '@/lib/next';
+import { getCityFromPathname } from '@/lib/next';
 import Content from '../../_components/content';
-
 
 export const runtime = 'edge';
 
@@ -16,34 +15,30 @@ export interface PageProps {
 export async function generateMetadata({
     params,
 }: PageProps): Promise<Metadata> {
-    const city = getCity();
-
-    const location = toTitleCase(unslugify(params.location));
+    const suburb = toTitleCase(unslugify(params.location));
 
     return {
-        title: `Apartment Cleaning Service ${location} | Book Online`,
+        title: `Apartment Cleaning Service ${suburb} | Book Online`,
         description:
-            'Book your apartment cleaning service with our trusted and experience cleaners in 60 seconds.',
+            'Book your apartment cleaning service with our trusted and experienced cleaners online in 60 seconds.',
     };
 }
 
 export default function Page({ params }: PageProps) {
-    const city = getCity();
+    const city = getCityFromPathname();
 
-    const location = toTitleCase(unslugify(params.location));
-
-    const isCity = city === location;
+    const suburb = toTitleCase(unslugify(params.location));
 
     return (
         <Content
             city={city}
-            suburb={!isCity ? location : undefined}
+            suburb={suburb}
             segments={[
                 { title: 'Home', href: '/' },
                 { title: 'Services', href: '/services' },
                 { title: 'Apartment Cleaning', href: '/apartment-cleaning' },
                 {
-                    title: location,
+                    title: suburb,
                     href: `/apartment-cleaning/${params.location}`,
                 },
             ]}

@@ -1,13 +1,12 @@
 import { type Metadata } from 'next';
 import React from 'react';
-import {} from 'next-seo';
 import Content from '../_components/content';
-import { getCity } from '@/lib/next';
+import { getCityFromPathname } from '@/lib/next';
 
 export const runtime = 'edge';
 
 export async function generateMetadata(): Promise<Metadata> {
-    const city = getCity();
+    const city = getCityFromPathname();
 
     return {
         title: `Apartment Cleaning Service ${city} | Book Online`,
@@ -17,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function Page() {
-    const city = getCity();
+    const city = getCityFromPathname();
 
     return (
         <Content
@@ -25,7 +24,10 @@ export default function Page() {
             segments={[
                 { title: 'Home', href: '/' },
                 { title: 'Services', href: '/services' },
-                { title: 'Apartment Cleaning', href: '/apartment-cleaning' },
+                {
+                    title: 'Apartment Cleaning',
+                    href: '/apartment-cleaning-sydney',
+                },
             ]}
         />
     );
