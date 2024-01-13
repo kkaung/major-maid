@@ -3,8 +3,6 @@ import { type Metadata } from 'next';
 import { getCityFromPathname } from '@/lib/next';
 import Content from '../_components/content';
 
-export const runtime = 'edge';
-
 export async function generateMetadata(): Promise<Metadata> {
     const city = getCityFromPathname();
 

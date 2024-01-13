@@ -7,7 +7,6 @@ import {
 import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { Shell } from '@/components/shell';
 import React from 'react';
-import Satisfaction from '@/components/marketing/satisfaction';
 import AccordionList from '@/components/accordion-list';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';

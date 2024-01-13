@@ -11,8 +11,6 @@ import Satisfaction from '@/components/marketing/satisfaction';
 import TableList, { TableData } from './_components/table-list';
 import { getCity } from '@/lib/next';
 
-export const runtime = 'edge';
-
 const data: TableData[] = [
     {
         title: 'All Areas',

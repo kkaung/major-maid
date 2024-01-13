@@ -1,6 +1,5 @@
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import { type User } from '@clerk/nextjs/server';
 import { env } from '@/env.mjs';
 
 export function cn(...inputs: ClassValue[]) {
@@ -40,14 +39,6 @@ export function isMacOs() {
     if (typeof window === 'undefined') return false;
 
     return window.navigator.userAgent.includes('Mac');
-}
-
-export function getUserEmail(user: User | null) {
-    const email =
-        user?.emailAddresses?.find(e => e.id === user.primaryEmailAddressId)
-            ?.emailAddress ?? '';
-
-    return email;
 }
 
 export function formatDate(input: string | number): string {

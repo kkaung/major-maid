@@ -26,22 +26,6 @@ const computedFields = {
     },
 };
 
-export const City = defineDocumentType(() => ({
-    name: 'City',
-    filePathPattern: `cities/**/*.mdx`,
-    contentType: 'mdx',
-    fields: {
-        title: {
-            type: 'string',
-            required: true,
-        },
-        description: {
-            type: 'string',
-        },
-    },
-    computedFields,
-}));
-
 export const Author = defineDocumentType(() => ({
     name: 'Author',
     filePathPattern: `authors/**/*.mdx`,

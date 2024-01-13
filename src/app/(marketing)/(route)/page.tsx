@@ -15,8 +15,6 @@ import { WebPageJsonLd, FAQPageJsonLd, OrganizationJsonLd } from 'next-seo';
 import { siteConfig } from '@/config/site';
 import LatestBlog from './_components/latest-blog';
 
-export const runtime = 'edge';
-
 export default function Page() {
     const city = getCity();
 

@@ -1,8 +1,6 @@
 import React from 'react';
 import { getCityFromPathname } from '@/lib/next';
 
-export const runtime = 'edge';
-
 import Content from '../_components/content';
 
 export default function Page() {

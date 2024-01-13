@@ -1,16 +1,15 @@
 import React from 'react';
-import Content from '../_components/content';
-import { getCityFromPathname } from '@/lib/next';
 import { type Metadata } from 'next';
-
-export const runtime = 'edge';
+import { getCityFromPathname } from '@/lib/next';
+import Content from '../_components/content';
 
 export async function generateMetadata(): Promise<Metadata> {
     const city = getCityFromPathname();
 
     return {
-        title: `${city}`,
-        description: ``,
+        title: `Spring Cleaning Service ${city}`,
+        description:
+            'Book your spring cleaning service with our trusted cleaners. Book online in less than 60 seconds.',
     };
 }
 
@@ -23,7 +22,7 @@ export default function Page() {
             segments={[
                 { title: 'Home', href: '/' },
                 { title: 'Services', href: '/services' },
-                { title: 'Drive Way Cleaning', href: '/driveway' },
+                { title: 'Spring Cleaning', href: '/spring-cleaning-sydney' },
             ]}
         />
     );

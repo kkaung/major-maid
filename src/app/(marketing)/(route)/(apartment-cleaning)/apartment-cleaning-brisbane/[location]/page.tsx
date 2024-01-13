@@ -5,8 +5,6 @@ import { getCityFromPathname } from '@/lib/next';
 
 import Content from '../../_components/content';
 
-export const runtime = 'edge';
-
 export interface PageProps {
     params: {
         location: string;

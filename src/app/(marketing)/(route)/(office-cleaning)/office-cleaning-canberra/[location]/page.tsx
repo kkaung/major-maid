@@ -1,12 +1,9 @@
 import React from 'react';
 import { getCityFromPathname } from '@/lib/next';
 import { Metadata } from 'next';
-
-import Content from '../../_components/content';
-
 import { toTitleCase, unslugify } from '@/lib/utils';
 
-export const runtime = 'edge';
+import Content from '../../_components/content';
 
 interface PageProps {
     params: {

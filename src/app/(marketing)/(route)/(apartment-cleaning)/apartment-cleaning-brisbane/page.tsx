@@ -3,8 +3,6 @@ import React from 'react';
 import Content from '../_components/content';
 import { getCityFromPathname } from '@/lib/next';
 
-export const runtime = 'edge';
-
 export async function generateMetadata(): Promise<Metadata> {
     const city = getCityFromPathname();
 

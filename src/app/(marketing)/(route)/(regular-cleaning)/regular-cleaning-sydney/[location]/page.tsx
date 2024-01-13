@@ -5,8 +5,6 @@ import { type Metadata } from 'next';
 
 import Content from '../../_components/content';
 
-export const runtime = 'edge';
-
 interface PageProps {
     params: {
         location: string;

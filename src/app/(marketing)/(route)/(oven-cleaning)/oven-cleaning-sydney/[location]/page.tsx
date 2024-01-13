@@ -5,8 +5,6 @@ import { Metadata } from 'next';
 import Content from '../../_components/content';
 import { toTitleCase, unslugify } from '@/lib/utils';
 
-export const runtime = 'edge';
-
 interface PageProps {
     params: {
         location: string;

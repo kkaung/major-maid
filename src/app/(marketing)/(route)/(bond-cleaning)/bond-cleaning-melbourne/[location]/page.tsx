@@ -4,8 +4,6 @@ import { toTitleCase, unslugify } from '@/lib/utils';
 import Content from '../../_components/content';
 import { getCityFromPathname } from '@/lib/next';
 
-export const runtime = 'edge';
-
 interface PageProps {
     params: {
         location: string;

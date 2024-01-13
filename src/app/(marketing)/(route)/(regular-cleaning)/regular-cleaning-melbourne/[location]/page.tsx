@@ -5,8 +5,6 @@ import { type Metadata } from 'next';
 
 import Content from '../../_components/content';
 
-export const runtime = 'edge';
-
 interface PageProps {
     params: {
         location: string;
@@ -36,7 +34,10 @@ export default function Page({ params }: PageProps) {
             segments={[
                 { title: 'Home', href: '/' },
                 { title: 'Services', href: '/services' },
-                { title: 'Regular Cleaning', href: '/regular-cleaning-melbourne' },
+                {
+                    title: 'Regular Cleaning',
+                    href: '/regular-cleaning-melbourne',
+                },
                 {
                     title: suburb,
                     href: `/regular-cleaning-melbourne/${params.location}`,

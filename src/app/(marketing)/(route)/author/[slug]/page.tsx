@@ -13,11 +13,8 @@ import { type Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import Image from 'next/image';
 import PostCard from '../../blog/_components/post-card';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Icons } from '@/components/icons';
 import Link from 'next/link';
-
-export const runtime = 'edge';
 
 export const metadata: Metadata = {
     title: '',

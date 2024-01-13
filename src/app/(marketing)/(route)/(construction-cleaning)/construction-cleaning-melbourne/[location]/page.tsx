@@ -5,8 +5,6 @@ import { toTitleCase, unslugify } from '@/lib/utils';
 
 import Content from '../../_components/content';
 
-export const runtime = 'edge';
-
 export interface PageProps {
     params: {
         location: string;

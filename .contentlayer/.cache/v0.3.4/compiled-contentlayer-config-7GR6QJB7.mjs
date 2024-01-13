@@ -40,7 +40,10 @@ var Author = defineDocumentType(() => ({
       type: "string",
       required: true
     },
-    linkin: {}
+    linkin: {
+      type: "string",
+      required: true
+    }
   },
   computedFields
 }));
@@ -79,14 +82,14 @@ var Post = defineDocumentType(() => ({
       type: "date",
       required: true
     },
-    authors: {
-      // Reference types are not embedded.
-      // Until this is fixed, we can use a simple list.
-      // type: "reference",
-      // of: Author,
-      type: "list",
-      of: { type: "string" },
+    author: {
+      type: "string",
       required: true
+    },
+    category: {
+      type: "enum",
+      options: [""],
+      required: false
     }
   },
   computedFields
@@ -157,4 +160,4 @@ export {
   Post,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-F55LZLZ7.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-7GR6QJB7.mjs.map
