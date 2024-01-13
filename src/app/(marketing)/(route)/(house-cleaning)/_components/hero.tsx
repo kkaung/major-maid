@@ -7,6 +7,8 @@ import Link from 'next/link';
 import HeroPreview from '/public/assets/images/hero-pp.jpeg';
 import Image from 'next/image';
 import Balancer from 'react-wrap-balancer';
+import HeroImage from '/public/assets/images/house-cleaning.jpeg';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 interface HeroProps extends HTMLAttributes<HTMLElement> {
     location?: string;
@@ -81,8 +83,8 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                     <Image
                         width={400}
                         height={400}
-                        src={HeroPreview}
-                        alt="Hero Image"
+                        src={HeroImage}
+                        alt="House Cleaning Service"
                         className="bg-top object-cover z-10 rounded-xl"
                     />
                 </div>

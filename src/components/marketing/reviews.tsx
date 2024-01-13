@@ -120,11 +120,11 @@ function ReviewCard({ name, body, ...props }: ReviewCardProps) {
                         <div>
                             <h6 className="font-medium">{name}</h6>
                             <div className="flex mt-1 items-center">
-                                <Icons.starFull className="w-4 h-4 text-yellow-500" />
-                                <Icons.starFull className="w-4 h-4 text-yellow-500" />
-                                <Icons.starFull className="w-4 h-4 text-yellow-500" />
-                                <Icons.starFull className="w-4 h-4 text-yellow-500" />
-                                <Icons.starFull className="w-4 h-4 text-yellow-500" />
+                                <Icons.starFull className="w-4 h-4 text-orange-400" />
+                                <Icons.starFull className="w-4 h-4 text-orange-400" />
+                                <Icons.starFull className="w-4 h-4 text-orange-400" />
+                                <Icons.starFull className="w-4 h-4 text-orange-400" />
+                                <Icons.starFull className="w-4 h-4 text-orange-400" />
                             </div>
                         </div>
                     </div>

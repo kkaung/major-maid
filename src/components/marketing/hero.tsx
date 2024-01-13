@@ -4,10 +4,9 @@ import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import React, { type HTMLAttributes } from 'react';
 import Link from 'next/link';
-import HeroPreview from '/public/assets/images/hero-pp.jpeg';
+import HeroImage from '/public/assets/images/hero-pp.jpeg';
 import Balancer from 'react-wrap-balancer';
 import Image from 'next/image';
-import { siteConfig } from '@/config/site';
 
 interface HeroProps extends HTMLAttributes<HTMLElement> {
     location?: string;
@@ -20,9 +19,9 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
         <PageHeader
             id="hero"
             aria-labelledby="hero-heading"
-            className={cn('max-w-5xl w-full mx-auto', props.className)}
+            className={cn('pt-6', props.className)}
         >
-            <div className="grid grid-cols-1 gap-12 items-center md:grid-cols-2">
+            <div className="relative container mx-auto max-w-5xl w-full grid grid-cols-1 gap-12 md:grid-flow-row md:grid-cols-2">
                 <div>
                     <h1 className={cn(headingVariants({ size: 'lg' }))}>
                         <Balancer>
@@ -32,11 +31,7 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                             </span>
                         </Balancer>
                     </h1>
-                    <p className="font-medium mt-6 mb-3">
-                        {siteConfig.name}&apos;s vetted cleaners are here to
-                        make your home clean and tidy.
-                    </p>
-                    <div className="space-y-2">
+                    <div className="grid grid-cols-1 mt-6 gap-2 font-semibold text-lg sm:grid-cols-2">
                         <p>
                             <Icons.check
                                 aria-hidden
@@ -88,9 +83,9 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                     <Image
                         width={400}
                         height={400}
-                        src={HeroPreview}
+                        src={HeroImage}
                         alt="Hero Image"
-                        className="bg-top object-cover z-10 rounded-xl"
+                        className="bg-top object-contain z-10 rounded-xl mx-auto"
                     />
                 </div>
             </div>

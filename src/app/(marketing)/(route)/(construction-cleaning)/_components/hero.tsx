@@ -21,7 +21,7 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
             aria-labelledby="hero-heading"
             className={cn('pt-6', props.className)}
         >
-            <div className="z-20 mx-auto max-w-4xl w-full grid gap-12 grid-flow-col md:grid-flow-row md:grid-cols-2">
+            <div className="container mx-auto max-w-5xl w-full grid grid-cols-1 gap-12 md:grid-flow-row md:grid-cols-2">
                 <div className="space-y-6">
                     <h1 className={cn(headingVariants({ size: 'lg' }))}>
                         <Balancer>

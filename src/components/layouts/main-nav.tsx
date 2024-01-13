@@ -20,7 +20,7 @@ interface MainNavProps {
 }
 
 export default function MainNav({ items }: MainNavProps) {
-    // const segment = useSelectedLayoutSegment();
+    const segment = useSelectedLayoutSegment();
 
     return (
         <div className="hidden gap-6 z-30 lg:flex">

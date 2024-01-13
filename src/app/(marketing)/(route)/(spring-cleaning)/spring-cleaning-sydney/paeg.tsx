@@ -9,9 +9,9 @@ export async function generateMetadata(): Promise<Metadata> {
     const city = getCityFromPathname();
 
     return {
-        title: `Spring Cleaning Service ${city} | 100% Bond Back Guarantee`,
+        title: `Spring Cleaning Service ${city}`,
         description:
-            'Book your spring cleaning service with our trusted cleaners. Book online in 60 seconds.',
+            'Book your spring cleaning service with our trusted cleaners. Book online in less than 60 seconds.',
     };
 }
 

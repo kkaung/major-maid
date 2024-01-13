@@ -18,8 +18,8 @@ export const siteConfig = {
     name: 'Major Maid',
     description:
         'An open source e-commerce skateshop build with everything new in Next.js 13.',
-    url: 'https://skateshop.sadmn.com',
-    ogImage: 'https://skateshop.sadmn.com/opengraph-image.png',
+    url: 'https://majormaid.com.au',
+    ogImage: 'https://majormaid.com.au/opengraph-image.png',
     mainNav: [
         {
             title: 'Sydney',

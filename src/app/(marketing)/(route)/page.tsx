@@ -10,6 +10,9 @@ import Satisfaction from '@/components/marketing/satisfaction';
 import { getCity } from '@/lib/next';
 import Reviews from '@/components/marketing/reviews';
 import Services from '@/components/marketing/services';
+import { WebPageJsonLd, FAQPageJsonLd, OrganizationJsonLd } from 'next-seo';
+
+import { siteConfig } from '@/config/site';
 import LatestBlog from './_components/latest-blog';
 
 export const runtime = 'edge';
@@ -37,6 +40,19 @@ export default function Page() {
                 </div>
                 <div className="container mx-auto max-w-6xl space-y-16"></div>
             </Shell>
+            <WebPageJsonLd
+                useAppDir
+                id={siteConfig.url}
+                url={siteConfig.url}
+                description=""
+            />
+            <OrganizationJsonLd
+                useAppDir
+                name={siteConfig.name}
+                url={siteConfig.url}
+                logo=""
+                legalName=""
+            />
         </>
     );
 }

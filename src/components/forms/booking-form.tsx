@@ -18,7 +18,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Icons } from '@/components/icons';
-import { bookingSchema } from '@/lib/validation/booking';
+import { bookingSchema } from '@/lib/validations/booking';
 import { cn } from '@/lib/utils';
 import {
     Card,

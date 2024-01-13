@@ -3,6 +3,7 @@ import { type Metadata } from 'next';
 import { toTitleCase, unslugify } from '@/lib/utils';
 
 import Content from '../../_components/content';
+import { getCityFromPathname } from '@/lib/next';
 
 export const runtime = 'edge';
 
@@ -25,11 +26,13 @@ export async function generateMetadata({
 }
 
 export default function Page({ params }: PageProps) {
+    const city = getCityFromPathname();
+
     const location = toTitleCase(unslugify(params.location));
 
     return (
         <Content
-            city="Sydney"
+            city={city}
             suburb={location}
             segments={[
                 { title: 'Home', href: '/' },

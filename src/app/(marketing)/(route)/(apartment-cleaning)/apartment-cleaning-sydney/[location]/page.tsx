@@ -39,7 +39,7 @@ export default function Page({ params }: PageProps) {
                 { title: 'Apartment Cleaning', href: '/apartment-cleaning' },
                 {
                     title: suburb,
-                    href: `/apartment-cleaning/${params.location}`,
+                    href: `/apartment-cleaning-sydney/${params.location}`,
                 },
             ]}
         />
