@@ -1,10 +1,10 @@
 import React from 'react';
-import { getCityFromPathname } from '@/lib/next';
+import { getCityFromPath } from '@/lib/next';
 
 import Content from '../_components/content';
 
 export default function Page() {
-    const city = getCityFromPathname();
+    const city = getCityFromPath();
 
     return (
         <Content

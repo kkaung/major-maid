@@ -68,7 +68,7 @@ export default function FAQs({ location = 'Sydney', ...props }: FAQsProps) {
         <section
             id="faqs"
             aria-labelledby="faqs-heading"
-            className={cn(props.className, 'bg-secondary rounded-3xl p-6')}
+            className={cn(props.className, 'bg-secondary rounded-3xl p-12')}
             {...props}
         >
             <div className="mx-auto max-w-4xl w-full space-y-6">
@@ -77,12 +77,7 @@ export default function FAQs({ location = 'Sydney', ...props }: FAQsProps) {
                         <h2 className={cn(headingVariants({}))}>
                             Frequently Asked Questions
                         </h2>
-                        <p
-                            className={cn(
-                                descriptionVariants({ size: 'sm' }),
-                                'mx-auto'
-                            )}
-                        >
+                        <p className={cn(descriptionVariants(), 'mx-auto')}>
                             Have questions about our house cleaning in{' '}
                             {location}? Take a look below. Or call us on
                             <span className="text-primary ml-1">

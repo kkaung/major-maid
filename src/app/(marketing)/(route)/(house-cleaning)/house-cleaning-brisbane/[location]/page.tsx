@@ -1,9 +1,10 @@
 import React from 'react';
-import { getCityFromPathname } from '@/lib/next';
+import { getCityFromPath } from '@/lib/next';
 import { toTitleCase, unslugify } from '@/lib/utils';
 import { type Metadata } from 'next';
 
 import Content from '../../_components/content';
+import { getMetadata } from '../../_components/metadata';
 
 interface PageProps {
     params: {
@@ -16,14 +17,11 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
     const subrub = toTitleCase(unslugify(params.location));
 
-    return {
-        title: `House Cleaning Service ${subrub} | Get An Instant Price & Book Online`,
-        description: `Book your house cleaning service with our vetted cleaners in 60 seconds. The ${subrub}'s best domestic cleaners and home cleaning service.`,
-    };
+    return getMetadata(subrub);
 }
 
 export default function Page({ params }: PageProps) {
-    const city = getCityFromPathname();
+    const city = getCityFromPath();
 
     const suburb = toTitleCase(unslugify(params.location));
 

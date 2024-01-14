@@ -30,7 +30,7 @@ export default function Services({
             <div className="space-y-4 text-center">
                 <h2 className={cn(headingVariants({}))}>
                     <Balancer>
-                        House Cleaning Services We Offer in
+                        House Cleaning Services We Offer In
                         {cities.map(city => {
                             const isActive = tab === city;
 
@@ -47,12 +47,7 @@ export default function Services({
                         })}
                     </Balancer>
                 </h2>
-                <p
-                    className={cn(
-                        descriptionVariants({ size: 'sm' }),
-                        'mx-auto'
-                    )}
-                >
+                <p className={cn(descriptionVariants({}), 'mx-auto')}>
                     Whatever your cleaning needs are, we&apos;ve got you
                     covered.
                 </p>

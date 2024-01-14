@@ -1,21 +1,18 @@
 import React from 'react';
-import { getCityFromPathname } from '@/lib/next';
+import { getCityFromPath } from '@/lib/next';
 import { type Metadata } from 'next';
 
 import Content from '../_components/content';
+import { getMetadata } from '../_components/metadata';
 
 export async function generateMetadata(): Promise<Metadata> {
-    const city = getCityFromPathname();
+    const city = getCityFromPath();
 
-    return {
-        title: `Bond Cleaning ${city} | 100% Bond Back Guarantee`,
-        description:
-            'Book your vacate cleaning service with our trusted cleaners. We guarantee you will get 100% of your bond back.Book online in under 60 seconds.',
-    };
+    return getMetadata(city);
 }
 
 export default function Page() {
-    const city = getCityFromPathname();
+    const city = getCityFromPath();
 
     return (
         <Content

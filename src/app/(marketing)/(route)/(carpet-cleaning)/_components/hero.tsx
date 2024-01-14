@@ -5,8 +5,9 @@ import { cn } from '@/lib/utils';
 import React, { type HTMLAttributes } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import HeroImage from '/public/assets/images/carpet-cleaning.jpeg';
 import Balancer from 'react-wrap-balancer';
+
+import HeroImage from '/public/assets/images/carpet-cleaning.jpeg';
 
 interface HeroProps extends HTMLAttributes<HTMLElement> {
     location?: string;
@@ -25,7 +26,7 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                 <div className="space-y-6">
                     <h1 className={cn(headingVariants({ size: 'lg' }))}>
                         <Balancer>
-                            Carpet Cleaning Service In
+                            Carpet Steam Cleaning Service In
                             <span className="text-primary ml-1">
                                 {location}
                             </span>

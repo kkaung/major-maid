@@ -197,7 +197,7 @@ export default async function PostPage({ params }: PostPageProps) {
                     </CardContent>
                 </Card>
             </section>
-            <AboutUs className="mt-6 w-full xl:absolute xl:right-[-260px] xl:top-14 xl:inline-flex xl:flex-col xl:mt-0 xl:w-[260px]" />
+            {/* <AboutUs className="mt-6 w-full xl:absolute xl:right-[-260px] xl:top-14 xl:inline-flex xl:flex-col xl:mt-0 xl:w-[260px]" /> */}
             <div className="flex justify-center py-6 lg:py-10">
                 <Link
                     href="/blog"

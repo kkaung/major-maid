@@ -4,6 +4,7 @@ import { type Metadata } from 'next';
 import { getCity } from '@/lib/next';
 
 import Content from '../../_components/content';
+import { getMetadata } from '../../_components/metadata';
 
 interface PageProps {
     params: {
@@ -14,33 +15,30 @@ interface PageProps {
 export async function generateMetadata({
     params,
 }: PageProps): Promise<Metadata> {
-    return {
-        title: '',
-        description: '',
-    };
+    const suburb = toTitleCase(unslugify(params.location));
+
+    return getMetadata(suburb);
 }
 
 export default function Page({ params }: PageProps) {
     const city = getCity();
 
-    const location = toTitleCase(unslugify(params.location));
-
-    const isCity = city === location;
+    const suburb = toTitleCase(unslugify(params.location));
 
     return (
         <Content
             city={city}
-            suburb={isCity ? location : undefined}
+            suburb={suburb}
             segments={[
                 { title: 'Home', href: '/' },
                 { title: 'Services', href: '/services' },
                 {
                     title: 'Move In - Move Out Cleaning',
-                    href: '/move-in-move-out-cleaning',
+                    href: '/move-in-move-out-cleaning-sydney',
                 },
                 {
                     title: city,
-                    href: `/move-in-move-out-cleaning/${city}`,
+                    href: `/move-in-move-out-cleaning-sydney/${city}`,
                 },
             ]}
         />

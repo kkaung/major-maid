@@ -1,15 +1,17 @@
 import React from 'react';
-import { getCity } from '@/lib/next';
+import { getCity, getCityFromPath } from '@/lib/next';
 import { type Metadata } from 'next';
 import Content from '../_components/content';
+import { getMetadata } from '../_components/metadata';
 
-export const metadata: Metadata = {
-    title: '',
-    description: '',
-};
+export async function generateMetadata(): Promise<Metadata> {
+    const city = getCityFromPath();
+
+    return getMetadata(city);
+}
 
 export default function Page() {
-    const city = getCity();
+    const city = getCityFromPath();
 
     return (
         <Content

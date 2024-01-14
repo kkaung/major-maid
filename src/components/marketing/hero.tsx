@@ -1,5 +1,9 @@
 import { Icons } from '@/components/icons';
-import { PageHeader, headingVariants } from '@/components/page-header';
+import {
+    PageHeader,
+    descriptionVariants,
+    headingVariants,
+} from '@/components/page-header';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import React, { type HTMLAttributes } from 'react';
@@ -7,6 +11,7 @@ import Link from 'next/link';
 import HeroImage from '/public/assets/images/hero-pp.jpeg';
 import Balancer from 'react-wrap-balancer';
 import Image from 'next/image';
+import { siteConfig } from '@/config/site';
 
 interface HeroProps extends HTMLAttributes<HTMLElement> {
     location?: string;
@@ -21,8 +26,8 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
             aria-labelledby="hero-heading"
             className={cn('pt-6', props.className)}
         >
-            <div className="relative container mx-auto max-w-5xl w-full grid grid-cols-1 gap-12 md:grid-flow-row md:grid-cols-2">
-                <div>
+            <div className="relative container mx-auto max-w-5xl w-full flex gap-12 flex-col lg:flex-row">
+                <div className="space-y-6 flex-1">
                     <h1 className={cn(headingVariants({ size: 'lg' }))}>
                         <Balancer>
                             1st House Cleaning & Maid Service In
@@ -31,41 +36,13 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                             </span>
                         </Balancer>
                     </h1>
-                    <div className="grid grid-cols-1 mt-6 gap-2 font-semibold text-lg sm:grid-cols-2">
-                        <p>
-                            <Icons.check
-                                aria-hidden
-                                className="w-4 h-4 mr-1 text-primary inline"
-                                strokeWidth={3}
-                            />
-                            Trusted Cleaners
-                        </p>
-                        <p>
-                            <Icons.check
-                                aria-hidden
-                                className="w-4 h-4 mr-1 text-primary inline"
-                                strokeWidth={3}
-                            />
-                            100% Guarantee
-                        </p>
-                        <p>
-                            <Icons.check
-                                aria-hidden
-                                className="w-4 h-4 mr-1 text-primary inline"
-                                strokeWidth={3}
-                            />
-                            5 Star Rated Service
-                        </p>
-                        <p>
-                            <Icons.check
-                                aria-hidden
-                                className="w-4 h-4 mr-1 text-primary inline stroke-3"
-                                strokeWidth={3}
-                            />
-                            Happy Customers
-                        </p>
-                    </div>
-                    <div className="mt-6">
+                    <p className={cn(descriptionVariants(), 'text-')}>
+                        Sometimes, there&apos;s just too much to do. Our maid
+                        service will take care of the housework. When
+                        you&apos;re ready, book securely online. Get started
+                        now!
+                    </p>
+                    <div className="mt-6 flex gap-4 items-center">
                         <Link
                             href="/booking"
                             className={cn(
@@ -75,8 +52,58 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                                 'font-semibold text-lg px-8 h-12 rounded-full animate-shimmer bg-[linear-gradient(110deg,#2463EB,45%,#7ba4f6,55%,#2463EB)] bg-[length:200%_100%] transition-colors'
                             )}
                         >
-                            Quote Me
+                            Instant quote
                         </Link>
+                        <Link
+                            href=""
+                            target="_blank"
+                            className="flex items-center"
+                        >
+                            <Icons.fullGoogle className="w-7 h-7 mr-2" />
+                            <div className="text-sm">
+                                <div>Google Rating</div>
+                                <div>
+                                    <span className="text-primary">
+                                        {siteConfig.rating.ratingValue}
+                                    </span>
+                                    <span>
+                                        ({siteConfig.rating.ratingCount}+)
+                                    </span>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
+                    <div className="flex font-medium flex-col gap-3 md:gap-6 md:flex-row">
+                        <p className="flex items-center gap-2">
+                            <Icons.users
+                                aria-hidden
+                                className="w-5 h-5 inline"
+                                strokeWidth={2}
+                            />
+                            <span className="leading-tight text-sm">
+                                Trusted Cleaners
+                            </span>
+                        </p>
+                        <p className="flex items-center gap-2">
+                            <Icons.shieldCheck
+                                aria-hidden
+                                className="w-5 h-5 inline"
+                                strokeWidth={2}
+                            />
+                            <span className="leading-tight text-sm">
+                                100% Guarantee
+                            </span>
+                        </p>
+                        <p className="flex items-center gap-2">
+                            <Icons.sparkles
+                                aria-hidden
+                                className="w-5 h-5 inline"
+                                strokeWidth={2}
+                            />
+                            <span className="leading-tight text-sm">
+                                5 Star Rated Service
+                            </span>
+                        </p>
                     </div>
                 </div>
                 <div>

@@ -35,7 +35,10 @@ export function Breadcrumbs({
 
                     if (isLastSegment)
                         return (
-                            <div className="text-foreground font-medium">
+                            <div
+                                key={segment.href}
+                                className="text-foreground font-medium"
+                            >
                                 {truncationLength > 0 && segment.title
                                     ? truncate(segment.title, truncationLength)
                                     : segment.title}

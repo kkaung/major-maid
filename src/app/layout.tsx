@@ -13,14 +13,17 @@ import '@/styles/globals.css';
 
 export const metadata: Metadata = {
     metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
+    alternates: {
+        canonical: siteConfig.url,
+    },
     title: {
-        default: siteConfig.name,
+        default: siteConfig.title,
         template: `%s - ${siteConfig.name}`,
     },
     description: siteConfig.description,
     keywords: [],
     authors: [],
-    creator: 'sadmann7',
+    creator: 'majormaid_au',
     openGraph: {
         type: 'website',
         locale: 'en_US',
@@ -34,7 +37,7 @@ export const metadata: Metadata = {
         title: siteConfig.name,
         description: siteConfig.description,
         images: [`${siteConfig.url}/og.jpg`],
-        creator: '@sadmann7',
+        creator: '@majormaid_au',
     },
     icons: {
         icon: '/favicon.ico',
@@ -51,12 +54,7 @@ export const viewport: Viewport = {
 export default async function RootLayout({ children }: PropsWithChildren) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body
-                className={
-                    (fontSans.variable,
-                    'scroll-smooth antialiased bg-secondary/10')
-                }
-            >
+            <body className={(fontSans.variable, 'scroll-smooth antialiased')}>
                 <Providers>{children}</Providers>
                 <TailwindIndicator />
                 <Toaster />

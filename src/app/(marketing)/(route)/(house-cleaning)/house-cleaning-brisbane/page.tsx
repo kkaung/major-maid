@@ -1,19 +1,17 @@
 import React from 'react';
 import { type Metadata } from 'next';
-import { getCityFromPathname } from '@/lib/next';
+import { getCityFromPath } from '@/lib/next';
 import Content from '../_components/content';
+import { getMetadata } from '../_components/metadata';
 
 export async function generateMetadata(): Promise<Metadata> {
-    const city = getCityFromPathname();
+    const city = getCityFromPath();
 
-    return {
-        title: `House Cleaning ${city} | Get An Instant Price & Book Online`,
-        description: `Book your house cleaning service with our vetted cleaners in 60 seconds. The ${city}'s best domestic cleaners and home cleaning service.`,
-    };
+    return getMetadata(city);
 }
 
 export default function Page() {
-    const city = getCityFromPathname();
+    const city = getCityFromPath();
 
     return (
         <Content

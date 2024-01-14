@@ -52,7 +52,7 @@ export default function Reviews({ location, ...props }: ReviewsProps) {
                 <div className="space-y-12">
                     <div className="text-center space-y-4">
                         <h2 className={cn(headingVariants({ size: 'sm' }))}>
-                            <Balancer>Don&apos;t take our word for it</Balancer>
+                            <Balancer>Live Customer Reviews</Balancer>
                         </h2>
                         <p className={cn(descriptionVariants({}), 'mx-auto')}>
                             <Balancer>
@@ -66,7 +66,7 @@ export default function Reviews({ location, ...props }: ReviewsProps) {
                                     href="https://www.google.com/search?q=majormaid"
                                     className="text-primary ml-1 font-medium hover:text-primary/80"
                                 >
-                                    Google reviews
+                                    Google Reviews
                                 </a>
                             </Balancer>
                         </p>

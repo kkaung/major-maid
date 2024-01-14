@@ -4,11 +4,10 @@ import { buttonVariants } from '@/components/ui/button';
 import React, { type HTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import HeroPreview from '/public/assets/images/hero-pp.jpeg';
 import Image from 'next/image';
 import Balancer from 'react-wrap-balancer';
 import HeroImage from '/public/assets/images/house-cleaning.jpeg';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { siteConfig } from '@/config/site';
 
 interface HeroProps extends HTMLAttributes<HTMLElement> {
     location?: string;
@@ -67,17 +66,37 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                             Happy Customers
                         </p>
                     </div>
-                    <Link
-                        href="/booking"
-                        className={cn(
-                            buttonVariants({
-                                size: 'lg',
-                            }),
-                            'font-semibold px-8 h-12 rounded-full animate-shimmer bg-[linear-gradient(110deg,#2463EB,45%,#7ba4f6,55%,#2463EB)] bg-[length:200%_100%] transition-colors'
-                        )}
-                    >
-                        Get a quote & Book online
-                    </Link>
+                    <div className="mt-6 flex gap-4 items-center">
+                        <Link
+                            href="/booking"
+                            className={cn(
+                                buttonVariants({
+                                    size: 'lg',
+                                }),
+                                'font-semibold text-lg px-8 h-12 rounded-full animate-shimmer bg-[linear-gradient(110deg,#2463EB,45%,#7ba4f6,55%,#2463EB)] bg-[length:200%_100%] transition-colors'
+                            )}
+                        >
+                            Instant quote
+                        </Link>
+                        <Link
+                            href=""
+                            target="_blank"
+                            className="flex items-center"
+                        >
+                            <Icons.fullGoogle className="w-7 h-7 mr-2" />
+                            <div className="text-sm">
+                                <div>Google Rating</div>
+                                <div>
+                                    <span className="text-primary">
+                                        {siteConfig.rating.ratingValue}
+                                    </span>
+                                    <span>
+                                        ({siteConfig.rating.ratingCount}+)
+                                    </span>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
                 </div>
                 <div>
                     <Image
@@ -85,7 +104,7 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                         height={400}
                         src={HeroImage}
                         alt="House Cleaning Service"
-                        className="bg-top object-cover z-10 rounded-xl"
+                        className="bg-top object-cover z-10 rounded-xl mx-auto"
                     />
                 </div>
             </div>

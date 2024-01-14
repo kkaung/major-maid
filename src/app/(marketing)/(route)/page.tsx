@@ -4,16 +4,28 @@ import FAQs from '@/components/marketing/faqs';
 import Featuring from '@/components/marketing/featuring';
 import WhyUs from '@/components/marketing/why-us';
 import HowWork from '@/components/marketing/how-work';
-import City from '@/components/marketing/city';
 import { Shell } from '@/components/shell';
 import Satisfaction from '@/components/marketing/satisfaction';
-import { getCity } from '@/lib/next';
+import { getCity, getCityFromPath } from '@/lib/next';
 import Reviews from '@/components/marketing/reviews';
 import Services from '@/components/marketing/services';
-import { WebPageJsonLd, FAQPageJsonLd, OrganizationJsonLd } from 'next-seo';
+import { WebPageJsonLd, OrganizationJsonLd } from 'next-seo';
 
 import { siteConfig } from '@/config/site';
 import LatestBlog from './_components/latest-blog';
+import ServiceInclusion from '@/components/marketing/service-inclusion';
+import { type Metadata } from 'next';
+
+export async function generateMetadata(): Promise<Metadata> {
+    const city = getCityFromPath();
+
+    console.log(city);
+
+    return {
+        title: `${city}'s Favourite House Cleaning Service`,
+        description: '',
+    };
+}
 
 export default function Page() {
     const city = getCity();
@@ -32,7 +44,7 @@ export default function Page() {
                     <WhyUs location={city} className="bg-primary" />
                 </div>
                 <div className="container mx-auto space-y-16 max-w-6xl">
-                    <City />
+                    <ServiceInclusion />
                     <FAQs />
                     <Satisfaction className="container mx-auto" />
                 </div>

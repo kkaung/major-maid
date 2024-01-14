@@ -1,7 +1,7 @@
 import React from 'react';
 import { type Metadata } from 'next';
 import { toTitleCase, unslugify } from '@/lib/utils';
-import { getCityFromPathname } from '@/lib/next';
+import { getCityFromPath } from '@/lib/next';
 
 import Content from '../../_components/content';
 
@@ -24,7 +24,7 @@ export async function generateMetadata({
 }
 
 export default function Page({ params }: PageProps) {
-    const city = getCityFromPathname();
+    const city = getCityFromPath();
 
     const suburb = toTitleCase(unslugify(params.location));
 

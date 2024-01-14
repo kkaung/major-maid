@@ -11,6 +11,7 @@ import {
     TableRow,
 } from '@/components/ui/table';
 import { Icons } from '@/components/icons';
+import { siteConfig } from '@/config/site';
 
 const data = [
     {
@@ -29,7 +30,7 @@ const data = [
         others: false,
     },
     {
-        title: '100% Money-Back guarantee',
+        title: '100% Money-Back Guarantee',
         majorMaid: true,
         others: false,
     },
@@ -54,13 +55,16 @@ export default function WhyUs({
         <section
             id="why-us"
             aria-labelledby="why-us-heading"
-            className={cn(props.className, 'py-14 bg-primary')}
+            className={cn(props.className, 'py-12 bg-primary')}
         >
             <div className="container mx-auto space-y-12">
-                <div className="relative text-center">
-                    <h2 className={cn(headingVariants({}), 'text-white')}>
+                <div className="relative text-center text-white space-y-4">
+                    <h2 className={cn(headingVariants({}))}>
                         <Balancer>Why Choose Major Maid?</Balancer>
                     </h2>
+                    <p className="font-medium">
+                        {siteConfig.name} Is Not Your Average Cleaning Company
+                    </p>
                     <Icons.ppointed className="w-36 h-36  absolute left-1/2 z-20 -translate-x-full top-4" />
                 </div>
                 <div className="rounded-3xl p-4 max-w-3xl mx-auto bg-white">

@@ -78,6 +78,17 @@ const billingQuestions = [
     },
 ];
 
+const pricingQuestions = [
+    {
+        question: 'How much does your cleaning service cost?',
+        answer: 'We can work off a flat rate if you’re looking for something like a whole house clean, or an hourly rate if you are looking for a couple hours of cleaning here or there. Our hourly rates start at $65/hr and flat rates at $159. We also offer discounts if you book regular cleaning services.',
+    },
+    {
+        question: 'Are your prices negoitable?',
+        answer: 'No, our rates are calculated by the information you provide on our booking page. We provide some of the best rates in the industry for the high-quality cleaning service we provide.',
+    },
+];
+
 export default function Page() {
     return (
         <Shell className="gap-16 max-w-7xl">
@@ -106,8 +117,8 @@ export default function Page() {
                     </span>
                 </PageHeaderDescription>
             </PageHeader>
-            <div className="max-w-4xl w-full mx-auto space-y-12">
-                <section>
+            <div className="max-w-5xl w-full mx-auto space-y-12">
+                <section id="general" aria-labelledby="general-heading">
                     <h2
                         className={cn(
                             headingVariants({
@@ -120,7 +131,7 @@ export default function Page() {
                     </h2>
                     <AccordionList items={generalQuestions} />
                 </section>
-                <section>
+                <section id="cleaning" aria-labelledby="cleaning-heading">
                     <h2
                         className={cn(
                             headingVariants({
@@ -133,7 +144,7 @@ export default function Page() {
                     </h2>
                     <AccordionList items={cleaningQuestions} />
                 </section>
-                <section>
+                <section id="scheduling" aria-labelledby="scheduling-heading">
                     <h2
                         className={cn(
                             headingVariants({
@@ -146,7 +157,7 @@ export default function Page() {
                     </h2>
                     <AccordionList items={schedulingQuestions} />
                 </section>
-                <section>
+                <section id="billing" aria-labelledby="billing-heading">
                     <h2
                         className={cn(
                             headingVariants({
@@ -158,6 +169,19 @@ export default function Page() {
                         <span className="sr-only">Billing Questions</span>
                     </h2>
                     <AccordionList items={billingQuestions} />
+                </section>
+                <section id="pricing" aria-labelledby="pricing-heading">
+                    <h2
+                        className={cn(
+                            headingVariants({
+                                size: 'sm',
+                            })
+                        )}
+                    >
+                        Pricing
+                        <span className="sr-only">Pricing Questions</span>
+                    </h2>
+                    <AccordionList items={pricingQuestions} />
                 </section>
             </div>
         </Shell>

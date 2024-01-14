@@ -34,8 +34,9 @@ export default async function SiteFooter({
                             <span className="font-bold">{siteConfig.logo}</span>
                         </Link>
                         <p className="my-4 max-w-xs text-xs font-light text-slate-300 md:text-sm">
-                            {siteConfig.name} is to transform your home with our
-                            professional house cleaning services.
+                            {siteConfig.name} is here to transform your house
+                            into home with our professional house cleaning
+                            services.
                         </p>
                         <div className="flex flex-col mt-2 space-y-2 text-slate-400">
                             <div className={cn('cursor-pointer text-sm')}>
@@ -77,7 +78,7 @@ export default async function SiteFooter({
                     <section
                         id="footer-links"
                         aria-labelledby="footer-links-heading"
-                        className="grid flex-1 grid-cols-1 gap-10 xs:grid-cols-2 sm:grid-cols-4"
+                        className="grid flex-1 grid-cols-1 gap-10 xs:grid-cols-2 sm:grid-cols-3"
                     >
                         {siteConfig.footerNav.map(item => (
                             <div key={item.title} className="space-y-3">
@@ -131,6 +132,13 @@ export default async function SiteFooter({
                             href={siteConfig.links.twitter}
                         >
                             <Icons.twitter aria-hidden className="h-4 w-4" />
+                        </Link>
+                        <Link
+                            aria-label="Youtube"
+                            target="_blank"
+                            href={siteConfig.links.youtube}
+                        >
+                            <Icons.youtube aria-hidden className="h-4 w-4" />
                         </Link>
                         <Link
                             aria-label="Linkin"
