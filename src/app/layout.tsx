@@ -14,7 +14,7 @@ import '@/styles/globals.css';
 export const metadata: Metadata = {
     metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
     alternates: {
-        canonical: siteConfig.url,
+        canonical: '/',
     },
     title: {
         default: siteConfig.title,

@@ -4,6 +4,7 @@ import { Shell } from '@/components/shell';
 import { Icons } from '@/components/icons';
 import { cn } from '@/lib/utils';
 import { type HTMLAttributes } from 'react';
+import { Separator } from '../ui/separator';
 
 interface SiteFooterProps extends HTMLAttributes<HTMLElement> {
     location?: string;
@@ -153,20 +154,6 @@ export default async function SiteFooter({
                             href={siteConfig.links.pinterest}
                         >
                             <Icons.pinterest aria-hidden className="h-4 w-4" />
-                        </Link>
-                        <Link
-                            aria-label="Tiktok"
-                            target="_blank"
-                            href={siteConfig.links.tiktok}
-                        >
-                            <Icons.tiktok aria-hidden className="h-4 w-4" />
-                        </Link>
-                        <Link
-                            aria-label="Temblr"
-                            target="_blank"
-                            href={siteConfig.links.temblr}
-                        >
-                            <Icons.temblr aria-hidden className="h-4 w-4" />
                         </Link>
                     </div>
                 </section>

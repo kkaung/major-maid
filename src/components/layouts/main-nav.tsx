@@ -14,6 +14,7 @@ import {
 } from '@/components/ui/navigation-menu';
 import { useSelectedLayoutSegment } from 'next/navigation';
 import type { MainNavItem } from '@/types';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 interface MainNavProps {
     items?: MainNavItem[];
@@ -40,17 +41,63 @@ export default function MainNav({ items }: MainNavProps) {
                                     {item.title}
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent>
-                                    <ul className="w-[360px] h-full grid grid-cols-2 gap-3  p-4 z-50">
-                                        {item.items.map(item => (
-                                            <ListItem
-                                                key={item.title}
-                                                title={item.title}
-                                                href={item.href}
-                                            >
-                                                {item.description}
-                                            </ListItem>
-                                        ))}
-                                    </ul>
+                                    <Tabs defaultValue={item.items[0].title}>
+                                        <div className="w-[400px] flex gap-6">
+                                            <div className="space-y-6 py-4 pl-4 bg-secondary flex flex-col">
+                                                <div className="space-y-1 pr-4">
+                                                    <h5 className="font-semibold text-xl leading-tight text-foreground">
+                                                        What are you <br />
+                                                        looking for?
+                                                    </h5>
+                                                    <p className="text-muted-foreground text-sm">
+                                                        Pick a type of service
+                                                    </p>
+                                                </div>
+                                                <TabsList className="flex flex-col space-y-2 flex-1">
+                                                    {item.items.map(item => (
+                                                        <TabsTrigger
+                                                            key={item.title}
+                                                            value={item.title}
+                                                            className="w-full justify-start text-base rounded-l-xl h-10"
+                                                        >
+                                                            {item.title}
+                                                        </TabsTrigger>
+                                                    ))}
+                                                </TabsList>
+                                            </div>
+                                            <div className="py-4 pr-4">
+                                                {item.items.map(item => (
+                                                    <TabsContent
+                                                        key={item.title}
+                                                        value={item.title}
+                                                    >
+                                                        <ul className="space-y-2">
+                                                            {item.items?.map(
+                                                                item => (
+                                                                    <li
+                                                                        key={
+                                                                            item.title
+                                                                        }
+                                                                        className="text-foreground/70 hover:underline hover:text-foreground"
+                                                                    >
+                                                                        <Link
+                                                                            href={
+                                                                                item.href!
+                                                                            }
+                                                                        >
+                                                                            {
+                                                                                item.title
+                                                                            }
+                                                                        </Link>
+                                                                    </li>
+                                                                )
+                                                            )}
+                                                        </ul>
+                                                    </TabsContent>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </Tabs>
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
                         ) : (

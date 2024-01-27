@@ -33,7 +33,6 @@ export default function Services({
                         House Cleaning Services We Offer In
                         {cities.map(city => {
                             const isActive = tab === city;
-
                             return (
                                 <span
                                     key={city}
@@ -67,23 +66,20 @@ export default function Services({
                             value={city}
                             className={cn({ hidden: !isActive })}
                         >
-                            <ul className="grid gap-x-6 gap-y-8 max-w-5xl w-full mx-auto grid-cols-3 sm:grid-cols-6">
+                            <ul className="grid gap-x-6 gap-y-8 max-w-5xl w-full mx-auto grid-cols-1 sm:grid-cols-2">
                                 {siteServices.map((service, idx) => {
-                                    const Icon = Icons[service.icon ?? 'add'];
-
                                     return (
                                         <li
                                             key={idx}
-                                            className="relative flex flex-col justify-center items-center text-center leading-tight"
+                                            className="relative flex  items-center justify-between  leading-tight border-b p-3"
                                         >
-                                            <Icon
-                                                className="w-14 h-14"
-                                                strokeWidth={0.1}
-                                                aria-hidden
-                                            />
-                                            <h6 className="mt-2 text-sm">
+                                            <h6 className="mt-2 text-xl font-medium">
                                                 {service.title}
                                             </h6>
+                                            <Icons.chevronRight
+                                                className="w-6 h-6"
+                                                strokeWidth={2}
+                                            />
                                             <Link
                                                 href={`${
                                                     service.slug
@@ -103,17 +99,6 @@ export default function Services({
                     );
                 })}
             </Tabs.Root>
-            <div className="text-center mt-6">
-                <Link href="/services" className={'underline font-bold group'}>
-                    See All
-                    <Icons.arrowRight
-                        aria-hidden
-                        className="ml-1 w-4 h-4 inline transition-all group-hover:translate-x-1"
-                        strokeWidth={3}
-                    />
-                    <span className="sr-only">See All Services</span>
-                </Link>
-            </div>
         </section>
     );
 }

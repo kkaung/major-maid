@@ -8,8 +8,6 @@ const links = {
     instagram: 'https://github.com/',
     twitter: 'https://twitter.com/',
     pinterest: 'https://pinterest.com/',
-    tiktok: 'https://tiktok.com',
-    temblr: 'https://temblr.com',
     linkin: 'https://linkin.com',
     youtube: 'https://youtube.com',
 };
@@ -23,116 +21,65 @@ export const siteConfig = {
     ogImage: 'https://majormaid.com.au/opengraph-image.png',
     mainNav: [
         {
-            title: 'Sydney',
+            title: 'Our Service',
             items: [
                 {
-                    title: 'House Cleaing',
-                    href: '/house-cleaning-sydney',
+                    title: 'Sydney',
+                    items: [
+                        {
+                            title: 'House Cleaing',
+                            href: '/house-cleaning-sydney',
+                        },
+                        {
+                            title: 'Regular Cleaing',
+                            href: '/regular-cleaning-sydney',
+                        },
+                        {
+                            title: 'Deep Cleaing',
+                            href: '/deep-cleaning-sydney',
+                        },
+                        {
+                            title: 'End Lease Cleaning',
+                            href: '/end-lease-cleaning-sydney',
+                        },
+                        {
+                            title: 'Apartment Cleaning',
+                            href: '/apartment-cleaning-sydney',
+                        },
+                        {
+                            title: 'Oven Cleaning',
+                            href: '/oven-cleaning-sydney',
+                        },
+                    ],
                 },
                 {
-                    title: 'Regular Cleaing',
-                    href: '/regular-cleaning-sydney',
-                },
-                {
-                    title: 'Deep Cleaing',
-                    href: '/deep-cleaning-sydney',
-                },
-                {
-                    title: 'End Lease Cleaning',
-                    href: '/end-lease-cleaning-sydney',
-                },
-                {
-                    title: 'Oven Cleaning',
-                    href: '/oven-cleaning-sydney',
-                },
-                {
-                    title: 'Bond Cleaning',
-                    href: '/bond-cleaning-sydney',
-                },
-                {
-                    title: 'Office Cleaning',
-                    href: '/office-cleaning-sydney',
-                },
-                {
-                    title: 'Move In - Move Out',
-                    href: '/move-in-move-out-cleaning-sydney',
-                },
-                {
-                    title: 'Carpet Cleaning',
-                    href: '/carpet-cleaning-sydney',
-                },
-                {
-                    title: 'NDIS Cleaning',
-                    href: '/ndis-cleaning-sydney',
-                },
-                {
-                    title: 'Apartment Cleaning',
-                    href: '/apartment-cleaning-sydney',
-                },
-                {
-                    title: 'Window Cleaning',
-                    href: '/window-cleaning-sydney',
-                },
-                {
-                    title: 'Construction Cleaning',
-                    href: '/construction-cleaning-sydney',
-                },
-            ],
-        },
-        {
-            title: 'Melbourne',
-            items: [
-                {
-                    title: 'House Cleaing',
-                    href: '/house-cleaning-melbourne',
-                },
-                {
-                    title: 'Regular Cleaing',
-                    href: '/regular-cleaning-melbourne',
-                },
-                {
-                    title: 'Deep Cleaing',
-                    href: '/deep-cleaning-melbourne',
-                },
-                {
-                    title: 'End Lease Cleaning',
-                    href: '/end-lease-cleaning-melbourne',
-                },
-                {
-                    title: 'Oven Cleaning',
-                    href: '/oven-cleaning-melbourne',
-                },
-                {
-                    title: 'Bond Cleaning',
-                    href: '/bond-cleaning-melbourne',
-                },
-                {
-                    title: 'Office Cleaning',
-                    href: '/office-cleaning-melbourne',
-                },
-                {
-                    title: 'Move In - Move Out',
-                    href: '/move-in-move-out-cleaning-melbourne',
-                },
-                {
-                    title: 'Carpet Cleaning',
-                    href: '/carpet-cleaning-melbourne',
-                },
-                {
-                    title: 'NDIS Cleaning',
-                    href: '/ndis-cleaning-melbourne',
-                },
-                {
-                    title: 'Apartment Cleaning',
-                    href: '/apartment-cleaning-melbourne',
-                },
-                {
-                    title: 'Window Cleaning',
-                    href: '/window-cleaning-melbourne',
-                },
-                {
-                    title: 'Construction Cleaning',
-                    href: '/construction-cleaning-melbourne',
+                    title: 'Melbourne',
+                    items: [
+                        {
+                            title: 'House Cleaing',
+                            href: '/house-cleaning-melbourne',
+                        },
+                        {
+                            title: 'Regular Cleaing',
+                            href: '/regular-cleaning-melbourne',
+                        },
+                        {
+                            title: 'Deep Cleaing',
+                            href: '/deep-cleaning-melbourne',
+                        },
+                        {
+                            title: 'End Lease Cleaning',
+                            href: '/end-lease-cleaning-melbourne',
+                        },
+                        {
+                            title: 'Apartment Cleaning',
+                            href: '/apartment-cleaning-melbourne',
+                        },
+                        {
+                            title: 'Oven Cleaning',
+                            href: '/oven-cleaning-melbourne',
+                        },
+                    ],
                 },
             ],
         },
@@ -167,10 +114,6 @@ export const siteConfig = {
                     href: '/oven-cleaning-sydney',
                 },
                 {
-                    title: 'Bond Cleaning',
-                    href: '/bond-cleaning-sydney',
-                },
-                {
                     title: 'Apartment Cleaning',
                     href: '/apartment-cleaning-sydney',
                 },
@@ -179,16 +122,8 @@ export const siteConfig = {
                     href: '/office-cleaning-sydney',
                 },
                 {
-                    title: 'NDIS Cleaning',
-                    href: '/ndis-cleaning-sydney',
-                },
-                {
                     title: 'Carpet Cleaning',
                     href: '/carpet-cleaning-sydney',
-                },
-                {
-                    title: 'Move In - Move Out',
-                    href: '/move-in-move-out-cleaning-sydney',
                 },
             ],
         },
@@ -196,15 +131,15 @@ export const siteConfig = {
             title: 'Melbourne',
             items: [
                 {
-                    title: 'House Cleaing',
+                    title: 'House Cleaning',
                     href: '/house-cleaning-melbourne',
                 },
                 {
-                    title: 'Regular Cleaing',
+                    title: 'Regular Cleaning',
                     href: '/regular-cleaning-melbourne',
                 },
                 {
-                    title: 'Deep Cleaing',
+                    title: 'Deep Cleaning',
                     href: '/deep-cleaning-melbourne',
                 },
                 {
@@ -216,10 +151,6 @@ export const siteConfig = {
                     href: '/oven-cleaning-melbourne',
                 },
                 {
-                    title: 'Bond Cleaning',
-                    href: '/bond-cleaning-melbourne',
-                },
-                {
                     title: 'Apartment Cleaning',
                     href: '/apartment-cleaning-melbourne',
                 },
@@ -228,16 +159,8 @@ export const siteConfig = {
                     href: '/office-cleaning-melbourne',
                 },
                 {
-                    title: 'NDIS Cleaning',
-                    href: '/ndis-cleaning-melbourne',
-                },
-                {
                     title: 'Carpet Cleaning',
                     href: '/carpet-cleaning-melbourne',
-                },
-                {
-                    title: 'Move In - Move Out',
-                    href: '/move-in-move-out-cleaning-melbourne',
                 },
             ],
         },
@@ -265,8 +188,8 @@ export const siteConfig = {
         openingHour: 'Mon – Sat: 9:00 AM – 5:00 PM',
     },
     rating: {
-        ratingValue: '4.8',
-        ratingCount: '528',
+        ratingValue: '4.9',
+        ratingCount: '727',
     },
 };
 
@@ -297,29 +220,8 @@ export const siteServices: {
         slug: 'oven-cleaning',
     },
     {
-        title: 'Bond Cleaning',
-        slug: 'bond-cleaning',
-    },
-    {
         title: 'Office Cleaning',
         slug: 'office-cleaning',
         icon: 'building',
-    },
-    {
-        title: 'NDIS Cleaning',
-        slug: 'ndis-cleaning',
-    },
-    {
-        title: 'Carpet Cleaning',
-        slug: '/carpet-cleaning',
-        icon: 'carpet',
-    },
-    {
-        title: 'Move In - Move Out',
-        slug: '/move-in-move-out-cleaning',
-    },
-    {
-        title: 'Tile Cleaning',
-        slug: '/tile-cleaning',
     },
 ];

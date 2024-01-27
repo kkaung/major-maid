@@ -52,7 +52,7 @@ export default function Reviews({ location, ...props }: ReviewsProps) {
                 <div className="space-y-12">
                     <div className="text-center space-y-4">
                         <h2 className={cn(headingVariants({ size: 'sm' }))}>
-                            <Balancer>Live Customer Reviews</Balancer>
+                            <Balancer>What Our Customers Are Saying</Balancer>
                         </h2>
                         <p className={cn(descriptionVariants({}), 'mx-auto')}>
                             <Balancer>
@@ -112,23 +112,11 @@ function ReviewCard({ name, body, ...props }: ReviewCardProps) {
             <div className="flex justify-between">
                 <div className="space-y-2">
                     <div className="flex gap-2">
-                        <Avatar className="h-9 w-9">
-                            <AvatarFallback className="bg-violet-500 text-white">
-                                {name.charAt(0).toUpperCase()}
-                            </AvatarFallback>
-                        </Avatar>
                         <div>
                             <h6 className="font-medium">{name}</h6>
-                            <div className="flex mt-1 items-center">
-                                <Icons.starFull className="w-4 h-4 text-orange-400" />
-                                <Icons.starFull className="w-4 h-4 text-orange-400" />
-                                <Icons.starFull className="w-4 h-4 text-orange-400" />
-                                <Icons.starFull className="w-4 h-4 text-orange-400" />
-                                <Icons.starFull className="w-4 h-4 text-orange-400" />
-                            </div>
                         </div>
                     </div>
-                    <p className="text-sm">{body}</p>
+                    <p className="text-sm italic">&quot;{body}&quot;</p>
                 </div>
                 <div>
                     <Icons.fullGoogle className="w-5 h-5" />

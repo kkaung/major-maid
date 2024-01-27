@@ -35,6 +35,11 @@ const data = [
         others: false,
     },
     {
+        title: 'Simple Online Booking System',
+        majorMaid: true,
+        others: false,
+    },
+    {
         title: 'Schedule Online, Cancel Anytime',
         majorMaid: true,
         others: false,
@@ -62,9 +67,9 @@ export default function WhyUs({
                     <h2 className={cn(headingVariants({}))}>
                         <Balancer>Why Choose Major Maid?</Balancer>
                     </h2>
-                    <p className="font-medium">
+                    <h3 className="font-medium">
                         {siteConfig.name} Is Not Your Average Cleaning Company
-                    </p>
+                    </h3>
                     <Icons.ppointed className="w-36 h-36  absolute left-1/2 z-20 -translate-x-full top-4" />
                 </div>
                 <div className="rounded-3xl p-4 max-w-3xl mx-auto bg-white">

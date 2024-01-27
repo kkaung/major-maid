@@ -36,40 +36,38 @@ export default function LatestBlog({ ...props }: LatestBlogProps) {
                     Read Suggested Articles About House Cleaning
                 </h2>
             </div>
-            <section>
-                <ul className="flex flex-nowrap overflow-x-scroll gap-6">
-                    {allPosts.map((post, idx) => (
-                        <li key={idx} className="w-[300px]">
-                            <article className="relative">
-                                <AspectRatio
-                                    ratio={16 / 9}
-                                    className="overflow-hidden rounded-xl relative mb-2"
+            <ul className="flex flex-nowrap overflow-x-scroll gap-6">
+                {allPosts.map((post, idx) => (
+                    <li key={idx} className="w-[300px]">
+                        <article className="relative">
+                            <AspectRatio
+                                ratio={16 / 9}
+                                className="overflow-hidden rounded-xl relative mb-2"
+                            >
+                                <Image
+                                    fill
+                                    src={post.image}
+                                    alt={`${post.title}`}
+                                    className="h-fit w-fit object-cover"
+                                />
+                                <Link
+                                    href={`/blog/${post.slugAsParams}`}
+                                    className="absolute inset-0"
                                 >
-                                    <Image
-                                        fill
-                                        src={post.image}
-                                        alt={`${post.title}`}
-                                        className="h-fit w-fit object-cover"
-                                    />
-                                    <Link
-                                        href={`/blog/${post.slugAsParams}`}
-                                        className="absolute inset-0"
-                                    >
-                                        <span className="sr-only">
-                                            View Blog Post
-                                        </span>
-                                    </Link>
-                                </AspectRatio>
-                                <Link href={`/blog/${post.slugAsParams}`}>
-                                    <h4 className="font-semibold text-lg leading-tight hover:underline">
-                                        {post.title}
-                                    </h4>
+                                    <span className="sr-only">
+                                        View Blog Post
+                                    </span>
                                 </Link>
-                            </article>
-                        </li>
-                    ))}
-                </ul>
-            </section>
+                            </AspectRatio>
+                            <Link href={`/blog/${post.slugAsParams}`}>
+                                <h4 className="font-semibold text-lg leading-tight hover:underline">
+                                    {post.title}
+                                </h4>
+                            </Link>
+                        </article>
+                    </li>
+                ))}
+            </ul>
         </section>
     );
 }

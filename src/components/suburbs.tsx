@@ -63,7 +63,10 @@ export default function Suburbs({
                     <div
                         className={cn(
                             'absolute z-10 bottom-0 inset-x-0 h-24 bg-gradient-to-t from-background via-background/80 translate-y-1',
-                            { 'from-transparent via-transparent h-0 -z-10': isOpen }
+                            {
+                                'from-transparent via-transparent h-0 -z-10':
+                                    isOpen,
+                            }
                         )}
                     />
                 </div>

@@ -54,7 +54,7 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
                         >
                             <Icons.phone
                                 aria-hidden
-                                className="w-4 h-4 mr-1 stroke-3"
+                                className="w-4 h-4 stroke-3 xs:mr-1"
                             />
                             <span className="hidden sm:inline">
                                 {siteConfig.business.phone}

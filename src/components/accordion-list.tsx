@@ -35,7 +35,7 @@ export default function AccordionList({ items, ...props }: AccordionListProps) {
                         <AccordionContent
                             forceMount
                             hidden={`${idx}` !== tab}
-                            className={cn({ '': isActive })}
+                            className="text-base"
                         >
                             {item.answer}
                         </AccordionContent>

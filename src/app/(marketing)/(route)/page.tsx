@@ -9,17 +9,15 @@ import Satisfaction from '@/components/marketing/satisfaction';
 import { getCity, getCityFromPath } from '@/lib/next';
 import Reviews from '@/components/marketing/reviews';
 import Services from '@/components/marketing/services';
-import { WebPageJsonLd, OrganizationJsonLd } from 'next-seo';
-
+import { WebPageJsonLd, OrganizationJsonLd, BreadcrumbJsonLd } from 'next-seo';
 import { siteConfig } from '@/config/site';
 import LatestBlog from './_components/latest-blog';
 import ServiceInclusion from '@/components/marketing/service-inclusion';
 import { type Metadata } from 'next';
+import { absoluteUrl } from '@/lib/utils';
 
 export async function generateMetadata(): Promise<Metadata> {
     const city = getCityFromPath();
-
-    console.log(city);
 
     return {
         title: `${city}'s Favourite House Cleaning Service`,
@@ -33,7 +31,7 @@ export default function Page() {
     return (
         <>
             <Shell variant="sidebar" className="grid-16">
-                <div className="container mx-auto">
+                <div className="container mx-auto space-y-12">
                     <Hero location={city} />
                     <Featuring />
                 </div>
@@ -62,6 +60,12 @@ export default function Page() {
                 url={siteConfig.url}
                 logo=""
                 legalName=""
+            />
+            <BreadcrumbJsonLd
+                useAppDir
+                itemListElements={[
+                    { position: 1, name: 'Home', item: absoluteUrl('/') },
+                ]}
             />
         </>
     );

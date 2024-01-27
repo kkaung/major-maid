@@ -77,14 +77,6 @@ export default function FAQs({ location = 'Sydney', ...props }: FAQsProps) {
                         <h2 className={cn(headingVariants({}))}>
                             Frequently Asked Questions
                         </h2>
-                        <p className={cn(descriptionVariants(), 'mx-auto')}>
-                            Have questions about our house cleaning in{' '}
-                            {location}? Take a look below. Or call us on
-                            <span className="text-primary ml-1">
-                                1300 905 032
-                            </span>
-                            .
-                        </p>
                     </div>
                 </div>
                 <AccordionList items={getFAQs(location)} />
