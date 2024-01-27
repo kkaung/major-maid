@@ -7,8 +7,7 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "typecheck": "contentlayer build && tsc --noEmit",
-        "postbuild": "next-sitemap"
+        "typecheck": "contentlayer build && tsc --noEmit"
     },
     "dependencies": {
         "@faker-js/faker": "^8.3.1",

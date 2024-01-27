@@ -116,7 +116,9 @@ function ReviewCard({ name, body, ...props }: ReviewCardProps) {
                             <h6 className="font-medium">{name}</h6>
                         </div>
                     </div>
-                    <p className="text-sm italic">&quot;{body}&quot;</p>
+                    <p className="text-sm italic text-foreground/80">
+                        &quot;{body}&quot;
+                    </p>
                 </div>
                 <div>
                     <Icons.fullGoogle className="w-5 h-5" />

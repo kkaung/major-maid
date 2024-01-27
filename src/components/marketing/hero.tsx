@@ -25,7 +25,7 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
         >
             <div className="relative container mx-auto max-w-5xl w-full flex items-center gap-12 flex-col lg:flex-row">
                 <div className="space-y-6 flex-1">
-                    <h1 className={cn(headingVariants())}>
+                    <h1 className={cn(headingVariants({ size: 'lg' }))}>
                         <Balancer>
                             1st House Cleaning & Maid Service In
                             <span className="text-primary ml-1">

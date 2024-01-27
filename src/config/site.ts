@@ -50,6 +50,10 @@ export const siteConfig = {
                             title: 'Oven Cleaning',
                             href: '/oven-cleaning-sydney',
                         },
+                        {
+                            title: 'Office Cleaning',
+                            href: '/office-cleaning-sydney',
+                        },
                     ],
                 },
                 {
@@ -78,6 +82,10 @@ export const siteConfig = {
                         {
                             title: 'Oven Cleaning',
                             href: '/oven-cleaning-melbourne',
+                        },
+                        {
+                            title: 'Office Cleaning',
+                            href: '/office-cleaning-melbourne',
                         },
                     ],
                 },

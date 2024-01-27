@@ -32,8 +32,8 @@ export default function HowWork({
                 <li>
                     <div className="space-y-2">
                         <Image
-                            width={100}
-                            height={100}
+                            width={150}
+                            height={150}
                             src={BookOnline}
                             className="mx-auto"
                             alt="Book Online"
@@ -48,8 +48,8 @@ export default function HowWork({
                 <li>
                     <div className="space-y-2">
                         <Image
-                            width={100}
-                            height={100}
+                            width={150}
+                            height={150}
                             src={WeClean}
                             className="mx-auto"
                             alt="We Clean"
@@ -64,8 +64,8 @@ export default function HowWork({
                 <li>
                     <div className="space-y-2">
                         <Image
-                            width={100}
-                            height={100}
+                            width={150}
+                            height={150}
                             src={YouRelax}
                             className="mx-auto"
                             alt="You Relax"

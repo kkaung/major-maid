@@ -53,12 +53,12 @@ export default function MainNav({ items }: MainNavProps) {
                                                         Pick a type of service
                                                     </p>
                                                 </div>
-                                                <TabsList className="flex flex-col space-y-2 flex-1">
+                                                <TabsList className="flex flex-col space-y-2 flex-1 p-0">
                                                     {item.items.map(item => (
                                                         <TabsTrigger
                                                             key={item.title}
                                                             value={item.title}
-                                                            className="w-full justify-start text-base rounded-l-xl h-10"
+                                                            className="w-full justify-start text-base rounded-l-xl rounded-r-none h-10"
                                                         >
                                                             {item.title}
                                                         </TabsTrigger>
