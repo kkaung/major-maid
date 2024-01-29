@@ -4,17 +4,17 @@ import type { FooterItem, MainNavItem } from '@/types';
 export type SiteConfig = typeof siteConfig;
 
 const links = {
-    facebook: 'https://facebook.com/',
-    instagram: 'https://github.com/',
-    twitter: 'https://twitter.com/',
-    pinterest: 'https://pinterest.com/',
-    linkin: 'https://linkin.com',
-    youtube: 'https://youtube.com',
+    facebook: 'https://www.facebook.com/profile.php?id=61555719702840',
+    instagram: 'https://instagram.com/majormaid_au',
+    twitter: 'https://twitter.com/majormaid_au',
+    pinterest: 'https://www.pinterest.com.au/majormaid_aus',
+    linkin: 'https://www.linkedin.com/company/majormaid',
+    youtube: 'https://www.youtube.com/@MajorMaid-dq2wd',
 };
 
 export const siteConfig = {
     logo: 'MajorMaid',
-    name: 'Major Maid',
+    name: 'Major Maid Cleaning',
     title: `Australia's Premium House Cleaning Serivce`,
     description: '',
     url: 'https://majormaid.com.au',
@@ -133,6 +133,10 @@ export const siteConfig = {
                     title: 'Carpet Cleaning',
                     href: '/carpet-cleaning-sydney',
                 },
+                {
+                    title: 'Move Out Cleaning',
+                    href: '/move-out-sydney',
+                },
             ],
         },
         {
@@ -169,6 +173,10 @@ export const siteConfig = {
                 {
                     title: 'Carpet Cleaning',
                     href: '/carpet-cleaning-melbourne',
+                },
+                {
+                    title: 'Move Out Cleaning',
+                    href: '/move-out-melbourne',
                 },
             ],
         },

@@ -22,7 +22,7 @@ export default function HowWork({
             aria-labelledby="how-work-heading"
             className={cn(
                 props.className,
-                'space-y-12 max-w-5xl w-full mx-auto text-center py-12'
+                'space-y-12 max-w-6xl w-full mx-auto text-center py-12'
             )}
         >
             <h2 className={headingVariants({})}>

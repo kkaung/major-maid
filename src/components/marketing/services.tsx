@@ -25,7 +25,7 @@ export default function Services({
         <section
             id="services"
             aria-labelledby="services-heading"
-            className={cn(props.className, 'py-12 px-4 space-y-12')}
+            className={cn(props.className, 'py-24 px-4 space-y-12')}
         >
             <div className="space-y-4 text-center">
                 <h2 className={cn(headingVariants({}))}>

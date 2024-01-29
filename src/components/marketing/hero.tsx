@@ -23,7 +23,7 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
             aria-labelledby="hero-heading"
             className={cn('pt-6', props.className)}
         >
-            <div className="relative container mx-auto max-w-5xl w-full flex items-center gap-12 flex-col lg:flex-row">
+            <div className="relative container mx-auto max-w-6xl w-full flex items-center gap-12 flex-col lg:flex-row">
                 <div className="space-y-6 flex-1">
                     <h1 className={cn(headingVariants({ size: 'lg' }))}>
                         <Balancer>

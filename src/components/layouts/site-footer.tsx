@@ -4,7 +4,6 @@ import { Shell } from '@/components/shell';
 import { Icons } from '@/components/icons';
 import { cn } from '@/lib/utils';
 import { type HTMLAttributes } from 'react';
-import { Separator } from '../ui/separator';
 
 interface SiteFooterProps extends HTMLAttributes<HTMLElement> {
     location?: string;
