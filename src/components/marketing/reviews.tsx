@@ -18,7 +18,7 @@ const reviews = [
     },
     {
         name: 'Durden',
-        body: 'I am very satisfied with the cleaning service. Brenda was extremely thorough, and my place is spotless! Highly recommend.',
+        body: 'I am very satisfied with cleaning service. Brenda was extremely thorough, and my place is spotless! Highly recommend.',
     },
     {
         name: 'Kelly',

@@ -10,11 +10,13 @@ const links = {
     pinterest: 'https://www.pinterest.com.au/majormaid_aus',
     linkin: 'https://www.linkedin.com/company/majormaid',
     youtube: 'https://www.youtube.com/@MajorMaid-dq2wd',
+    rzcleaning: 'https://rzcleaning.com.au',
+    azcleaning: 'https://azcleaning.com.au',
 };
 
 export const siteConfig = {
     logo: 'MajorMaid',
-    name: 'Major Maid Cleaning',
+    name: 'Major Maid',
     title: `Australia's Premium House Cleaning Serivce`,
     description: '',
     url: 'https://majormaid.com.au',
@@ -118,10 +120,6 @@ export const siteConfig = {
                     href: '/end-lease-cleaning-sydney',
                 },
                 {
-                    title: 'Oven Cleaning',
-                    href: '/oven-cleaning-sydney',
-                },
-                {
                     title: 'Apartment Cleaning',
                     href: '/apartment-cleaning-sydney',
                 },
@@ -130,12 +128,16 @@ export const siteConfig = {
                     href: '/office-cleaning-sydney',
                 },
                 {
+                    title: 'Oven Cleaning',
+                    href: '/oven-cleaning-sydney',
+                },
+                {
                     title: 'Carpet Cleaning',
                     href: '/carpet-cleaning-sydney',
                 },
                 {
-                    title: 'Move Out Cleaning',
-                    href: '/move-out-sydney',
+                    title: 'Vacate Cleaning',
+                    href: '/vacate-cleaning-sydney',
                 },
             ],
         },
@@ -159,10 +161,6 @@ export const siteConfig = {
                     href: '/end-lease-cleaning-melbourne',
                 },
                 {
-                    title: 'Oven Cleaning',
-                    href: '/oven-cleaning-melbourne',
-                },
-                {
                     title: 'Apartment Cleaning',
                     href: '/apartment-cleaning-melbourne',
                 },
@@ -171,12 +169,16 @@ export const siteConfig = {
                     href: '/office-cleaning-melbourne',
                 },
                 {
+                    title: 'Oven Cleaning',
+                    href: '/oven-cleaning-melbourne',
+                },
+                {
                     title: 'Carpet Cleaning',
                     href: '/carpet-cleaning-melbourne',
                 },
                 {
-                    title: 'Move Out Cleaning',
-                    href: '/move-out-melbourne',
+                    title: 'Vacate Cleaning',
+                    href: '/vacate-cleaning-melbourne',
                 },
             ],
         },
@@ -185,8 +187,8 @@ export const siteConfig = {
             items: [
                 { title: 'Contact Us', href: '/contact' },
                 { title: 'About Us', href: '/about' },
+                { title: 'Services', href: '/cleaning-services' },
                 { title: 'Blog', href: '/blog' },
-                { title: 'Reviews', href: '/reviews' },
                 { title: 'Pricing', href: '/pricing' },
                 { title: 'Careers', href: '/careers' },
                 { title: 'Checklist', href: '/checklist' },

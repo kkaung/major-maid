@@ -42,6 +42,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }));
 
     const routes = [
+        
         '',
         '/frequently-asked-questions',
         '/locations',
@@ -49,6 +50,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         '/carrers',
         '/pricing',
         '/blog',
+        '/cleaning-services',
+
     ].map(route => ({
         url: absoluteUrl(route),
         lastModified: new Date().toISOString(),
