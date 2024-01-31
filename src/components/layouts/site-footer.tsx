@@ -155,18 +155,21 @@ export default async function SiteFooter({
                             <Icons.pinterest aria-hidden className="h-4 w-4" />
                         </Link>
                         <Link
-                            href={siteConfig.links.rzcleaning}
+                            href={siteConfig.links.azcleaning}
                             target="_blank"
                             title="AZ Cleaning - End of lease cleaning and bond cleaning in Melbourne"
                         >
-                            <Icons.sparkles className="h-4 w-4" />
+                            <Icons.sparkles aria-hidden className="h-4 w-4" />
                         </Link>
                         <Link
                             href={siteConfig.links.rzcleaning}
                             target="_blank"
                             title="RZ Cleaning - End of lease cleaning and bond cleaning in Sydney"
                         >
-                            <Icons.personStanding className="h-4 w-4" />
+                            <Icons.personStanding
+                                aria-hidden
+                                className="h-4 w-4"
+                            />
                         </Link>
                     </div>
                 </section>
