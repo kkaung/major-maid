@@ -64,7 +64,7 @@ var Page = defineDocumentType(() => ({
 }));
 var Post = defineDocumentType(() => ({
   name: "Post",
-  filePathPattern: `posts/**/*.mdx`,
+  filePathPattern: `blog/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
@@ -160,4 +160,4 @@ export {
   Post,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-2JGMT6MP.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-5GXBGDZO.mjs.map

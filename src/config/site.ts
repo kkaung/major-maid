@@ -105,11 +105,11 @@ export const siteConfig = {
             title: 'Sydney',
             items: [
                 {
-                    title: 'House Cleaing',
+                    title: 'House Cleaning',
                     href: '/house-cleaning-sydney',
                 },
                 {
-                    title: 'Regular Cleaing',
+                    title: 'Regular Cleaning',
                     href: '/regular-cleaning-sydney',
                 },
                 {

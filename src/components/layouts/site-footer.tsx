@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { siteConfig } from '@/config/site';
 import { Shell } from '@/components/shell';
 import { Icons } from '@/components/icons';
-import { cn } from '@/lib/utils';
+import { cn, toTitleCase, unslugify } from '@/lib/utils';
 import { type HTMLAttributes } from 'react';
 
 interface SiteFooterProps extends HTMLAttributes<HTMLElement> {
@@ -14,7 +14,7 @@ export default async function SiteFooter({
     ...props
 }: SiteFooterProps) {
     return (
-        <footer className="w-full  bg-[#0C0E1F] relative overflow-hidden border-t">
+        <footer className="w-full bg-[#0C0E1F] relative overflow-hidden border-t">
             <Shell as="div" className="max-w-7xl w-full mx-auto">
                 <section
                     id="footer-content"
@@ -91,7 +91,9 @@ export default async function SiteFooter({
                                             <Link
                                                 href={link.href}
                                                 className="text-sm text-slate-400 transition-colors line-clamp-1 hover:text-slate-50"
-                                                title={link.title}
+                                                title={`${toTitleCase(
+                                                    unslugify(link.href)
+                                                )}`}
                                             >
                                                 {link.title}
                                             </Link>
@@ -157,14 +159,14 @@ export default async function SiteFooter({
                         <Link
                             href={siteConfig.links.azcleaning}
                             target="_blank"
-                            title="AZ Cleaning - End of lease cleaning and bond cleaning in Melbourne"
+                            title="AZ Cleaning - End of Lease Cleaning and Bond Cleaning in Melbourne"
                         >
                             <Icons.sparkles aria-hidden className="h-4 w-4" />
                         </Link>
                         <Link
                             href={siteConfig.links.rzcleaning}
                             target="_blank"
-                            title="RZ Cleaning - End of lease cleaning and bond cleaning in Sydney"
+                            title="RZ Cleaning - End of Lease Cleaning And Bond Cleaning in Sydney"
                         >
                             <Icons.personStanding
                                 aria-hidden
@@ -176,10 +178,7 @@ export default async function SiteFooter({
                             target="_blank"
                             title="BondToClean - Top Rated End of Lease Cleaning and Bond Cleaning in Australia"
                         >
-                            <Icons.personStanding
-                                aria-hidden
-                                className="h-4 w-4"
-                            />
+                            <Icons.sword aria-hidden className="h-4 w-4" />
                         </Link>
                     </div>
                 </section>

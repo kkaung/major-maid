@@ -12,7 +12,6 @@ import Dot from '@/components/dot';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { headingVariants } from '@/components/page-header';
-import AboutUs from './_components/about-us';
 
 interface PostPageProps {
     params: {
@@ -128,7 +127,7 @@ export default async function PostPage({ params }: PostPageProps) {
                                 <p className="font-semibold">
                                     by
                                     <Link
-                                        href={`/author/${author.slugAsParams}`}
+                                        href={`/authors/${author.slugAsParams}`}
                                         className="ml-1 hover:underline"
                                     >
                                         {author.title}
@@ -173,7 +172,7 @@ export default async function PostPage({ params }: PostPageProps) {
                                 <p className="text-xs text-muted-foreground">
                                     Article by
                                 </p>
-                                <Link href={`/author/${author.slugAsParams}`}>
+                                <Link href={`/authors/${author.slugAsParams}`}>
                                     <p className="relative text-primary hover:underline">
                                         {author.title}
                                     </p>
@@ -187,17 +186,17 @@ export default async function PostPage({ params }: PostPageProps) {
                             <Link aria-label="Linkin" target="_blank" href="/">
                                 <Icons.linkin aria-hidden className="h-4 w-4" />
                             </Link>
-                            <Link aria-label="Linkin" target="_blank" href="/">
-                                <Icons.twitter
-                                    aria-hidden
-                                    className="h-4 w-4"
-                                />
-                            </Link>
                         </div>
                     </CardContent>
                 </Card>
             </section>
-            {/* <AboutUs className="mt-6 w-full xl:absolute xl:right-[-260px] xl:top-14 xl:inline-flex xl:flex-col xl:mt-0 xl:w-[260px]" /> */}
+            <section id="house-cleaners">
+                <h3>Find house cleaners in your city</h3>
+                <p>
+                    MajorMaid&apos;s network of verified local cleaners operates
+                    Australia-wide. Choose your city and get started now.
+                </p>
+            </section>
             <div className="flex justify-center py-6 lg:py-10">
                 <Link
                     href="/blog"
