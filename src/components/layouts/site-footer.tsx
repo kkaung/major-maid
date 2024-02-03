@@ -171,6 +171,16 @@ export default async function SiteFooter({
                                 className="h-4 w-4"
                             />
                         </Link>
+                        <Link
+                            href={siteConfig.links.bondtoclean}
+                            target="_blank"
+                            title="BondToClean - Top Rated End of Lease Cleaning and Bond Cleaning in Australia"
+                        >
+                            <Icons.personStanding
+                                aria-hidden
+                                className="h-4 w-4"
+                            />
+                        </Link>
                     </div>
                 </section>
             </Shell>

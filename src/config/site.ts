@@ -12,6 +12,7 @@ const links = {
     youtube: 'https://www.youtube.com/@MajorMaid-dq2wd',
     rzcleaning: 'https://rzcleaning.com.au',
     azcleaning: 'https://azcleaning.com.au',
+    bondtoclean: 'https://bondtoclean.com.au',
 };
 
 export const siteConfig = {
