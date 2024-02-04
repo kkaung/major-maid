@@ -235,12 +235,24 @@ export const siteServices: {
         slug: 'end-lease-cleaning',
     },
     {
-        title: 'Oven Cleaning',
-        slug: 'oven-cleaning',
+        title: 'Apartment Cleaning',
+        slug: 'apartment-cleaning',
     },
     {
         title: 'Office Cleaning',
         slug: 'office-cleaning',
         icon: 'building',
+    },
+    {
+        title: 'Oven Cleaning',
+        slug: 'oven-cleaning',
+    },
+    {
+        title: 'Carpet Cleaning',
+        slug: 'carpet-cleaning',
+    },
+    {
+        title: 'Vacate Cleaning',
+        slug: 'vacate-cleaning',
     },
 ];

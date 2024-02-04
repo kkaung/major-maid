@@ -16,13 +16,13 @@ export default function Icon() {
         (
             // ImageResponse JSX element
             <div
-                tw="flex items-center italic justify-center bg-black text-[20px] leading-8 text-white font-extrabold"
+                tw="flex items-center italic justify-center text-[20px] leading-8 text-white font-extrabold text-blue bg-white"
                 style={{
                     width: 32,
                     height: 32,
                 }}
             >
-                B
+                M
             </div>
         ),
         // ImageResponse options

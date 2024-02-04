@@ -38,22 +38,14 @@ export default function Content({ city, suburb, segments }: ContentProps) {
                     <Checklist title="House Cleaning" name="bond" />
                     <FAQs />
                     <Satisfaction />
-                    <Suburbs
+                    {/* <Suburbs
                         title={`Find House Cleaners In Surburb Of ${city}`}
                         slug={`house-cleaning-${city.toLocaleLowerCase()}`}
                         location={city}
-                    />
+                    /> */}
                     <Breadcrumbs segments={segments} dottable={false} />
                 </div>
             </Shell>
-            <LocalBusinessJsonLd
-                useAppDir
-                type="Cleaning"
-                id=""
-                name={''}
-                description={''}
-                address={{}}
-            />
         </>
     );
 }

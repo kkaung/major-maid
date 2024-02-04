@@ -153,7 +153,7 @@ export default async function PostPage({ params }: PostPageProps) {
                 />
             )}
             <Mdx code={post.body.code} />
-            <section className="mt-8">
+            <section className="my-8">
                 <Card className="border-0 bg-secondary/50 rounded-xl">
                     <CardHeader>
                         <div className="flex gap-4">
@@ -190,12 +190,20 @@ export default async function PostPage({ params }: PostPageProps) {
                     </CardContent>
                 </Card>
             </section>
-            <section id="house-cleaners">
-                <h3>Find house cleaners in your city</h3>
-                <p>
-                    MajorMaid&apos;s network of verified local cleaners operates
-                    Australia-wide. Choose your city and get started now.
-                </p>
+            <section
+                id="house-cleaners"
+                className="bg-secondary/50 p-6 rounded-lg"
+            >
+                <div className="space-y-1">
+                    <h3 className="text-lg font-semibold">
+                        Find house cleaners in your city
+                    </h3>
+                    <p>
+                        MajorMaid&apos;s network of verified local cleaners
+                        operates Australia-wide. Choose your city and get
+                        started now.
+                    </p>
+                </div>
             </section>
             <div className="flex justify-center py-6 lg:py-10">
                 <Link

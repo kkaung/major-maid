@@ -11,7 +11,7 @@ import { allAuthors, allPosts } from 'contentlayer/generated';
 import { type Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import Image from 'next/image';
-import PostCard from '../../../blog/_components/post-card';
+import PostCard from '../../blog/_components/post-card';
 import { Icons } from '@/components/icons';
 import Link from 'next/link';
 
@@ -44,7 +44,7 @@ export default function Page({ params }: PageProps) {
             <Breadcrumbs
                 segments={[
                     { title: 'Home', href: '/' },
-                    { title: 'Author', href: '/blog' },
+                    { title: 'Blog', href: '/blog' },
                     { title: title, href: `/author/${params.slug}` },
                 ]}
                 dottable={false}
