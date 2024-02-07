@@ -4,12 +4,14 @@ import type { FooterItem, MainNavItem } from '@/types';
 export type SiteConfig = typeof siteConfig;
 
 const links = {
-    facebook: 'https://www.facebook.com/profile.php?id=61555719702840',
+    facebook: 'https://www.facebook.com/people/Major-Maid/61555719702840/',
     instagram: 'https://instagram.com/majormaid_au',
     twitter: 'https://twitter.com/majormaid_au',
     pinterest: 'https://www.pinterest.com.au/majormaid_aus',
     linkin: 'https://www.linkedin.com/company/majormaid',
     youtube: 'https://www.youtube.com/@MajorMaid-dq2wd',
+    yelp: '',
+
     rzcleaning: 'https://rzcleaning.com.au',
     azcleaning: 'https://azcleaning.com.au',
     bondtoclean: 'https://bondtoclean.com.au',
@@ -24,15 +26,11 @@ export const siteConfig = {
     ogImage: 'https://majormaid.com.au/opengraph-image.png',
     mainNav: [
         {
-            title: 'Our Service',
+            title: 'Our Services',
             items: [
                 {
                     title: 'Sydney',
                     items: [
-                        {
-                            title: 'House Cleaing',
-                            href: '/house-cleaning-sydney',
-                        },
                         {
                             title: 'Regular Cleaing',
                             href: '/regular-cleaning-sydney',
@@ -62,10 +60,6 @@ export const siteConfig = {
                 {
                     title: 'Melbourne',
                     items: [
-                        {
-                            title: 'House Cleaing',
-                            href: '/house-cleaning-melbourne',
-                        },
                         {
                             title: 'Regular Cleaing',
                             href: '/regular-cleaning-melbourne',
@@ -105,10 +99,6 @@ export const siteConfig = {
             title: 'Sydney',
             items: [
                 {
-                    title: 'House Cleaning',
-                    href: '/house-cleaning-sydney',
-                },
-                {
                     title: 'Regular Cleaning',
                     href: '/regular-cleaning-sydney',
                 },
@@ -146,10 +136,6 @@ export const siteConfig = {
             title: 'Melbourne',
             items: [
                 {
-                    title: 'House Cleaning',
-                    href: '/house-cleaning-melbourne',
-                },
-                {
                     title: 'Regular Cleaning',
                     href: '/regular-cleaning-melbourne',
                 },
@@ -181,6 +167,13 @@ export const siteConfig = {
                     title: 'Vacate Cleaning',
                     href: '/vacate-cleaning-melbourne',
                 },
+            ],
+        },
+        {
+            title: 'Locations',
+            items: [
+                { title: 'Sydney', href: '/house-cleaner-sydney' },
+                { title: 'Melbourne', href: '/house-cleaner-melbourne' },
             ],
         },
         {
@@ -218,11 +211,6 @@ export const siteServices: {
     icon?: keyof typeof Icons;
 }[] = [
     {
-        title: 'House Cleaning',
-        slug: 'house-cleaning',
-        icon: 'house',
-    },
-    {
         title: 'Regular Cleaning',
         slug: 'regular-cleaning',
     },
@@ -250,9 +238,5 @@ export const siteServices: {
     {
         title: 'Carpet Cleaning',
         slug: 'carpet-cleaning',
-    },
-    {
-        title: 'Vacate Cleaning',
-        slug: 'vacate-cleaning',
     },
 ];

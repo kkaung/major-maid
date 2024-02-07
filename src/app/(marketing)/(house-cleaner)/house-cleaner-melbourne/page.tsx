@@ -1,9 +1,10 @@
 import React from 'react';
+import { type Metadata } from 'next';
 import { getCityFromPath } from '@/lib/next';
-import { Metadata } from 'next';
-
-import Content from '../_components/content';
 import { getMetadata } from '../_components/metadata';
+import Content from '../_components/content';
+
+export const runtime = 'edge';
 
 export async function generateMetadata(): Promise<Metadata> {
     const city = getCityFromPath();
@@ -19,12 +20,8 @@ export default function Page() {
             city={city}
             segments={[
                 { title: 'Home', href: '/' },
-                { title: 'Services', href: '/services' },
-                { title: 'House Cleaning', href: '/house-cleaner-melbourne' },
-                {
-                    title: 'Office Cleaning',
-                    href: '/office-cleaning-melbourne',
-                },
+                { title: 'Cleaning Services', href: '/cleaning-services' },
+                { title: 'House Cleaning', href: '/house-cleaner-sydney' },
             ]}
         />
     );

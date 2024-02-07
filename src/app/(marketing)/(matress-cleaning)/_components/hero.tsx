@@ -7,7 +7,7 @@ import Link from 'next/link';
 import HeroPreview from '/public/assets/images/hero-pp.jpeg';
 import Balancer from 'react-wrap-balancer';
 import Image from 'next/image';
-import { siteConfig } from '@/config/site';
+import { siteConfig } from '@/configs/site';
 
 interface HeroProps extends HTMLAttributes<HTMLElement> {
     location?: string;

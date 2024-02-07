@@ -10,7 +10,7 @@ import { getCity, getCityFromPath } from '@/lib/next';
 import Reviews from '@/components/marketing/reviews';
 import Services from '@/components/marketing/services';
 import { WebPageJsonLd, OrganizationJsonLd, BreadcrumbJsonLd } from 'next-seo';
-import { siteConfig } from '@/config/site';
+import { siteConfig } from '@/configs/site';
 import LatestBlog from './_components/latest-blog';
 import ServiceInclusion from '@/components/marketing/service-inclusion';
 import { type Metadata } from 'next';

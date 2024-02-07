@@ -1,8 +1,8 @@
 import { type MetadataRoute } from 'next';
 import { absoluteUrl } from '@/lib/utils';
 import { allPosts, allPages, allAuthors } from 'contentlayer/generated';
-import { locations } from '@/config/location';
-import { siteServices } from '@/config/site';
+import { locations } from '@/configs/location';
+import { siteServices } from '@/configs/site';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const cities = ['sydney', 'melbourne'];
@@ -50,6 +50,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         '/pricing',
         '/blog',
         '/cleaning-services',
+
+        '/house-cleaner-sydney',
+        '/house-cleaner-melbourne',
+        
     ].map(route => ({
         url: absoluteUrl(route),
         lastModified: new Date().toISOString(),

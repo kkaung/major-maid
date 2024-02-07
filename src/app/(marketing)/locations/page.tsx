@@ -5,7 +5,7 @@ import {
 } from '@/components/page-header';
 import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { Shell } from '@/components/shell';
-import { locations } from '@/config/location';
+import { locations } from '@/configs/location';
 import { env } from '@/env.mjs';
 import { GoogleMapsEmbed } from '@next/third-parties/google';
 import React from 'react';

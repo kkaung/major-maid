@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import React, { type HTMLAttributes } from 'react';
 import { buttonVariants } from '@/components/ui/button';
-import { siteConfig } from '@/config/site';
+import { siteConfig } from '@/configs/site';
 import { Icons } from '@/components/icons';
 
 interface WhyDifferentProps extends HTMLAttributes<HTMLElement> {}

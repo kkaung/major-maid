@@ -1,6 +1,6 @@
 'use client';
 
-import { siteConfig } from '@/config/site';
+import { siteConfig } from '@/configs/site';
 import { cn } from '@/lib/utils';
 import React, { HTMLAttributes } from 'react';
 import { headingVariants } from '@/components/page-header';

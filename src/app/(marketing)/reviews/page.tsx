@@ -8,7 +8,7 @@ import {
 } from '@/components/page-header';
 import { Shell } from '@/components/shell';
 import { buttonVariants } from '@/components/ui/button';
-import { siteConfig } from '@/config/site';
+import { siteConfig } from '@/configs/site';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import React from 'react';

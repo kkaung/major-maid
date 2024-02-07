@@ -7,7 +7,7 @@ import React from 'react';
 export const runtime = 'edge';
 
 import type { Metadata } from 'next';
-import { cities } from '@/config/location';
+import { cities } from '@/configs/location';
 import { redirect } from 'next/navigation';
 
 export const metadata: Metadata = {

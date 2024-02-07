@@ -1,9 +1,11 @@
 import Link from 'next/link';
-import { siteConfig } from '@/config/site';
+import { siteConfig } from '@/configs/site';
 import { Shell } from '@/components/shell';
 import { Icons } from '@/components/icons';
 import { cn, toTitleCase, unslugify } from '@/lib/utils';
 import { type HTMLAttributes } from 'react';
+import { Separator } from '../ui/separator';
+import FooterTabs from '../footer-tabs';
 
 interface SiteFooterProps extends HTMLAttributes<HTMLElement> {
     location?: string;
@@ -15,7 +17,7 @@ export default async function SiteFooter({
 }: SiteFooterProps) {
     return (
         <footer className="w-full bg-[#0C0E1F] relative overflow-hidden border-t">
-            <Shell as="div" className="max-w-7xl w-full mx-auto">
+            <Shell as="div">
                 <section
                     id="footer-content"
                     aria-labelledby="footer-content-heading"
@@ -33,7 +35,7 @@ export default async function SiteFooter({
                         >
                             <span className="font-bold">{siteConfig.logo}</span>
                         </Link>
-                        <p className="my-4 max-w-xs text-xs font-light text-slate-300 md:text-sm">
+                        <p className="my-4 max-w-xs text-xs font-light text-slate-400 md:text-sm">
                             {siteConfig.name} is here to transform your house
                             into home with our professional house cleaning
                             services.
@@ -78,19 +80,19 @@ export default async function SiteFooter({
                     <section
                         id="footer-links"
                         aria-labelledby="footer-links-heading"
-                        className="grid flex-1 grid-cols-1 gap-10 xs:grid-cols-2 sm:grid-cols-3"
+                        className="grid flex-1 grid-cols-1 gap-8 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4"
                     >
                         {siteConfig.footerNav.map(item => (
                             <div key={item.title} className="space-y-3">
-                                <h4 className="text-base font-medium text-white">
+                                <div className="text-base font-medium text-white">
                                     {item.title}
-                                </h4>
+                                </div>
                                 <ul className="space-y-2">
                                     {item.items.map(link => (
                                         <li key={link.title}>
                                             <Link
                                                 href={link.href}
-                                                className="text-sm text-slate-400 transition-colors line-clamp-1 hover:text-slate-50"
+                                                className="text-sm text-slate-400 transition-colors leading-none hover:text-slate-50"
                                                 title={`${toTitleCase(
                                                     unslugify(link.href)
                                                 )}`}
@@ -104,6 +106,7 @@ export default async function SiteFooter({
                         ))}
                     </section>
                 </section>
+                <FooterTabs />
                 <section
                     id="footer-bottom"
                     aria-labelledby="footer-bottom-heading"
@@ -117,6 +120,7 @@ export default async function SiteFooter({
                         <Link
                             aria-label="Facebook"
                             target="_blank"
+                            rel="nofollow"
                             href={siteConfig.links.facebook}
                         >
                             <Icons.facebook aria-hidden className="h-4 w-4" />
@@ -131,6 +135,7 @@ export default async function SiteFooter({
                         <Link
                             aria-label="Twitter"
                             target="_blank"
+                            rel="nofollow"
                             href={siteConfig.links.twitter}
                         >
                             <Icons.twitter aria-hidden className="h-4 w-4" />
@@ -138,6 +143,7 @@ export default async function SiteFooter({
                         <Link
                             aria-label="Youtube"
                             target="_blank"
+                            rel="nofollow"
                             href={siteConfig.links.youtube}
                         >
                             <Icons.youtube aria-hidden className="h-4 w-4" />
@@ -145,6 +151,7 @@ export default async function SiteFooter({
                         <Link
                             aria-label="Linkin"
                             target="_blank"
+                            rel="nofollow"
                             href={siteConfig.links.linkin}
                         >
                             <Icons.linkin aria-hidden className="h-4 w-4" />
@@ -152,9 +159,18 @@ export default async function SiteFooter({
                         <Link
                             aria-label="Pinterest"
                             target="_blank"
+                            rel="nofollow"
                             href={siteConfig.links.pinterest}
                         >
                             <Icons.pinterest aria-hidden className="h-4 w-4" />
+                        </Link>
+                        <Link
+                            aria-label="Yelp"
+                            target="_blank"
+                            rel="nofollow"
+                            href={siteConfig.links.yelp}
+                        >
+                            <Icons.yelp aria-hidden className="h-4 w-4" />
                         </Link>
                         <Link
                             href={siteConfig.links.azcleaning}

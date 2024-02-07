@@ -11,7 +11,7 @@ import {
     TableRow,
 } from '@/components/ui/table';
 import { Icons } from '@/components/icons';
-import { siteConfig } from '@/config/site';
+import { siteConfig } from '@/configs/site';
 
 const data = [
     {

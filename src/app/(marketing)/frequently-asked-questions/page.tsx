@@ -8,7 +8,7 @@ import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { Shell } from '@/components/shell';
 import React from 'react';
 import AccordionList from '@/components/accordion-list';
-import { siteConfig } from '@/config/site';
+import { siteConfig } from '@/configs/site';
 import { cn } from '@/lib/utils';
 
 const generalQuestions = [

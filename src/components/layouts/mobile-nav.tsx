@@ -4,7 +4,7 @@ import * as React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { MainNavItem, SidebarNavItem } from '@/types';
-import { siteConfig } from '@/config/site';
+import { siteConfig } from '@/configs/site';
 import { cn } from '@/lib/utils';
 import {
     Accordion,

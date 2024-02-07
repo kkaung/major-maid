@@ -54,7 +54,7 @@ export function Breadcrumbs({
                     return (
                         <React.Fragment key={segment.href}>
                             {isFirstSegment ? (
-                                <Link href="/" title="House Cleaning">
+                                <Link href="/" title="House Cleaning Company">
                                     <Icons.home
                                         aria-hidden
                                         className="w-4 h-4"

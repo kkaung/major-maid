@@ -3,7 +3,7 @@ import React, { HTMLAttributes } from 'react';
 import Balancer from 'react-wrap-balancer';
 import { descriptionVariants, headingVariants } from '@/components/page-header';
 import { Icons } from '@/components/icons';
-import { siteConfig } from '@/config/site';
+import { siteConfig } from '@/configs/site';
 import Marquee from '@/components/magicui/marquee';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 
@@ -116,9 +116,7 @@ function ReviewCard({ name, body, ...props }: ReviewCardProps) {
                             <h6 className="font-medium">{name}</h6>
                         </div>
                     </div>
-                    <q className="text-sm italic text-foreground/80">
-                        &quot;{body}&quot;
-                    </q>
+                    <q className="text-sm italic text-foreground/80">{body}</q>
                 </div>
                 <div>
                     <Icons.fullGoogle className="w-5 h-5" />

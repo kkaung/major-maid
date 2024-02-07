@@ -5,7 +5,7 @@ import {
     PageHeaderDescription,
     PageHeaderHeading,
 } from '@/components/page-header';
-import { siteConfig } from '@/config/site';
+import { siteConfig } from '@/configs/site';
 import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import Satisfaction from '@/components/marketing/satisfaction';
 import TableList, { TableData } from './_components/table-list';

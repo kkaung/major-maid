@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React, { type HTMLAttributes } from 'react';
 import { Icons } from '@/components/icons';
-import { cities } from '@/config/location';
+import { cities } from '@/configs/location';
 import { cn } from '@/lib/utils';
 import { descriptionVariants, headingVariants } from '@/components/page-header';
 import Marquee from '@/components/magicui/marquee';

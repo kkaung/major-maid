@@ -1,6 +1,6 @@
 'use client';
 
-import { locations } from '@/config/location';
+import { locations } from '@/configs/location';
 import { cn } from '@/lib/utils';
 import React, { type HTMLAttributes } from 'react';
 import Balancer from 'react-wrap-balancer';

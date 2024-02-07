@@ -1,6 +1,6 @@
 import { headingVariants } from '@/components/page-header';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { cities } from '@/config/location';
+import { cities } from '@/configs/location';
 import { cn, unslugify } from '@/lib/utils';
 import React, { type HTMLAttributes } from 'react';
 import Link from 'next/link';

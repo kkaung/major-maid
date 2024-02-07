@@ -33,11 +33,6 @@ export default function Content({ city, suburb, segments }: ContentProps) {
                     <Inclusion />
                     <FAQs />
                     <Satisfaction />
-                    <Suburbs
-                        title={`Find Apartment Cleaners In Suburbs Of ${city}`}
-                        slug="apartment-cleaning"
-                        location={city}
-                    />
                     <Breadcrumbs segments={segments} dottable={false} />
                 </div>
             </Shell>

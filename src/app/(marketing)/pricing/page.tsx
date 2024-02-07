@@ -5,7 +5,7 @@ import {
     PageHeaderHeading,
 } from '@/components/page-header';
 import { Shell } from '@/components/shell';
-import { siteConfig } from '@/config/site';
+import { siteConfig } from '@/configs/site';
 import React from 'react';
 import FAQs from './_components/faqs';
 import { Button } from '@/components/ui/button';

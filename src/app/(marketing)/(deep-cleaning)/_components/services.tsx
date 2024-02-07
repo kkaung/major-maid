@@ -5,7 +5,7 @@ import Link from 'next/link';
 import React, { useState, type HTMLAttributes } from 'react';
 import { descriptionVariants, headingVariants } from '@/components/page-header';
 import { Icons } from '@/components/icons';
-import { siteServices } from '@/config/site';
+import { siteServices } from '@/configs/site';
 import * as Tabs from '@radix-ui/react-tabs';
 import Balancer from 'react-wrap-balancer';
 

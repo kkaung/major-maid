@@ -6,7 +6,7 @@ import {
 } from '@/components/page-header';
 import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { Shell } from '@/components/shell';
-import { siteConfig } from '@/config/site';
+import { siteConfig } from '@/configs/site';
 import { type Author, allAuthors, allPosts } from 'contentlayer/generated';
 import PostCard from './_components/post-card';
 

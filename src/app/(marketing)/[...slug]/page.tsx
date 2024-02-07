@@ -3,7 +3,7 @@ import { allPages } from 'contentlayer/generated';
 import { Mdx } from '@/components/mdx/mdx-components';
 import { Metadata } from 'next';
 import { env } from '@/env.mjs';
-import { siteConfig } from '@/config/site';
+import { siteConfig } from '@/configs/site';
 import { absoluteUrl, cn } from '@/lib/utils';
 import { headingVariants } from '@/components/page-header';
 import { Shell } from '@/components/shell';

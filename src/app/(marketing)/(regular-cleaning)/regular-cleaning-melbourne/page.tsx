@@ -21,6 +21,10 @@ export default function Page() {
                 { title: 'Home', href: '/' },
                 { title: 'Cleaning Services', href: '/services' },
                 {
+                    title: 'House Cleaning',
+                    href: '/house-cleaning-melbourne',
+                },
+                {
                     title: 'Regular Cleaning',
                     href: '/regular-cleaning-melbourne',
                 },

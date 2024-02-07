@@ -1,4 +1,4 @@
-import { siteConfig } from '@/config/site';
+import { siteConfig } from '@/configs/site';
 import { cn } from '@/lib/utils';
 import React, { type HTMLAttributes } from 'react';
 import Link from 'next/link';

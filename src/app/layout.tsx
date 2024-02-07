@@ -5,7 +5,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { TailwindIndicator } from '@/components/tailwind-indicator';
 import { GoogleTagManager } from '@next/third-parties/google';
 import { env } from '@/env.mjs';
-import { siteConfig } from '@/config/site';
+import { siteConfig } from '@/configs/site';
 import { fontSans } from '@/lib/fonts';
 import { Providers } from '@/components/providers';
 
