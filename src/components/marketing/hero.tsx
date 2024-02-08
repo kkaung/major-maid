@@ -8,7 +8,7 @@ import HeroImage from '/public/assets/images/hero-pp.jpeg';
 import Balancer from 'react-wrap-balancer';
 import Image from 'next/image';
 import { siteConfig } from '@/configs/site';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { cities } from '@/configs/location';
 
 interface HeroProps extends HTMLAttributes<HTMLElement> {
     location?: string;
@@ -21,9 +21,12 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
         <PageHeader
             id="hero"
             aria-labelledby="hero-heading"
-            className={cn('pt-6', props.className)}
+            className={cn(
+                'pt-6 container mx-auto max-w-6xl w-full',
+                props.className
+            )}
         >
-            <div className="relative container mx-auto max-w-6xl w-full flex items-center gap-12 flex-col lg:flex-row">
+            <div className="relative flex items-center gap-12 flex-col lg:flex-row">
                 <div className="space-y-6 flex-1">
                     <h1 className={cn(headingVariants({ size: 'lg' }))}>
                         <Balancer>
@@ -114,18 +117,27 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                     </div>
                 </div>
                 <div className="flex-1">
-                    <div className="overflow-hidden rounded-xl">
-                        <AspectRatio ratio={16 / 9}>
-                            <Image
-                                fill
-                                src={HeroImage}
-                                alt="Hero Image"
-                                className="bg-top object-contain z-10 rounded-xl mx-auto overflow-hidden"
-                            />
-                        </AspectRatio>
-                    </div>
+                    <Image
+                        width={500}
+                        height={500}
+                        src={HeroImage}
+                        alt="Hero Image"
+                        className="bg-top object-contain z-10 rounded-xl mx-auto overflow-hidden"
+                    />
                 </div>
             </div>
+            <ul className="flex items-center gap-6 py-4 font-medium">
+                {cities.map(c => (
+                    <li key={c}>
+                        <Link
+                            href={`/house-cleaner-${c.toLowerCase()}`}
+                            title={`House Cleaning Company ${c}`}
+                        >
+                            {c}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
         </PageHeader>
     );
 }

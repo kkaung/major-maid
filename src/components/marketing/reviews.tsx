@@ -51,25 +51,9 @@ export default function Reviews({ location, ...props }: ReviewsProps) {
             >
                 <div className="space-y-12">
                     <div className="text-center space-y-4">
-                        <h2 className={cn(headingVariants({ size: 'sm' }))}>
+                        <h2 className={cn(headingVariants({}))}>
                             <Balancer>What Our Customers Are Saying</Balancer>
                         </h2>
-                        <p className={cn(descriptionVariants({}), 'mx-auto')}>
-                            <Balancer>
-                                Our customers have given us
-                                <Icons.starFull className="w-4 h-4 text-yellow-400 inline mx-1" />
-                                {siteConfig.rating.ratingValue} (
-                                {siteConfig.rating.ratingCount}) rating on
-                                <a
-                                    target="_blank"
-                                    rel="nofollow noreferrer"
-                                    href="https://www.google.com/search?q=majormaid"
-                                    className="text-primary ml-1 font-medium hover:text-primary/80"
-                                >
-                                    Google Reviews
-                                </a>
-                            </Balancer>
-                        </p>
                     </div>
                     <div className="space-y-5">
                         <Marquee

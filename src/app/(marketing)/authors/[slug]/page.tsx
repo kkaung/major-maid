@@ -49,7 +49,7 @@ export default function Page({ params }: PageProps) {
                 ]}
                 dottable={false}
             />
-            <PageHeader className="relative grid grid-cols-1 sm:grid-cols-2 gap-12 max-w-4xl w-full mx-auto py-12">
+            <PageHeader className="relative grid grid-cols-1 sm:grid-cols-2 gap-12  w-full mx-auto py-12">
                 <div className="space-y-4">
                     <PageHeaderHeading>{author.title}</PageHeaderHeading>
                     <PageHeaderDescription className="mx-auto" size="sm">
@@ -69,7 +69,7 @@ export default function Page({ params }: PageProps) {
                     className="hidden bg-cover object-cover rounded-xl sm:block"
                 />
             </PageHeader>
-            <section className="mx-auto w-full max-w-4xl gap-6">
+            <section className="mx-auto w-full  gap-6">
                 <ul className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
                     {posts.map((post, key) => (
                         <li key={key}>

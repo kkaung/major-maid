@@ -12,6 +12,8 @@ import Dot from '@/components/dot';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { headingVariants } from '@/components/page-header';
+import { siteConfig } from '@/configs/site';
+import { cities } from '@/configs/location';
 
 interface PostPageProps {
     params: {
@@ -192,7 +194,7 @@ export default async function PostPage({ params }: PostPageProps) {
             </section>
             <section
                 id="house-cleaners"
-                className="bg-secondary/50 p-6 rounded-lg"
+                className="bg-secondary/50 p-6 rounded-lg space-y-4"
             >
                 <div className="space-y-1">
                     <h3 className="text-lg font-semibold">
@@ -200,10 +202,27 @@ export default async function PostPage({ params }: PostPageProps) {
                     </h3>
                     <p>
                         MajorMaid&apos;s network of verified local cleaners
-                        operates Australia-wide. Choose your city and get
-                        started now.
+                        operates in Sydney and Melbourne. Choose your city and
+                        get started now.
                     </p>
                 </div>
+                <ul className="grid grid-cols-1 gap-x-4 gap-y-2 text-foreground/80 text-sm sm:grid-cols-2 md:grid-cols-3">
+                    {cities.map((city, idx) => (
+                        <li key={idx}>
+                            <Link
+                                href={`/house-cleaner-${city.toLowerCase()}`}
+                                className="hover:underline"
+                                title={`House Cleaner ${city}`}
+                            >
+                                <Icons.mapPin
+                                    aria-hidden
+                                    className="w-4 h-4 inline mr-1"
+                                />
+                                <span>House Cleaner {city}</span>
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
             </section>
             <div className="flex justify-center py-6 lg:py-10">
                 <Link

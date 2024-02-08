@@ -30,9 +30,15 @@ interface LatestBlogProps extends HTMLAttributes<HTMLElement> {}
 
 export default function LatestBlog({ ...props }: LatestBlogProps) {
     return (
-        <section className={cn(props.className, 'w-full mx-auto')} {...props}>
+        <section
+            className={cn(
+                props.className,
+                'w-full mx-auto max-w-6xl overflow-scroll'
+            )}
+            {...props}
+        >
             <div className="flex items-center justify-between mb-6">
-                <h2 className="text-3xl font-semibold">
+                <h2 className="text-4xl font-semibold">
                     Read Suggested Articles About House Cleaning
                 </h2>
             </div>

@@ -34,10 +34,9 @@ export default function Page() {
             <Shell variant="sidebar" className="grid-16">
                 <div className="container mx-auto space-y-12">
                     <Hero location={city} />
-                    <Featuring />
                 </div>
-                <HowWork className="container mx-auto" />
                 <Reviews />
+                <HowWork className="container mx-auto" />
                 <div>
                     <Services location={city} />
                     <WhyUs location={city} className="bg-primary" />
