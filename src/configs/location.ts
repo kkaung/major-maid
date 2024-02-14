@@ -1,3 +1,7 @@
+export const allLocations = [];
+
+export const popularLocations = [];
+
 export const locations = [
     {
         title: 'Sydney',

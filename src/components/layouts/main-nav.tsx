@@ -58,7 +58,7 @@ export default function MainNav({ items }: MainNavProps) {
                                                         <TabsTrigger
                                                             key={item.title}
                                                             value={item.title}
-                                                            className="w-full justify-start text-base rounded-l-xl rounded-r-none h-10"
+                                                            className="w-full justify-start text-base rounded-l-lg rounded-r-none h-10"
                                                         >
                                                             {item.title}
                                                         </TabsTrigger>

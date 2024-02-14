@@ -1,7 +1,6 @@
 import React from 'react';
 import Hero from '@/components/marketing/hero';
 import FAQs from '@/components/marketing/faqs';
-import Featuring from '@/components/marketing/featuring';
 import WhyUs from '@/components/marketing/why-us';
 import HowWork from '@/components/marketing/how-work';
 import { Shell } from '@/components/shell';
@@ -15,6 +14,8 @@ import LatestBlog from './_components/latest-blog';
 import ServiceInclusion from '@/components/marketing/service-inclusion';
 import { type Metadata } from 'next';
 import { absoluteUrl } from '@/lib/utils';
+
+export const runtime = 'edge';
 
 export async function generateMetadata(): Promise<Metadata> {
     const city = getCityFromPath();

@@ -34,11 +34,6 @@ export default function Content({ city, suburb, segments }: ContentProps) {
                 <div className="container mx-auto max-w-7xl w-full space-y-16">
                     <FAQs />
                     <Satisfaction />
-                    <Suburbs
-                        title={`Find Oven Cleaners In Suburb Of ${city}`}
-                        slug={`oven-cleaning-${city.toLowerCase()}`}
-                        location={city}
-                    />
                     <Breadcrumbs segments={segments} dottable={false} />
                 </div>
             </Shell>

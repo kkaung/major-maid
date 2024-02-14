@@ -21,7 +21,7 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
             aria-labelledby="hero-heading"
             className={cn('pt-6', props.className)}
         >
-            <div className="container mx-auto max-w-5xl w-full grid grid-cols-1 gap-12 md:grid-flow-row md:grid-cols-2">
+            <div className="container mx-auto max-w-6xl w-full grid grid-cols-1 gap-12 md:grid-flow-row md:grid-cols-2">
                 <div className="space-y-6">
                     <h1 className={cn(headingVariants({ size: 'lg' }))}>
                         <Balancer>
@@ -31,6 +31,12 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                             </span>
                         </Balancer>
                     </h1>
+                    <p>
+                        Lowest Price Guaranteed Bond Cleaning Service — trusted
+                        by thousands of customers across {location}. Secure the
+                        return of your security bond with our thorough bond
+                        cleaning service.
+                    </p>
                     <div className="grid grid-cols-1 mt-6 gap-2 font-semibold text-lg sm:grid-cols-2">
                         <div>
                             <Icons.check
@@ -71,18 +77,18 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                             buttonVariants({
                                 size: 'lg',
                             }),
-                            'font-semibold px-8 h-12 rounded-full animate-shimmer bg-[linear-gradient(110deg,#2463EB,45%,#7ba4f6,55%,#2463EB)] bg-[length:200%_100%] transition-colors'
+                            'font-semibold px-8 h-12 rounded-full'
                         )}
                     >
-                        Get a quote & Book online
+                        Get an instant quote
                     </Link>
                 </div>
                 <div>
                     <Image
-                        width={400}
-                        height={400}
+                        width={500}
+                        height={500}
                         src={HeroImage}
-                        alt="Deep Cleaning"
+                        alt="Bond Cleaners"
                         className="bg-top object-cover z-10 rounded-xl"
                     />
                 </div>

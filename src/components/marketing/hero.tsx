@@ -131,7 +131,7 @@ export default function Hero({ location = 'Sydney', ...props }: HeroProps) {
                     <li key={c}>
                         <Link
                             href={`/house-cleaner-${c.toLowerCase()}`}
-                            title={`House Cleaning Company ${c}`}
+                            title={`House Cleaning ${c}`}
                         >
                             {c}
                         </Link>

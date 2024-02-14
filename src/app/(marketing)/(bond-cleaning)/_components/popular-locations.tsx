@@ -1,6 +1,6 @@
 import { headingVariants } from '@/components/page-header';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { cities } from '@/configs/location';
+import { locations } from '@/configs/location';
 import { cn, unslugify } from '@/lib/utils';
 import React, { type HTMLAttributes } from 'react';
 import Link from 'next/link';
@@ -62,7 +62,7 @@ export default function PopularLocations({
                             </div>
                         ))}
                     </TabsList>
-                    {cities.map(city => (
+                    {locations.map(city => (
                         <TabsContent
                             key={city.title}
                             value={city.title.toLowerCase()}

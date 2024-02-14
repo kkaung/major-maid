@@ -10,11 +10,15 @@ const links = {
     pinterest: 'https://www.pinterest.com.au/majormaid_aus',
     linkin: 'https://www.linkedin.com/company/majormaid',
     youtube: 'https://www.youtube.com/@MajorMaid-dq2wd',
+
     yelp: '',
+    buynsw: '',
 
     rzcleaning: 'https://rzcleaning.com.au',
     azcleaning: 'https://azcleaning.com.au',
     bondtoclean: 'https://bondtoclean.com.au',
+    bondcleaningsydney:
+        'https://end-of-lease-bond-vacate-cleaning-sydney.com.au',
 };
 
 export const siteConfig = {
@@ -126,10 +130,6 @@ export const siteConfig = {
                     title: 'Carpet Cleaning',
                     href: '/carpet-cleaning-sydney',
                 },
-                {
-                    title: 'Vacate Cleaning',
-                    href: '/vacate-cleaning-sydney',
-                },
             ],
         },
         {
@@ -162,10 +162,6 @@ export const siteConfig = {
                 {
                     title: 'Carpet Cleaning',
                     href: '/carpet-cleaning-melbourne',
-                },
-                {
-                    title: 'Vacate Cleaning',
-                    href: '/vacate-cleaning-melbourne',
                 },
             ],
         },
@@ -229,7 +225,6 @@ export const siteServices: {
     {
         title: 'Office Cleaning',
         slug: 'office-cleaning',
-        icon: 'building',
     },
     {
         title: 'Oven Cleaning',

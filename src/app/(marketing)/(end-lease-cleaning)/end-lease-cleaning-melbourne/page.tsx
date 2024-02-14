@@ -4,6 +4,8 @@ import { getCityFromPath } from '@/lib/next';
 import Content from '../_components/content';
 import { getMetadata } from '../_components/metadata';
 
+export const runtime = 'edge';
+
 export async function generateMetadata(): Promise<Metadata> {
     const city = getCityFromPath();
 

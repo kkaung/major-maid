@@ -36,11 +36,11 @@ export default function Content({ city, suburb, segments }: ContentProps) {
                     />
                     <FAQs />
                     <Satisfaction />
-                    <Suburbs
+                    {/* <Suburbs
                         title="Carpet Cleaners"
                         location={city}
                         slug={`carpet-cleaning-${city.toLocaleLowerCase()}`}
-                    />
+                    /> */}
                     <Breadcrumbs segments={segments} dottable={false} />
                 </div>
             </Shell>
