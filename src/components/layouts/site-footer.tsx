@@ -197,7 +197,7 @@ export default async function SiteFooter({
                             <Icons.sword aria-hidden className="h-4 w-4" />
                         </Link>
                         <Link
-                            href={siteConfig.links.bondtoclean}
+                            href={siteConfig.links.bondcleaningsydney}
                             target="_blank"
                             title="End of Lease - Bond Cleaning in Sydney"
                         >
