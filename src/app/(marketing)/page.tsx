@@ -10,10 +10,11 @@ import Reviews from '@/components/marketing/reviews';
 import Services from '@/components/marketing/services';
 import { WebPageJsonLd, OrganizationJsonLd, BreadcrumbJsonLd } from 'next-seo';
 import { siteConfig } from '@/configs/site';
-import LatestBlog from './_components/latest-blog';
 import ServiceInclusion from '@/components/marketing/service-inclusion';
 import { type Metadata } from 'next';
 import { absoluteUrl } from '@/lib/utils';
+import { allPages } from 'contentlayer/generated';
+import LatestBlog from './_components/latest-blog';
 
 export const runtime = 'edge';
 
@@ -29,6 +30,8 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function Page() {
     const city = getCity();
+
+    console.log(allPages);
 
     return (
         <>

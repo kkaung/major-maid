@@ -1,6 +1,5 @@
 import {
     PageHeader,
-    PageHeaderDescription,
     PageHeaderHeading,
     headingVariants,
 } from '@/components/page-header';
@@ -10,6 +9,8 @@ import React from 'react';
 import AccordionList from '@/components/accordion-list';
 import { siteConfig } from '@/configs/site';
 import { cn } from '@/lib/utils';
+import { type Metadata } from 'next';
+import { getPathname } from '@/lib/next';
 
 const generalQuestions = [
     {
@@ -89,6 +90,20 @@ const pricingQuestions = [
     },
 ];
 
+export const runtime = 'edge';
+
+export function generateMetadata(): Metadata {
+    const pathname = getPathname();
+
+    return {
+        title: 'Frequently Asked Questions About Bond Cleaning',
+        description: `Find the answers you're looking for a house cleaning service.`,
+        alternates: {
+            canonical: pathname,
+        },
+    };
+}
+
 export default function Page() {
     return (
         <Shell className="gap-16 max-w-7xl">
@@ -106,16 +121,6 @@ export default function Page() {
                 <PageHeaderHeading>
                     Find Answers to Your Questions
                 </PageHeaderHeading>
-                <PageHeaderDescription className="mx-auto" size="sm">
-                    Can&apos;t find an answer? Call us at
-                    <span className="text-primary/80 font-medium mx-1">
-                        {siteConfig.business.phone}
-                    </span>
-                    or email
-                    <span className="text-primary/80 font-medium ml-1">
-                        {siteConfig.business.email}
-                    </span>
-                </PageHeaderDescription>
             </PageHeader>
             <div className="max-w-5xl w-full mx-auto space-y-12">
                 <section id="general" aria-labelledby="general-heading">

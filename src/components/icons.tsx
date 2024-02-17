@@ -47,6 +47,7 @@ import {
     PersonStanding,
     Sword,
     Sticker,
+    Wand,
 } from 'lucide-react';
 
 // export type Icon = LucideIcon;
@@ -100,6 +101,7 @@ export const Icons = {
     personStanding: PersonStanding,
     sword: Sword,
     sticker: Sticker,
+    wand: Wand,
     starFull: (props: LucideProps) => (
         <svg
             xmlns="http://www.w3.org/2000/svg"

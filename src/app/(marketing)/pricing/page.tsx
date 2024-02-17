@@ -9,6 +9,24 @@ import { siteConfig } from '@/configs/site';
 import React from 'react';
 import FAQs from './_components/faqs';
 import { Button } from '@/components/ui/button';
+import { Metadata } from 'next';
+import { getCity, getPathname } from '@/lib/next';
+
+export const runtime = 'edge';
+
+export function generateMetadata(): Metadata {
+    const pathname = getPathname();
+
+    const city = getCity();
+
+    return {
+        title: `House Cleaning Pricing And Service List`,
+        description: `We provides premier house and office cleaning in ${city}, leaving you with more time to relax and enjoy a spotless space.`,
+        alternates: {
+            canonical: pathname,
+        },
+    };
+}
 
 export default function Page() {
     return (

@@ -83,19 +83,19 @@ export default function FooterTabs() {
                                             </li>
                                         ))}
                                     </ul>
-                                    {/* <div
+                                    <div
                                         className={cn(
-                                            'absolute z-10 bottom-0 inset-x-0 h-24 bg-gradient-to-t from-background via-background/80 translate-y-1',
+                                            'absolute z-10 bottom-0 inset-x-0 h-24 bg-gradient-to-t from-[#0C0E1F] via-[#0C0E1F]/80 translate-y-1',
                                             {
                                                 'from-transparent via-transparent h-0 -z-10':
                                                     isOpen,
                                             }
                                         )}
-                                    /> */}
+                                    />
                                 </div>
                                 <div className="text-center py-6">
                                     <CollapsibleTrigger>
-                                        <div className="font-medium text-sm">
+                                        <div className="font-medium text-sm text-gray-400">
                                             {isOpen ? 'View Less' : 'View More'}
                                         </div>
                                         <span className="sr-only">Toggle</span>

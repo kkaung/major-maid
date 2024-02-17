@@ -30,7 +30,7 @@ export function generateMetadata(): Metadata {
 
     return {
         title: 'Cleaning Blog',
-        description: `Read major maid's news, tips and tricks other interesting informations and articles about cleaning.`,
+        description: `Read major maid's news, tips and tricks other interesting informations and articles about house cleaning.`,
         alternates: {
             canonical: pathname,
         },

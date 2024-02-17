@@ -36,9 +36,9 @@ export default async function SiteFooter({
                             <span className="font-bold">{siteConfig.logo}</span>
                         </Link>
                         <p className="my-4 max-w-xs text-xs font-light text-slate-400 md:text-sm">
-                            {siteConfig.name} is here to transform your house
-                            into home with our professional house cleaning
-                            services.
+                            {siteConfig.name}&apos;s professional house cleaning
+                            services transform houses into havens. Relax and
+                            enjoy, we&apos;ve got this!
                         </p>
                         <div className="flex flex-col mt-2 space-y-2 text-slate-400">
                             <div className={cn('cursor-pointer text-sm')}>
@@ -116,7 +116,7 @@ export default async function SiteFooter({
                         © {new Date().getFullYear()} {siteConfig.name}.
                         <span>All rights reserved.</span>
                     </div>
-                    <div className="mt-3 flex items-center gap-6 text-slate-400">
+                    <div className="mt-3 flex flex-wrap items-center gap-x-6 gap-y-2 text-slate-400">
                         <Link
                             aria-label="Facebook"
                             target="_blank"
@@ -171,6 +171,14 @@ export default async function SiteFooter({
                             href={siteConfig.links.yelp}
                         >
                             <Icons.yelp aria-hidden className="h-4 w-4" />
+                        </Link>
+                        <Link
+                            aria-label="BUY NSW"
+                            target="_blank"
+                            title="NSW Government registered ICT supplier"
+                            href={siteConfig.links.buynsw}
+                        >
+                            <Icons.wand aria-hidden className="h-4 w-4" />
                         </Link>
                         <Link
                             href={siteConfig.links.azcleaning}

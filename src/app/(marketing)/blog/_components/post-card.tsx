@@ -45,7 +45,7 @@ export default function PostCard({ post, author, ...props }: PostCardProps) {
                         {author?.title.charAt(0).toUpperCase()}
                     </AvatarFallback>
                 </Avatar>
-                <Link href={`/author/${author.slugAsParams}`}>
+                <Link href={`/authors/${author.slugAsParams}`}>
                     <p className="text-sm hover:underline">{author.title}</p>
                 </Link>
             </div>

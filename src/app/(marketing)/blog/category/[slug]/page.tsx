@@ -1,3 +1,4 @@
+import React from 'react';
 import {
     PageHeader,
     PageHeaderDescription,
@@ -6,11 +7,7 @@ import {
 import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { Shell } from '@/components/shell';
 import { toTitleCase, unslugify } from '@/lib/utils';
-import React from 'react';
 import { Author, allAuthors, allPosts } from 'contentlayer/generated';
-
-import { BlogTabs } from '../../_components/blog-tabs';
-import PostCard from '../../_components/post-card';
 import {
     Pagination,
     PaginationContent,
@@ -20,10 +17,29 @@ import {
     PaginationNext,
     PaginationPrevious,
 } from '@/components/ui/pagination';
+import { Metadata } from 'next';
+import { getPathname } from '@/lib/next';
+
+import { BlogTabs } from '../../_components/blog-tabs';
+import PostCard from '../../_components/post-card';
 
 interface PageProps {
     params: {
         slug: string;
+    };
+}
+
+export const runtime = 'edge';
+
+export function generateMetadata(): Metadata {
+    const pathname = getPathname();
+
+    return {
+        title: ``,
+        description: ``,
+        alternates: {
+            canonical: pathname,
+        },
     };
 }
 

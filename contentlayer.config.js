@@ -52,7 +52,7 @@ export const Author = defineDocumentType(() => ({
 
 export const Page = defineDocumentType(() => ({
     name: 'Page',
-    filePathPattern: `blog/**/*.mdx`,
+    filePathPattern: `pages/**/*.mdx`,
     contentType: 'mdx',
     fields: {
         title: {

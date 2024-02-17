@@ -8,12 +8,13 @@ import { env } from '@/env.mjs';
 import { absoluteUrl, cn, formatDate } from '@/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
 import { Icons } from '@/components/icons';
-import Dot from '@/components/dot';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { headingVariants } from '@/components/page-header';
-import { siteConfig } from '@/configs/site';
 import { cities } from '@/configs/location';
+import { getPathname } from '@/lib/next';
+
+import Dot from '@/components/dot';
 
 interface PostPageProps {
     params: {
@@ -35,6 +36,8 @@ export async function generateMetadata({
 }: PostPageProps): Promise<Metadata> {
     const post = await getPostFromParams(params);
 
+    const pathname = getPathname();
+
     if (!post) return {};
 
     const url = env.NEXT_PUBLIC_APP_URL;
@@ -44,10 +47,22 @@ export async function generateMetadata({
     ogUrl.searchParams.set('type', 'Blog Post');
     ogUrl.searchParams.set('mode', 'dark');
 
+    const author = allAuthors.find(
+        author => author.slugAsParams === post.author
+    ) as Author;
+
     return {
         title: post.title,
         description: post.description,
-        authors: [],
+        authors: [
+            {
+                name: author.title,
+                url: absoluteUrl(`/authors/${author.slugAsParams}`),
+            },
+        ],
+        alternates: {
+            canonical: pathname,
+        },
         openGraph: {
             title: post.title,
             description: post.description,
@@ -175,7 +190,7 @@ export default async function PostPage({ params }: PostPageProps) {
                                     Article by
                                 </p>
                                 <Link href={`/authors/${author.slugAsParams}`}>
-                                    <p className="relative text-primary hover:underline">
+                                    <p className="relative hover:underline">
                                         {author.title}
                                     </p>
                                 </Link>
@@ -185,7 +200,11 @@ export default async function PostPage({ params }: PostPageProps) {
                     <CardContent className="space-y-4 text-foreground">
                         <p className="text-foreground">{author.description}</p>
                         <div className="flex gap-4">
-                            <Link aria-label="Linkin" target="_blank" href="/">
+                            <Link
+                                aria-label="Linkin"
+                                target="_blank"
+                                href={`https://www.linkedin.com/in/${author.linkin}`}
+                            >
                                 <Icons.linkin aria-hidden className="h-4 w-4" />
                             </Link>
                         </div>
