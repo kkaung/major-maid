@@ -53,8 +53,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
         '/house-cleaner-sydney',
         '/house-cleaner-melbourne',
-
-        
     ].map(route => ({
         url: absoluteUrl(route),
         lastModified: new Date().toISOString(),

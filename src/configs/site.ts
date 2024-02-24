@@ -19,6 +19,7 @@ const links = {
     bondtoclean: 'https://bondtoclean.com.au',
     bondcleaningsydney:
         'https://end-of-lease-bond-vacate-cleaning-sydney.com.au',
+    moreclean: 'https://moreclean.com.au',
 };
 
 export const siteConfig = {

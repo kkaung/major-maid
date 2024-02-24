@@ -211,6 +211,13 @@ export default async function SiteFooter({
                         >
                             <Icons.sticker aria-hidden className="h-4 w-4" />
                         </Link>
+                        <Link
+                            href={siteConfig.links.moreclean}
+                            target="_blank"
+                            title="More Clean - House Cleaning Company In Sydney"
+                        >
+                            <Icons.coffee aria-hidden className="h-4 w-4" />
+                        </Link>
                     </div>
                 </section>
             </Shell>

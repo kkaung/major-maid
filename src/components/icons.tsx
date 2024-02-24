@@ -48,6 +48,7 @@ import {
     Sword,
     Sticker,
     Wand,
+    Coffee,
 } from 'lucide-react';
 
 // export type Icon = LucideIcon;
@@ -102,6 +103,7 @@ export const Icons = {
     sword: Sword,
     sticker: Sticker,
     wand: Wand,
+    coffee: Coffee,
     starFull: (props: LucideProps) => (
         <svg
             xmlns="http://www.w3.org/2000/svg"
